@@ -19,7 +19,7 @@ module.exports = (title) => ({
                 return allNote.nodes.map((post) => {
                     return {
                         title: post.title,
-                        date: post.date,
+                        created: post.date,
                         excerpt: post.excerpt,
                         url: site.siteMetadata.siteUrl + post.slug,
                         guid: site.siteMetadata.siteUrl + post.slug,
@@ -29,10 +29,10 @@ module.exports = (title) => ({
             },
             query: `
         {
-          allNote(sort: { fields: date, order: DESC }) {
+          allNote(sort: { fields: created, order: DESC }) {
             nodes {
               title
-              date(formatString: "MMMM D, YYYY")
+              created(formatString: "MMMM D, YYYY")
               excerpt
               slug
               html
