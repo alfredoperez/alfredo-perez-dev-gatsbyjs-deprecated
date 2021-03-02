@@ -1,39 +1,78 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+const newsletterFeed = require(`./src/utils/newsletterFeed`)
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const options = require(`./utils/default-options`)
+
+const siteMetadata = {
+  siteTitle: 'Alfredo Perez',
+  siteTitleAlt: `Alfredo Perez - Digital Garden`,
+  feedTitle: 'Alfredo Perez - Digital Garden',
+  siteHeadline: `This is a beautiful digital garden`,
+  siteUrl: `https://alfredo-perez.dev`,
+  siteDescription: `Digital garden where ideas can flourish`,
+  siteLanguage: `en`,
+  siteImage: `/banner.jpg`,
+  author: `@alfredo-perez`,
+}
 
 module.exports = {
-  siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-  },
+  siteMetadata,
   plugins: [
     {
-      resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      // See the theme's README for all available options
+      resolve: `gatsby-source-filesystem`,
       options: {
-        navigation: [
+        name: options.notesPath,
+        path: options.notesPath,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: options.pagesPath,
+        path: options.pagesPath,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-markdown-references`,
+      options: {
+        types: ['Mdx'], // or ['RemarkMarkdown'] (or both)
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
           {
-            title: `Blog`,
-            slug: `/blog`,
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              quality: 90,
+              linkImagesToOriginal: false,
+            },
           },
           {
-            title: `About`,
-            slug: `/about`,
+            resolve: 'gatsby-remark-double-brackets-link',
+            options: {
+              titleToURLPath: `${__dirname}/utils/resolve-url.js`,
+              stripBrackets: true,
+            },
           },
         ],
-        externalLinks: [
+        plugins: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              quality: 90,
+              linkImagesToOriginal: false,
+            },
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: newsletterFeed(`${siteMetadata.feedTitle}`),
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -41,40 +80,12 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
-    `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#6B46C1`,
-        display: `standalone`,
-        icons: [
-          {
-            src: `/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
-      },
-    },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
-    shouldAnalyseBundle && {
-      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
-      options: {
-        analyzerMode: `static`,
-        reportFilename: `_bundle.html`,
-        openAnalyzer: false,
-      },
-    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-theme-ui`,
   ].filter(Boolean),
 }
