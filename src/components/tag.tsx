@@ -1,26 +1,20 @@
 /** @jsx jsx */
-import { Heading, jsx, Link as TLink } from 'theme-ui'
-import { Flex } from '@theme-ui/components'
-import { Link } from 'gatsby'
+import {Heading, jsx, Link as TLink} from 'theme-ui'
+import {Flex} from '@theme-ui/components'
+import {Link} from 'gatsby'
 import Layout from './layout'
 import useBlogConfig from '../hooks/use-blog-config'
 import Listing from './listing'
 import replaceSlashes from '../utils/replace-slashes'
 import SEO from './seo'
+import {NoteEntity} from "../models/note.entity";
 
 type TagProps = {
-  posts: {
-    slug: string
-    title: string
-    date: string
-    excerpt: string
-    description: string
-    timeToRead?: number
-    tags: {
-      name: string
-      slug: string
-    }[]
-  }[]
+  data: {
+    allNote: {
+      nodes: Array<NoteEntity>
+    }
+  },
   pageContext: {
     isCreatedByStatefulCreatePages: boolean
     slug: string
@@ -29,12 +23,13 @@ type TagProps = {
   }
 }
 
-const Tag = ({ posts, pageContext }: TagProps) => {
-  const { tagsPath, basePath } = useBlogConfig()
+const Tag = (props: TagProps) => {
+  const {data: {allNote: {nodes: notes}}, pageContext} = props;
+  const {tagsPath, basePath} = useBlogConfig()
 
   return (
     <Layout>
-      <SEO title={`Tag: ${pageContext.name}`} />
+      <SEO title={`Tag: ${pageContext.name}`}/>
       <Flex
         sx={{
           alignItems: `center`,
@@ -42,18 +37,18 @@ const Tag = ({ posts, pageContext }: TagProps) => {
           flexFlow: `wrap`,
         }}
       >
-        <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
+        <Heading as="h1" variant="styles.h1" sx={{marginY: 2}}>
           {pageContext.name}
         </Heading>
         <TLink
           as={Link}
-          sx={{ variant: `links.secondary`, marginY: 2 }}
+          sx={{variant: `links.secondary`, marginY: 2}}
           to={replaceSlashes(`/${basePath}/${tagsPath}`)}
         >
           View all tags
         </TLink>
       </Flex>
-      <Listing notes={posts} sx={{ mt: [4, 5] }} />
+      <Listing notes={notes} sx={{mt: [4, 5]}}/>
     </Layout>
   )
 }
