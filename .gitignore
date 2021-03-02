@@ -57,8 +57,11 @@ typings/
 
 # dotenv environment variables file
 .env
-.env.*
 !.env.example
+
+# Obsidian
+**/.obsidian/**
+**/.idea
 
 .cache
 **/.cache
