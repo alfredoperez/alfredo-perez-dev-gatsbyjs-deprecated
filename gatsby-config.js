@@ -1,4 +1,6 @@
 const newsletterFeed = require(`./src/utils/newsletterFeed`)
+require("dotenv").config({path: `.env.${process.env.NODE_ENV}`,})
+
 
 const options = require(`./utils/default-options`)
 
@@ -87,5 +89,6 @@ module.exports = {
         `gatsby-plugin-typescript`,
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-theme-ui`,
+        `gatsby-plugin-gatsby-cloud`
     ].filter(Boolean),
 }
