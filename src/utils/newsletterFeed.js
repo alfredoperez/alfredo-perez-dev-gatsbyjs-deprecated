@@ -35,7 +35,6 @@ module.exports = (title) => ({
               created(formatString: "MMMM D, YYYY")
               excerpt
               slug
-              html
             }
           }
         }
