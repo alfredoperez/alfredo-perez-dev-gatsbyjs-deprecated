@@ -51,7 +51,7 @@ const Homepage = ({
         {/*  View All Notes */}
         {/* </Link> */}
       </Title>
-      <Listing notes={mocs} showTags={false} />
+      <Listing mocs={mocs} showTags={false} />
 
       {/* <List sx={{ variant: `section_bottom` }}> */}
       {/*  <Bottom /> */}

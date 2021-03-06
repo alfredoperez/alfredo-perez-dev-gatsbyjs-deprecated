@@ -1,5 +1,5 @@
 --- 
-title: __Home
+title: Master Map of Content
 description:   
 tags: []  
 created: 02/23/2021  
@@ -7,9 +7,7 @@ updated:  3/4/21
 type: moc
 ---
 
-# _Home
-
-[[How this works]] | [[Personal Website Goals]] | [[PKM Drivers]]
+Related: [[How this works]] | [[Personal Website Goals]]
 
 ## Main Maps
 
@@ -24,8 +22,8 @@ type: moc
 	- Recipes
 
 - **Courses**
-	- Personal Courses [[Personal/_Courses and Workshops]]
-	- Professional Courses [[Professional/_Courses and Workshops]]
+	- Personal Courses [[_Personal - Courses and Workshops]]
+	- Professional Courses [[_Professional - Courses and Workshops]]
 
 - **Angular**
 	- NgRx
@@ -38,5 +36,5 @@ type: moc
 
 
 ## Other Maps of Content
-Look for my more personal notes at [[Personal/__Home]]
+Look for my more personal notes at [[__Master Personal]]
 Look for my notes about software development at [[Professional/__Home]]

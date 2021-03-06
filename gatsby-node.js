@@ -198,7 +198,13 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   const source = fileNode.sourceInstanceName
 
   // Check for "notes" and create the "Note" type
-  if (node.internal.type === `Mdx` && source === notesPath) {
+  if (
+    node.internal.type === `Mdx` &&
+    source === notesPath &&
+    // Makes sure to not include any note from the folders that include `00 - `
+    // These folders are used for obsidian templates
+    !fileNode.relativePath.includes('00 - ')
+  ) {
     const tags = processTags(node.frontmatter.tags)
 
     const {
@@ -329,17 +335,14 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           fieldValue
         }
       }
-      allNote: allNote(filter: { type: { eq: "note" } }, sort: { order: DESC, fields: created }) {
+      allNote: allNote(filter: { type: { ne: "moc" } }, sort: { order: DESC, fields: created }) {
         nodes {
           slug
           title
           status
         }
       }
-      notesQuery: allNote(
-        filter: { type: { eq: "note" } }
-        sort: { order: DESC, fields: created }
-      ) {
+      notesQuery: allNote(filter: { type: { ne: "moc" } }, sort: { order: DESC, fields: created }) {
         nodes {
           slug
           title
