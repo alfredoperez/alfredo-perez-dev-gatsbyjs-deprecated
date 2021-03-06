@@ -1,12 +1,13 @@
 ---
 title: How this works
 description: 
-tags: ["#ngrx", "#angular"]
-created: 1/30/2021
-updated: 2/23/21
+tags: []  
 type: note
 status: budd
+created:  1/30/2021 
+updated: 3/4/21
 ---
+
 
 #  How this works
 - My workflow is located on https://whimsical.com/digital-garden-15FWj9nugBrPiv5e53SHp8
@@ -18,6 +19,8 @@ status: budd
 	- Personal -> bullet journal for time blocking and goals, journal, habits, etc
 	- Work -> Private vault
 	- Obsidian: for the notes I will like to keep
+- Need to achieve less friction to write notes
+- Constrains can help toavoid hoarding notes
 ## Tools
 - Pocket for articles
 - Kindle for books
@@ -92,7 +95,8 @@ Here are the different types of notes:
 
 This statuses are represented via tags at the top of the note:
   
-
+## Folder setup
+Evertyhing that is setup for obsidian uses `00 - `
 ## Tools Setup 
 - Created a snippet with Alfred to add the actual date by typing `dz
 - Create image links from Cloudinary https://github.com/urre/alfredinary

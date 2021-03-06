@@ -5,7 +5,7 @@ export default DigitalGarden
 
 export const query = graphql`
   query($formatString: String!) {
-    allNote(filter: { type: { eq: "note" } }, sort: { fields: created, order: DESC }) {
+    allNote(filter: { type: { ne: "moc" } }, sort: { fields: created, order: DESC }) {
       nodes {
         slug
         title
