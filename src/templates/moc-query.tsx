@@ -1,21 +1,11 @@
-import Note from '../components/note'
+import Moc from '../components/moc'
 import { graphql } from 'gatsby'
 
-export default Note
+export default Moc
 
-// inboundReferences {
-// ... on Mdx {
-//     frontmatter {
-//       title
-//     }
-//     slug
-//   }
-// }
 export const query = graphql`
   query($slug: String!, $formatString: String!) {
-    note(
-    slug: { eq: $slug }
-    ) {
+    note(slug: { eq: $slug }) {
       slug
       title
       created(formatString: $formatString)

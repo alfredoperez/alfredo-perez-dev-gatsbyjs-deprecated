@@ -53,7 +53,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   })
 
   createTypes(`
-     interface Note @nodeInterface {
+     interface Note implements Node {
       id: ID!
       slug: String! @slugify
       title: String!
@@ -67,6 +67,8 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       banner: File @fileByRelativePath
       description: String
       canonicalUrl: String
+      status: String
+      type: String
     }
     
      type NoteTag {
@@ -75,7 +77,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
     }
 
    
-    interface Page @nodeInterface {
+    interface Page implements Node {
       id: ID!
       slug: String!
       title: String!
@@ -94,6 +96,8 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       timeToRead: Int @mdxpassthrough(fieldName: "timeToRead")
       tags: [NoteTag]
       banner: File @fileByRelativePath
+      status: String
+      type: String
       description: String
       canonicalUrl: String
     }
@@ -169,6 +173,20 @@ exports.sourceNodes = ({ actions, createContentDigest }) => {
   })
 }
 
+const processTags = (tags) => {
+  let results = null
+  if (!tags) {
+    return results
+  }
+
+  results = tags.map((tag) => ({
+    name: tag,
+    slug: kebabCase(tag),
+  }))
+
+  return results
+}
+
 exports.onCreateNode = ({
   node,
   actions,
@@ -176,7 +194,7 @@ exports.onCreateNode = ({
   createNodeId,
   createContentDigest,
 }) => {
-  const { createNode, createParentChildLink } = actions
+  const { createNode, createParentChildLink, createNodeField } = actions
   const { postsPath, pagesPath, notesPath } = options
 
   // Make sure that it's an MDX node
@@ -192,27 +210,30 @@ exports.onCreateNode = ({
 
   // Check for "notes" and create the "Note" type
   if (node.internal.type === `Mdx` && source === notesPath) {
-    let modifiedTags
+    const tags = processTags(node.frontmatter.tags)
 
-    if (node.frontmatter.tags) {
-      modifiedTags = node.frontmatter.tags.map((tag) => ({
-        name: tag,
-        slug: kebabCase(tag),
-      }))
-    } else {
-      modifiedTags = null
-    }
+    const {
+      title,
+      slug,
+      type,
+      status,
+      description,
+      canonicalUrl,
+      created,
+      updated,
+    } = node.frontmatter
 
     const fieldData = {
-      slug: node.frontmatter.slug ? node.frontmatter.slug : undefined,
-      title: node.frontmatter.title,
-
-      created: node.frontmatter.created,
-      updated: node.frontmatter.updated,
-      tags: modifiedTags,
-      banner: node.frontmatter.banner,
-      description: node.frontmatter.description,
-      canonicalUrl: node.frontmatter.canonicalUrl,
+      slug,
+      title: title.replace(/_/g, ''),
+      created,
+      updated,
+      tags,
+      slug,
+      type,
+      status,
+      description,
+      canonicalUrl,
     }
 
     const mdxNoteId = createNodeId(`${node.id} >>> MdxNote`)
@@ -229,6 +250,18 @@ exports.onCreateNode = ({
         content: JSON.stringify(fieldData),
         description: `Mdx implementation of the Note interface`,
       },
+    })
+
+    createNodeField({
+      name: 'status',
+      node,
+      value: fieldData.status,
+    })
+
+    createNodeField({
+      name: 'type',
+      node,
+      value: fieldData.type,
     })
 
     createParentChildLink({ parent: node, child: getNode(mdxNoteId) })
@@ -266,6 +299,7 @@ const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
 const tagTemplate = require.resolve(`./src/templates/tag-query.tsx`)
 const tagsTemplate = require.resolve(`./src/templates/tags-query.tsx`)
 const noteTemplate = require.resolve(`./src/templates/note-query.tsx`)
+const mocTemplate = require.resolve(`./src/templates/note-query.tsx`)
 const digitalGardenTemplate = require.resolve(
   `./src/templates/digital-garden-query.tsx`,
 )
@@ -278,7 +312,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
     tagsPath,
     formatString,
     notesPrefix,
-    notesPath,
+    mocsPrefix,
     digitalGardenPath,
   } = options
 
@@ -315,9 +349,34 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           fieldValue
         }
       }
-      allNote(sort: { fields: created, order: DESC }) {
+      allNote: allNote(
+        filter: { type: { eq: "note" } }
+        sort: { order: DESC, fields: created }
+      ) {
         nodes {
           slug
+          title
+          status
+        }
+      }
+      notesQuery: allNote(
+        filter: { type: { eq: "note" } }
+        sort: { order: DESC, fields: created }
+      ) {
+        nodes {
+          slug
+          title
+          status
+        }
+      }
+      allMoc: allNote(
+        filter: { type: { eq: "moc" } }
+        sort: { order: DESC, fields: created }
+      ) {
+        nodes {
+          slug
+          title
+          status
         }
       }
     }
@@ -377,4 +436,17 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       })
     })
   }
+
+  const mocs = result.data.allMoc.nodes
+
+  mocs.forEach((moc) => {
+    createPage({
+      path: `${mocsPrefix}${moc.slug}`.replace(/\/\/+/g, `/`),
+      component: mocTemplate,
+      context: {
+        slug: moc.slug,
+        formatString,
+      },
+    })
+  })
 }

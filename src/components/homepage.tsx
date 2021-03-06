@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import Layout from './layout'
 import Title from './title'
 import Listing from './listing'
-import List from './list'
 import useBlogConfig from '../hooks/use-blog-config'
 import useSiteMetadata from '../hooks/use-site-metadata'
 import replaceSlashes from '../utils/replace-slashes'
@@ -12,17 +11,20 @@ import { visuallyHidden } from '../styles/utils'
 // @ts-ignore
 import Hero from '../texts/hero'
 // @ts-ignore
-import Bottom from '../texts/bottom'
 import { NoteEntity } from '../models/note.entity'
 
 type HomePageProps = {
-  data: { allNote: { nodes: Array<NoteEntity> } }
+  data: {
+    allNote: { nodes: Array<NoteEntity> }
+    allMoc: { nodes: Array<NoteEntity> }
+  }
   [key: string]: any
 }
 
 const Homepage = ({
   data: {
     allNote: { nodes: notes },
+    allMoc: { nodes: mocs },
   },
 }: HomePageProps) => {
   const { basePath, digitalGardenPath } = useBlogConfig()
@@ -40,12 +42,19 @@ const Homepage = ({
       >
         <Hero />
       </section>
-      <Title text="Digital Garden">
+      <Title text="Latest Notes">
         <Link to={replaceSlashes(`/${basePath}/${digitalGardenPath}`)}>
           View All Notes
         </Link>
       </Title>
       <Listing notes={notes} showTags={false} />
+      <Title text="Maps of content">
+        {/*<Link to={replaceSlashes(`/${basePath}/${digitalGardenPath}`)}>*/}
+        {/*  View All Notes*/}
+        {/*</Link>*/}
+      </Title>
+      <Listing notes={mocs} showTags={false} />
+
       {/*<List sx={{ variant: `section_bottom` }}>*/}
       {/*  <Bottom />*/}
       {/*</List>*/}

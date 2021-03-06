@@ -27,13 +27,6 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: options.pagesPath,
-                path: options.pagesPath,
-            },
-        },
-        {
             resolve: `gatsby-transformer-markdown-references`,
             options: {
                 types: ['Mdx'], // or ['RemarkMarkdown'] (or both)
