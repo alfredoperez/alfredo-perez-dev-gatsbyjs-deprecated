@@ -1,12 +1,7 @@
 const kebabCase = require(`lodash.kebabcase`)
 const options = require(`./utils/default-options`)
 
-const mdxResolverPassthrough = (fieldName) => async (
-  source,
-  args,
-  context,
-  info,
-) => {
+const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
@@ -187,13 +182,7 @@ const processTags = (tags) => {
   return results
 }
 
-exports.onCreateNode = ({
-  node,
-  actions,
-  getNode,
-  createNodeId,
-  createContentDigest,
-}) => {
+exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
   const { createNode, createParentChildLink, createNodeField } = actions
   const { postsPath, pagesPath, notesPath } = options
 
@@ -300,21 +289,12 @@ const tagTemplate = require.resolve(`./src/templates/tag-query.tsx`)
 const tagsTemplate = require.resolve(`./src/templates/tags-query.tsx`)
 const noteTemplate = require.resolve(`./src/templates/note-query.tsx`)
 const mocTemplate = require.resolve(`./src/templates/note-query.tsx`)
-const digitalGardenTemplate = require.resolve(
-  `./src/templates/digital-garden-query.tsx`,
-)
+const digitalGardenTemplate = require.resolve(`./src/templates/digital-garden-query.tsx`)
 
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const {
-    basePath,
-    tagsPath,
-    formatString,
-    notesPrefix,
-    mocsPrefix,
-    digitalGardenPath,
-  } = options
+  const { basePath, tagsPath, formatString, notesPrefix, mocsPrefix, digitalGardenPath } = options
 
   createPage({
     path: basePath,
@@ -349,10 +329,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           fieldValue
         }
       }
-      allNote: allNote(
-        filter: { type: { eq: "note" } }
-        sort: { order: DESC, fields: created }
-      ) {
+      allNote: allNote(filter: { type: { eq: "note" } }, sort: { order: DESC, fields: created }) {
         nodes {
           slug
           title
@@ -369,10 +346,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           status
         }
       }
-      allMoc: allNote(
-        filter: { type: { eq: "moc" } }
-        sort: { order: DESC, fields: created }
-      ) {
+      allMoc: allNote(filter: { type: { eq: "moc" } }, sort: { order: DESC, fields: created }) {
         nodes {
           slug
           title
@@ -383,10 +357,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   `)
 
   if (result.errors) {
-    reporter.panicOnBuild(
-      `There was an error loading your posts or pages`,
-      result.errors,
-    )
+    reporter.panicOnBuild(`There was an error loading your posts or pages`, result.errors)
     return
   }
 
@@ -421,9 +392,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   if (tags.length > 0) {
     tags.forEach((tag) => {
-      const path = `/${basePath}/${tagsPath}/${kebabCase(
-        tag.fieldValue,
-      )}`.replace(/\/\/+/g, `/`)
+      const path = `/${basePath}/${tagsPath}/${kebabCase(tag.fieldValue)}`.replace(/\/\/+/g, `/`)
 
       createPage({
         path,

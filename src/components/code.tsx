@@ -76,8 +76,7 @@ const Code = ({
   const [language, { title = `` }] = getParams(blockClassName)
   const shouldHighlightLine = calculateLinesToHighlight(metastring)
 
-  const hasLineNumbers =
-    !noLineNumbers && language !== `noLineNumbers` && showLineNumbers
+  const hasLineNumbers = !noLineNumbers && language !== `noLineNumbers` && showLineNumbers
 
   if (props[`react-live`]) {
     return (
@@ -92,25 +91,16 @@ const Code = ({
     )
   }
   return (
-    <Highlight
-      {...defaultProps}
-      code={codeString}
-      language={language}
-      theme={theme}
-    >
+    <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <React.Fragment>
+        <>
           {title && (
             <div className="code-title">
               <div>{title}</div>
             </div>
           )}
           <div className="gatsby-highlight" data-language={language}>
-            <pre
-              className={className}
-              style={style}
-              data-linenumber={hasLineNumbers}
-            >
+            <pre className={className} style={style} data-linenumber={hasLineNumbers}>
               {showCopyButton && <Copy content={codeString} fileName={title} />}
               <code className={`language-${language}`}>
                 {tokens.map((line, i) => {
@@ -122,9 +112,7 @@ const Code = ({
 
                   return (
                     <div {...lineProps}>
-                      {hasLineNumbers && (
-                        <span className="line-number-style">{i + 1}</span>
-                      )}
+                      {hasLineNumbers && <span className="line-number-style">{i + 1}</span>}
                       {line.map((token, key) => (
                         <span {...getTokenProps({ token, key })} />
                       ))}
@@ -134,7 +122,7 @@ const Code = ({
               </code>
             </pre>
           </div>
-        </React.Fragment>
+        </>
       )}
     </Highlight>
   )

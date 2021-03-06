@@ -1,5 +1,5 @@
-import Moc from '../components/moc'
 import { graphql } from 'gatsby'
+import Moc from '../components/moc'
 
 export default Moc
 

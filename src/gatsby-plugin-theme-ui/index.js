@@ -1,6 +1,6 @@
-import { merge } from "theme-ui"
-import { transparentize } from "@theme-ui/color"
-import { tailwind } from "@theme-ui/presets"
+import { merge } from 'theme-ui'
+import { transparentize } from '@theme-ui/color'
+import { tailwind } from '@theme-ui/presets'
 
 const theme = merge(tailwind, {
   initialColorModeName: `light`,
@@ -42,8 +42,8 @@ const theme = merge(tailwind, {
       fontSize: [1, 1, 2],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
-      "--baseline-multiplier": 0.179,
-      "--x-height-multiplier": 0.35,
+      '--baseline-multiplier': 0.179,
+      '--x-height-multiplier': 0.35,
       wordBreak: `break-word`,
     },
     ul: {
@@ -51,8 +51,8 @@ const theme = merge(tailwind, {
         fontSize: [1, 1, 2],
         letterSpacing: `-0.003em`,
         lineHeight: `body`,
-        "--baseline-multiplier": 0.179,
-        "--x-height-multiplier": 0.35,
+        '--baseline-multiplier': 0.179,
+        '--x-height-multiplier': 0.35,
       },
     },
     ol: {
@@ -60,8 +60,8 @@ const theme = merge(tailwind, {
         fontSize: [1, 1, 2],
         letterSpacing: `-0.003em`,
         lineHeight: `body`,
-        "--baseline-multiplier": 0.179,
-        "--x-height-multiplier": 0.35,
+        '--baseline-multiplier': 0.179,
+        '--x-height-multiplier': 0.35,
       },
     },
     h1: {
@@ -154,10 +154,10 @@ const theme = merge(tailwind, {
     fontFamily: `body`,
     letterSpacing: `0.025rem`,
     transition: `default`,
-    "&[disabled]": {
+    '&[disabled]': {
       cursor: `not-allowed`,
     },
-    ":not([disabled]):hover": {
+    ':not([disabled]):hover': {
       bg: `primary`,
       color: `white`,
     },
@@ -186,11 +186,11 @@ const theme = merge(tailwind, {
     secondary: {
       color: `secondary`,
       textDecoration: `none`,
-      ":hover": {
+      ':hover': {
         color: `heading`,
         textDecoration: `underline`,
       },
-      ":focus": {
+      ':focus': {
         color: `heading`,
       },
     },

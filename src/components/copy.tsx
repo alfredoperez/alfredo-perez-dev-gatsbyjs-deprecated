@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { useState } from "react"
+import { jsx } from 'theme-ui'
+import { useState } from 'react'
 
-import copyToClipboard from "../utils/copy-to-clipboard"
-import { visuallyHidden } from "../styles/utils"
+import copyToClipboard from '../utils/copy-to-clipboard'
+import { visuallyHidden } from '../styles/utils'
 
 const delay = (duration: number) => new Promise((resolve) => setTimeout(resolve, duration))
 

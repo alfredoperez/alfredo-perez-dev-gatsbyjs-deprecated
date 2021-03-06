@@ -1,1 +1,1 @@
-require("typeface-ibm-plex-sans");
+require('typeface-ibm-plex-sans')

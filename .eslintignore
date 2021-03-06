@@ -1,0 +1,9 @@
+node_modules
+coverage
+dist
+build
+example
+cache
+content
+public
+/*.d.ts
