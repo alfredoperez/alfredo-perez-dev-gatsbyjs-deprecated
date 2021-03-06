@@ -4,6 +4,7 @@ description:
 tags: ["#status/seed🌱", "#ngrx", "#angular"]
 created: 1/30/2021
 updated: 2/23/21
+type: note
 ---
 
 MOCs:

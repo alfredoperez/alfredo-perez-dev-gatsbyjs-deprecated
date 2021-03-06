@@ -1,11 +1,10 @@
 module.exports = {
   basePath: '/',
-  blogPath: `/blog`,
-  postsPath: `content/posts`,
   postsPrefix: `/`,
   digitalGardenPath: `/digital-garden`,
   notesPath: `content/notes`,
   notesPrefix: `/notes/`,
+  mocsPrefix: `/mocs/`,
   pagesPath: `content/pages`,
   tagsPath: `/tags`,
   externalLinks: [
@@ -25,7 +24,7 @@ module.exports = {
     },
     {
       title: `About`,
-      slug: `/about`,
+      slug: `/notes/how-this-works`,
     },
   ],
   showLineNumbers: true,
