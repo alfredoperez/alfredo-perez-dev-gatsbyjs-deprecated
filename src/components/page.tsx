@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx, Heading } from "theme-ui"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "./layout"
-import SEO from "./seo"
+import { jsx, Heading } from 'theme-ui'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import Layout from './layout'
+import SEO from './seo'
 
 type PageProps = {
   data: {

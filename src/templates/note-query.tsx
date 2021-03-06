@@ -1,5 +1,5 @@
-import Note from '../components/note'
 import { graphql } from 'gatsby'
+import Note from '../components/note'
 
 export default Note
 
@@ -13,9 +13,7 @@ export default Note
 // }
 export const query = graphql`
   query($slug: String!, $formatString: String!) {
-    note(
-    slug: { eq: $slug }
-    ) {
+    note(slug: { eq: $slug }) {
       slug
       title
       created(formatString: $formatString)

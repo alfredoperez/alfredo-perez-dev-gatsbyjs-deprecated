@@ -5,11 +5,7 @@ export default Homepage
 
 export const query = graphql`
   query($formatString: String!) {
-    allNote(
-      filter: { type: { eq: "note" } }
-      sort: { fields: created, order: DESC }
-      limit: 3
-    ) {
+    allNote(filter: { type: { eq: "note" } }, sort: { fields: created, order: DESC }, limit: 3) {
       nodes {
         slug
         title

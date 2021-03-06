@@ -43,21 +43,19 @@ const Homepage = ({
         <Hero />
       </section>
       <Title text="Latest Notes">
-        <Link to={replaceSlashes(`/${basePath}/${digitalGardenPath}`)}>
-          View All Notes
-        </Link>
+        <Link to={replaceSlashes(`/${basePath}/${digitalGardenPath}`)}>View All Notes</Link>
       </Title>
       <Listing notes={notes} showTags={false} />
       <Title text="Maps of content">
-        {/*<Link to={replaceSlashes(`/${basePath}/${digitalGardenPath}`)}>*/}
-        {/*  View All Notes*/}
-        {/*</Link>*/}
+        {/* <Link to={replaceSlashes(`/${basePath}/${digitalGardenPath}`)}> */}
+        {/*  View All Notes */}
+        {/* </Link> */}
       </Title>
       <Listing notes={mocs} showTags={false} />
 
-      {/*<List sx={{ variant: `section_bottom` }}>*/}
-      {/*  <Bottom />*/}
-      {/*</List>*/}
+      {/* <List sx={{ variant: `section_bottom` }}> */}
+      {/*  <Bottom /> */}
+      {/* </List> */}
     </Layout>
   )
 }

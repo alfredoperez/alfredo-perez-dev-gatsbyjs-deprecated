@@ -15,11 +15,7 @@ const NoteListItem = ({ note, showTags = true }: NoteItemProps) => {
   const noteLink = `/notes${note.slug.toLocaleLowerCase()}`
   return (
     <Box mb={4}>
-      <TLink
-        as={Link}
-        to={noteLink}
-        sx={{ fontSize: [1, 2, 3], color: `text` }}
-      >
+      <TLink as={Link} to={noteLink} sx={{ fontSize: [1, 2, 3], color: `text` }}>
         {note.title}
       </TLink>
       <p
