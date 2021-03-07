@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from 'react'
 import { Heading, jsx, Link as TLink } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Flex } from '@theme-ui/components'
