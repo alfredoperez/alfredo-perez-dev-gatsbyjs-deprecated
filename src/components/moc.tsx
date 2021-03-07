@@ -27,7 +27,6 @@
 import { Heading, jsx } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import Layout from './layout'
 import ItemTags from './item-tags'
 import SEO from './seo'
 import { NoteEntity } from '../models/note.entity'
@@ -42,7 +41,7 @@ const px = [`32px`, `16px`, `8px`, `4px`]
 const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
 const Moc = ({ data: { note } }: MocProps) => (
-  <Layout>
+  <>
     <SEO
       title={note.title}
       description={note.description ? note.description : note.excerpt}
@@ -83,7 +82,7 @@ const Moc = ({ data: { note } }: MocProps) => (
     >
       <MDXRenderer>{note.body}</MDXRenderer>
     </section>
-  </Layout>
+  </>
 )
 
 export default Moc

@@ -4,7 +4,6 @@ import { Flex } from '@theme-ui/components'
 import useBlogConfig from '../hooks/use-blog-config'
 import ColorModeToggle from './colormode-toggle'
 import Navigation from './navigation'
-import HeaderTitle from './header-title'
 import logo from '../../static/logo.png'
 
 const Header = () => {
@@ -19,8 +18,8 @@ const Header = () => {
   return (
     <header sx={{ mb: [5, 6] }}>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
-        <HeaderTitle />
-        <img src={logo} alt="Logo" />
+        {/*<HeaderTitle />*/}
+        <img src={logo} alt="Logo" height={75} />
         <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
       </Flex>
       <div

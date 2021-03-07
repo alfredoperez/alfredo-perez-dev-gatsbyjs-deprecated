@@ -2,7 +2,6 @@
 import { Heading, jsx, Link as TLink } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Flex } from '@theme-ui/components'
-import Layout from './layout'
 import Listing from './listing'
 import useBlogConfig from '../hooks/use-blog-config'
 import replaceSlashes from '../utils/replace-slashes'
@@ -19,7 +18,7 @@ const DigitalGarden = (props: DigitalGardenProps) => {
   const { tagsPath, basePath } = useBlogConfig()
 
   return (
-    <Layout>
+    <>
       <SEO title="Digital Garden" />
       <Flex
         sx={{
@@ -40,7 +39,7 @@ const DigitalGarden = (props: DigitalGardenProps) => {
         </TLink>
       </Flex>
       <Listing notes={notes} sx={{ mt: [4, 5] }} />
-    </Layout>
+    </>
   )
 }
 

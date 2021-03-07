@@ -1,7 +1,7 @@
 /** @jsx jsx */
+import React from 'react'
 import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
-import Layout from './layout'
 import Title from './title'
 import Listing from './listing'
 import useBlogConfig from '../hooks/use-blog-config'
@@ -31,7 +31,7 @@ const Homepage = ({
   const { siteTitle } = useSiteMetadata()
 
   return (
-    <Layout>
+    <>
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <section
         sx={{
@@ -56,7 +56,7 @@ const Homepage = ({
       {/* <List sx={{ variant: `section_bottom` }}> */}
       {/*  <Bottom /> */}
       {/* </List> */}
-    </Layout>
+    </>
   )
 }
 
