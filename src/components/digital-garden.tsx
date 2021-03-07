@@ -11,7 +11,7 @@ import { NoteEntity } from '../models/note.entity'
 
 type DigitalGardenProps = {
   data: { allNote: { nodes: Array<NoteEntity> } }
-  [key: string]: any
+  [key: string]: unknown
 }
 
 const DigitalGarden = (props: DigitalGardenProps) => {
@@ -39,7 +39,7 @@ const DigitalGarden = (props: DigitalGardenProps) => {
           View all tags
         </TLink>
       </Flex>
-      {!!notes && <Listing notes={notes} sx={{ mt: [4, 5] }} />}
+      <Listing notes={notes} sx={{ mt: [4, 5] }} />
     </Layout>
   )
 }

@@ -1,83 +1,80 @@
 ---
 title: Enhancing NgRx Entity with Atomic State
-description: 
-tags: ["angular", "ngrx"]
+description:
+tags: ['angular', 'ngrx']
 type: note
 status: budd
 created: 2/23/21
-updated: 
+updated:
 ---
 
+# Enhancing NgRx Entity with Atomic State
 
+Dashboard and Search Module have an interface for `CallState`
 
-# Enhancing NgRx Entity with Atomic State 
+```typescript
+export enum LoadingState {
+  INIT = 'INIT',
+  LOADING = 'LOADING',
+  LOADED = 'LOADED',
+}
 
- Dashboard and Search Module have an interface for `CallState`
+export interface ErrorState {
+  errorMsg: string
+}
 
-``` typescript
-export enum LoadingState {  
-   INIT = 'INIT',  
-   LOADING = 'LOADING',  
-   LOADED = 'LOADED'  
-}  
-  
-export interface ErrorState {  
-   errorMsg: string;  
-}  
-  
-export type CallState = LoadingState | ErrorState;  
-  
-export interface EntityState<T> {  
-entity: T;  
-callState: CallState;  
+export type CallState = LoadingState | ErrorState
+
+export interface EntityState<T> {
+  entity: T
+  callState: CallState
 }
 ```
 
 ---
+
 1. Move this interface to a shared place and add more states
 
 ```typescript
-export const enum RequestState {  
-	 INIT = 'INIT',  
-	 REQUESTING = 'REQUESTING',  
-	 REQUESTING_MORE = 'REQUESTING_MORE',  
-	 PROCESSING = 'PROCESSING',
-	 RESOLVED = 'RESOLVED',  
-	 FAILED = 'FAILED',  
-	 REJECTED = 'REJECTED',  
-	 STOPPING = 'STOPPING',  
-	 STOPPED = 'STOPPED'  
+export const enum RequestState {
+  INIT = 'INIT',
+  REQUESTING = 'REQUESTING',
+  REQUESTING_MORE = 'REQUESTING_MORE',
+  PROCESSING = 'PROCESSING',
+  RESOLVED = 'RESOLVED',
+  FAILED = 'FAILED',
+  REJECTED = 'REJECTED',
+  STOPPING = 'STOPPING',
+  STOPPED = 'STOPPED',
 }
 
 export interface AtomicEntityState<T> extends EntityState<T> {
-	// The total number of entities
-	total: number;
-	// The search query executed
-	searchQuery: SearchQuery;
-	// The current state of the request
-	atomicState: AtomicState;
+  // The total number of entities
+  total: number
+  // The search query executed
+  searchQuery: SearchQuery
+  // The current state of the request
+  atomicState: AtomicState
 }
-
 ```
 
 ---
+
 2. Add common selectors
 
 ```typescript
 export interface AtomicStateEntitySelectors<T, V> extends EntitySelectors<T, V> {
-
-selectIsLoading: (state: V) => boolean;
-selectIsLoadingMore: (state: V) => boolean;
-selectHasNoResults: (state: V) => boolean;
-selectHasError: (state: V) => boolean;
-selectErrorMessage: (state: V) => string;
-selectAllResultsTotal: (state: V) => number;
-selectTotalPages: (state: V) => number;
-selectIsFirstRequest: (state: V) => boolean;
-selectHasError: (state: V) => boolean;  
-selectErrorMessage: (state: V) => string;
+  selectIsLoading: (state: V) => boolean
+  selectIsLoadingMore: (state: V) => boolean
+  selectHasNoResults: (state: V) => boolean
+  selectHasError: (state: V) => boolean
+  selectErrorMessage: (state: V) => string
+  selectAllResultsTotal: (state: V) => number
+  selectTotalPages: (state: V) => number
+  selectIsFirstRequest: (state: V) => boolean
+  selectHasError: (state: V) => boolean
+  selectErrorMessage: (state: V) => string
 }
-
 ```
 
 ---

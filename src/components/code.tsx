@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* eslint react/destructuring-assignment: 0 */
 import React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
@@ -20,13 +21,13 @@ function getParams(className = ``) {
   const [lang = ``, params = ``] = className.split(`:`)
 
   return [
-    // @ts-ignore
+    // @ts-expect-error
     lang.split(`language-`).pop().split(`{`).shift(),
   ].concat(
-    // @ts-ignore
+    // @ts-expect-error
     params.split(`&`).reduce((merged, param) => {
       const [key, value] = param.split(`=`)
-      // @ts-ignore
+      // @ts-expect-error
       merged[key] = value
       return merged
     }, {}),

@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/* eslint-disable */
 import { jsx } from 'theme-ui'
 
 type Props = {

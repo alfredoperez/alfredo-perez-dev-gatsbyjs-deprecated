@@ -1,10 +1,10 @@
---- 
-title: {{title}}
-description:   
-tags: []  
-created: {{date}}  
-updated:  
+---
+title: { { title } }
+description:
+tags: []
+created: { { date } }
+updated:
 type: moc
 ---
 
-# {{title}}
+#

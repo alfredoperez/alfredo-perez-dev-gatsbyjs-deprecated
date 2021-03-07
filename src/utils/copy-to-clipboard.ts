@@ -4,7 +4,7 @@ const copyToClipboard = (str: string) => {
    * fallback to older browsers (including Safari)
    * if clipboard API is not supported
    */
-  if (!clipboard || typeof clipboard.writeText !== `function`) {
+  if (typeof clipboard.writeText !== `function`) {
     const textarea = document.createElement(`textarea`)
     textarea.value = str
     textarea.setAttribute(`readonly`, `true`)

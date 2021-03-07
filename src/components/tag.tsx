@@ -19,7 +19,7 @@ type TagProps = {
     isCreatedByStatefulCreatePages: boolean
     slug: string
     name: string
-    [key: string]: any
+    [key: string]: unknown
   }
 }
 

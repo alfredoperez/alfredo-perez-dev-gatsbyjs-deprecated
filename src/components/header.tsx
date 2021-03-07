@@ -5,13 +5,13 @@ import useBlogConfig from '../hooks/use-blog-config'
 import ColorModeToggle from './colormode-toggle'
 import Navigation from './navigation'
 import HeaderTitle from './header-title'
-import HeaderExternalLinks from './header-external-links'
+import logo from '../../static/logo.png'
 
 const Header = () => {
   const { navigation: nav } = useBlogConfig()
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
-  const toggleColorMode = (e: any) => {
+  const toggleColorMode = (e: unknown) => {
     e.preventDefault()
     setColorMode(isDark ? `light` : `dark`)
   }
@@ -20,6 +20,7 @@ const Header = () => {
     <header sx={{ mb: [5, 6] }}>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
         <HeaderTitle />
+        <img src={logo} alt="Logo" />
         <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
       </Flex>
       <div
@@ -36,7 +37,6 @@ const Header = () => {
         }}
       >
         <Navigation nav={nav} />
-        <HeaderExternalLinks />
       </div>
     </header>
   )
