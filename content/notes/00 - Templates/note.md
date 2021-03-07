@@ -1,15 +1,11 @@
 ---
-title: {{title}}
-description: 
+title: { { title } }
+description:
 tags: []
 type: note
 status: seed
-created: {{date}}
-updated: 
+created: { { date } }
+updated:
 ---
 
-# {{title}}
-
-## --CONTENT--
-
-
+# --CONTENT--

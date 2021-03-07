@@ -13,7 +13,7 @@ type LayoutProps = { children: React.ReactNode; className?: string }
 const Layout = ({ children, className = `` }: LayoutProps) => (
   <React.Fragment>
     <Global
-      styles={(theme) => ({
+      styles={(theme: { colors: { text: string; background: string } }) => ({
         '*': {
           boxSizing: `inherit`,
         },

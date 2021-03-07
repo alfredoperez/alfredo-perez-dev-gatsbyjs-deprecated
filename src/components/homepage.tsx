@@ -1,16 +1,16 @@
 /** @jsx jsx */
+import React from 'react'
 import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
-import Layout from './layout'
 import Title from './title'
 import Listing from './listing'
 import useBlogConfig from '../hooks/use-blog-config'
 import useSiteMetadata from '../hooks/use-site-metadata'
 import replaceSlashes from '../utils/replace-slashes'
 import { visuallyHidden } from '../styles/utils'
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import Hero from '../texts/hero'
-// @ts-ignore
 import { NoteEntity } from '../models/note.entity'
 
 type HomePageProps = {
@@ -18,7 +18,7 @@ type HomePageProps = {
     allNote: { nodes: Array<NoteEntity> }
     allMoc: { nodes: Array<NoteEntity> }
   }
-  [key: string]: any
+  [key: string]: unknown
 }
 
 const Homepage = ({
@@ -31,7 +31,7 @@ const Homepage = ({
   const { siteTitle } = useSiteMetadata()
 
   return (
-    <Layout>
+    <>
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <section
         sx={{
@@ -56,7 +56,7 @@ const Homepage = ({
       {/* <List sx={{ variant: `section_bottom` }}> */}
       {/*  <Bottom /> */}
       {/* </List> */}
-    </Layout>
+    </>
   )
 }
 

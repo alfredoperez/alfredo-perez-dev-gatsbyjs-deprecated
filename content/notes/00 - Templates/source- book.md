@@ -1,11 +1,11 @@
 ---
-title: {{title}}
-authors: 
-links: 
+title: { { title } }
+authors:
+links:
 type: book
-tags: [] 
-created: {{date}}
+tags: []
+created: { { date } }
 updated:
 ---
 
-# {{title}}
+#

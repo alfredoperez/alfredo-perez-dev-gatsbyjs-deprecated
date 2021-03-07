@@ -1,10 +1,10 @@
 ---
-title: {{title}}
+title: { { title } }
 authors: []
-tags: [] 
+tags: []
 type: course
-created: {{date}}
+created: { { date } }
 updated:
 ---
 
-# {{title}}
+#

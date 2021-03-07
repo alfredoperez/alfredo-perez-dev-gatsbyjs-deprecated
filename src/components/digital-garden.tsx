@@ -1,8 +1,8 @@
 /** @jsx jsx */
+import React from 'react'
 import { Heading, jsx, Link as TLink } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Flex } from '@theme-ui/components'
-import Layout from './layout'
 import Listing from './listing'
 import useBlogConfig from '../hooks/use-blog-config'
 import replaceSlashes from '../utils/replace-slashes'
@@ -11,7 +11,7 @@ import { NoteEntity } from '../models/note.entity'
 
 type DigitalGardenProps = {
   data: { allNote: { nodes: Array<NoteEntity> } }
-  [key: string]: any
+  [key: string]: unknown
 }
 
 const DigitalGarden = (props: DigitalGardenProps) => {
@@ -19,7 +19,7 @@ const DigitalGarden = (props: DigitalGardenProps) => {
   const { tagsPath, basePath } = useBlogConfig()
 
   return (
-    <Layout>
+    <>
       <SEO title="Digital Garden" />
       <Flex
         sx={{
@@ -39,8 +39,8 @@ const DigitalGarden = (props: DigitalGardenProps) => {
           View all tags
         </TLink>
       </Flex>
-      {!!notes && <Listing notes={notes} sx={{ mt: [4, 5] }} />}
-    </Layout>
+      <Listing notes={notes} sx={{ mt: [4, 5] }} />
+    </>
   )
 }
 

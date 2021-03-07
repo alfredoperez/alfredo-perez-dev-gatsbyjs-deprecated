@@ -1,9 +1,11 @@
-node_modules
-coverage
-dist
+.cache
+.netlify
+/*.d.ts
 build
-example
 cache
 content
+coverage
+dist
+example
+node_modules
 public
-/*.d.ts

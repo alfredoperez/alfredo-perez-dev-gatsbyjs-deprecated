@@ -1,17 +1,16 @@
---- 
+---
 title: _Keto
-description:   
-tags: []  
+description:
+tags: []
 created: 2/23/21
-updated:  2/23/21
+updated: 2/23/21
 type: moc
 ---
 
-
-
-# _Keto
+# \_Keto
 
 Meal Plans
+
 - [[Keto Mediterranean]]
 - [[Keto Fast]]
 - [[Fat Fast]]

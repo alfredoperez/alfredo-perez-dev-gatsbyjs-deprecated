@@ -1,8 +1,8 @@
 /** @jsx jsx */
+import React from 'react'
 import { Heading, jsx, Link as TLink } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
 import { Link } from 'gatsby'
-import Layout from './layout'
 import useBlogConfig from '../hooks/use-blog-config'
 import Listing from './listing'
 import replaceSlashes from '../utils/replace-slashes'
@@ -19,7 +19,7 @@ type TagProps = {
     isCreatedByStatefulCreatePages: boolean
     slug: string
     name: string
-    [key: string]: any
+    [key: string]: unknown
   }
 }
 
@@ -33,7 +33,7 @@ const Tag = (props: TagProps) => {
   const { tagsPath, basePath } = useBlogConfig()
 
   return (
-    <Layout>
+    <>
       <SEO title={`Tag: ${pageContext.name}`} />
       <Flex
         sx={{
@@ -54,7 +54,7 @@ const Tag = (props: TagProps) => {
         </TLink>
       </Flex>
       <Listing notes={notes} sx={{ mt: [4, 5] }} />
-    </Layout>
+    </>
   )
 }
 
