@@ -31,7 +31,7 @@ const Homepage = ({
   const { siteTitle } = useSiteMetadata()
 
   return (
-    <>
+    <React.Fragment>
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <section
         sx={{
@@ -56,7 +56,7 @@ const Homepage = ({
       {/* <List sx={{ variant: `section_bottom` }}> */}
       {/*  <Bottom /> */}
       {/* </List> */}
-    </>
+    </React.Fragment>
   )
 }
 

@@ -41,7 +41,7 @@ const px = [`32px`, `16px`, `8px`, `4px`]
 const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
 const Moc = ({ data: { note } }: MocProps) => (
-  <>
+  <React.Fragment>
     <SEO
       title={note.title}
       description={note.description ? note.description : note.excerpt}
@@ -82,7 +82,7 @@ const Moc = ({ data: { note } }: MocProps) => (
     >
       <MDXRenderer>{note.body}</MDXRenderer>
     </section>
-  </>
+  </React.Fragment>
 )
 
 export default Moc

@@ -33,7 +33,7 @@ const Tag = (props: TagProps) => {
   const { tagsPath, basePath } = useBlogConfig()
 
   return (
-    <>
+    <React.Fragment>
       <SEO title={`Tag: ${pageContext.name}`} />
       <Flex
         sx={{
@@ -54,7 +54,7 @@ const Tag = (props: TagProps) => {
         </TLink>
       </Flex>
       <Listing notes={notes} sx={{ mt: [4, 5] }} />
-    </>
+    </React.Fragment>
   )
 }
 

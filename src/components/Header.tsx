@@ -2,9 +2,9 @@
 import { jsx, useColorMode } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
 import useBlogConfig from '../hooks/use-blog-config'
+import Navigation from './Navigation'
+import Logo from './Logo'
 import ColorModeToggle from './colormode-toggle'
-import Navigation from './navigation'
-import logo from '../../static/logo.png'
 
 const Header = () => {
   const { navigation: nav } = useBlogConfig()
@@ -17,12 +17,7 @@ const Header = () => {
 
   return (
     <header sx={{ mb: [5, 6] }}>
-      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
-        {/*<HeaderTitle />*/}
-        <img src={logo} alt="Logo" height={75} />
-        <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
-      </Flex>
-      <div
+      <Flex
         sx={{
           boxSizing: `border-box`,
           display: `flex`,
@@ -35,8 +30,12 @@ const Header = () => {
           flexFlow: `wrap`,
         }}
       >
-        <Navigation nav={nav} />
-      </div>
+        <Logo />
+        <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, marginRight: `2rem` }}>
+          <Navigation nav={nav} sx={{ marginRight: `2rem` }} />
+          <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
+        </Flex>
+      </Flex>
     </header>
   )
 }

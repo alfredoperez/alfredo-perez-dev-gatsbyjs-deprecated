@@ -13,7 +13,7 @@ const ItemTags = ({ tags }: TagsProps) => {
   const { tagsPath, basePath } = useBlogConfig()
 
   return (
-    <>
+    <React.Fragment>
       {tags.map((tag, i) => (
         <React.Fragment key={tag.slug}>
           {!!i && `, `}
@@ -22,7 +22,7 @@ const ItemTags = ({ tags }: TagsProps) => {
           </TLink>
         </React.Fragment>
       ))}
-    </>
+    </React.Fragment>
   )
 }
 

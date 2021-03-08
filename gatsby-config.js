@@ -19,6 +19,12 @@ module.exports = {
   siteMetadata,
   plugins: [
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: options.notesPath,

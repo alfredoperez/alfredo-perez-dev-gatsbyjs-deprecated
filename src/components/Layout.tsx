@@ -3,15 +3,20 @@ import React from 'react'
 import { Global } from '@emotion/core'
 import { Box, Container, jsx } from 'theme-ui'
 import SEO from './seo'
-import Header from './header'
+import Header from './Header'
 import Footer from './footer'
 import CodeStyles from '../styles/code'
 import SkipNavLink from './skip-nav'
+import 'normalize.css'
+import GlobalStyles from '../styles/GlobalStyles'
+import Typography from '../styles/Typography'
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
 const Layout = ({ children, className = `` }: LayoutProps) => (
   <React.Fragment>
+    <GlobalStyles />
+    <Typography />
     <Global
       styles={(theme: { colors: { text: string; background: string } }) => ({
         '*': {
