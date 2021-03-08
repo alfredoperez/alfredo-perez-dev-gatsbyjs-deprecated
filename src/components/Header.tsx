@@ -5,10 +5,14 @@ import useBlogConfig from '../hooks/use-blog-config'
 import Navigation from './Navigation'
 import Logo from './Logo'
 import ColorModeToggle from './colormode-toggle'
+import { Link } from 'gatsby'
+import replaceSlashes from '../utils/replace-slashes'
+import useSiteMetadata from '../hooks/use-site-metadata'
 
 const Header = () => {
-  const { navigation: nav } = useBlogConfig()
+  const { navigation: nav, basePath } = useBlogConfig()
   const [colorMode, setColorMode] = useColorMode()
+  const { siteTitle } = useSiteMetadata()
   const isDark = colorMode === `dark`
   const toggleColorMode = (e: unknown) => {
     e.preventDefault()
@@ -30,7 +34,13 @@ const Header = () => {
           flexFlow: `wrap`,
         }}
       >
-        <Logo />
+        <Link
+          to={replaceSlashes(`/${basePath}`)}
+          aria-label={`${siteTitle} - Back to home`}
+          sx={{ color: `heading`, textDecoration: `none` }}
+        >
+          <Logo />
+        </Link>
         <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, marginRight: `2rem` }}>
           <Navigation nav={nav} sx={{ marginRight: `2rem` }} />
           <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />

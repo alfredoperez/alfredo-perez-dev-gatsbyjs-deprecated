@@ -15,7 +15,7 @@ const mdxResolverPassthrough = (fieldName) => async (source, args, context, info
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
-exports.createSchemaCustomization = ({ actions, schema }) => {
+exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes, createFieldExtension } = actions
 
   const { basePath } = options
@@ -184,7 +184,7 @@ const processTags = (tags) => {
 
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
   const { createNode, createParentChildLink, createNodeField } = actions
-  const { postsPath, pagesPath, notesPath } = options
+  const { pagesPath, notesPath } = options
 
   // Make sure that it's an MDX node
   if (node.internal.type !== `Mdx`) {
@@ -224,7 +224,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       created,
       updated,
       tags,
-      slug,
+
       type,
       status,
       description,
@@ -261,6 +261,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
     createParentChildLink({ parent: node, child: getNode(mdxNoteId) })
   }
+
   // Check for "pages" and create the "Page" type
   if (node.internal.type === `Mdx` && source === pagesPath) {
     const fieldData = {
@@ -297,7 +298,7 @@ const noteTemplate = require.resolve(`./src/templates/note-query.tsx`)
 const mocTemplate = require.resolve(`./src/templates/note-query.tsx`)
 const digitalGardenTemplate = require.resolve(`./src/templates/digital-garden-query.tsx`)
 
-exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const { basePath, tagsPath, formatString, notesPrefix, mocsPrefix, digitalGardenPath } = options
