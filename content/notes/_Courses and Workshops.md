@@ -1,5 +1,5 @@
 ---
-title: Courses and Workshops
+title: _Courses and Workshops
 description:
 tags: []
 created: 2/22/21

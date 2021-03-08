@@ -9,7 +9,7 @@ updated: 2/23/21
 
 https://www.youtube.com/watch?v=r-buPWeuTPc
 
-All notes are in top level structure.
+All notes are in top-level structure.
 **Why?** object permanence in ADHD effects preference for top level structure.
 Uses inks and tags to replace the folder structure
 Uses declarative titles to find data
