@@ -5,6 +5,12 @@ require('typeface-ibm-plex-sans')
 
 const Typography = createGlobalStyle`
   html {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 2rem;
+  }
+  html {
   //  font-family: FrenchFries, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--black);
   }

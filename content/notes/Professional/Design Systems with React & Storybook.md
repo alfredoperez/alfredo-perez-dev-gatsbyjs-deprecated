@@ -7,12 +7,6 @@ created: 1/30/21
 updated: 2/23/21
 ---
 
-# Design Systems with React & Storybook
-
-# Design Systems with React & Storybook
-
-## Notes
-
 - Links: [Repository](https://github.com/emmabostian/fem-design-systems) | [Website](https://fem-design-systems.netlify.com/) | [Slides](https://static.frontendmasters.com/resources/2020-03-12-design-systems-storybook/design-systems-formatted.pdf)
 
 - Design system will allow creating a modular experience thanks to the use of components

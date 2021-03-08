@@ -8,7 +8,6 @@ created: 2/23/21
 updated:
 ---
 
-# Enhancing NgRx Entity with Atomic State
 
 Dashboard and Search Module have an interface for `CallState`
 

@@ -15,7 +15,7 @@
     "lint:all": "yarn lint && yarn lint:css && yarn prettier",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx",
     "stylelint": "stylelint --ignore-path .gitignore './src/**/*.ts'",
-    "prettier": "prettier --ignore-path .gitignore --check  \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "prettier": "prettier --ignore-path .gitignore --check  \"**/*.{js,jsx,ts,tsx,json}\"",
     "prettier:fix": "yarn prettier --write"
   },
   "dependencies": {

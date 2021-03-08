@@ -8,12 +8,7 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --grey: #efefef;
   }
-  html {
-    font-size: 10px;
-  }
-  body {
-    font-size: 2rem;
-  }
+
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;

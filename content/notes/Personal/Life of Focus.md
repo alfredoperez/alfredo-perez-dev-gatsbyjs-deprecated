@@ -7,8 +7,6 @@ created: 2/21/21
 updated: 3/6/21
 ---
 
-# Life of Focus
-
 ## How to track your deep work?
 
 - Stopwatch Method:

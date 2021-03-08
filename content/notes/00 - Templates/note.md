@@ -1,10 +1,10 @@
 ---
-title: { { title } }
+title: {{ title }}
 description:
 tags: []
 type: note
 status: seed
-created: { { date } }
+created: {{ date }}
 updated:
 ---
 
