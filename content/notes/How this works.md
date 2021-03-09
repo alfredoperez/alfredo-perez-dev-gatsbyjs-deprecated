@@ -3,114 +3,95 @@ title: How this works
 description:
 tags: []
 type: note
-status: budd
+status: bud
 created: 1/30/21
 updated: 3/4/21
 ---
 
-# How this works
+This website is my digital garden! 
 
-- My workflow is located on https://whimsical.com/digital-garden-15FWj9nugBrPiv5e53SHp8
+The goal of this PKM/Digital Garden is to have a place for all the interesting things I come across and also a place where I can share what I am learning or exploring.
 
-## Notes
+I wanted to create something that integrates my writing process with my website and without feeling limited of only publishing finished articles.
 
--use a seedbox to dump notes
--use tags only on the frontmatter
+I write my notes using Obsidian and created a website with GatsbyJS to share them publicly.
 
-- How I separate note:
-  - Personal -> bullet journal for time blocking and goals, journal, habits, etc
-  - Work -> Private vault
-  - Obsidian: for the notes I will like to keep
-- Need to achieve less friction to write notes
-- Constrains can help toavoid hoarding notes
+
+## My note-making process
+
+Started by creating a mind map with the structure of my PKM system.  https://whimsical.com/digital-garden-15FWj9nugBrPiv5e53SHp8
+
+<iframe src="https://whimsical.com/digital-garden-15FWj9nugBrPiv5e53SHp8@2Ux7TurymN39FY8A9s57"></iframe>
+
+### Obsidian Vaults 
+
+
+Since everything is published automatically I use two Obsidian Vaults for notes:
+  - **Work** -> Work related  vault that never gets published
+  - **Digital Garden** -> Notes for my evergreen PKD/ Digital Garden site
+  
+	![https://res.cloudinary.com/dagkspppt/image/upload/v1615249389/2021-03-08\_18-22-52\_mxnsm9.png](https://res.cloudinary.com/dagkspppt/image/upload/v1615249389/2021-03-08_18-22-52_mxnsm9.png)
+
+
+###  Folders
+
+I have the following folders for notes in Obsidian:
+- **00 - Templates**: This is where I save all my templates. 
+- **Inbox**: Here I put all the notes that are in "seed" state or in idea. This helps me to have a place to dump notes and ideas before connecting them to other notes
+- **Personal**: Here I put all my personal notes
+- **Professional**: Here I put all my notes related to software development
+- **Root**: at the root folder we can find the main maps of contents and notes that describe how this system work. Usually this notes might represent a "Page" in the website
+- 
+### Types and Statuses
+
+![https://res.cloudinary.com/dagkspppt/image/upload/v1615249863/2021-03-08\_18-30-46\_ha0swh.png](https://res.cloudinary.com/dagkspppt/image/upload/v1615249863/2021-03-08_18-30-46_ha0swh.png)
+
+Notes can be either input or output notes. Where the input notes contains notes from another source and the output will be my original (evergreen) notes [[Personal/Linking Your Thinking#Evergreen Notes]]
+
+I use the `type` frontmatter property to identify them and for ease of use I create templates for each type
+
+Here are the different types of notes:
+
+- **Learning Notes**:Notes from workshops, courses, podcasts, videos or articles
+	- Workshop:  (`type: workshop`)
+	- Podcast:  (`type: podcast`)
+	- Course (`type: Course`)
+	- Video (`type: video`)
+	- Book (`type: book`)
+- **Evergreen Notes**:  (`type: note`) Articles, guides, or notes of things I create
+- **Inspiration**:  (`type: inspiration`)  this can be screenshots or links to websites can be used as inspiration when creating. This will be like my personal Pinterest
+- **MOCs**:  (`type: mocs`) Map of content note will have links to other notes and can be used as Launchpads to learn/read about specific subjects.
+- **Links**:  (`type: links`)  This note will contain only links for a related subject.
+
+### Status
+- **Seed**: ( `status: seed` )This might include a name or ideas to write. This type of notes are saved on the inbox folder
+- **Bud**: ( `status: bud` ) A note or an idea that is growing but not in a mature state
+- **Evergreen**:( `status:evergreen` ) a more mature idea that was finished and can keep growing
+- **Snag** (`status: snag`) - Notes that are not longer relevant and are archived
+
+
+###  Rules and Constrains
+- Use the status and type property in frontmatter to classify them
+- Put them in the Professional or Personal folder
+
+ Learning notes:
+- Make my own notes from the source instead of just storing the source
+- Use headers as a way to separate ideas. This will help to reference specific ideas in other notes
+
+Inspiration Notes:
+- Create an inspiration notes for a related subject and add screenshots and links
+
+Links:
+- ❓ This notes should contain a set of links
 
 ## Tools
-
-- Pocket for articles
+I use the following tools:
+- Pocket to highlight and read articles
 - Kindle for books
 - GatsbyJS to create site
 - Alfred for automation
 - Obsidian for note-making
+- Cloudinary to store images
 
-## Workflows
-
-<iframe src="https://whimsical.com/digital-garden-15FWj9nugBrPiv5e53SHp8@2Ux7TurymN39FY8A9s57"></iframe>
-
-### What are your use cases again?
-
-The goal of this PKM/Digital Garden is to have a place for all the interesting things I come across and also a place where I can share what I am learning or exploring.
-Some of the use cases are:
-
-- Learning Notes: Notes from workshops, courses, podcasts, videos or articles
-- Evergreen Notes: New things I am creating
-- Inspiration: this can be screenshots or links to websites I like
-- Links: This note will contain only links for a related subject.
-
-### What are your biggest sticking points?
-
-### What are your workflow rules?
-
-For Learning notes:
-
-- Make notes from the source instead of just storing the source
-- Use headers as a way to separate ideas. This will help to reference specific ideas in other notes
-- Use the type tags to identify them
-- Put them in the Professional or Personal folder
-
-For Evergreen Notes:
-
-- Use the status tags to identify them
-- Put them in the Professional or Personal folder
-
-For inspiration Notes:
-
-- Create an inspiration notes for a related subject and add screenshots and links
-
-## For Links Notes:
-
-### Where are you encountering new things?
-
-Web articles, Twitter, YouTube, Forums, books, courses, workshops
-
-### How are you processing the different things you encounter?
-
-- Articles:
-- Twitter:
-- YouTube:
-- Forums:
-- Books:
-- Courses:
-- Workshops:
-
-## Notes Types
-
-Notes can be either input or output notes. Where the input notes contains notes from another source and the output will be my original (evergreen) notes [[Personal/Linking Your Thinking#Evergreen Notes]]
-
-Here are the different types of notes:
-
-- **MOC**: ( #type/MOC ) [[00 - Templates/MOC]]
-- **Evergreen Notes**: This uses the [[note]]
-- **Learning Notes**: this contains all the notes related to things that I learn from other sources: [[00 - Templates/Sources]]
-  - **Workshop**: ( #type/workshop )
-  - **Podcast**: ( #type/podcast)
-  - **Course**: ( #type/course)
-  - **Book**: ( #type/book)
-  - **Video**: ( #type/video)
-
-## Evergreen Notes Statuses
-
-- **Seed**: ( #status/seed🌱 )This might include a name or ideas to write
-- **Budd**: ( #status/budd🌿 )A note or an idea that is growing but not in a mature state
-- **Evergreen**:( #status/evergreen🌳 ) a more mature idea that was finished and can keep growing
-- **Snag** ( #status/snag🍂) - Archive
-
-This statuses are represented via tags at the top of the note:
-
-## Folder setup
-
-Evertyhing that is setup for obsidian uses `00 - `
-
-## Tools Setup
-
-- Created a snippet with Alfred to add the actual date by typing `dz
-- Create image links from Cloudinary https://github.com/urre/alfredinary
+---
+related: [[Website Goals and Setup]]

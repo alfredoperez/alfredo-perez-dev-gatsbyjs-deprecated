@@ -7,8 +7,6 @@ created: 1/30/21
 updated: 2/23/21
 ---
 
-# [[Linking Your Thinking]]
-
 ## UNIT 1 - PKM & Idea Emergence
 
 **Linked Notes**- Now, with the ability to make fast notes, free notes, and smaller, concise notes—the need arose for a way to manage them better. Folders are no longer enough. Notes should be able to live in more than one place—just like how in our brains, many things can trigger the same idea. Enter the `Linked Note` and here we are.S-LYT Workshop

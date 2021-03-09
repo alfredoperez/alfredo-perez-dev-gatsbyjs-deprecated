@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react'
-import { jsx, Link as TLink, useColorMode } from 'theme-ui'
+import { jsx, Link as TLink } from 'theme-ui'
 import { Link } from 'gatsby'
 import useBlogConfig from '../hooks/use-blog-config'
 import replaceSlashes from '../utils/replace-slashes'
@@ -14,13 +14,6 @@ type NavigationProps = {
 
 const Navigation = ({ nav }: NavigationProps) => {
   const { basePath } = useBlogConfig()
-
-  const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === `dark`
-  const toggleColorMode = (e: unknown) => {
-    e.preventDefault()
-    setColorMode(isDark ? `light` : `dark`)
-  }
 
   return (
     <React.Fragment>

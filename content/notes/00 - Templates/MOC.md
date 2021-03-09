@@ -1,8 +1,8 @@
 ---
-title: { { title } }
+title: {{ title }}
 description:
 tags: []
-created: { { date } }
+created: {{ date }}
 updated:
 type: moc
 ---

@@ -8,8 +8,6 @@ created: 1/30/2021
 updated: 2/23/21
 ---
 
-# NgRx Best Practices
-
 ## Bedrock
 
 - Use SHARI Principle to define what goes into the store

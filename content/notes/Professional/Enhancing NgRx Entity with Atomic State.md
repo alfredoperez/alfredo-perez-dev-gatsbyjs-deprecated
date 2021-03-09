@@ -3,12 +3,11 @@ title: Enhancing NgRx Entity with Atomic State
 description:
 tags: ['angular', 'ngrx']
 type: note
-status: budd
+status: bud
 created: 2/23/21
 updated:
 ---
 
-# Enhancing NgRx Entity with Atomic State
 
 Dashboard and Search Module have an interface for `CallState`
 

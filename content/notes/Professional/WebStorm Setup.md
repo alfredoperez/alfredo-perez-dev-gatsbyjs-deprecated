@@ -5,7 +5,7 @@ tags: ['#IDE', '#setup']
 type: note
 status: seed
 created: 3/07/21
-updated:
+updated: 3/8/21
 ---
 
 # Plugins

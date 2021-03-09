@@ -8,10 +8,6 @@ created: 3/04/21
 updated: 3/6/21
 ---
 
-# The Compound Effect
-
-# [[The Compound Effect]]
-
 > _"The tiny choices you make today can lead to the successes and failures you experience tomorrow. Small steps and slight changes lead to major progress and massive results._ [^](https://www.meaningfulhq.com/the-compound-effect.html)
 
 > _“New or more information is **\*not** what you need—a new plan of **action** is. It’s time to create new behaviors and habits that are oriented away from sabotage and toward success. It’s that simple.”_ [^](https://www.meaningfulhq.com/the-compound-effect.html)
