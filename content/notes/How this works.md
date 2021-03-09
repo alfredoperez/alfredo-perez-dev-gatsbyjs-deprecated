@@ -16,7 +16,6 @@ I wanted to create something that integrates my writing process with my website 
 
 I write my notes using Obsidian and created a website with GatsbyJS to share them publicly.
 
-
 ## My note-making process
 
 Started by creating a mind map with the structure of my PKM system.  https://whimsical.com/digital-garden-15FWj9nugBrPiv5e53SHp8
@@ -41,7 +40,7 @@ I have the following folders for notes in Obsidian:
 - **Personal**: Here I put all my personal notes
 - **Professional**: Here I put all my notes related to software development
 - **Root**: at the root folder we can find the main maps of contents and notes that describe how this system work. Usually this notes might represent a "Page" in the website
-- 
+
 ### Types and Statuses
 
 ![https://res.cloudinary.com/dagkspppt/image/upload/v1615249863/2021-03-08\_18-30-46\_ha0swh.png](https://res.cloudinary.com/dagkspppt/image/upload/v1615249863/2021-03-08_18-30-46_ha0swh.png)

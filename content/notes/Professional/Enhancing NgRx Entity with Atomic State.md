@@ -3,13 +3,13 @@ title: Enhancing NgRx Entity with Atomic State
 description:
 tags: ['angular', 'ngrx']
 type: note
-status: bud
+status: evergreen
 created: 2/23/21
-updated:
+updated: 3/9/21
 ---
 
 
-Dashboard and Search Module have an interface for `CallState`
+Going from the concept that we have a `CallState`
 
 ```typescript
 export enum LoadingState {

@@ -7,9 +7,7 @@ updated: 2/23/21
 type: moc
 ---
 
-# _Keto
-
-Meal Plans
+## Meal Plans
 
 - [[Keto Mediterranean]]
 - [[Keto Fast]]
