@@ -224,7 +224,6 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       created,
       updated,
       tags,
-
       type,
       status,
       description,

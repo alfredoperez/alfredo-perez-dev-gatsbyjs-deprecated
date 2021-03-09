@@ -1,7 +1,7 @@
 ---
 title: Design Systems with React & Storybook
 authors: ['Emma Bosmian']
-tags: ['#react', '#storybook']
+tags: ['react', 'storybook']
 type: course
 created: 1/30/21
 updated: 2/23/21
