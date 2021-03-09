@@ -220,7 +220,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
     const fieldData = {
       slug,
-      title: title.replace(/_/g, ''),
+      title: title ? title.replace(/_/g, '') : '',
       created,
       updated,
       tags,

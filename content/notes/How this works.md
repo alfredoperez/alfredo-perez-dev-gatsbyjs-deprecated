@@ -19,7 +19,7 @@ I write my notes using Obsidian and created a website with GatsbyJS to share the
 
 ## My note-making process
 
-Created the workflow mind map on https://whimsical.com/digital-garden-15FWj9nugBrPiv5e53SHp8
+Started by creating a mind map with the structure of my PKM system.  https://whimsical.com/digital-garden-15FWj9nugBrPiv5e53SHp8
 
 <iframe src="https://whimsical.com/digital-garden-15FWj9nugBrPiv5e53SHp8@2Ux7TurymN39FY8A9s57"></iframe>
 
@@ -92,3 +92,6 @@ I use the following tools:
 - Alfred for automation
 - Obsidian for note-making
 - Cloudinary to store images
+
+---
+related: [[Website Goals and Setup]]
