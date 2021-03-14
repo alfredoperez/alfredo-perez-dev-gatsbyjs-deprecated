@@ -24,13 +24,19 @@ type TagProps = {
 }
 
 const TagPage = (props: TagProps) => {
+  const { tagsPath, basePath } = useBlogConfig()
+
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (!props.data) {
+    return null
+  }
+
   const {
     data: {
       allNote: { nodes: notes },
     },
     pageContext,
   } = props
-  const { tagsPath, basePath } = useBlogConfig()
 
   return (
     <React.Fragment>

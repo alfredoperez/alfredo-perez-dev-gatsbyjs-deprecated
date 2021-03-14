@@ -1,5 +1,5 @@
 /** @jsx jsx */
-// @ts-expect-error
+
 import React from 'react'
 import { Heading, jsx, Link as TLink } from 'theme-ui'
 import { Box, Flex } from '@theme-ui/components'
@@ -23,8 +23,13 @@ type TagsProps = {
 }
 
 const TagsPage = (props: TagsProps) => {
-  const { group: tags } = props.data.allNote
   const { tagsPath, basePath } = useBlogConfig()
+
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (!props.data) {
+    return null
+  }
+  const { group: tags } = props.data.allNote
 
   return (
     <>

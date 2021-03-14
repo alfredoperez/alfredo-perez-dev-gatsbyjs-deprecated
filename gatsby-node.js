@@ -289,8 +289,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 }
 
 // These template are only data-fetching wrappers that import components
-const homepageTemplate = require.resolve(`./src/templates/homepage-query.tsx`)
-const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
+const homepageTemplate = require.resolve(`./src/templates/home-page-query.tsx`)
 const tagTemplate = require.resolve(`./src/templates/tag-query.tsx`)
 const tagsTemplate = require.resolve(`./src/templates/tags-query.tsx`)
 const noteTemplate = require.resolve(`./src/templates/note-query.tsx`)
@@ -318,9 +317,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   createPage({
     path: `/${basePath}/${digitalGardenPath}`.replace(/\/\/+/g, `/`),
     component: digitalGardenTemplate,
-    context: {
-      formatString,
-    },
   })
 
   const result = await graphql(`
@@ -376,20 +372,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     })
   })
-
-  const pages = result.data.allPage.nodes
-
-  if (pages.length > 0) {
-    pages.forEach((page) => {
-      createPage({
-        path: `/${basePath}/${page.slug}`.replace(/\/\/+/g, `/`),
-        component: pageTemplate,
-        context: {
-          slug: page.slug,
-        },
-      })
-    })
-  }
 
   const tags = result.data.tags.group
 
