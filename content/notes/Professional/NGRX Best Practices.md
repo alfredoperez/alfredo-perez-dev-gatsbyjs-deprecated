@@ -1,7 +1,7 @@
 ---
-title: NGRX Best Practices
+title: NgRx Best Practices
 description:
-tags: []
+tags: ["ngrx", "angular"]
 type: note
 status: seed
 created: 1/30/2021

@@ -7,8 +7,6 @@ updated: 3/6/21
 type: moc
 ---
 
-# _Fasting
-
 ## Protocols
 
 [[Time Restricted Eating]] | [[OMAD]] | [[Two Mad]] | [[Clean Fast]]

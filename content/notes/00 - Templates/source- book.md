@@ -1,6 +1,6 @@
 ---
 title: {{ title }}
-authors:
+authors: []
 links:
 type: book
 tags: []

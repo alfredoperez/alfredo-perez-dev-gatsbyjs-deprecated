@@ -1,7 +1,7 @@
 ---
 title: WebStorm Setup
 description:
-tags: ['#IDE', '#setup']
+tags: ['IDE', 'setup']
 type: note
 status: seed
 created: 3/07/21

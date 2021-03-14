@@ -1,8 +1,8 @@
 ---
 title: A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS
-tags: ['#pkm', '#productivity']
+tags: ['pkm', 'productivity']
 type: video
-status: seed
+status: budd
 created: 2/23/21
 updated: 2/23/21
 ---

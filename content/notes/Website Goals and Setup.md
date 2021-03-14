@@ -30,8 +30,9 @@ I use the original themes and create CSS snippets as needed
   - https://dev.to/bathrobe/creating-a-diy-digital-garden-with-obsidian-and-gatsby-378e
 - [ ] Markdown References. Using `gatsby-transformer-markdown-references`
 - [ ] Markdown custom components embed `mdx-embed` and `gatsby-plugin-mdx-embed`
+- [X] Track traffic with Google Analytics using `gatsby-plugin-google-analytics`
+- [x] SEO using `gatsby-plugin-react-helmet`
 - [ ] Social media share
-- [ ] Track traffic with Google Analytics
 - [ ] Track article reads, share and likes
 - [ ] Highlights and comments
 

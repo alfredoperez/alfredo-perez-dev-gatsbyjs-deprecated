@@ -1,9 +1,9 @@
 ---
-title: {{ title }}
+title: {{title}}
 authors: []
 tags: []
-type: course
-created: {{ date }}
+type: workshop
+created: {{date}}
 updated:
 ---
 
