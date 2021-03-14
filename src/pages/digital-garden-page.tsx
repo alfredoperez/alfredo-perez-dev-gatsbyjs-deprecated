@@ -15,11 +15,16 @@ type DigitalGardenProps = {
 }
 
 const DigitalGardenPage = (props: DigitalGardenProps) => {
-  const notes = props.data.allNote.nodes
   const { tagsPath, basePath } = useBlogConfig()
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (!props.data) {
+    return null
+  }
+
+  const notes = props.data.allNote.nodes
   return (
-    <>
+    <React.Fragment>
       <SEO title="Digital Garden" />
       <Flex
         sx={{
@@ -40,7 +45,7 @@ const DigitalGardenPage = (props: DigitalGardenProps) => {
         </TLink>
       </Flex>
       <Listing notes={notes} sx={{ mt: [4, 5] }} />
-    </>
+    </React.Fragment>
   )
 }
 

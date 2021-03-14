@@ -20,15 +20,21 @@ type HomePageProps = {
   [key: string]: unknown
 }
 
-const HomePage = ({
-  data: {
-    allNote: { nodes: notes },
-    allMoc: { nodes: mocs },
-  },
-}: HomePageProps) => {
+const HomePage = (props: HomePageProps) => {
   const { basePath, digitalGardenPath } = useBlogConfig()
   const { siteTitle } = useSiteMetadata()
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (!props.data) {
+    return null
+  }
+
+  const {
+    data: {
+      allNote: { nodes: notes },
+      allMoc: { nodes: mocs },
+    },
+  } = props
   return (
     <React.Fragment>
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
