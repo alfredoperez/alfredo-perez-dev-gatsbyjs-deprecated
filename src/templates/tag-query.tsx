@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby'
-import TagComponent from '../components/tag'
+import TagComponent from '../pages/tag-page'
 
 export default TagComponent
 

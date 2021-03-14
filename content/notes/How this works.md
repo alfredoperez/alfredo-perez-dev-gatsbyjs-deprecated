@@ -28,10 +28,9 @@ Started by creating a mind map with the structure of my PKM system.  https://whi
 
 Since everything is published automatically I use two Obsidian Vaults for notes:
   - **Work** -> Work related  vault that never gets published
-  - **Digital Garden** -> Notes for my evergreen PKD/ Digital Garden site
+  - **Digital Garden** -> Notes for my evergreen PKM/ Digital Garden site
   
-	![https://res.cloudinary.com/dagkspppt/image/upload/v1615249389/2021-03-08\_18-22-52\_mxnsm9.png](https://res.cloudinary.com/dagkspppt/image/upload/v1615249389/2021-03-08_18-22-52_mxnsm9.png)
-
+![https://res.cloudinary.com/dagkspppt/image/upload/v1615249389/2021-03-08\_18-22-52\_mxnsm9.png](https://res.cloudinary.com/dagkspppt/image/upload/v1615249389/2021-03-08_18-22-52_mxnsm9.png)
 
 ###  Folders
 
@@ -74,7 +73,7 @@ Here are the different types of notes:
 - Use the status and type property in frontmatter to classify them
 - Put them in the Professional or Personal folder
 
- Learning notes:
+Learning notes:
 - Make my own notes from the source instead of just storing the source
 - Use headers as a way to separate ideas. This will help to reference specific ideas in other notes
 
@@ -93,5 +92,4 @@ I use the following tools:
 - Obsidian for note-making
 - Cloudinary to store images
 
----
 related: [[Website Goals and Setup]]

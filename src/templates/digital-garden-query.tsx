@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
-import DigitalGarden from '../components/digital-garden'
+import DigitalGardenPage from '../pages/digital-garden-page'
 
-export default DigitalGarden
+export default DigitalGardenPage
 
 export const query = graphql`
   query($formatString: String!) {

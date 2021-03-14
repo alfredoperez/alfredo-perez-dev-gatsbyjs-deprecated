@@ -60,7 +60,8 @@ typings/
 !.env.example
 
 # Obsidian
-**/.obsidian/**
+
+
 **/.idea
 
 .cache

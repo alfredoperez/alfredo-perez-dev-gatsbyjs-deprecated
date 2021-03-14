@@ -27,7 +27,7 @@
 import { Heading, jsx } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import ItemTags from './item-tags'
+import TagsList from './tags-list'
 import SEO from './seo'
 import { NoteEntity } from '../models/note.entity'
 
@@ -64,7 +64,7 @@ const Note = ({ data: { note } }: NoteProps) => (
       {note.tags && (
         <React.Fragment>
           {` — `}
-          <ItemTags tags={note.tags} />
+          <TagsList tags={note.tags} />
         </React.Fragment>
       )}
       {note.timeToRead && ` — `}

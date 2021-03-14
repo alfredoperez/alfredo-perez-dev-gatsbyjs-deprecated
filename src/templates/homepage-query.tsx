@@ -1,16 +1,18 @@
 import { graphql } from 'gatsby'
-import Homepage from '../components/homepage'
+import HomePage from '../pages/home-page'
 
-export default Homepage
+export default HomePage
 
 export const query = graphql`
-  query($formatString: String!) {
+  query {
     allNote(filter: { type: { ne: "moc" } }, sort: { fields: updated, order: DESC }, limit: 7) {
       nodes {
         slug
         title
-        created(formatString: $formatString)
+        created
+        updated
         excerpt
+        status
         timeToRead
         description
         tags {

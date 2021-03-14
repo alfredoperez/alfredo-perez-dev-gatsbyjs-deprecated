@@ -1,0 +1,19 @@
+h1, h2 {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+h1:before,
+h1:after,
+h2:before,
+h2:after {
+
+	content: '';
+	background: gray;
+	height: .1em;
+	margin: .2em;
+	flex: 1;
+}
+h1 > a, h2 > a {
+	padding: 0 0.25em!important;
+}

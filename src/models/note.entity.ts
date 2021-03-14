@@ -14,8 +14,10 @@ export interface BannerImage {
 export interface NoteEntity {
   slug: string
   title: string
-  date: string
+  created: string
+  updated: string
   description: string
+  status: string
   body: string
   excerpt: string
   tags?: Array<TagEntity>

@@ -12,7 +12,7 @@ type ListingProps = {
 }
 
 const Listing = ({ notes, mocs, className = ``, showTags = true }: ListingProps) => (
-  <section sx={{ mb: [5, 6, 7] }} className={className}>
+  <section sx={{ mb: [3, 4, 5] }} className={className}>
     {notes?.map((note) => (
       <NoteListItem key={note.slug} note={note} showTags={showTags} />
     ))}

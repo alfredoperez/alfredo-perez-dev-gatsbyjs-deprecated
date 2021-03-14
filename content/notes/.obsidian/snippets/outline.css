@@ -1,0 +1,60 @@
+/* outliner for the outline */
+/* outliner for the outline */
+.tree-view-item-children{
+  content: ' ';
+  border-left: 1px solid rgba(118,158,165,0.2);
+  border-radius:0 0px 0px 0;
+}
+/* outliner for the file and folders */
+.nav-folder,.nav-file{
+  border-left: 2px solid rgba(118,158,165,0.2);
+}
+/* outliner for the Table of Contents */
+.outline, .tree-item{
+  border-left: 2px solid rgba(118,158,165,0.2);
+}
+
+/* tree view outlines */
+.tree-item-collapse {
+  padding: 2px 15px 2px 15px;
+  left:1.5px;
+}
+ div.tree-item-inner{
+  position:relative;
+  padding-left: 5px;
+ }
+.outline .tree-item-children {
+  margin-left: 20px;
+  border-left: 1px solid rgba(118,158,165,0.2);
+  border-radius: 4px;
+  transition:all 0.5s ease-in-out;
+}
+.outline .tree-item-children:hover {
+  border-left-color: rgba(118,158,165,0.4);
+}
+
+/* outline for list */
+.cm-hmd-list-indent .cm-tab,
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+position: relative;
+}
+
+.cm-hmd-list-indent .cm-tab::before,
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+content:’’;
+border-left: 2px solid rgba(0, 122, 255, 0.25);
+position: absolute;
+}
+.cm-hmd-list-indent .cm-tab::before { left: 0px; top: -5px; bottom: -4px;
+}
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before{ left: -11px; top: 0; bottom: 0;
+}

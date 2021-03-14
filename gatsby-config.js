@@ -11,7 +11,7 @@ const siteMetadata = {
   siteUrl: `https://alfredo-perez.dev`,
   siteDescription: `Digital garden where ideas can flourish`,
   siteLanguage: `en`,
-  siteImage: `/banner.jpg`,
+  siteImage: `/logo.png`,
   author: `@alfredo-perez`,
 }
 
