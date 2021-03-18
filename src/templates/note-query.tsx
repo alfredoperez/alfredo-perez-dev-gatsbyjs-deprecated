@@ -12,11 +12,12 @@ export default Note
 //   }
 // }
 export const query = graphql`
-  query($slug: String!, $formatString: String!) {
+  query($slug: String!) {
     note(slug: { eq: $slug }) {
       slug
       title
-      created(formatString: $formatString)
+      created
+      updated
       tags {
         name
         slug
