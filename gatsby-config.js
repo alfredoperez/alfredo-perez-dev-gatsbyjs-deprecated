@@ -1,5 +1,7 @@
 const newsletterFeed = require(`./src/utils/newsletterFeed`)
-require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
+require(`dotenv`).config({
+  path: `.env`,
+})
 
 const options = require(`./utils/default-options`)
 
@@ -19,11 +21,21 @@ module.exports = {
   siteMetadata,
   plugins: [
     {
+      resolve: 'gatsby-plugin-algolia',
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        chunkSize: 10000,
+        queries: require('./utils/algolia-queries'),
+      },
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,6 +43,8 @@ module.exports = {
         path: options.notesPath,
       },
     },
+
+    // Link references
     {
       resolve: `gatsby-transformer-markdown-references`,
       options: {
@@ -77,7 +91,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-76775958-2',
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
     `gatsby-transformer-sharp`,
@@ -88,5 +102,6 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-tsconfig-paths`,
   ].filter(Boolean),
 }

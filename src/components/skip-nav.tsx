@@ -2,10 +2,6 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 
-type SkipNavLinkProps = {
-  children: React.ReactNode
-}
-
 const skipNavStyles = {
   border: 0,
   clip: `react(0 0 0 0)`,
@@ -28,6 +24,10 @@ const skipNavStyles = {
     clip: `auto`,
     textDecoration: `none`,
   },
+}
+
+type SkipNavLinkProps = {
+  children: React.ReactNode
 }
 
 const SkipNavLink = ({ children, ...props }: SkipNavLinkProps) => (

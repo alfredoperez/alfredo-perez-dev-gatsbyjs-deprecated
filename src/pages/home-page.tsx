@@ -9,13 +9,13 @@ import useSiteMetadata from '../hooks/use-site-metadata'
 import replaceSlashes from '../utils/replace-slashes'
 import { visuallyHidden } from '../utils/vissually-hidden'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-import { NoteEntity } from '../models/note.entity'
+import { NoteModel } from '../models/note.model'
 import HeroContent from '../components/hero-content'
 
 type HomePageProps = {
   data: {
-    allNote: { nodes: Array<NoteEntity> }
-    allMoc: { nodes: Array<NoteEntity> }
+    allNote: { nodes: Array<NoteModel> }
+    allMoc: { nodes: Array<NoteModel> }
   }
   [key: string]: unknown
 }

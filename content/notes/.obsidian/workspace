@@ -6,27 +6,29 @@
       {
         "id": "ec2136bf912f8e57",
         "type": "leaf",
+        "dimension": 52.91803278688525,
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/Enhancing NgRx Entity with Atomic State.md",
+            "file": "Professional/Where to initialize NgRx Selectors?.md",
             "mode": "source"
           }
         },
-        "group": "afbbf23dd7a35b23"
+        "group": "9b5c7bf2941eb9ad"
       },
       {
-        "id": "5d297e299653fc73",
+        "id": "74c791a0afaa16a2",
         "type": "leaf",
+        "dimension": 47.08196721311476,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/Enhancing NgRx Entity with Atomic State.md",
-            "mode": "source"
+            "file": "Professional/Where to initialize NgRx Selectors?.md",
+            "mode": "preview"
           }
         },
-        "group": "afbbf23dd7a35b23"
+        "group": "9b5c7bf2941eb9ad"
       }
     ],
     "direction": "vertical"
@@ -54,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "updated",
+                "query": "selectors",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "1f317ed0d6664cd7",
@@ -102,6 +105,7 @@
       {
         "id": "ab1df979851abe53",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "164299b69c4f1266",
@@ -109,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Professional/Enhancing NgRx Entity with Atomic State.md"
+                "file": "Professional/Where to initialize NgRx Selectors?.md"
               }
             }
           }
@@ -118,6 +122,7 @@
       {
         "id": "fb3ded1b48ebbb71",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "db9ea14cedcb461b",
@@ -125,9 +130,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Professional/Enhancing NgRx Entity with Atomic State.md",
+                "file": "Professional/Where to initialize NgRx Selectors?.md",
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": false
@@ -138,18 +143,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 371
+    "width": 296
   },
   "lastOpenFiles": [
-    "Professional/Enhancing NgRx Entity with Atomic State.md",
-    "New note name.md",
+    "Professional/Where to initialize NgRx Selectors?.md",
     "How this works.md",
     "Website Goals and Setup.md",
-    "00 - Templates/MOC.md",
-    "00 - Templates/source - workshop.md",
-    "00 - Templates/source- book.md",
-    "Untitled.md",
-    "_Courses and Workshops.md",
-    "Professional/Where to initialize NgRx Selectors?.md"
+    "Professional/WebStorm Setup.md",
+    "Professional/Testing an NgRx effect using observer-spy.md",
+    "Professional/Setting up Jest in Angular 11.md",
+    "Professional/NGRX Best Practices.md",
+    "Professional/Design Systems with React & Storybook.md",
+    "Professional/Enhancing NgRx Entity with Atomic State.md",
+    "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md"
   ]
 }

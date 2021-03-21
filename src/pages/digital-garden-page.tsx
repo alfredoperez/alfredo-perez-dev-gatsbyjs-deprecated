@@ -7,10 +7,10 @@ import Listing from '../components/listing'
 import useBlogConfig from '../hooks/use-blog-config'
 import replaceSlashes from '../utils/replace-slashes'
 import SEO from '../components/seo'
-import { NoteEntity } from '../models/note.entity'
+import { NoteModel } from '../models/note.model'
 
 type DigitalGardenProps = {
-  data: { allNote: { nodes: Array<NoteEntity> } }
+  data: { allNote: { nodes: Array<NoteModel> } }
   [key: string]: unknown
 }
 

@@ -3,6 +3,7 @@
       "kentcdodds",
       "kentcdodds/react",
       "kentcdodds/jsx-a11y",
+
      // "kentcdodds/jest"
   ],
   "rules": {
@@ -15,6 +16,7 @@
     "max-lines-per-function": "off",
     "babel/quotes": "off",
     "consistent-return": "off",
-    "@typescript-eslint/ban-ts-comment":"off"
+    "@typescript-eslint/ban-ts-comment":"off",
+    "@typescript-eslint/no-explicit-any":"off"
   }
 }

@@ -50,11 +50,10 @@ export default {
   error: colors.red[500],
 
   white: colors.white,
-  // background: `#f8f8f8`,
-  contentBg: colors.white,
-  //headerBg: colors.white,
-  //footerBg: colors.white,
 
+  contentBg: colors.white,
+
+  toggleIcon: colors.gray[600],
   background: `#fbfbfb`,
   headerBg: `transparent`,
   footerBg: `transparent`,
@@ -88,8 +87,8 @@ export default {
 
       background: colors.gray[900],
       contentBg: colors.gray[800],
-      // headerBg: colors.gray[800],
-      // footerBg: colors.gray[800],
+      toggleIcon: colors.gray[200],
+
       headerBg: `transparent`,
       footerBg: `transparent`,
 

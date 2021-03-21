@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
-import Note from '../components/note'
+import NotePage from '../pages/note-page'
 
-export default Note
+export default NotePage
 
 // inboundReferences {
 // ... on Mdx {
@@ -27,11 +27,14 @@ export const query = graphql`
       body
       excerpt
       timeToRead
-      banner {
-        childImageSharp {
-          resize(width: 1200, quality: 90) {
-            src
+    }
+    mdx(slug: { eq: $slug }) {
+      inboundReferences {
+        ... on Mdx {
+          frontmatter {
+            title
           }
+          slug
         }
       }
     }

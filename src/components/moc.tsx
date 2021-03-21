@@ -29,11 +29,11 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import TagsList from './tags-list'
 import SEO from './seo'
-import { NoteEntity } from '../models/note.entity'
+import { NoteModel } from '../models/note.model'
 
 type MocProps = {
   data: {
-    note: NoteEntity
+    note: NoteModel
   }
 }
 
