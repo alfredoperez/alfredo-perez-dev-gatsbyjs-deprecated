@@ -8,7 +8,7 @@ import replaceSlashes from '../../../utils/replace-slashes'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 import { HeaderMenu } from './Header.Menu'
 import HeaderColorModeToggle from './Header.ColorModeToggle'
-import Search from '@components/layout/Search/Search'
+import Search from '../Search/Search'
 
 const styles = {
   wrapper: {
