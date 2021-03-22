@@ -11,7 +11,14 @@
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "removeComments": false
+    "removeComments": false,
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@models/*": ["models/*"],
+      "@utils/*": ["utils/*"]
+    }
   },
   "include": ["./src/**/*"]
 }

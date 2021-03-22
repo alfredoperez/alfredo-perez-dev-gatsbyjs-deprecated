@@ -12,7 +12,7 @@ updated: 3/9/21
 
 When using the selector in the component, it is recommended not to initialize them in the declaration and instead initialize them in the constructor.
 
-```typescript
+```ts
 export class FindBookPageComponent {
   searchQuery$: Observable<string>;
   books$: Observable<Book[]>;

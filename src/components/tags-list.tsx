@@ -3,7 +3,7 @@ import { Badge, Box, Flex } from 'theme-ui'
 import { Link } from 'gatsby'
 import useBlogConfig from '../hooks/use-blog-config'
 import replaceSlashes from '../utils/replace-slashes'
-import { TagEntity } from '../models/note.entity'
+import { TagEntity } from '../models/note.model'
 
 type TagsProps = {
   tags: Array<TagEntity>

@@ -18,9 +18,9 @@ I use the original themes and create CSS snippets as needed
 
 - [ ] Add different colors per link type
   - [ ] Check the Roam Research theme from Maggie Appleton [screenshot](https://github.com/theianjones/roam-research-themes/blob/master/images/mappletons_screenshot_1.png) | [css](https://github.com/theianjones/roam-research-themes/blob/master/leyendecker.css) | [article](https://maggieappleton.com/paintingroam)
-- [ ] Outline
-- [ ] Zoom images in preview mode 
-- [ ] Css Tweaks for Obsidian [github](https://github.com/kmaasrud/awesome-obsidian#collapsing-sidebar)
+- [x] Outline
+- [x] Zoom images in preview mode 
+- [x] Css Tweaks for Obsidian [github](https://github.com/kmaasrud/awesome-obsidian#collapsing-sidebar)
 
 #  Digital Garden Website  using GatbyJS
 - [x] Automatic deployments of updates using GatsbyJS and Gatsby Cloud

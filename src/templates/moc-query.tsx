@@ -4,11 +4,12 @@ import Moc from '../components/moc'
 export default Moc
 
 export const query = graphql`
-  query($slug: String!, $formatString: String!) {
+  query($slug: String!) {
     note(slug: { eq: $slug }) {
       slug
       title
-      created(formatString: $formatString)
+      created
+      updated
       tags {
         name
         slug
@@ -18,13 +19,6 @@ export const query = graphql`
       body
       excerpt
       timeToRead
-      banner {
-        childImageSharp {
-          resize(width: 1200, quality: 90) {
-            src
-          }
-        }
-      }
     }
   }
 `

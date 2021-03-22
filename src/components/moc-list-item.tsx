@@ -4,10 +4,10 @@ import React from 'react'
 import { jsx, Link as TLink } from 'theme-ui'
 import { Box } from '@theme-ui/components'
 import { Link } from 'gatsby'
-import { NoteEntity } from '../models/note.entity'
+import { NoteModel } from '../models/note.model'
 
 type MocItemProps = {
-  moc: NoteEntity
+  moc: NoteModel
 }
 
 const MocListItem = ({ moc }: MocItemProps) => {
