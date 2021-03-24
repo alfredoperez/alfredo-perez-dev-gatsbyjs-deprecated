@@ -27,9 +27,9 @@
 import { Heading, jsx } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import TagsList from './tags-list'
-import SEO from './seo'
-import { NoteModel } from '../models/note.model'
+import TagsList from '@components/tags-list'
+import SEO from '@components/seo'
+import { NoteModel } from '@models/note.model'
 
 type MocProps = {
   data: {
@@ -40,7 +40,7 @@ type MocProps = {
 const px = [`32px`, `16px`, `8px`, `4px`]
 const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
-const Moc = ({ data: { note } }: MocProps) => (
+const MocPage = ({ data: { note } }: MocProps) => (
   <React.Fragment>
     <SEO
       title={note.title}
@@ -85,4 +85,4 @@ const Moc = ({ data: { note } }: MocProps) => (
   </React.Fragment>
 )
 
-export default Moc
+export default MocPage

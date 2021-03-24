@@ -2,15 +2,15 @@
 import React from 'react'
 import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
-import Title from '../components/title'
-import Listing from '../components/listing'
-import useBlogConfig from '../hooks/use-blog-config'
-import useSiteMetadata from '../hooks/use-site-metadata'
-import replaceSlashes from '../utils/replace-slashes'
-import { visuallyHidden } from '../utils/vissually-hidden'
+import Title from '@components/title'
+import Listing from '@components/listing'
+import useBlogConfig from '@hooks/use-blog-config'
+import useSiteMetadata from '@hooks/use-site-metadata'
+import replaceSlashes from '@utils/replace-slashes'
+import { visuallyHidden } from '@utils/vissually-hidden'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-import { NoteModel } from '../models/note.model'
-import HeroContent from '../components/hero-content'
+import { NoteModel } from '@models/note.model'
+import HeroContent from '@components/hero-content'
 
 type HomePageProps = {
   data: {
