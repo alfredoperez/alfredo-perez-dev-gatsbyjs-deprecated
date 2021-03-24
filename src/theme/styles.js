@@ -2,29 +2,29 @@ export default {
   /** Root (body tag) */
   root: {
     WebkitFontSmoothing: `antialiased`,
-    textDecoration: `none`
+    textDecoration: `none`,
   },
 
   /** MDX articles */
   pre: {
-    variant: `prism`,
-    fontFamily: `monospace`,
+    //  variant: `prism`,
+    fontFamily: `"Fira Code"`,
     hyphens: `none`,
     overflow: `auto`,
     borderRadius: `default`,
     tabSize: 4,
     p: 3,
-    my: 4
+    my: 4,
   },
   inlineCode: {
     borderRadius: `0.3em`,
     color: `#4a5568`,
     bg: `highlight`,
     py: 1,
-    px: 2
+    px: 2,
   },
   a: {
-    variant: `links.normal`
+    variant: `links.normal`,
   },
   h1: {
     variant: `text.h1`,
@@ -32,64 +32,64 @@ export default {
     borderBottomStyle: `solid`,
     borderBottomColor: `omegaLight`,
     pb: 3,
-    mb: 4
+    mb: 4,
   },
   h2: {
-    variant: `text.h2`
+    variant: `text.h2`,
   },
   h3: {
     variant: `text.h3`,
     '& + pre': {
-      mt: 0
-    }
+      mt: 0,
+    },
   },
   h4: {
     variant: `text.h4`,
     '& + pre': {
-      mt: 0
-    }
+      mt: 0,
+    },
   },
   h5: {
-    variant: `text.h5`
+    variant: `text.h5`,
   },
   h6: {
-    variant: `text.h6`
+    variant: `text.h6`,
   },
   hr: {
     my: 4,
-    color: `omegaLight`
+    color: `omegaLight`,
   },
   p: {
     color: 'article',
     fontSize: 3,
     mb: 4,
     code: {
-      fontSize: `inherit`
-    }
+      fontSize: `inherit`,
+    },
   },
   ol: {
-    mb: 4
+    mb: 4,
   },
   ul: {
-    mb: 4
+    mb: 4,
   },
   li: {
     color: 'article',
     fontSize: 3,
     code: {
-      fontSize: `inherit`
+      fontSize: `inherit`,
     },
-    m: 0
+    m: 0,
   },
   table: {
     borderRadius: `default`,
     overflow: `hidden`,
-    bg: `omegaLight`
+    bg: `omegaLight`,
   },
   tr: {
     '&:nth-of-type(even)': {
-      bg: `omegaLighter`
-    }
+      bg: `omegaLighter`,
+    },
   },
   th: {
     bg: `omegaDarker`,
@@ -97,25 +97,25 @@ export default {
     fontWeight: `normal`,
     p: 2,
     '&:first-of-type': {
-      pl: 3
+      pl: 3,
     },
     '&:last-of-type': {
-      pr: 3
-    }
+      pr: 3,
+    },
   },
   td: {
     borderBottomWidth: 0,
     p: 2,
     '&:first-of-type': {
-      pl: 3
+      pl: 3,
     },
     '&:last-of-type': {
-      pr: 3
-    }
+      pr: 3,
+    },
   },
   blockquote: {
     p: {
-      color: `text`
+      color: `text`,
     },
     fontStyle: `italic`,
     borderLeftStyle: `solid`,
@@ -124,20 +124,20 @@ export default {
     mx: [0, 4],
     px: [3, 4],
     '&.translation': {
-      fontSize: 2
-    }
+      fontSize: 2,
+    },
   },
   figure: {
     boxShadow: `1px 1px 5px 0 rgba(1,1,1,.15)`,
     overflow: `hidden`,
     backgroundColor: `contentBg`,
     borderRadius: 'default',
-    margin: 0
+    margin: 0,
   },
   figcaption: {
     textAlign: `center`,
     fontStyle: `italic`,
     fontSize: 1,
-    margin: 3
-  }
+    margin: 3,
+  },
 }

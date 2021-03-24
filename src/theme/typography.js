@@ -1,14 +1,10 @@
 import { toTheme } from '@theme-ui/typography'
 
 const fonts = {
-  fonts: {
-    google: {
-      families: ['Inter:400,700,900', 'Fira Sans:400,i400,600,700&display=swap'],
-    },
-  },
   theme: {
-    headerFontFamily: ['Inter', 'sans-serif'],
-    bodyFontFamily: ['Fira Sans', 'sans-serif'],
+    headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
+    bodyFontFamily: ['IBM Plex Sans', 'sans-serif'],
+    monospace: ['Fira Code'],
   },
 }
 
