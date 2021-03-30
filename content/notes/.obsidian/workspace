@@ -134,6 +134,8 @@
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -143,7 +145,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296
+    "width": 296,
+    "collapsed": true
   },
   "lastOpenFiles": [
     "Professional/Where to initialize NgRx Selectors?.md",

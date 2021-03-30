@@ -4,7 +4,7 @@ import { jsx, Link as TLink } from 'theme-ui'
 import { Card, Flex } from '@theme-ui/components'
 import { Link } from 'gatsby'
 import TagsList from './tags-list'
-import { NoteModel } from '../models/note.model'
+import { NoteModel } from '@models/note.model'
 import Status from './status'
 
 type NoteItemProps = {
