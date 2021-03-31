@@ -7,9 +7,9 @@ import { Box, Flex } from '@theme-ui/components'
 // @ts-expect-error
 import kebabCase from 'lodash.kebabcase'
 import { Link } from 'gatsby'
-import useBlogConfig from '../hooks/use-blog-config'
-import SEO from '../components/seo'
-import replaceSlashes from '../utils/replace-slashes'
+import useBlogConfig from '@hooks/use-blog-config'
+import SEO from '@components/seo'
+import replaceSlashes from '@utils/replace-slashes'
 
 type TagsProps = {
   data: {

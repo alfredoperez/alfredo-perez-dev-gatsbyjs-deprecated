@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby'
-import MocPage from './MocPage'
+import MocPage from '../pages/MocPage'
 
 export default MocPage
 

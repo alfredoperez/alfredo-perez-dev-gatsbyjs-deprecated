@@ -2,9 +2,9 @@
 import { Flex, Heading, jsx } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import TagsList from '../components/tags-list'
-import SEO from '../components/seo'
-import { NoteModel } from '../models/note.model'
+import TagsList from '@components/tags-list'
+import SEO from '@components/seo'
+import { NoteModel } from '@models/note.model'
 import Comments from '@components/Comments/Comments'
 
 const px = [`32px`, `16px`, `8px`, `4px`]

@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby'
-import DigitalGardenPage from './DigitalGardenPage'
+import DigitalGardenPage from '../pages/DigitalGardenPage'
 
 export default DigitalGardenPage
 

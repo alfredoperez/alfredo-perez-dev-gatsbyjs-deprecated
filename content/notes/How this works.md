@@ -80,7 +80,7 @@ Inspiration Notes:
 - Create an inspiration notes for a related subject and add screenshots and links
 
 Links:
-- ❓ This notes should contain a set of links
+- ❓ These notes should contain a set of links
 
 ## Tools
 I use the following tools:

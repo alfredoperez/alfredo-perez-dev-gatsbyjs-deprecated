@@ -2,12 +2,12 @@ const options = require(`./src/gatsby/default-options`)
 const kebabCase = require(`lodash.kebabcase`)
 
 // These template are only data-fetching wrappers that import components
-const homepageTemplate = require.resolve(`./src/pages/HomePage.Query.tsx`)
-const tagTemplate = require.resolve(`./src/pages/TagPage.Query.tsx`)
-const tagsTemplate = require.resolve(`./src/pages/TagsPage.Query.tsx`)
-const noteTemplate = require.resolve(`./src/pages/NotePage.Query.tsx`)
-const mocTemplate = require.resolve(`./src/pages/NotePage.Query.tsx`)
-const digitalGardenTemplate = require.resolve(`./src/pages/DigitalGardenPage.Query.tsx`)
+const homepageTemplate = require.resolve(`./src/templates/HomePage.Query.tsx`)
+const tagTemplate = require.resolve(`./src/templates/TagPage.Query.tsx`)
+const tagsTemplate = require.resolve(`./src/templates/TagsPage.Query.tsx`)
+const noteTemplate = require.resolve(`./src/templates/NotePage.Query.tsx`)
+const mocTemplate = require.resolve(`./src/templates/NotePage.Query.tsx`)
+const digitalGardenTemplate = require.resolve(`./src/templates/DigitalGardenPage.Query.tsx`)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
