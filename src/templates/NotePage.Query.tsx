@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby'
-import NotePage from '../pages/note-page'
+import NotePage from '../pages/NotePage'
 
 export default NotePage
 

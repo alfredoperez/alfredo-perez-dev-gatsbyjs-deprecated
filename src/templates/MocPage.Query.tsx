@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
-import Moc from '../components/moc'
+import MocPage from '../pages/MocPage'
 
-export default Moc
+export default MocPage
 
 export const query = graphql`
   query($slug: String!) {

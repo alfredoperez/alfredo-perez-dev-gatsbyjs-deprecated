@@ -3,11 +3,11 @@ import React from 'react'
 import { Heading, jsx, Link as TLink } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Flex } from '@theme-ui/components'
-import Listing from '../components/listing'
-import useBlogConfig from '../hooks/use-blog-config'
-import replaceSlashes from '../utils/replace-slashes'
-import SEO from '../components/seo'
-import { NoteModel } from '../models/note.model'
+import Listing from '@components/listing'
+import useBlogConfig from '@hooks/use-blog-config'
+import replaceSlashes from '@utils/replace-slashes'
+import SEO from '@components/seo'
+import { NoteModel } from '@models/note.model'
 
 type DigitalGardenProps = {
   data: { allNote: { nodes: Array<NoteModel> } }

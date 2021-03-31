@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby'
-import HomePage from '../pages/home-page'
+import HomePage from '../pages/HomePage'
 
 export default HomePage
 

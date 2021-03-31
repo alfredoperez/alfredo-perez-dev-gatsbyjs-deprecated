@@ -15901,6 +15901,11 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
+typeface-fira-code@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-fira-code/-/typeface-fira-code-1.1.13.tgz#0179d220382297a50ea29cabae5c4f61bf6208c3"
+  integrity sha512-8TRlYeIGAqwNajMHB3eSFs58VVfKsAsA0JRVu7z895s/FBl3nrh4PCvbH8tqxadU0UXEbCxNBvZtXn/Jpt7C3Q==
+
 typeface-ibm-plex-sans@^1.1.13:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/typeface-ibm-plex-sans/-/typeface-ibm-plex-sans-1.1.13.tgz#3141045440b445dc323bf3f87b6bcc57c0091ef2"

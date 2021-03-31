@@ -1,34 +1,134 @@
 const options = require(`./src/gatsby/default-options`)
 const kebabCase = require(`lodash.kebabcase`)
 
-exports.sourceNodes = require('./src/gatsby/sourceNodes')
+// These template are only data-fetching wrappers that import components
+const homepageTemplate = require.resolve(`./src/templates/HomePage.Query.tsx`)
+const tagTemplate = require.resolve(`./src/templates/TagPage.Query.tsx`)
+const tagsTemplate = require.resolve(`./src/templates/TagsPage.Query.tsx`)
+const noteTemplate = require.resolve(`./src/templates/NotePage.Query.tsx`)
+const mocTemplate = require.resolve(`./src/templates/NotePage.Query.tsx`)
+const digitalGardenTemplate = require.resolve(`./src/templates/DigitalGardenPage.Query.tsx`)
 
-// exports.onCreateNode = require('./src/gatsby/onCreateNode')
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions
 
-exports.createPages = require('./src/gatsby/createPages')
+  const { basePath, tagsPath, formatString, notesPrefix, mocsPrefix, digitalGardenPath } = options
 
-const processTags = (tags) => {
-  let results = null
-  if (!tags) {
-    return results
+  createPage({
+    path: basePath,
+    component: homepageTemplate,
+    context: {
+      formatString,
+    },
+  })
+
+  createPage({
+    path: `/${basePath}/${tagsPath}`.replace(/\/\/+/g, `/`),
+    component: tagsTemplate,
+  })
+
+  createPage({
+    path: `/${basePath}/${digitalGardenPath}`.replace(/\/\/+/g, `/`),
+    component: digitalGardenTemplate,
+  })
+
+  const result = await graphql(`
+    query {
+      tags: allNote(sort: { fields: tags___name, order: DESC }) {
+        group(field: tags___name) {
+          fieldValue
+        }
+      }
+      allNote: allNote(filter: { type: { ne: "moc" } }, sort: { order: DESC, fields: created }) {
+        nodes {
+          slug
+          title
+          status
+        }
+      }
+      notesQuery: allNote(filter: { type: { ne: "moc" } }, sort: { order: DESC, fields: created }) {
+        nodes {
+          slug
+          title
+          status
+        }
+      }
+      allMoc: allNote(filter: { type: { eq: "moc" } }, sort: { order: DESC, fields: created }) {
+        nodes {
+          slug
+          title
+          status
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild(`There was an error loading your posts or pages`, result.errors)
+    return
   }
 
-  results = tags.map((tag) => ({
-    name: tag,
-    slug: kebabCase(tag),
-  }))
+  const notes = result.data.allNote.nodes
 
-  return results
+  notes.forEach((note) => {
+    createPage({
+      path: `/${notesPrefix}${note.slug}`.replace(/\/\/+/g, `/`),
+      component: noteTemplate,
+      context: {
+        slug: note.slug,
+        formatString,
+      },
+    })
+  })
+
+  const tags = result.data.tags.group
+
+  if (tags.length > 0) {
+    tags.forEach((tag) => {
+      const path = `/${basePath}/${tagsPath}/${kebabCase(tag.fieldValue)}`.replace(/\/\/+/g, `/`)
+
+      createPage({
+        path,
+        component: tagTemplate,
+        context: {
+          slug: kebabCase(tag.fieldValue),
+          name: tag.fieldValue,
+          formatString,
+        },
+      })
+    })
+  }
+
+  const mocs = result.data.allMoc.nodes
+
+  mocs.forEach((moc) => {
+    createPage({
+      path: `${mocsPrefix}${moc.slug}`.replace(/\/\/+/g, `/`),
+      component: mocTemplate,
+      context: {
+        slug: moc.slug,
+        formatString,
+      },
+    })
+  })
 }
 
-exports.onCreateNode = ({
-  node,
-  actions,
-  getNode,
-  createNodeId,
-  createContentDigest,
-  getNodes,
-}) => {
+exports.sourceNodes = require('./src/gatsby/sourceNodes')
+
+exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
+  const processTags = (tags) => {
+    let results = null
+    if (!tags) {
+      return results
+    }
+
+    results = tags.map((tag) => ({
+      name: tag,
+      slug: kebabCase(tag),
+    }))
+
+    return results
+  }
   const { createNode, createParentChildLink, createNodeField } = actions
   const { notesPath } = options
 
@@ -114,24 +214,24 @@ exports.onCreateNode = ({
   }
 }
 
-const mdxResolverPasstrough = (fieldName) => async (source, args, context, info) => {
-  const type = info.schema.getType(`Mdx`)
-  const mdxNode = context.nodeModel.getNodeById({
-    id: source.parent,
-  })
-  const fields = type.getFields()
-
-  const resolver = fields[fieldName].resolve
-  const result = await resolver(mdxNode, args, context, {
-    fieldName,
-  })
-
-  return result
-}
-
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
 exports.createSchemaCustomization = ({ actions }) => {
+  const mdxResolverPasstrough = (fieldName) => async (source, args, context, info) => {
+    const type = info.schema.getType(`Mdx`)
+    const mdxNode = context.nodeModel.getNodeById({
+      id: source.parent,
+    })
+    const fields = type.getFields()
+
+    const resolver = fields[fieldName].resolve
+    const result = await resolver(mdxNode, args, context, {
+      fieldName,
+    })
+
+    return result
+  }
+
   const { createTypes, createFieldExtension } = actions
 
   const { basePath } = options

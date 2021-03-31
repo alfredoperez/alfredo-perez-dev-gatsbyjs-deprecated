@@ -7,7 +7,6 @@ import sizes from './sizes'
 import radii from './radii'
 import colors from './colors'
 import initialColorModeName from './initialColorModeName'
-
 import styles from './styles'
 import buttons from './buttons'
 import links from './links'
@@ -24,7 +23,6 @@ export default merge(typography, {
   useCustomProperties: true,
   initialColorModeName,
   colors,
-
   breakpoints,
   sizes,
   space,
