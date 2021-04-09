@@ -4,6 +4,7 @@ import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
 import AuthorAvatar from './Card.Footer.Author.Avatar'
 import AuthorName from './Card.Footer.Author.Name'
 import Info from './Card.Footer.Info'
+import CardFooterTags from '@components/Card/Card.Footer.Tags'
 
 const styles = {
   wrapper: {
@@ -21,9 +22,9 @@ const CardFooter = ({ omitFooter, ...props }) =>
   !omitFooter && (
     <Box sx={{ variant: rv(props.variant, 'footer') }}>
       <Flex sx={styles.wrapper}>
-        <AuthorAvatar {...props} />
+        <CardFooterTags {...props} />
         <Flex sx={styles.postInfo}>
-          <AuthorName {...props} />
+          {/*<AuthorName {...props} />*/}
           <Info {...props} />
         </Flex>
       </Flex>

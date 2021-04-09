@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import TagsList from '@components/tags-list'
 import SEO from '@components/seo'
-import { NoteModel } from '@models/note.model'
+import { Note } from '@models/note'
 import Comments from '@components/Comments/Comments'
 
 const px = [`32px`, `16px`, `8px`, `4px`]
@@ -12,7 +12,7 @@ const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
 type NoteProps = {
   data: {
-    note: NoteModel
+    note: Note
   }
 }
 const NotePage = (props: NoteProps) => {

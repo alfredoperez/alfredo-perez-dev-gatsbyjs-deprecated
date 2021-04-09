@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from 'theme-ui'
 import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
-import CardBodyCategory from './Card.Body.Category'
+import CardBodyStatus from './Card.Body.Status'
 import CardBodyTitle from './Card.Body.Title'
 import CardBodyExcerpt from './Card.Body.Excerpt'
 
@@ -22,7 +22,7 @@ const CardBody = ({ children, omitBody, ...props }) =>
         variant: rv(props.variant, 'body'),
       }}
     >
-      <CardBodyCategory {...props} />
+      <CardBodyStatus {...props} />
       <CardBodyTitle {...props} />
       <CardBodyExcerpt {...props} />
       {children}

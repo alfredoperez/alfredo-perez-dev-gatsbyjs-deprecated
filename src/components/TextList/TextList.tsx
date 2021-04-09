@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { Box } from 'theme-ui'
 
 const styles = {
@@ -16,12 +16,12 @@ const styles = {
   },
 }
 
-type TextListProps = {
+interface TextListProps extends PropsWithChildren<any> {
   separator: string
   nowrap: boolean
 }
 
-const TextList = ({ nowrap = false, separator = '・' }: TextListProps, children) => (
+const TextList = ({ nowrap = false, separator = '・', children }: TextListProps) => (
   <Box sx={{ ...(nowrap && styles.nowrap), ...styles.wrapper(separator) }}>{children}</Box>
 )
 

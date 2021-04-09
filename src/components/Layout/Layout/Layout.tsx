@@ -1,13 +1,14 @@
 /** @jsx jsx */
 import React from 'react'
 import { Box, Container, jsx } from 'theme-ui'
-import SEO from '../seo'
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
-import SkipNavLink from '../skip-nav'
-import CodeStyles from '../../theme/code'
+import SEO from '../../seo'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
+import SkipNavLink from '../../skip-nav'
+import CodeStyles from './LayoutCode.Styles'
 import 'normalize.css'
-import pageContextProvider from '../pageContextProvider'
+import pageContextProvider from '../../pageContextProvider'
+import { PageContext } from '@models/page-context.model'
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 

@@ -5,7 +5,11 @@ export default HomePage
 
 export const query = graphql`
   query {
-    allNote(filter: { type: { ne: "moc" } }, sort: { fields: updated, order: DESC }, limit: 7) {
+    allNote(
+      filter: { status: { in: ["evergreen", "bud", "seed", "snag"] }, type: { ne: "moc" } }
+      sort: { fields: updated, order: DESC }
+      limit: 10
+    ) {
       nodes {
         slug
         title

@@ -2,18 +2,19 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import { tint } from '@theme-ui/color'
+import typography from './typography.js'
 
 const code = {
   pre: {
-    fontFamily: `"Fira Code"`,
+    fontFamily: typography.fonts.monospace,
   },
   code: {
-    fontFamily: `"Fira Code"`,
-    fontSize: [0],
+    fontFamily: typography.fonts.monospace,
+    fontSize: 2,
   },
   "[data-name='live-editor']": {
     fontSize: 1,
-    fontFamily: `"Fira Code"`,
+    fontFamily: typography.fonts.monospace,
     'textarea, pre': {
       padding: (t: unknown) => `${t.space[3]} !important`,
     },
@@ -24,7 +25,7 @@ const code = {
   },
   '.prism-code': {
     fontSize: [1, 1, 2],
-    // fontFamily: `"Fira Code"`,
+
     padding: `2rem 1rem 1rem 1rem`,
     margin: `2rem`,
     webkitOverflowScrolling: `touch`,
@@ -57,19 +58,19 @@ const code = {
   '.gatsby-highlight': {
     fontSize: [1, 1, 2],
     position: `relative`,
-    // marginLeft: `4rem`,
-    // marginRight: `4rem`,
+    marginLeft: `4rem`,
+    marginRight: `4rem`,
     webkitOverflowScrolling: `touch`,
     bg: `rgb(1, 22, 39)`,
     borderRadius: `2px`,
-    mx: [1, 0, 0, -3],
+    //mx: [3, 0, 0, -3],
     '.token-line': {
       mx: -3,
       minWidth: `100%`,
     },
     'pre code': {
       float: `left`,
-      minWidth: `100%`,
+      minWidth: `80%`,
     },
     'pre[class*="language-"]:before': {
       bg: `white`,

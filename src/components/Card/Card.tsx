@@ -1,6 +1,7 @@
 import React from 'react'
 import { buildResponsiveVariant } from '@utils/buildResponsiveVariant'
 import Base from './Card.Base'
+import { VariantProp } from '@models/props'
 
 type Category = {
   name: string
@@ -17,18 +18,7 @@ type Author = {
 
 type CardProps = {
   variantGroup: unknown
-  variant:
-    | 'horizontal'
-    | 'horizontal-aside'
-    | 'horizontal-md'
-    | 'horizontal-lg'
-    | 'horizontal-cover'
-    | 'horizontal-cover-hero'
-    | 'horizontal-cover-wide'
-    | 'horizontal-hero'
-    | 'vertical-cover'
-    | 'vertical'
-    | 'search'
+  variant: Array<VariantProp> | VariantProp
   omitMedia: boolean
   omitCategory: boolean
   omitExcerpt: boolean
@@ -39,7 +29,7 @@ type CardProps = {
   columns: Array<unknown>
   mediaType: 'icon' | 'image'
   imageVariant: string
-  loading: 'lazy' | 'auto' | 'eager'
+  loading?: 'lazy' | 'auto' | 'eager'
   title: string | {}
   slug: string
   link: string

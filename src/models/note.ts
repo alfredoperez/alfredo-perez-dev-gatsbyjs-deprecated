@@ -11,7 +11,8 @@ export interface BannerImage {
   }
 }
 
-export interface NoteModel {
+export interface Note {
+  id: string
   slug: string
   title: string
   created: string
