@@ -3,8 +3,8 @@ import { Heading, jsx } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import TagsList from '@components/tags-list'
-import SEO from '@components/seo'
 import { Note } from '@models/note'
+import SEO from '@components/SEO'
 
 type MocProps = {
   data: {

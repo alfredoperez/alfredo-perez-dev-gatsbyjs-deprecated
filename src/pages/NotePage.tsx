@@ -3,9 +3,9 @@ import { Flex, Heading, jsx } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import TagsList from '@components/tags-list'
-import SEO from '@components/seo'
 import { Note } from '@models/note'
 import Comments from '@components/Comments/Comments'
+import SEO from '@components/SEO'
 
 const px = [`32px`, `16px`, `8px`, `4px`]
 const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)

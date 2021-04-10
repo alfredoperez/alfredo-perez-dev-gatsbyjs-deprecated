@@ -12,6 +12,8 @@ import { visuallyHidden } from '@utils/vissually-hidden'
 import { Note } from '@models/note'
 import CardList from '@components/CardList'
 import Divider from '@components/Divider'
+import SEO from '@components/SEO'
+import pageContextProvider from '../components/pageContextProvider'
 
 type HomePageProps = {
   data: {
@@ -38,6 +40,7 @@ const HomePage = (props: HomePageProps) => {
   } = props
   return (
     <React.Fragment>
+      <SEO />
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       {/*<section*/}
       {/*  sx={{*/}

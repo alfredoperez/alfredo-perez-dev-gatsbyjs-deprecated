@@ -6,8 +6,8 @@ import { Flex } from '@theme-ui/components'
 import Listing from '@components/listing'
 import useBlogConfig from '@hooks/use-blog-config'
 import replaceSlashes from '@utils/replace-slashes'
-import SEO from '@components/seo'
 import { Note } from '@models/note'
+import SEO from '@components/SEO'
 
 type DigitalGardenProps = {
   data: { allNote: { nodes: Array<Note> } }
