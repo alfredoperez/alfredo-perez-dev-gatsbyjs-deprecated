@@ -7,5 +7,5 @@ export default {
   normal,
   mute,
   vertical,
-  horizontal
+  horizontal,
 }

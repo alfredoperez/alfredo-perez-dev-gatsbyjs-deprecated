@@ -3,9 +3,9 @@ export default {
   textDecoration: `none`,
   userSelect: `none`,
   ':visited': {
-    color: 'alpha'
+    color: 'alpha',
   },
   ':hover': {
-    color: 'alphaDark'
-  }
+    color: 'alphaDark',
+  },
 }

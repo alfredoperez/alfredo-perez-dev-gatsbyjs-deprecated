@@ -29,5 +29,5 @@ export default {
   paper,
   'paper-lg': paperLg,
   search,
-  interactive
+  interactive,
 }

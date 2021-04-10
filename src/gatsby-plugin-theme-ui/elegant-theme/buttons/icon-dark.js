@@ -4,5 +4,5 @@ export default {
   ...simple,
   borderRadius: `full`,
   bg: `omegaDark`,
-  color: `omegaLight`
+  color: `omegaLight`,
 }

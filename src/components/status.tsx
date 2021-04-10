@@ -5,20 +5,38 @@ type StatusProps = {
   status: string
 }
 
-const StatusIcon = styled.p`
-  margin: 0;
-`
+const styles = {
+  emoji: {
+    margin: 0,
+  },
+}
 
 const Status = ({ status }: StatusProps) => {
   switch (status) {
     case 'evergreen':
-      return <StatusIcon>🌳</StatusIcon>
+      return (
+        <span role="img" aria-label="Evergreen note" sx={styles.emoji}>
+          🌳
+        </span>
+      )
     case 'seed':
-      return <StatusIcon>🌱</StatusIcon>
+      return (
+        <span role="img" aria-label="Seed Note" sx={styles.emoji}>
+          🌱
+        </span>
+      )
     case 'bud':
-      return <StatusIcon>🌿</StatusIcon>
+      return (
+        <span role="img" aria-label="Bud Note" sx={styles.emoji}>
+          🌿
+        </span>
+      )
     case 'snag':
-      return <StatusIcon>🍂</StatusIcon>
+      return (
+        <span role="img" aria-label="Snag Note" sx={styles.emoji}>
+          🍂
+        </span>
+      )
     default:
       return null
   }

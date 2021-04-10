@@ -3,5 +3,5 @@ export default {
   md: 3,
   lg: 5,
   xl: 10,
-  xxl: 20
+  xxl: 20,
 }

@@ -41,10 +41,7 @@ export default {
     },
   },
   image: {
-    borderRadius: (t) => [
-      `${t.radii.default} 3rem 0 0`,
-      `${t.radii.default} 3rem 3rem`,
-    ],
+    borderRadius: (t) => [`${t.radii.default} 3rem 0 0`, `${t.radii.default} 3rem 3rem`],
     maxHeight: `none`,
     zIndex: 2,
     img: {

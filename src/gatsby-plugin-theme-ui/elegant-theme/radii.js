@@ -9,5 +9,5 @@ export default {
   right: `0 0.5rem 0.5rem 0`,
   left: `0.5rem 0 0 0.5rem`,
   top: `0.5rem 0.5rem 0 0`,
-  bottom: `0 0 0.5rem 0.5rem`
+  bottom: `0 0 0.5rem 0.5rem`,
 }

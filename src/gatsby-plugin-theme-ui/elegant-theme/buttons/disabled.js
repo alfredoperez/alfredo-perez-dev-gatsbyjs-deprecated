@@ -5,5 +5,5 @@ export default {
   color: `omegaDark`,
   bg: `mute`,
   borderColor: `mute`,
-  cursor: `not-allowed`
+  cursor: `not-allowed`,
 }

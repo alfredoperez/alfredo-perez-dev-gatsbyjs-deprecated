@@ -6,6 +6,6 @@ export default {
   svg: {
     display: `block`,
     mx: `auto`,
-    mb: 1
-  }
+    mb: 1,
+  },
 }

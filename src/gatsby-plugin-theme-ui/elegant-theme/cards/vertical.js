@@ -1,57 +1,57 @@
 export default {
   content: {
-    flexDirection: `column`
+    flexDirection: `column`,
   },
   media: {
     flexBasis: 0,
     m: 2,
-    mb: 0
+    mb: 0,
   },
   image: {
     borderRadius: `default`,
     minHeight: `8.3rem`,
     maxHeight: `15rem`,
     img: {
-      objectFit: `none !important`
-    }
+      objectFit: `none !important`,
+    },
   },
   iconBox: {
     borderRadius: `default`,
-    minHeight: `8.3rem`
+    minHeight: `8.3rem`,
   },
   iconText: {
-    display: [`none`, `block`]
+    display: [`none`, `block`],
   },
   icon: {
-    size: `icon.lg`
+    size: `icon.lg`,
   },
   body: {
-    p: 4
+    p: 4,
   },
   category: {
-    display: `inline-block`
+    display: `inline-block`,
   },
   title: {
     variant: `text.h3`,
-    flex: [0, 0, `auto`]
+    flex: [0, 0, `auto`],
   },
   excerpt: {
-    display: `block`
+    display: `block`,
   },
   footer: {
-    variant: `text.small`
+    variant: `text.small`,
   },
   authorPhoto: {
-    display: `block`
+    display: `block`,
   },
   author: {
     display: `inline-block`,
-    flexBasis: `full`
+    flexBasis: `full`,
   },
   date: {
-    display: `inline-block`
+    display: `inline-block`,
   },
   timeToRead: {
-    display: `inline-block`
-  }
+    display: `inline-block`,
+  },
 }

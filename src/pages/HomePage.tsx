@@ -54,13 +54,7 @@ const HomePage = (props: HomePageProps) => {
       {/*  <Link to={replaceSlashes(`/${basePath}/${digitalGardenPath}`)}>View All</Link>*/}
       {/*</Title>*/}
       {/*<Divider />*/}
-      <CardList
-        variant={['horizontal']}
-        title="Latest Notes"
-        nodes={notes}
-        columns={[1, 2]}
-        omitMedia
-      />
+      <CardList variant={['horizontal']} title="Latest Notes" nodes={notes} columns={[1, 2]} omitMedia />
       {/*<Title text="Maps of content" />*/}
       {/*<Listing mocs={mocs} showTags={false} />*/}
     </React.Fragment>

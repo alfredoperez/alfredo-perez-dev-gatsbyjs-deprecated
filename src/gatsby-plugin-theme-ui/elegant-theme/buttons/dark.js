@@ -8,6 +8,6 @@ export default {
   ':hover': {
     color: `white`,
     bg: `alpha`,
-    borderColor: `alpha`
-  }
+    borderColor: `alpha`,
+  },
 }

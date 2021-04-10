@@ -11,21 +11,21 @@ export default {
   size: 24,
   p: 2,
   '+a, + button': {
-    ml: 2
+    ml: 2,
   },
   svg: {
-    size: 24
+    size: 24,
   },
   '@media (hover: hover) and (pointer: fine)': {
     ':hover': {
       bg: `alpha`,
       color: `white`,
       svg: {
-        fill: `white`
-      }
-    }
+        fill: `white`,
+      },
+    },
   },
   ':before': {
-    display: `none`
-  }
+    display: `none`,
+  },
 }

@@ -19,5 +19,5 @@ export default {
   white,
   simple,
   icon,
-  'icon-dark': iconDark
+  'icon-dark': iconDark,
 }

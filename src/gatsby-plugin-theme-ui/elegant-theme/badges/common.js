@@ -6,9 +6,9 @@ const badge = {
   verticalAlign: `middle`,
   px: 3,
   py: 1,
-  transition: ` all 250ms ease`
+  transition: ` all 250ms ease`,
 }
 
 export default {
-  badge
+  badge,
 }

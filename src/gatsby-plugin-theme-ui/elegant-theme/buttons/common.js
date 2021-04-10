@@ -15,9 +15,9 @@ const button = {
   cursor: `pointer`,
   borderWidth: `md`,
   borderStyle: `solid`,
-  transition: `all 250ms ease`
+  transition: `all 250ms ease`,
 }
 
 export default {
-  button
+  button,
 }

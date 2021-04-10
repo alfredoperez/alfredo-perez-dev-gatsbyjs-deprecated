@@ -6,6 +6,6 @@ export default {
   color: `white`,
   ':hover': {
     bg: `alpha`,
-    color: `white`
-  }
+    color: `white`,
+  },
 }

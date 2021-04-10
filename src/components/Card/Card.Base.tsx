@@ -18,12 +18,7 @@ const styles = {
 }
 
 const CardBase = ({ columns, onMouseOver, ...props }) => (
-  <Box
-    className="blog_card"
-    sx={columnSizeMatcher(columns)}
-    onMouseOver={onMouseOver}
-    onFocus={onMouseOver}
-  >
+  <Box className="blog_card" sx={columnSizeMatcher(columns)} onMouseOver={onMouseOver} onFocus={onMouseOver}>
     <Card
       variant="interactive"
       sx={{

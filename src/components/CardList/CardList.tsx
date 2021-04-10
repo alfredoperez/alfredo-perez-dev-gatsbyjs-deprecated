@@ -58,10 +58,7 @@ const CardList = React.forwardRef(
     const sectionKey = title && `${hashCode(reducedNodes.map((node: any) => node.id).join())}`
 
     //Build responsive variant for card list
-    const cardListVariant = buildResponsiveVariant(
-      slider ? SLIDER_VARIANT_GROUP : FIXED_VARIANT_GROUP,
-      variant,
-    )
+    const cardListVariant = buildResponsiveVariant(slider ? SLIDER_VARIANT_GROUP : FIXED_VARIANT_GROUP, variant)
 
     const changeSlide = (index: number) => {
       if (asNavFor?.current) {

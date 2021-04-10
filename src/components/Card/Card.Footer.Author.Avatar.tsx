@@ -15,20 +15,13 @@ const CardFooterAuthorAvatar = ({ variant, omitAuthor, author }) => {
 
   const visibility = responsiveVariant.reduce(
     (mobileVisibility, variant) =>
-      mobileVisibility === false && get(context.theme, variant, {}).display === 'none'
-        ? false
-        : true,
+      mobileVisibility === false && get(context.theme, variant, {}).display === 'none' ? false : true,
     false,
   )
 
   return visibility ? (
     author && author.thumbnail ? (
-      <Link
-        as={GLink}
-        to={author.slug}
-        aria-label={author.name}
-        sx={{ variant: responsiveVariant }}
-      >
+      <Link as={GLink} to={author.slug} aria-label={author.name} sx={{ variant: responsiveVariant }}>
         <Avatar avatar={author.thumbnail} width={authorImageSize} simple />
       </Link>
     ) : null

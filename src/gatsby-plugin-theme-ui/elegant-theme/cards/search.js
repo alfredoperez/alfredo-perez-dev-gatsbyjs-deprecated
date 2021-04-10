@@ -5,47 +5,47 @@ export default {
     bg: `transparent`,
     ':hover': {
       transform: `none`,
-      boxShadow: `none`
-    }
+      boxShadow: `none`,
+    },
   },
   content: {
-    pl: [0, 3]
+    pl: [0, 3],
   },
   media: {
-    display: `none`
+    display: `none`,
   },
   body: {
     alignSelf: `center`,
-    flexGrow: 1
+    flexGrow: 1,
   },
   category: {
-    display: `none`
+    display: `none`,
   },
   title: {
     variant: `text.h4`,
     color: `alpha`,
     mb: 2,
     ':hover': {
-      color: `alphaDark`
-    }
+      color: `alphaDark`,
+    },
   },
   excerpt: {
-    variant: `text.small`
+    variant: `text.small`,
   },
   footer: {
-    variant: `text.small`
+    variant: `text.small`,
   },
   authorPhoto: {
-    display: `block`
+    display: `block`,
   },
   author: {
     display: `inline-block`,
-    flexBasis: `full`
+    flexBasis: `full`,
   },
   date: {
-    display: `inline-block`
+    display: `inline-block`,
   },
   timeToRead: {
-    display: `inline-block`
-  }
+    display: `inline-block`,
+  },
 }

@@ -7,6 +7,6 @@ export default {
     verticalAlign: `middle`,
     display: `inline-block`,
     mr: 2,
-    mb: 0
-  }
+    mb: 0,
+  },
 }

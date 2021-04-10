@@ -7,6 +7,6 @@ export default {
   borderColor: `omegaDark`,
   ':hover': {
     bg: `omegaDark`,
-    color: `white`
-  }
+    color: `white`,
+  },
 }
