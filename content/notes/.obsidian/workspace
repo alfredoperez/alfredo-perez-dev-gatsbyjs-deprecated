@@ -7,7 +7,6 @@
         "id": "ec2136bf912f8e57",
         "type": "leaf",
         "dimension": 52.91803278688525,
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -148,6 +147,7 @@
     "width": 296,
     "collapsed": true
   },
+  "active": "ec2136bf912f8e57",
   "lastOpenFiles": [
     "Professional/Where to initialize NgRx Selectors?.md",
     "How this works.md",
