@@ -4,6 +4,7 @@ import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
 import CardBodyStatus from './Card.Body.Status'
 import CardBodyTitle from './Card.Body.Title'
 import CardBodyExcerpt from './Card.Body.Excerpt'
+import { CardProps } from './Card'
 
 const styles = {
   body: {
@@ -14,7 +15,7 @@ const styles = {
   },
 }
 
-const CardBody = ({ children, omitBody, ...props }) =>
+const CardBody = ({ children, omitBody, ...props }: CardProps) =>
   !omitBody && (
     <Box
       sx={{

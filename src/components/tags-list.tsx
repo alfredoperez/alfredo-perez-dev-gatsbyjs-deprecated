@@ -3,11 +3,10 @@ import { Badge, Box, Flex } from 'theme-ui'
 import { Link } from 'gatsby'
 import useBlogConfig from '../hooks/use-blog-config'
 import replaceSlashes from '../utils/replace-slashes'
-import { TagEntity } from '@models/note'
-import { getReadableColor } from '@utils/getReadableColor'
+import { Tag } from '@models/note'
 
 type TagsProps = {
-  tags: Array<TagEntity>
+  tags: Array<Tag>
 }
 
 const TagsList = ({ tags }: TagsProps) => {

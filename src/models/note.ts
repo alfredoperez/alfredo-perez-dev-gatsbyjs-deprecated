@@ -1,4 +1,4 @@
-export interface TagEntity {
+export interface Tag {
   name: string
   slug: string
 }
