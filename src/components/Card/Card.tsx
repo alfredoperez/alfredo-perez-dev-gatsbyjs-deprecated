@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { buildResponsiveVariant } from '@utils/buildResponsiveVariant'
 import Base from './Card.Base'
+import { VariantProp } from '@models/props'
 
 type Category = {
   name: string
@@ -15,20 +16,9 @@ type Author = {
   thumbnail: unknown
 }
 
-type CardProps = {
+export interface CardProps extends PropsWithChildren<any> {
   variantGroup: unknown
-  variant:
-    | 'horizontal'
-    | 'horizontal-aside'
-    | 'horizontal-md'
-    | 'horizontal-lg'
-    | 'horizontal-cover'
-    | 'horizontal-cover-hero'
-    | 'horizontal-cover-wide'
-    | 'horizontal-hero'
-    | 'vertical-cover'
-    | 'vertical'
-    | 'search'
+  variant: Array<VariantProp> | VariantProp
   omitMedia: boolean
   omitCategory: boolean
   omitExcerpt: boolean
@@ -39,7 +29,11 @@ type CardProps = {
   columns: Array<unknown>
   mediaType: 'icon' | 'image'
   imageVariant: string
-  loading: 'lazy' | 'auto' | 'eager'
+  loading?: 'lazy' | 'auto' | 'eager'
+
+  thumbnail: unknown
+  thumbnailText: string
+
   title: string | {}
   slug: string
   link: string
@@ -48,8 +42,6 @@ type CardProps = {
   date: string
   timeToRead: number
   excerpt: string
-  thumbnail: unknown
-  thumbnailText: string
 }
 
 const Card = ({ variantGroup = 'cards', variant = 'vertical', aside, ...props }: CardProps) => {

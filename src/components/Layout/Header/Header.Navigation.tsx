@@ -26,12 +26,7 @@ const HeaderNavigation = ({ items }: NavigationProps) => {
           }}
         >
           {items.map((item) => (
-            <TLink
-              key={item.slug}
-              as={Link}
-              activeClassName="active"
-              to={replaceSlashes(`/${basePath}/${item.slug}`)}
-            >
+            <TLink key={item.slug} as={Link} activeClassName="active" to={replaceSlashes(`/${basePath}/${item.slug}`)}>
               {item.title}
             </TLink>
           ))}

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, Card, Flex } from 'theme-ui'
 import Body from './Card.Body'
-import Footer from './Card.Footer'
 import Media from './Card.Media'
+import Footer from './Card.Footer'
 import { columnSizeMatcher } from '@utils/columnSizeMatcher'
 import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
 
@@ -18,12 +18,7 @@ const styles = {
 }
 
 const CardBase = ({ columns, onMouseOver, ...props }) => (
-  <Box
-    className="blog_card"
-    sx={columnSizeMatcher(columns)}
-    onMouseOver={onMouseOver}
-    onFocus={onMouseOver}
-  >
+  <Box className="blog_card" sx={columnSizeMatcher(columns)} onMouseOver={onMouseOver} onFocus={onMouseOver}>
     <Card
       variant="interactive"
       sx={{

@@ -24,8 +24,7 @@ const CardMedia = ({ imageVariant, omitMedia, mediaType, title, slug, link, ...p
 
   const { variant, thumbnail, thumbnailText } = props
 
-  const imageVar =
-    imageVariant || get(context.theme, rv(variant, 'imageVariant')[0]) || DEFAULT_IMAGE_VARIANT
+  const imageVar = imageVariant || get(context.theme, rv(variant, 'imageVariant')[0]) || DEFAULT_IMAGE_VARIANT
 
   const image = thumbnail && thumbnail[imageVar]
 

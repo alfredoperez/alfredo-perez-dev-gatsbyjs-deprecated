@@ -1,13 +1,12 @@
 import React from 'react'
 
-type StatusProps = {
-  status: string
-}
-
 const styles = {
   emoji: {
     margin: 0,
   },
+}
+type StatusProps = {
+  status: string
 }
 
 const Status = ({ status }: StatusProps) => {

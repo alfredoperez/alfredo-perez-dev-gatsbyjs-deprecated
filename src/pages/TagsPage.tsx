@@ -8,8 +8,8 @@ import { Box, Flex } from '@theme-ui/components'
 import kebabCase from 'lodash.kebabcase'
 import { Link } from 'gatsby'
 import useBlogConfig from '@hooks/use-blog-config'
-import SEO from '@components/seo'
 import replaceSlashes from '@utils/replace-slashes'
+import SEO from '@components/SEO'
 
 type TagsProps = {
   data: {
@@ -32,7 +32,7 @@ const TagsPage = (props: TagsProps) => {
   const { group: tags } = props.data.allNote
 
   return (
-    <>
+    <React.Fragment>
       <SEO title="Tags" />
       <Heading as="h1" variant="styles.h1">
         Tags
@@ -50,7 +50,7 @@ const TagsPage = (props: TagsProps) => {
           </Flex>
         ))}
       </Box>
-    </>
+    </React.Fragment>
   )
 }
 

@@ -6,13 +6,13 @@ import { Link } from 'gatsby'
 import useBlogConfig from '@hooks/use-blog-config'
 import Listing from '@components/listing'
 import replaceSlashes from '@utils/replace-slashes'
-import SEO from '@components/seo'
-import { NoteModel } from '@models/note.model'
+import { Note } from '@models/note'
+import SEO from '@components/SEO'
 
 type TagProps = {
   data: {
     allNote: {
-      nodes: Array<NoteModel>
+      nodes: Array<Note>
     }
   }
   pageContext: {

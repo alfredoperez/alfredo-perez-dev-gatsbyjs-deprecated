@@ -1,6 +1,38 @@
-const options = require(`./src/gatsby/default-options`)
 const kebabCase = require(`lodash.kebabcase`)
 
+const options = {
+  basePath: '/',
+  postsPrefix: `/`,
+  digitalGardenPath: `/digital-garden`,
+  notesPath: `content/notes`,
+  notesPrefix: `/notes/`,
+  mocsPrefix: `/mocs/`,
+  pagesPath: `content/pages`,
+  tagsPath: `/tags`,
+  externalLinks: [
+    {
+      name: `Twitter`,
+      url: `https://twitter.com/alfrodo_perez`,
+    },
+    {
+      name: `GitHub`,
+      url: `https://github.com/alfredoperez`,
+    },
+  ],
+  navigation: [
+    {
+      title: `Digital Garden`,
+      slug: `/digital-garden`,
+    },
+    {
+      title: `About`,
+      slug: `/notes/how-this-works`,
+    },
+  ],
+  showLineNumbers: true,
+  showCopyButton: true,
+  formatString: `DD/MM/YYYY`,
+}
 // These template are only data-fetching wrappers that import components
 const homepageTemplate = require.resolve(`./src/templates/HomePage.Query.tsx`)
 const tagTemplate = require.resolve(`./src/templates/TagPage.Query.tsx`)
@@ -113,7 +145,45 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
-exports.sourceNodes = require('./src/gatsby/sourceNodes')
+exports.sourceNodes = ({ actions, createContentDigest }) => {
+  const { createNode } = actions
+  const {
+    basePath,
+    digitalGardenPath,
+    notesPath,
+    pagesPath,
+    tagsPath,
+    externalLinks,
+    navigation,
+    showLineNumbers,
+    showCopyButton,
+  } = options
+
+  const config = {
+    basePath,
+    pagesPath,
+    digitalGardenPath,
+    notesPath,
+    tagsPath,
+    externalLinks,
+    navigation,
+    showLineNumbers,
+    showCopyButton,
+  }
+
+  createNode({
+    ...config,
+    id: `blog-config`,
+    parent: null,
+    children: [],
+    internal: {
+      type: `BlogConfig`,
+      contentDigest: createContentDigest(config),
+      content: JSON.stringify(config),
+      description: `Options for the blog`,
+    },
+  })
+}
 
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
   const processTags = (tags) => {

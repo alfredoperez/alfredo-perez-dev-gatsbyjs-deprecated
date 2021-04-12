@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import NoteListItem from './note-list-item'
-import { NoteModel } from '../models/note.model'
+import { Note } from '@models/note'
 import MocListItem from './moc-list-item'
 
 type ListingProps = {
-  notes?: Array<NoteModel>
-  mocs?: Array<NoteModel>
+  notes?: Array<Note>
+  mocs?: Array<Note>
   className?: string
   showTags?: boolean
 }

@@ -76,12 +76,7 @@ type NavigationElegantProps = {
   items: Array<NavigationMenuItem>
 }
 
-const NavigationElegant = ({
-  items,
-  variant = 'horizontal',
-  headingProps,
-  wrapperStyle,
-}: NavigationElegantProps) => {
+const NavigationElegant = ({ items, variant = 'horizontal', headingProps, wrapperStyle }: NavigationElegantProps) => {
   if (items.length === 0) return null
 
   const wrapperVariant = buildResponsiveVariant('lists.links', variant)
@@ -101,21 +96,11 @@ const NavigationElegant = ({
       <Fragment key={`nav-menu-${i}`}>
         <NavigationDivider index={i} />
         <Heading {...headingProps}>{node.title}</Heading>
-        <NavigationList
-          navKey={navKey}
-          wrapperProps={wrapperProps}
-          items={node.items}
-          variant={linkVariant}
-        />
+        <NavigationList navKey={navKey} wrapperProps={wrapperProps} items={node.items} variant={linkVariant} />
       </Fragment>
     ))
   ) : (
-    <NavigationList
-      navKey={navKey}
-      wrapperProps={wrapperProps}
-      items={items}
-      variant={linkVariant}
-    />
+    <NavigationList navKey={navKey} wrapperProps={wrapperProps} items={items} variant={linkVariant} />
   )
 }
 

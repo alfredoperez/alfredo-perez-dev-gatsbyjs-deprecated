@@ -5,9 +5,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import loadable from '@loadable/component'
 import './Drawer.css'
 
-const DrawerMenu = loadable(
-  () => import(/* webpackChunkName: 'rc-drawer' */ /* webpackPrefetch: true */ 'rc-drawer'),
-)
+const DrawerMenu = loadable(() => import(/* webpackChunkName: 'rc-drawer' */ /* webpackPrefetch: true */ 'rc-drawer'))
 
 const styles = {
   handler: {
@@ -62,13 +60,7 @@ const Drawer = ({ container = null, width = 300, locationState }: DrawerProps) =
     <>
       {/* {open && <ScrollDisabler />} */}
       {handler}
-      <DrawerMenu
-        width={width}
-        open={open}
-        getContainer={container}
-        onHandleClick={handleSwitch}
-        placement="right"
-      >
+      <DrawerMenu width={width} open={open} getContainer={container} onHandleClick={handleSwitch} placement="right">
         <Box sx={styles.content}>{props.children}</Box>
       </DrawerMenu>
     </>
