@@ -31,6 +31,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+      options: {
+        analyzerMode: `server`,
+        analyzerPort: `8888`,
+        disable: process.env.ANALYSE_BUNDLE === 'true',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: options.notesPath,
