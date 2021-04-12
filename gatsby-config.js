@@ -27,15 +27,9 @@ module.exports = {
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         chunkSize: 10000,
         queries: require('./utils/algolia-queries'),
+        skipIndexing: process.env.ALGOLIA_SKIP_INDEX === 'true',
       },
     },
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
-      },
-    },
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {
