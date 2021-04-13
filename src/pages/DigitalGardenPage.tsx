@@ -1,50 +1,27 @@
 /** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React from 'react'
-import { Heading, jsx, Link as TLink } from 'theme-ui'
-import { Link } from 'gatsby'
-import { Flex } from '@theme-ui/components'
-import Listing from '@components/listing'
-import useBlogConfig from '@hooks/use-blog-config'
-import replaceSlashes from '@utils/replace-slashes'
-import SEO from '@components/seo'
-import { NoteModel } from '@models/note.model'
+import { Note } from '@models/note'
+import SEO from '@components/SEO'
+import CardList from '../components/CardList'
 
 type DigitalGardenProps = {
-  data: { allNote: { nodes: Array<NoteModel> } }
+  data: { allNote: { nodes: Array<Note> } }
   [key: string]: unknown
 }
 
 const DigitalGardenPage = (props: DigitalGardenProps) => {
-  const { tagsPath, basePath } = useBlogConfig()
-
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (!props.data) {
     return null
   }
 
   const notes = props.data.allNote.nodes
+
   return (
     <React.Fragment>
       <SEO title="Digital Garden" />
-      <Flex
-        sx={{
-          alignItems: `center`,
-          justifyContent: `space-between`,
-          flexFlow: `wrap`,
-        }}
-      >
-        <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
-          Digital Garden
-        </Heading>
-        <TLink
-          as={Link}
-          sx={{ variant: `links.secondary`, marginY: 2 }}
-          to={replaceSlashes(`/${basePath}/${tagsPath}`)}
-        >
-          View all tags
-        </TLink>
-      </Flex>
-      <Listing notes={notes} sx={{ mt: [4, 5] }} />
+      <CardList variant={['horizontal']} title="Digital Garden" nodes={notes} columns={[1, 2]} omitMedia />
     </React.Fragment>
   )
 }

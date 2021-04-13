@@ -2,13 +2,13 @@
 import { Heading, jsx } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import TagsList from '@components/tags-list'
-import SEO from '@components/seo'
-import { NoteModel } from '@models/note.model'
+import { Note } from '@models/note'
+import SEO from '@components/SEO'
+import TagsList from '@components/TagsList'
 
 type MocProps = {
   data: {
-    note: NoteModel
+    note: Note
   }
 }
 const MocPage = (props: MocProps) => {

@@ -82,12 +82,7 @@ const Code = ({
   if (props[`react-live`]) {
     return (
       <div className="react-live-wrapper">
-        <LazyLiveProvider
-          code={codeString}
-          noInline
-          theme={theme}
-          showCopyButton={showCopyButton}
-        />
+        <LazyLiveProvider code={codeString} noInline theme={theme} showCopyButton={showCopyButton} />
       </div>
     )
   }

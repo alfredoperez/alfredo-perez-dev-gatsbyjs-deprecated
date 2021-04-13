@@ -1,4 +1,4 @@
-interface PageContext {
+export interface PageContext {
   paginatePostsPage: boolean
   basePath: boolean
   services: boolean

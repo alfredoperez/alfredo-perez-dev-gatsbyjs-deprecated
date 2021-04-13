@@ -27,15 +27,17 @@ module.exports = {
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         chunkSize: 10000,
         queries: require('./utils/algolia-queries'),
+        skipIndexing: process.env.ALGOLIA_SKIP_INDEX === 'true',
       },
     },
     {
-      resolve: `gatsby-plugin-styled-components`,
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
-        // Add any options here
+        analyzerMode: `server`,
+        analyzerPort: `8888`,
+        disable: process.env.ANALYSE_BUNDLE === 'true',
       },
     },
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {

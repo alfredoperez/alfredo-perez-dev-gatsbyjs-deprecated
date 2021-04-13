@@ -13,7 +13,7 @@ const CardBodyTitle = ({ variant, title, slug, link }) => {
       }
     : {
         as: GLink,
-        to: slug,
+        to: `/notes${slug.toLocaleLowerCase()}`,
       }
   return (
     <Heading {...linkProps} sx={{ variant: rv(variant, 'title') }}>
