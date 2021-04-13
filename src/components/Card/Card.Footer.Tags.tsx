@@ -1,9 +1,6 @@
 import React from 'react'
-import { Text } from 'theme-ui'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
 import { Flex } from '@theme-ui/components'
-import Status from '@components/status'
-import TagsList from '@components/tags-list'
+import TagsList from '@components/TagsList'
 
 const CardFooterTags = ({ variant, tags, omitTags }) => (
   <React.Fragment>

@@ -2,13 +2,13 @@
 import { Box, Container, jsx } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
 import useBlogConfig from '../../../hooks/use-blog-config'
-import Logo from '../../Logo'
 import { Link } from 'gatsby'
 import replaceSlashes from '../../../utils/replace-slashes'
 import useSiteMetadata from '../../../hooks/use-site-metadata'
 import { HeaderMenu } from './Header.Menu'
 import HeaderColorModeToggle from './Header.ColorModeToggle'
 import Search from '../Search/Search'
+import Logo from '@components/Logo/Logo'
 
 const styles = {
   wrapper: {

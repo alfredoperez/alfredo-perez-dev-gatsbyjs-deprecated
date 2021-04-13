@@ -21,7 +21,7 @@ export interface Note {
   status: string
   body: string
   excerpt: string
-  tags?: Array<TagEntity>
+  tags?: Array<Tag>
   canonicalUrl?: string
   timeToRead?: number
   banner?: BannerImage

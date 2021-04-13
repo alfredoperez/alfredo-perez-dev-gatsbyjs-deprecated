@@ -35,7 +35,7 @@ const TagsPage = (props: TagsProps) => {
     <React.Fragment>
       <SEO title="Tags" />
       <Heading as="h1" variant="styles.h1">
-        Tags
+        All Tags
       </Heading>
       <Box mt={[4, 5]}>
         {tags.map((listItem) => (

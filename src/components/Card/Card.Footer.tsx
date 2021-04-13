@@ -1,8 +1,6 @@
 import React from 'react'
 import { Box, Flex } from 'theme-ui'
 import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
-import AuthorAvatar from './Card.Footer.Author.Avatar'
-import AuthorName from './Card.Footer.Author.Name'
 import Info from './Card.Footer.Info'
 import CardFooterTags from '@components/Card/Card.Footer.Tags'
 

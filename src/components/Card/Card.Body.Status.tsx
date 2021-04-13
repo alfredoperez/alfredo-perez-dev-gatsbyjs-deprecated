@@ -1,10 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { Badge, Box } from 'theme-ui'
+import { Box } from 'theme-ui'
 import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
-import { getReadableColor } from '@utils/getReadableColor'
-import Status from '@components/status'
-import { Flex } from '@theme-ui/components'
+import Status from '@components/Status'
 
 const styles = {
   badge: {
@@ -12,7 +9,7 @@ const styles = {
   },
 }
 
-const CardBodyStatus = ({ variant, status, omitStatus }) =>
+const CardBodyStatus = ({ variant, status, omitStatus }: any) =>
   !omitStatus && status ? (
     <Box sx={{ variant: rv(variant, 'category') }}>
       <Box sx={styles.badge}>

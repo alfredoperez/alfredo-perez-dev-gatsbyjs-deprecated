@@ -8,6 +8,7 @@ import Listing from '@components/listing'
 import replaceSlashes from '@utils/replace-slashes'
 import { Note } from '@models/note'
 import SEO from '@components/SEO'
+import CardList from '../components/CardList'
 
 type TagProps = {
   data: {
@@ -49,7 +50,7 @@ const TagPage = (props: TagProps) => {
         }}
       >
         <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
-          {pageContext.name}
+          Notes with tag: {pageContext.name}
         </Heading>
         <TLink
           as={Link}
@@ -59,7 +60,7 @@ const TagPage = (props: TagProps) => {
           View all tags
         </TLink>
       </Flex>
-      <Listing notes={notes} sx={{ mt: [4, 5] }} />
+      <CardList variant={['horizontal']} nodes={notes} columns={[1, 2]} omitMedia fade={true} />
     </React.Fragment>
   )
 }
