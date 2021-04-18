@@ -1,4 +1,4 @@
-const newsletterFeed = require(`./src/utils/newsletterFeed`)
+const newsletterFeed = require(`./utils/newsletterFeed`)
 require(`dotenv`).config({
   path: `.env`,
 })

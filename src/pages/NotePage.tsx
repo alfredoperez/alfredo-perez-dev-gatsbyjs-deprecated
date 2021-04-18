@@ -1,19 +1,24 @@
 /** @jsx jsx */
-import { Flex, Heading, jsx } from 'theme-ui'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-
 import { Note } from '@models/note'
-import Comments from '@components/Comments/Comments'
 import SEO from '@components/SEO'
-import TagsList from '../components/TagsList'
-
-const px = [`32px`, `16px`, `8px`, `4px`]
-const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
+import { Card as CardComponent } from 'theme-ui'
+import Card from '@components/Card'
+import { PostBody, PostImage, PostTagsShare } from '../components/Post'
+import PostComments from '../components/Post/Post.Comments'
+import Divider from '@components/Divider'
+import { Main } from '@layout/Main'
+import { Stack } from '../components/Layout'
 
 type NoteProps = {
   data: {
     note: Note
+    location: any
+    tagCategoryPosts: any
+    tagPosts: any
+    categoryPosts: any
+    previous: any
+    next: any
   }
 }
 const NotePage = (props: NoteProps) => {
@@ -22,8 +27,14 @@ const NotePage = (props: NoteProps) => {
     return null
   }
   const {
-    data: { note },
+    data: { note /*tagCategoryPosts, tagPosts, categoryPosts, previous, next */ },
   } = props
+
+  // const relatedPosts = [
+  //   ...(tagCategoryPosts ? tagCategoryPosts.nodes : []),
+  //   ...(tagPosts ? tagPosts.nodes : []),
+  //   ...(categoryPosts ? categoryPosts.nodes : []),
+  // ]
 
   return (
     <React.Fragment>
@@ -34,37 +45,36 @@ const NotePage = (props: NoteProps) => {
         pathname={note.slug}
         canonicalUrl={note.canonicalUrl}
       />
-      <Heading as="h1" variant="styles.h1">
-        {note.title}
-      </Heading>
-      <Flex
-        sx={{
-          color: `secondary`,
-          mt: 3,
-          a: { color: `secondary` },
-          fontSize: [1, 1, 2],
-        }}
-      >
-        {note.tags && note.tags.length > 0 && <TagsList tags={note.tags} />}
-        <time>{note.created}</time>
-        {note.timeToRead && `—`}
-        {note.timeToRead && <span>{note.timeToRead} min read</span>}
-      </Flex>
-      <section
-        sx={{
-          my: 5,
-          '.gatsby-resp-image-wrapper': {
-            my: [4, 4, 5],
-            boxShadow: shadow.join(`, `),
-          },
-          variant: `layout.content`,
-        }}
-      >
-        <MDXRenderer>{note.body}</MDXRenderer>
-      </section>
-      <section>
-        <Comments />
-      </section>
+      <Divider />
+      <Stack effectProps={{ effect: 'fadeInDown' }}>
+        <Main>
+          <Card {...note} variant="horizontal-hero" omitExcerpt omitMedia />
+        </Main>
+      </Stack>
+      <Divider space={3} />
+      <Stack effectProps={{ fraction: 0 }}>
+        <Main>
+          <CardComponent variant="paper-lg">
+            {/*<PostImage {...note} inCard />*/}
+            <PostBody {...note} />
+            <PostTagsShare {...note} location={props.location} />
+            <PostComments {...note} />
+          </CardComponent>
+          <Divider />
+          {/*{post.category && (*/}
+          {/*  <CardList*/}
+          {/*    title="Related Posts"*/}
+          {/*    nodes={relatedPosts}*/}
+          {/*    variant={['horizontal-aside']}*/}
+          {/*    columns={[1, 2, 2, 2]}*/}
+          {/*    limit={6}*/}
+          {/*    distinct*/}
+          {/*    omitMedia*/}
+          {/*    omitCategory*/}
+          {/*  />*/}
+          {/*)}*/}
+        </Main>
+      </Stack>
     </React.Fragment>
   )
 }
