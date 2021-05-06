@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ec2136bf912f8e57",
+        "id": "0345f791b1c81633",
         "type": "leaf",
-        "dimension": 52.91803278688525,
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
             "file": "Professional/Where to initialize NgRx Selectors?.md",
             "mode": "source"
           }
-        },
-        "group": "9b5c7bf2941eb9ad"
-      },
-      {
-        "id": "74c791a0afaa16a2",
-        "type": "leaf",
-        "dimension": 47.08196721311476,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Professional/Where to initialize NgRx Selectors?.md",
-            "mode": "preview"
-          }
-        },
-        "group": "9b5c7bf2941eb9ad"
+        }
       }
     ],
     "direction": "vertical"
@@ -56,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "selectors",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "1f317ed0d6664cd7",
@@ -148,16 +131,17 @@
     "width": 296,
     "collapsed": true
   },
+  "active": "0345f791b1c81633",
   "lastOpenFiles": [
     "Professional/Where to initialize NgRx Selectors?.md",
-    "How this works.md",
-    "Website Goals and Setup.md",
     "Professional/WebStorm Setup.md",
-    "Professional/Testing an NgRx effect using observer-spy.md",
-    "Professional/Setting up Jest in Angular 11.md",
-    "Professional/NGRX Best Practices.md",
-    "Professional/Design Systems with React & Storybook.md",
-    "Professional/Enhancing NgRx Entity with Atomic State.md",
-    "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md"
+    "Professional/NgRx Workshop at ng-conf 2020.md",
+    "_Courses and Workshops.md",
+    "Inbox/Website Resources.md",
+    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md",
+    "Inbox/Modify Network Requests.md",
+    "Personal/_Fasting.md",
+    "Personal/_Keto.md",
+    "Personal/_Meditation.md"
   ]
 }
