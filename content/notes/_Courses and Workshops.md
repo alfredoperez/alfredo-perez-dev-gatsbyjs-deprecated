@@ -20,3 +20,5 @@ type: moc
 - [[Design Systems with React & Storybook]]
 
 ## Angular
+
+[[NgRx Workshop at ng-conf 2020]]

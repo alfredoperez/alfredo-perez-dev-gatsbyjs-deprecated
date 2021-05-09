@@ -2,16 +2,18 @@
 title: NgRx Best Practices
 description:
 tags: ["ngrx", "angular"]
-type: note
+type: moc
 status: seed
 created: 1/30/2021
-updated: 2/23/21
+updated: 4/18/21
 ---
 
 ## Bedrock
 
-- Use SHARI Principle to define what goes into the store
-- Prefer using Component Store or services with a behavior subject for local state
+The following can practices are the foundation to how and when to use the NgRx Store.
+
+- [[Use SHARI Principle to define what goes into the store]]
+- [[Prefer using Component Store or services with a behavior subject for local state]]
 - Prefer using atomic state
 - Prefer the use of containers and presentational components
 
