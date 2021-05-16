@@ -1,14 +1,12 @@
-/** @jsx jsx */
 import React from 'react'
 import { Note } from '@models/note'
 import SEO from '@components/SEO'
 import { Card as CardComponent } from 'theme-ui'
 import Card from '@components/Card'
-import { PostBody, PostImage, PostTagsShare } from '../components/Post'
+import { PostBody, PostTagsShare } from '../components/Post'
 import PostComments from '../components/Post/Post.Comments'
 import Divider from '@components/Divider'
-import { Main } from '@layout/Main'
-import { Stack } from '../components/Layout'
+import { Main, Stack } from '@components/Layout'
 
 type NoteProps = {
   data: {
@@ -57,7 +55,7 @@ const NotePage = (props: NoteProps) => {
           <CardComponent variant="paper-lg">
             {/*<PostImage {...note} inCard />*/}
             <PostBody {...note} />
-            <PostTagsShare {...note} location={props.location} />
+            {/*<PostTagsShare {...note} location={props.location} />*/}
             <PostComments {...note} />
           </CardComponent>
           <Divider />

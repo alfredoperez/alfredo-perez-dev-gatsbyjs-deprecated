@@ -19,8 +19,14 @@ export default {
   searchIcon: {
     flexShrink: 0,
   },
+  searchIconFa: {
+    height: `20px`,
+    width: `20px`,
+  },
   mobileTrigger: {
     display: [`block`, `block`, `none`],
+    height: `20px`,
+    width: `20px`,
   },
   input: {
     ml: 1,

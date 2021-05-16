@@ -1,6 +1,7 @@
 import React from 'react'
 import { Flex, Box, Divider } from 'theme-ui'
-import { PostTags, PostShare } from '@widgets/Post'
+import { PostTags } from '@components/Post/Post.Tags'
+import PostShare from '@components/Post/Post.Share'
 
 const styles = {
   flex: {
@@ -10,16 +11,16 @@ const styles = {
     '& > div + div': {
       mt: [3, 0],
       flexBasis: `1/2`,
-      justifyContent: `flex-end`
-    }
-  }
+      justifyContent: `flex-end`,
+    },
+  },
 }
 
-export const PostTagsShare = props => (
+export const PostTagsShare = (props) => (
   <Box>
     <Divider />
     <Flex sx={styles.flex}>
-      <PostTags {...props} />
+      {/*<PostTags {...props} />*/}
       <PostShare {...props} />
     </Flex>
   </Box>

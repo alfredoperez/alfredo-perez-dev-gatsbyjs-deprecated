@@ -1,8 +1,8 @@
 import React from 'react'
-import { GatsbyImage as Img } from 'gatsby-plugin-image'
+import Img from 'gatsby-image'
 import { css } from 'theme-ui'
 import Divider from '@components/Divider'
-import getImageVariant from '@components/utils/getImageVariant'
+import getImageVariant from '@utils/getImageVariant'
 
 const styles = {
   regular: {
@@ -32,32 +32,35 @@ const styles = {
   },
 }
 
-export const PostImage = ({ title, thumbnail, wide, full, inCard, inCardLarge }) => {
-  if (!thumbnail) return null
-
-  const variant = (wide && 'wide') || (full && 'full') || 'regular'
-  const image = getImageVariant(thumbnail, 'hero')
-
-  return (
-    <>
-      <Img
-        image={image}
-        alt={title}
-        css={css({
-          ...styles[variant],
-          ...(inCard && styles.inCard),
-          ...(inCardLarge && styles.inCardLarge),
-        })}
-        imgStyle={variant === 'wide' || variant === 'full' ? styles.full : undefined}
-      />
-      <Divider space={3} />
-    </>
-  )
+type PostImageProps = {
+  wide: boolean
+  full: boolean
+  inCard: boolean
+  inCardLarge: boolean
+  title: string
+  thumbnail: string
 }
 
-PostImage.propTypes = {
-  wide: PropTypes.bool,
-  full: PropTypes.bool,
-  inCard: PropTypes.bool,
-  inCardLarge: PropTypes.bool,
+export const PostImage = ({ title, thumbnail, wide, full, inCard, inCardLarge }: PostImageProps) => {
+  if (!thumbnail) return null
+
+  // const variant = (wide && 'wide') || (full && 'full') || 'regular'
+  // const image = getImageVariant(thumbnail, 'hero')
+
+  return (
+    <React.Fragment>
+      <p>HERE GOES THE Thumbnail IMAGE</p>
+      {/*<Img*/}
+      {/*  image={image}*/}
+      {/*  alt={title}*/}
+      {/*  css={css({*/}
+      {/*    ...styles[variant],*/}
+      {/*    ...(inCard && styles.inCard),*/}
+      {/*    ...(inCardLarge && styles.inCardLarge),*/}
+      {/*  })}*/}
+      {/*  imgStyle={variant === 'wide' || variant === 'full' ? styles.full : undefined}*/}
+      {/*/>*/}
+      <Divider space={3} />
+    </React.Fragment>
+  )
 }

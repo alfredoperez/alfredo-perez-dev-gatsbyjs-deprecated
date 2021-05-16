@@ -6,25 +6,33 @@ import PageTitle from '@components/PageTitle'
 
 const styles = {
   item: {
-    display: `inline-block`
-  }
+    display: `inline-block`,
+  },
 }
 
-export const PostHead = ({ title, author, date, timeToRead, category }) => {
+type PostHeadProps = {
+  title: string
+  author: any
+  date: string | Date
+  timeToRead: number
+  category: any
+}
+
+export const PostHead = ({ title, author, date, timeToRead, category }: PostHeadProps) => {
   const info = (
     <TextList>
-      {author && author.slug && (
+      {author?.slug && (
         <Text sx={styles.item}>
           {`By `}
-          <Link variant='mute' as={GLink} to={author.slug}>
+          <Link variant="mute" as={GLink} to={author.slug}>
             <strong>{author.name}</strong>
           </Link>
         </Text>
       )}
-      {category && category.slug && (
+      {category?.slug && (
         <Text sx={styles.item}>
           {`Published in `}
-          <Link variant='mute' as={GLink} to={category.slug}>
+          <Link variant="mute" as={GLink} to={category.slug}>
             <strong>{category.name}</strong>
           </Link>
         </Text>

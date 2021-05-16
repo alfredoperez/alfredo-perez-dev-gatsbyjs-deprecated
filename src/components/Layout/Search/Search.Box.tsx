@@ -5,7 +5,7 @@ import { FaSearch } from 'react-icons/fa'
 import styles from './Search.styles'
 import useDebounce from '@hooks/useDebounce'
 
-type SearchBoxProps = { refine: any; delay; focus; handleFocus; handleClose }
+type SearchBoxProps = { refine: any; delay: any; focus: any; handleFocus: any; handleClose: any }
 const SearchBox = ({ refine, delay, focus, handleFocus, handleClose, ...rest }: SearchBoxProps) => {
   const [searchTerm, setSearchTerm] = useState('')
   const debouncedSearchTerm = useDebounce(searchTerm, 500)
@@ -35,7 +35,7 @@ const SearchBox = ({ refine, delay, focus, handleFocus, handleClose, ...rest }: 
   return (
     <React.Fragment>
       <IconButton sx={styles.mobileTrigger} onClick={handleFocus} aria-label="Search">
-        <FaSearch />
+        <FaSearch sx={styles.searchIconFa} />
       </IconButton>
       <Box
         sx={styles.form({
