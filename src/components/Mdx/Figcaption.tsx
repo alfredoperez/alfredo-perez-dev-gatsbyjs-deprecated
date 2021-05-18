@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { css } from 'theme-ui'
 
-const Figcaption = props => (
-  <figcaption {...props} css={css(t => t.styles.figcaption)}>
+type FigcaptionProps = PropsWithChildren<{}>
+const Figcaption = (props: FigcaptionProps) => (
+  <figcaption {...props} css={css((t) => t.styles.figcaption)}>
     {props.children}
   </figcaption>
 )
