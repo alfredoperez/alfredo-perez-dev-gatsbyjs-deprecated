@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/Where to initialize NgRx Selectors?.md",
+            "file": "Website Goals and Setup.md",
             "mode": "source"
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#AlexOkrushko",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Professional/Where to initialize NgRx Selectors?.md"
+                "file": "Website Goals and Setup.md"
               }
             }
           }
@@ -113,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Professional/Where to initialize NgRx Selectors?.md",
+                "file": "Website Goals and Setup.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -133,15 +133,15 @@
   },
   "active": "0345f791b1c81633",
   "lastOpenFiles": [
+    "Website Goals and Setup.md",
+    "Untitled.md",
+    "Professional/NgRx From Global to Component Store - BLS021 SHOW & TELL WITH ZACK DEROSE.md",
+    "00 - Templates/source- book.md",
+    "00 - Templates/source- book 1.md",
+    "Professional/Prefer using Component Store or services with a behavior subject for local state.md",
+    "Professional/Enhancing NgRx Entity with Atomic State.md",
+    "Professional/Untitled.md",
     "Professional/Where to initialize NgRx Selectors?.md",
-    "Professional/WebStorm Setup.md",
-    "Professional/NgRx Workshop at ng-conf 2020.md",
-    "_Courses and Workshops.md",
-    "Inbox/Website Resources.md",
-    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md",
-    "Inbox/Modify Network Requests.md",
-    "Personal/_Fasting.md",
-    "Personal/_Keto.md",
-    "Personal/_Meditation.md"
+    "Professional/WebStorm Setup.md"
   ]
 }
