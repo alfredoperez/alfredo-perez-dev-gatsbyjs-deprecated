@@ -7,6 +7,7 @@ import sizes from './sizes'
 import radii from './radii'
 import colors from './colors'
 import initialColorModeName from './initialColorModeName'
+import prism from './prism'
 import styles from './styles'
 import buttons from './buttons'
 import links from './links'
@@ -19,10 +20,11 @@ import forms from './forms'
 import layout from './layout'
 import global from './global'
 
-export default merge(typography, {
+const theme = merge(typography, {
   useCustomProperties: true,
   initialColorModeName,
   colors,
+  prism,
   breakpoints,
   sizes,
   space,
@@ -40,3 +42,5 @@ export default merge(typography, {
   layout,
   global,
 })
+
+export default theme

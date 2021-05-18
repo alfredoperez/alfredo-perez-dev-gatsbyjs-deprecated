@@ -1,4 +1,4 @@
-const newsletterFeed = require(`./src/utils/newsletterFeed`)
+const newsletterFeed = require(`./utils/newsletterFeed`)
 require(`dotenv`).config({
   path: `.env`,
 })
@@ -96,13 +96,18 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
+    {
+      resolve: 'gatsby-plugin-theme-ui',
+      options: {
+        prismPreset: 'night-owl',
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-theme-ui`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-tsconfig-paths`,
   ].filter(Boolean),
