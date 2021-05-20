@@ -3,11 +3,7 @@
     "module": "commonjs",
     "target": "es6",
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2015",
-      "es2017"
-    ],
+    "lib": ["dom", "es2015", "es2017"],
     "strict": true,
     "noEmit": true,
     "isolatedModules": true,
@@ -18,24 +14,12 @@
     "removeComments": false,
     "baseUrl": "src",
     "paths": {
-      "@components/*": [
-        "components/*"
-      ],
-      "@layout/*": [
-        "components/layout/*"
-      ],
-      "@hooks/*": [
-        "hooks/*"
-      ],
-      "@models/*": [
-        "models/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ]
+      "@components/*": ["components/*"],
+      "@layout/*": ["components/layout/*"],
+      "@hooks/*": ["hooks/*"],
+      "@models/*": ["models/*"],
+      "@utils/*": ["utils/*"]
     }
   },
-  "include": [
-    "./src/**/*"
-  ]
+  "include": ["./src/**/*"]
 }

@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 import useSiteMetadata from '@hooks/use-site-metadata'
-import { visuallyHidden } from '@utils/vissually-hidden'
+import { visuallyHidden } from '@utils/visuallyHidden'
 import { Note } from '@models/note'
 import CardList from '@components/CardList'
 import SEO from '@components/SEO'

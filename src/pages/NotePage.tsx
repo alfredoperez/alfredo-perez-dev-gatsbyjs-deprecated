@@ -3,10 +3,11 @@ import { Note } from '@models/note'
 import SEO from '@components/SEO'
 import { Card as CardComponent } from 'theme-ui'
 import Card from '@components/Card'
-import { PostBody, PostTagsShare } from '../components/Post'
+import { PostBody } from '@components/Post'
 import PostComments from '../components/Post/Post.Comments'
 import Divider from '@components/Divider'
 import { Main, Stack } from '@components/Layout'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 type NoteProps = {
   data: {
@@ -54,6 +55,7 @@ const NotePage = (props: NoteProps) => {
         <Main>
           <CardComponent variant="paper-lg">
             {/*<PostImage {...note} inCard />*/}
+
             <PostBody {...note} />
             {/*<PostTagsShare {...note} location={props.location} />*/}
             <PostComments {...note} />

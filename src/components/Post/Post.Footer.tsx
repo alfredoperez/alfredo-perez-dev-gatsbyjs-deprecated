@@ -33,7 +33,7 @@ const styles = {
 const PostLink = ({ title, post }) => (
   <>
     <Text sx={styles.guide}>{title}</Text>
-    <Heading variant='h4' as={Link} to={post.slug}>
+    <Heading variant="h4" as={Link} to={post.slug}>
       {post.title}
     </Heading>
   </>
@@ -45,12 +45,8 @@ export const PostFooter = ({ previous, next }) => {
   return (
     <Box sx={styles.wrapper}>
       <Flex sx={styles.flex}>
-        <Box sx={styles.item}>
-          {previous && <PostLink post={previous} title='Previous Article' />}
-        </Box>
-        <Box sx={{ ...styles.item, ...styles.next }}>
-          {next && <PostLink post={next} title='Next Article' />}
-        </Box>
+        <Box sx={styles.item}>{previous && <PostLink post={previous} title="Previous Article" />}</Box>
+        <Box sx={{ ...styles.item, ...styles.next }}>{next && <PostLink post={next} title="Next Article" />}</Box>
       </Flex>
     </Box>
   )
