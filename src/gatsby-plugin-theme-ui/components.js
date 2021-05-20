@@ -11,7 +11,6 @@ const components = {
   // eslint-disable-next-line react/display-name
   pre: (preProps) => {
     const props = preToCodeBlock(preProps)
-    console.log('HERE')
     // if there's a codeString and some props, we passed the test
     if (props) {
       return <Code {...props} />

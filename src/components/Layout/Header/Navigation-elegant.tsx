@@ -41,7 +41,6 @@ const NavigationItem = ({ name, slug, url, Icon, color, variant, iconOnly }) => 
 }
 
 const NavigationList = ({ navKey, wrapperProps, items, ...props }: unknown) => {
-  console.log({ items })
   return items ? (
     <Flex {...wrapperProps}>
       {items.map((menuItem, index) => {
