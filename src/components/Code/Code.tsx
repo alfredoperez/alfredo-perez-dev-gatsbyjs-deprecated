@@ -4,11 +4,11 @@ import Highlight, { defaultProps } from 'prism-react-renderer'
 import loadable from '@loadable/component'
 import theme from 'prism-react-renderer/themes/shadesOfPurple'
 import CodeCopy from './code.copy'
-import { Language } from '@models/code.model'
 
 type CodeProps = {
   codeString: string
-  language: Language
+  // language: Language
+  language: any
   noLineNumbers?: boolean
   metastring?: string
   [key: string]: any
