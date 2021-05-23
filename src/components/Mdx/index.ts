@@ -6,7 +6,7 @@ import { default as code } from './CodeBlock'
 export default {
   figure,
   figcaption,
-  pre: props => props.children,
+  pre: (props) => props.children,
   code,
-  ...headings
+  ...headings,
 }

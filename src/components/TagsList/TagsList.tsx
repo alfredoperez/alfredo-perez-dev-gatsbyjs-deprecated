@@ -16,11 +16,7 @@ const TagsList = ({ tags }: TagsProps) => {
     <Flex sx={{ flexDirection: `row`, marginRight: `2rem` }}>
       {tags.map((tag) => (
         <Box key={tag.slug} sx={{ marginRight: `0.5rem` }}>
-          <Badge
-            variant="tag"
-            as={Link}
-            to={replaceSlashes(`/${basePath}/${tagsPath}/${tag.slug}`)}
-          >
+          <Badge variant="tag" as={Link} to={replaceSlashes(`/${basePath}/${tagsPath}/${tag.slug}`)}>
             {tag.name}
           </Badge>
         </Box>

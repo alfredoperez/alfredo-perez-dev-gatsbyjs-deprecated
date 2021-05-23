@@ -1,1 +1,22 @@
-{"theme":"theme-light","accentHue":244,"accentSat":29,"lightStyle":"minimal-light-contrast","darkStyle":"minimal-dark","textFont":"iA Writer Duo S","editorFont":"iA Writer Mono S","monoFont":"iA Writer Quattro S","bordersToggle":true,"fancyCursor":true,"focusMode":true,"lineWidth":100,"textNormal":16,"textSmall":14,"underlineInternal":true,"underlineExternal":true,"useSystemTheme":false,"folding":true,"relationLinesPreview":true,"relationLinesEdit":true}
+{
+  "theme": "theme-light",
+  "accentHue": 244,
+  "accentSat": 29,
+  "lightStyle": "minimal-light-contrast",
+  "darkStyle": "minimal-dark",
+  "textFont": "iA Writer Duo S",
+  "editorFont": "iA Writer Mono S",
+  "monoFont": "iA Writer Quattro S",
+  "bordersToggle": true,
+  "fancyCursor": true,
+  "focusMode": true,
+  "lineWidth": 100,
+  "textNormal": 16,
+  "textSmall": 14,
+  "underlineInternal": true,
+  "underlineExternal": true,
+  "useSystemTheme": false,
+  "folding": true,
+  "relationLinesPreview": true,
+  "relationLinesEdit": true
+}

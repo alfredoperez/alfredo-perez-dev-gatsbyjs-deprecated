@@ -1,8 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
-import { css } from 'theme-ui'
 import Divider from '@components/Divider'
-import getImageVariant from '@utils/getImageVariant'
 
 const styles = {
   regular: {

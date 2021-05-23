@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box } from 'theme-ui'
 // @ts-expect-error
-
 import memphis from '../../../static/memphis.png'
 
 const styles = {
@@ -16,6 +15,8 @@ const styles = {
   },
 }
 
-const MemphisPattern = ({ sx = {}, ...props }) => <Box sx={{ ...styles.pattern, ...sx }} {...props} />
+const MemphisPattern = ({ sx = {}, ...props }) => {
+  return <Box sx={{ ...styles.pattern, ...sx }} {...props} />
+}
 
 export default MemphisPattern
