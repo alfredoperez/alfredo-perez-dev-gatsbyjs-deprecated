@@ -39,13 +39,13 @@ const CodeCopy = ({ content, duration = 5000, fileName = ``, trim = false }: Cod
       }}
     >
       {copied ? `Copied` : `Copy`}
-      <span sx={{ ...visuallyHidden }} aria-roledescription="status">
-        {label}
-      </span>
+      {/* <span sx={{ ...visuallyHidden }} aria-roledescription="status"> */}
+      {/*  {label} */}
+      {/* </span> */}
     </button>
   )
 }
-////
+/// /
 type CodeProps = {
   codeString: string
   // language: Language
@@ -59,12 +59,15 @@ function getParams(className = ``) {
   const [lang = ``, params = ``] = className.split(`:`)
 
   return [
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     lang.split(`language-`).pop().split(`{`).shift(),
   ].concat(
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     params.split(`&`).reduce((merged, param) => {
       const [key, value] = param.split(`=`)
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       merged[key] = value
       return merged
@@ -121,14 +124,19 @@ const Code = ({
   if (props[`react-live`]) {
     return (
       <div className="react-live-wrapper">
-        <LazyLiveProvider code={codeString} noInline theme={theme} showCopyButton={showCopyButton} />
+        <LazyLiveProvider
+          code={codeString}
+          noInline
+          theme={theme}
+          showCopyButton={showCopyButton}
+        />
       </div>
     )
   }
   return (
     <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <React.Fragment>
+        <>
           {title && (
             <div className="code-title">
               <div>{title}</div>
@@ -157,7 +165,7 @@ const Code = ({
               </code>
             </pre>
           </div>
-        </React.Fragment>
+        </>
       )}
     </Highlight>
   )

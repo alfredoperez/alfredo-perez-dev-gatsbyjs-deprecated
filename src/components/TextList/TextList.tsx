@@ -21,7 +21,7 @@ interface TextListProps extends PropsWithChildren<any> {
   nowrap: boolean
 }
 
-const TextList = ({ nowrap = false, separator = '・', children }: TextListProps) => (
+const TextList = ({ nowrap = false, separator = `・`, children }: TextListProps) => (
   <Box sx={{ ...(nowrap && styles.nowrap), ...styles.wrapper(separator) }}>{children}</Box>
 )
 

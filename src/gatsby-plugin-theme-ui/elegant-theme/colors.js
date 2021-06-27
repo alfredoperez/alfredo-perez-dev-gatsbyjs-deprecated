@@ -1,6 +1,6 @@
 import colors from './color-preset'
 
-//Primary
+// Primary
 const alpha = {
   alphaLighter: colors.indigo[100],
   alphaLight: colors.indigo[300],

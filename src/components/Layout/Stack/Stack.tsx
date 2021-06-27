@@ -16,8 +16,8 @@ export const Stack = ({ children, direction, effectProps = {}, ...props }) => {
     </Container>
   )
 
-  //Use Reveal animation only on route update
-  return context.location && context.location.action === 'PUSH' && effectProps.effect !== false ? (
+  // Use Reveal animation only on route update
+  return context.location && context.location.action === `PUSH` && effectProps.effect !== false ? (
     <Reveal {...effectProps}>{content}</Reveal>
   ) : (
     content

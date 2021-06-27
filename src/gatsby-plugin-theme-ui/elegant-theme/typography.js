@@ -19,7 +19,7 @@ const typography = {
 
 const typographyTheme = toTheme(typography)
 
-//We use our own config for this property
+// We use our own config for this property
 typographyTheme.space = null
 
 typographyTheme.fonts = {

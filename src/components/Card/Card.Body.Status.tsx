@@ -11,7 +11,7 @@ const styles = {
 
 const CardBodyStatus = ({ variant, status, omitStatus }: any) =>
   !omitStatus && status ? (
-    <Box sx={{ variant: rv(variant, 'category') }}>
+    <Box sx={{ variant: rv(variant, `category`) }}>
       <Box sx={styles.badge}>
         <Status status={status} />
       </Box>

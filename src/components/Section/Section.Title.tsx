@@ -8,7 +8,7 @@ const styles = {
     justifyContent: `space-between`,
     alignItems: `end`,
   },
-  //Section title
+  // Section title
   section: {
     position: `relative`,
     pl: [0, 4],
@@ -26,7 +26,7 @@ const styles = {
       left: 0,
     },
   },
-  //Section aside title
+  // Section aside title
   'section-aside': {
     color: `omegaDark`,
     mx: `auto`,
@@ -54,7 +54,7 @@ const SectionTitle = ({ title, titleLink, omitTitle, variant }: SectionTitleProp
   }
 
   return (
-    <React.Fragment>
+    <>
       <Flex sx={styles.wrapper}>
         {title && (
           <Heading variant="h2" sx={styles[variant]} {...linkProps}>
@@ -68,7 +68,7 @@ const SectionTitle = ({ title, titleLink, omitTitle, variant }: SectionTitleProp
         )}
       </Flex>
       <Divider />
-    </React.Fragment>
+    </>
   )
 }
 

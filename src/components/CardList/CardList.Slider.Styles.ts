@@ -18,7 +18,7 @@ export default {
   fade: {
     width: `full`,
     '.slick-slide:not(.slick-active)': {
-      left: `-9999px !important`, //fix overlapping slides in fade mode
+      left: `-9999px !important`, // fix overlapping slides in fade mode
     },
     '.slick-track': {
       display: `flex`,

@@ -1,6 +1,7 @@
 export const hashCode = (target: string) => {
   let hash = 0
-  let i, chr
+  let i
+  let chr
   for (i = 0; i < target.length; i++) {
     chr = target.charCodeAt(i)
     // eslint-disable-next-line no-bitwise

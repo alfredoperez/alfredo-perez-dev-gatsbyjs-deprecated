@@ -4,7 +4,7 @@ import { Box } from 'theme-ui'
 import { normalizeImage } from '@utils/normalizeImage'
 import MemphisPattern from '@components/MemphisPattern'
 
-//Base size to keep all layers aligned easier
+// Base size to keep all layers aligned easier
 const bs = (x) => `${x * 0.35}rem`
 
 const styles = {
@@ -86,7 +86,7 @@ type AvatarProps = {
   patternStyles?: {}
 }
 const Avatar = ({
-  avatar = 'regular',
+  avatar = `regular`,
   withPattern = false,
   patternStyles = {},
   size,
@@ -107,8 +107,8 @@ const Avatar = ({
     <Box sx={styles.wrapper}>
       <Box>
         {withPattern && <MemphisPattern sx={{ ...styles.pattern, ...patternStyles }} />}
-        <Box sx={styles.circle({ width })}></Box>
-        <Box sx={styles.arc({ width })}></Box>
+        <Box sx={styles.circle({ width })} />
+        <Box sx={styles.arc({ width })} />
         <Box sx={styles.imageWrapper({ width })}>
           <Img fluid={image} />
         </Box>

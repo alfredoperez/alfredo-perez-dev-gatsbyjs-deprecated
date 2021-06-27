@@ -17,9 +17,9 @@ const Reveal = ({ effect, children, ...props }) => (
 export default Reveal
 
 Reveal.defaultProps = {
-  effect: 'fadeInUp',
+  effect: `fadeInUp`,
 }
 
 Reveal.propTypes = {
-  effect: PropTypes.oneOf(['fadeIn', 'fadeInUp', 'fadeInDown', 'fadeInRight', 'fadeInLeft']),
+  effect: PropTypes.oneOf([`fadeIn`, `fadeInUp`, `fadeInDown`, `fadeInRight`, `fadeInLeft`]),
 }

@@ -1,7 +1,7 @@
 import { merge } from 'theme-ui'
 import { tailwind } from '@theme-ui/presets'
-import elegantTheme from './elegant-theme'
 import { transparentize } from '@theme-ui/color'
+import elegantTheme from './elegant-theme'
 
 require('typeface-ibm-plex-sans')
 require('typeface-fira-code')

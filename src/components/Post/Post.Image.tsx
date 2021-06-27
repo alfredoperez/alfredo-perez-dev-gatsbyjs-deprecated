@@ -38,26 +38,33 @@ type PostImageProps = {
   thumbnail: string
 }
 
-export const PostImage = ({ title, thumbnail, wide, full, inCard, inCardLarge }: PostImageProps) => {
+export const PostImage = ({
+  title,
+  thumbnail,
+  wide,
+  full,
+  inCard,
+  inCardLarge,
+}: PostImageProps) => {
   if (!thumbnail) return null
 
   // const variant = (wide && 'wide') || (full && 'full') || 'regular'
   // const image = getImageVariant(thumbnail, 'hero')
 
   return (
-    <React.Fragment>
+    <>
       <p>HERE GOES THE Thumbnail IMAGE</p>
-      {/*<Img*/}
-      {/*  image={image}*/}
-      {/*  alt={title}*/}
-      {/*  css={css({*/}
-      {/*    ...styles[variant],*/}
-      {/*    ...(inCard && styles.inCard),*/}
-      {/*    ...(inCardLarge && styles.inCardLarge),*/}
-      {/*  })}*/}
-      {/*  imgStyle={variant === 'wide' || variant === 'full' ? styles.full : undefined}*/}
-      {/*/>*/}
+      {/* <Img */}
+      {/*  image={image} */}
+      {/*  alt={title} */}
+      {/*  css={css({ */}
+      {/*    ...styles[variant], */}
+      {/*    ...(inCard && styles.inCard), */}
+      {/*    ...(inCardLarge && styles.inCardLarge), */}
+      {/*  })} */}
+      {/*  imgStyle={variant === 'wide' || variant === 'full' ? styles.full : undefined} */}
+      {/* /> */}
       <Divider space={3} />
-    </React.Fragment>
+    </>
   )
 }

@@ -4,7 +4,7 @@ import { FaSearch } from 'react-icons/fa'
 import styles from './Search.styles'
 
 const SearchFallback = (
-  <React.Fragment>
+  <>
     <IconButton sx={styles.mobileTrigger}>
       <FaSearch />
     </IconButton>
@@ -19,7 +19,7 @@ const SearchFallback = (
     >
       <Input disabled />
     </Box>
-  </React.Fragment>
+  </>
 )
 
 export default SearchFallback

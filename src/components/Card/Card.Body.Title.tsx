@@ -6,17 +6,17 @@ import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
 const CardBodyTitle = ({ variant, title, slug, link }) => {
   const linkProps = link
     ? {
-        as: 'a',
+        as: `a`,
         href: link,
-        target: '_blank',
-        rel: 'noopener noreferrer',
+        target: `_blank`,
+        rel: `noopener noreferrer`,
       }
     : {
         as: GLink,
         to: `/notes${slug.toLocaleLowerCase()}`,
       }
   return (
-    <Heading {...linkProps} sx={{ variant: rv(variant, 'title') }}>
+    <Heading {...linkProps} sx={{ variant: rv(variant, `title`) }}>
       {title}
     </Heading>
   )

@@ -7,7 +7,7 @@ export const reduceArray = (array, { limit, skip, distinct }) => {
 
   let newArray = array
 
-  //Remove duplicate array
+  // Remove duplicate array
   if (distinct) {
     newArray = dedupe(newArray, (node) => node.id)
   }
@@ -17,7 +17,7 @@ export const reduceArray = (array, { limit, skip, distinct }) => {
     newArray = newArray.slice(skip)
   }
 
-  //Limit total number of array
+  // Limit total number of array
   if (limit) {
     newArray = newArray.slice(0, limit)
   }

@@ -25,7 +25,11 @@ export const query = graphql`
         }
       }
     }
-    allMoc: allNote(filter: { type: { eq: "moc" } }, sort: { order: DESC, fields: created }, limit: 10) {
+    allMoc: allNote(
+      filter: { type: { eq: "moc" } }
+      sort: { order: DESC, fields: created }
+      limit: 10
+    ) {
       nodes {
         slug
         title

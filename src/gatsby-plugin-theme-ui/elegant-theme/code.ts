@@ -63,7 +63,7 @@ const code = {
     webkitOverflowScrolling: `touch`,
     bg: `rgb(1, 22, 39)`,
     borderRadius: `2px`,
-    //mx: [3, 0, 0, -3],
+    // mx: [3, 0, 0, -3],
     '.token-line': {
       mx: -3,
       minWidth: `100%`,

@@ -7,7 +7,7 @@ import { getReadableColor } from '@utils/getReadableColor'
 
 const styles = {
   iconBox: (color) => ({
-    bg: color || 'omegaDark',
+    bg: color || `omegaDark`,
     height: `full`,
   }),
   iconAndText: (color) => ({
@@ -35,12 +35,12 @@ const CardMediaIcon = ({ variant, thumbnailText, category }) =>
     <Box
       sx={{
         ...styles.iconBox(category.color),
-        variant: rv(variant, 'iconBox'),
+        variant: rv(variant, `iconBox`),
       }}
     >
       <Flex sx={styles.iconAndText(category.color)}>
-        <SVG src={category.icon} css={css({ variant: rv(variant, 'icon') })} />
-        <Text sx={{ variant: rv(variant, 'iconText') }}>{thumbnailText || category.name}</Text>
+        <SVG src={category.icon} css={css({ variant: rv(variant, `icon`) })} />
+        <Text sx={{ variant: rv(variant, `iconText`) }}>{thumbnailText || category.name}</Text>
       </Flex>
       <MemphisPattern sx={styles.pattern} />
     </Box>

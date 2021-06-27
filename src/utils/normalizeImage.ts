@@ -1,5 +1,5 @@
 export const normalizeImage = (image) => ({
   ...image,
-  sizes: '',
+  sizes: ``,
   aspectRatio: image.aspectRatio || (image.height && image.width && image.width / image.height),
 })
