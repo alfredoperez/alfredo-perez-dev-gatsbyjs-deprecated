@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, Flex } from 'theme-ui'
 import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
-import Info from './Card.Footer.Info'
 import CardFooterTags from '@components/Card/Card.Footer.Tags'
+import Info from './Card.Footer.Info'
 
 const styles = {
   wrapper: {
@@ -18,11 +18,11 @@ const styles = {
 
 const CardFooter = ({ omitFooter, ...props }) =>
   !omitFooter && (
-    <Box sx={{ variant: rv(props.variant, 'footer') }}>
+    <Box sx={{ variant: rv(props.variant, `footer`) }}>
       <Flex sx={styles.wrapper}>
         <CardFooterTags {...props} />
         <Flex sx={styles.postInfo}>
-          {/*<AuthorName {...props} />*/}
+          {/* <AuthorName {...props} /> */}
           <Info {...props} />
         </Flex>
       </Flex>

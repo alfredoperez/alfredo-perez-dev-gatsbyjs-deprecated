@@ -2,8 +2,8 @@ import React, { PropsWithChildren } from 'react'
 import { Container } from 'theme-ui'
 import SectionTitle from './Section.Title'
 
-const SECTION_VARIANT = 'section'
-const SIDE_SECTION_VARIANT = 'section-aside'
+const SECTION_VARIANT = `section`
+const SIDE_SECTION_VARIANT = `section-aside`
 
 interface SectionProps extends PropsWithChildren<any> {
   aside?: boolean

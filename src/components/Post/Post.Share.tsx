@@ -1,12 +1,17 @@
 import React, { PropsWithChildren } from 'react'
 import { IconButton, Heading, Flex } from 'theme-ui'
-import { FacebookShareButton, TwitterShareButton, LinkedinShareButton, EmailShareButton } from 'react-share'
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LinkedinShareButton,
+  EmailShareButton,
+} from 'react-share'
 import attachSocialIcons from '@utils/attachSocialIcons'
 
 const styles = {
   wrapper: {
     alignItems: `center`,
-    height: '20px',
+    height: `20px`,
   },
   heading: {
     color: `omegaDark`,
@@ -53,8 +58,8 @@ const PostShare = ({ location, title }: PostShareProps) => {
         const ShareButton = buttons[name]
         const buttonStyle = {
           ...color,
-          width: '20px',
-          height: '20px',
+          width: `20px`,
+          height: `20px`,
         }
         return (
           ShareButton && (

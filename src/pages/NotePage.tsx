@@ -4,10 +4,10 @@ import SEO from '@components/SEO'
 import { Card as CardComponent } from 'theme-ui'
 import Card from '@components/Card'
 import { PostBody } from '@components/Post'
-import PostComments from '../components/Post/Post.Comments'
 import Divider from '@components/Divider'
 import { Main, Stack } from '@components/Layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import PostComments from '../components/Post/Post.Comments'
 
 type NoteProps = {
   data: {
@@ -26,7 +26,7 @@ const NotePage = (props: NoteProps) => {
     return null
   }
   const {
-    data: { note /*tagCategoryPosts, tagPosts, categoryPosts, previous, next */ },
+    data: { note /* tagCategoryPosts, tagPosts, categoryPosts, previous, next */ },
   } = props
 
   // const relatedPosts = [
@@ -36,7 +36,7 @@ const NotePage = (props: NoteProps) => {
   // ]
 
   return (
-    <React.Fragment>
+    <>
       <SEO
         title={note.title}
         description={note.description ? note.description : note.excerpt}
@@ -45,7 +45,7 @@ const NotePage = (props: NoteProps) => {
         canonicalUrl={note.canonicalUrl}
       />
       <Divider />
-      <Stack effectProps={{ effect: 'fadeInDown' }}>
+      <Stack effectProps={{ effect: `fadeInDown` }}>
         <Main>
           <Card {...note} variant="horizontal-hero" omitExcerpt omitMedia />
         </Main>
@@ -54,28 +54,28 @@ const NotePage = (props: NoteProps) => {
       <Stack effectProps={{ fraction: 0 }}>
         <Main>
           <CardComponent variant="paper-lg">
-            {/*<PostImage {...note} inCard />*/}
+            {/* <PostImage {...note} inCard /> */}
 
             <PostBody {...note} />
-            {/*<PostTagsShare {...note} location={props.location} />*/}
+            {/* <PostTagsShare {...note} location={props.location} /> */}
             <PostComments {...note} />
           </CardComponent>
           <Divider />
-          {/*{post.category && (*/}
-          {/*  <CardList*/}
-          {/*    title="Related Posts"*/}
-          {/*    nodes={relatedPosts}*/}
-          {/*    variant={['horizontal-aside']}*/}
-          {/*    columns={[1, 2, 2, 2]}*/}
-          {/*    limit={6}*/}
-          {/*    distinct*/}
-          {/*    omitMedia*/}
-          {/*    omitCategory*/}
-          {/*  />*/}
-          {/*)}*/}
+          {/* {post.category && ( */}
+          {/*  <CardList */}
+          {/*    title="Related Posts" */}
+          {/*    nodes={relatedPosts} */}
+          {/*    variant={['horizontal-aside']} */}
+          {/*    columns={[1, 2, 2, 2]} */}
+          {/*    limit={6} */}
+          {/*    distinct */}
+          {/*    omitMedia */}
+          {/*    omitCategory */}
+          {/*  /> */}
+          {/* )} */}
         </Main>
       </Stack>
-    </React.Fragment>
+    </>
   )
 }
 

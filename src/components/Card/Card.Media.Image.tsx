@@ -7,16 +7,16 @@ const CardMediaImage = ({ variant, loading, image }) => (
   <Img
     fluid={normalizeImage(image)}
     loading={loading}
-    fadeIn={loading === 'lazy' ? true : false}
+    fadeIn={loading === `lazy`}
     css={css({
       height: `full`,
       bg: `omegaLighter`,
-      variant: rv(variant, 'image'),
+      variant: rv(variant, `image`),
     })}
   />
 )
 CardMediaImage.defaultProps = {
-  loading: 'lazy',
+  loading: `lazy`,
 }
 
 export default CardMediaImage

@@ -20,7 +20,7 @@ export const PostTagsShare = (props) => (
   <Box>
     <Divider />
     <Flex sx={styles.flex}>
-      {/*<PostTags {...props} />*/}
+      {/* <PostTags {...props} /> */}
       <PostShare {...props} />
     </Flex>
   </Box>

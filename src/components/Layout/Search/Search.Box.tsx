@@ -2,12 +2,12 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { connectSearchBox, PoweredBy } from 'react-instantsearch-dom'
 import { Box, IconButton, Input } from 'theme-ui'
 import { FaSearch } from 'react-icons/fa'
-import styles from './Search.styles'
 import useDebounce from '@hooks/useDebounce'
+import styles from './Search.styles'
 
 type SearchBoxProps = { refine: any; delay: any; focus: any; handleFocus: any; handleClose: any }
 const SearchBox = ({ refine, delay, focus, handleFocus, handleClose, ...rest }: SearchBoxProps) => {
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState(``)
   const debouncedSearchTerm = useDebounce(searchTerm, 500)
 
   const searchCharacters = useCallback(
@@ -25,7 +25,7 @@ const SearchBox = ({ refine, delay, focus, handleFocus, handleClose, ...rest }: 
   }, [debouncedSearchTerm, searchCharacters])
 
   const handleEsc = (e) => {
-    //close on esc keypress
+    // close on esc keypress
     if (e.keyCode === 27) {
       e.currentTarget.blur()
       handleClose()
@@ -33,7 +33,7 @@ const SearchBox = ({ refine, delay, focus, handleFocus, handleClose, ...rest }: 
   }
 
   return (
-    <React.Fragment>
+    <>
       <IconButton sx={styles.mobileTrigger} onClick={handleFocus} aria-label="Search">
         <FaSearch sx={styles.searchIconFa} />
       </IconButton>
@@ -59,7 +59,7 @@ const SearchBox = ({ refine, delay, focus, handleFocus, handleClose, ...rest }: 
           </Box>
         )}
       </Box>
-    </React.Fragment>
+    </>
   )
 }
 

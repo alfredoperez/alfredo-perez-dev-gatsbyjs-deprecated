@@ -3,10 +3,12 @@ import { css, IconButton, useThemeUI } from 'theme-ui'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import 'slick-carousel/slick/slick.css'
 import './CardList.Slider.css'
-import styles from './CardList.Slider.Styles'
 import loadable from '@loadable/component'
+import styles from './CardList.Slider.Styles'
 
-const Slider = loadable(() => import(/* webpackChunkName: 'react-slick' */ /* webpackPrefetch: true */ 'react-slick'))
+const Slider = loadable(
+  () => import(/* webpackChunkName: 'react-slick' */ /* webpackPrefetch: true */ `react-slick`),
+)
 interface CardListSliderProps extends PropsWithChildren<any> {
   fade: boolean
   dots: boolean
@@ -33,8 +35,8 @@ const CardListSlider = React.forwardRef(
       dots = true,
       arrows = true,
       centerMode = false,
-      centerPadding = '50px',
-      controlPosition = 'sides',
+      centerPadding = `50px`,
+      controlPosition = `sides`,
       rows = 1,
       columns,
       beforeChange,
@@ -47,12 +49,12 @@ const CardListSlider = React.forwardRef(
     const animationSettings = {
       slidesToScroll: 1,
       autoplay: true,
-      cssEase: 'linear',
+      cssEase: `linear`,
     }
 
     const mobileSettings = {
       centerMode: !fade,
-      centerPadding: '40px',
+      centerPadding: `40px`,
       swipeToSlide: true,
       arrows: false,
       dots: dots && fade,
@@ -60,7 +62,8 @@ const CardListSlider = React.forwardRef(
 
     const responsiveSettings = context.theme.breakpoints.map((breakpoint, index) => {
       const rSlidesToShow = columns[index >= columns.length ? columns.length - 1 : index]
-      const rSlidesToScroll = slidesToScroll[index >= slidesToScroll.length ? slidesToScroll.length - 1 : index]
+      const rSlidesToScroll =
+        slidesToScroll[index >= slidesToScroll.length ? slidesToScroll.length - 1 : index]
       return {
         breakpoint: parseInt(breakpoint),
         settings: {
@@ -81,14 +84,14 @@ const CardListSlider = React.forwardRef(
       centerMode,
       centerPadding,
       infinite: true,
-      cssEase: fade ? 'ease-out' : 'cubic-bezier(0.23, 1, 0.32, 1)',
+      cssEase: fade ? `ease-out` : `cubic-bezier(0.23, 1, 0.32, 1)`,
       fade,
       responsive: responsiveSettings,
       css: css({
         ...(fade ? styles.fade : styles.slide),
-        ...(controlPosition === 'bottom' && styles.controlBottom),
-        ...(controlPosition === 'center' && styles.controlCenter),
-        ...(controlPosition === 'over' && styles.controlOver),
+        ...(controlPosition === `bottom` && styles.controlBottom),
+        ...(controlPosition === `center` && styles.controlCenter),
+        ...(controlPosition === `over` && styles.controlOver),
       }),
       prevArrow: (
         <IconButton>

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Website Goals and Setup.md",
+            "file": "Professional/The Developers Guide to SEO Audits.md",
             "mode": "source"
           }
         }
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Website Goals and Setup.md"
+                "file": "Professional/The Developers Guide to SEO Audits.md"
               }
             }
           }
@@ -113,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Website Goals and Setup.md",
+                "file": "Professional/The Developers Guide to SEO Audits.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -133,6 +133,8 @@
   },
   "active": "0345f791b1c81633",
   "lastOpenFiles": [
+    "Professional/Untitled.md",
+    "00 - Templates/source - workshop.md",
     "Website Goals and Setup.md",
     "Untitled.md",
     "Professional/NgRx From Global to Component Store - BLS021 SHOW & TELL WITH ZACK DEROSE.md",
@@ -140,8 +142,6 @@
     "00 - Templates/source- book 1.md",
     "Professional/Prefer using Component Store or services with a behavior subject for local state.md",
     "Professional/Enhancing NgRx Entity with Atomic State.md",
-    "Professional/Untitled.md",
-    "Professional/Where to initialize NgRx Selectors?.md",
-    "Professional/WebStorm Setup.md"
+    "Professional/Where to initialize NgRx Selectors?.md"
   ]
 }

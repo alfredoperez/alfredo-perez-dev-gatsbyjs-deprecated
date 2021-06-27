@@ -223,7 +223,16 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   ) {
     const tags = processTags(node.frontmatter.tags)
 
-    const { title, slug, type, status, description, canonicalUrl, created, updated } = node.frontmatter
+    const {
+      title,
+      slug,
+      type,
+      status,
+      description,
+      canonicalUrl,
+      created,
+      updated,
+    } = node.frontmatter
 
     const fieldData = {
       slug,

@@ -20,7 +20,7 @@ const CardBody = ({ children, omitBody, ...props }: CardProps) =>
     <Box
       sx={{
         ...styles.body,
-        variant: rv(props.variant, 'body'),
+        variant: rv(props.variant, `body`),
       }}
     >
       <CardBodyStatus {...props} />

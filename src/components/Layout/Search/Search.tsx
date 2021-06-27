@@ -8,7 +8,7 @@ import SearchBox from './Search.Box'
 
 import Results from './Search.Results'
 
-const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME || 'Notes'
+const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME || `Notes`
 const searchDistinctLimit = 4
 
 const styles = {
@@ -55,11 +55,14 @@ const Overlay = ({ onClick }) => (
 const Search = () => {
   const [focus, setFocus] = useState(false)
 
-  const algoliaClient = algoliasearch(process.env.GATSBY_ALGOLIA_APP_ID, process.env.GATSBY_ALGOLIA_SEARCH_KEY)
+  const algoliaClient = algoliasearch(
+    process.env.GATSBY_ALGOLIA_APP_ID,
+    process.env.GATSBY_ALGOLIA_SEARCH_KEY,
+  )
 
   const searchClient = {
     search(requests) {
-      const shouldSearch = requests.some(({ params: { query } }) => query !== '')
+      const shouldSearch = requests.some(({ params: { query } }) => query !== ``)
       if (focus && shouldSearch) {
         return algoliaClient.search(requests)
       }
@@ -69,9 +72,7 @@ const Search = () => {
     },
   }
 
-  const handleClose = () => {
-    return setFocus(false)
-  }
+  const handleClose = () => setFocus(false)
   const handleFocus = () => {
     if (!focus) {
       setFocus(true)

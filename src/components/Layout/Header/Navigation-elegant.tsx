@@ -6,20 +6,20 @@ import { buildResponsiveVariant } from '@utils/index'
 
 const NavigationItem = ({ name, slug, url, Icon, color, variant, iconOnly }) => {
   let linkProps = {
-    sx: { variant: iconOnly ? 'icon' : variant },
+    sx: { variant: iconOnly ? `icon` : variant },
   }
 
-  //External link
+  // External link
   if (url) {
     linkProps = {
       ...linkProps,
-      as: 'a',
+      as: `a`,
       href: url,
-      target: '_blank',
-      rel: 'noopener noreferrer',
+      target: `_blank`,
+      rel: `noopener noreferrer`,
     }
   }
-  //Internal link
+  // Internal link
   if (slug) {
     linkProps = {
       ...linkProps,
@@ -40,15 +40,14 @@ const NavigationItem = ({ name, slug, url, Icon, color, variant, iconOnly }) => 
   )
 }
 
-const NavigationList = ({ navKey, wrapperProps, items, ...props }: unknown) => {
-  return items ? (
+const NavigationList = ({ navKey, wrapperProps, items, ...props }: unknown) =>
+  items ? (
     <Flex {...wrapperProps}>
-      {items.map((menuItem, index) => {
-        return <NavigationItem key={`${navKey}-${index}`} {...menuItem} {...props} />
-      })}
+      {items.map((menuItem, index) => (
+        <NavigationItem key={`${navKey}-${index}`} {...menuItem} {...props} />
+      ))}
     </Flex>
   ) : null
-}
 
 const NavigationDivider = ({ index }) =>
   index !== 0 && (
@@ -75,11 +74,16 @@ type NavigationElegantProps = {
   items: Array<NavigationMenuItem>
 }
 
-const NavigationElegant = ({ items, variant = 'horizontal', headingProps, wrapperStyle }: NavigationElegantProps) => {
+const NavigationElegant = ({
+  items,
+  variant = `horizontal`,
+  headingProps,
+  wrapperStyle,
+}: NavigationElegantProps) => {
   if (items.length === 0) return null
 
-  const wrapperVariant = buildResponsiveVariant('lists.links', variant)
-  const linkVariant = buildResponsiveVariant('links', variant)
+  const wrapperVariant = buildResponsiveVariant(`lists.links`, variant)
+  const linkVariant = buildResponsiveVariant(`links`, variant)
 
   const navKey = `${hashCode(items.map((node) => node.title || node.name).join())}-nav`
 
@@ -95,11 +99,21 @@ const NavigationElegant = ({ items, variant = 'horizontal', headingProps, wrappe
       <Fragment key={`nav-menu-${i}`}>
         <NavigationDivider index={i} />
         <Heading {...headingProps}>{node.title}</Heading>
-        <NavigationList navKey={navKey} wrapperProps={wrapperProps} items={node.items} variant={linkVariant} />
+        <NavigationList
+          navKey={navKey}
+          wrapperProps={wrapperProps}
+          items={node.items}
+          variant={linkVariant}
+        />
       </Fragment>
     ))
   ) : (
-    <NavigationList navKey={navKey} wrapperProps={wrapperProps} items={items} variant={linkVariant} />
+    <NavigationList
+      navKey={navKey}
+      wrapperProps={wrapperProps}
+      items={items}
+      variant={linkVariant}
+    />
   )
 }
 

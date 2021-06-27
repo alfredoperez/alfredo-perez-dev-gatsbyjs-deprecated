@@ -28,11 +28,11 @@ const styles = {
 
 const heading = (Tag) => (props) => (
   <Tag {...props} css={css(styles.heading)}>
-    {/* TODO: fix the link location and icon size*/}
-    {/*<Link href={`#${props.id}`} variant={`text.${Tag}`} sx={styles.link}>*/}
-    {/*  {props.children}*/}
-    {/*  <FaLink sx={styles.linkIcon} />*/}
-    {/*</Link>*/}
+    {/* TODO: fix the link location and icon size */}
+    {/* <Link href={`#${props.id}`} variant={`text.${Tag}`} sx={styles.link}> */}
+    {/*  {props.children} */}
+    {/*  <FaLink sx={styles.linkIcon} /> */}
+    {/* </Link> */}
   </Tag>
 )
 

@@ -1,4 +1,4 @@
-//Responsive flex sizes based on theme-ui sizes (theme.sizes)
+// Responsive flex sizes based on theme-ui sizes (theme.sizes)
 export const columnSizeMatcher = (columns: Array<unknown>) => {
   if (!Array.isArray(columns) || columns.length <= 0) return
 

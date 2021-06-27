@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from 'theme-ui'
-import HeaderNavigation from './Header.Navigation'
 import useBlogConfig from '@hooks/use-blog-config'
+import HeaderNavigation from './Header.Navigation'
 
 const styles = {
   desktopMenu: {
@@ -11,7 +11,7 @@ const styles = {
     display: [`block`, `block`, `none`],
   },
   desktopMenuWrapper: {
-    justifyContent: 'flex-end',
+    justifyContent: `flex-end`,
   },
 }
 
@@ -35,9 +35,9 @@ export const HeaderMenu = () => {
   // )
 
   return (
-    <React.Fragment>
+    <>
       <Box sx={styles.desktopMenu}>{desktopMenuNav}</Box>
-      {/*<Box sx={styles.mobileMenu}>{mobileMenuNav}</Box>*/}
-    </React.Fragment>
+      {/* <Box sx={styles.mobileMenu}>{mobileMenuNav}</Box> */}
+    </>
   )
 }

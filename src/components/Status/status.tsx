@@ -11,25 +11,25 @@ type StatusProps = {
 
 const Status = ({ status }: StatusProps) => {
   switch (status) {
-    case 'evergreen':
+    case `evergreen`:
       return (
         <span role="img" aria-label="Evergreen note" sx={styles.emoji}>
           🌳
         </span>
       )
-    case 'seed':
+    case `seed`:
       return (
         <span role="img" aria-label="Seed Note" sx={styles.emoji}>
           🌱
         </span>
       )
-    case 'bud':
+    case `bud`:
       return (
         <span role="img" aria-label="Bud Note" sx={styles.emoji}>
           🌿
         </span>
       )
-    case 'snag':
+    case `snag`:
       return (
         <span role="img" aria-label="Snag Note" sx={styles.emoji}>
           🍂

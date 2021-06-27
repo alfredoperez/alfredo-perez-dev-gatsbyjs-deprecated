@@ -5,7 +5,7 @@ import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
 import CardMediaIcon from './Card.Media.Icon'
 import CardMediaImage from './Card.Media.Image'
 
-const DEFAULT_IMAGE_VARIANT = 'vertical'
+const DEFAULT_IMAGE_VARIANT = `vertical`
 
 const styles = {
   link: {
@@ -24,16 +24,17 @@ const CardMedia = ({ imageVariant, omitMedia, mediaType, title, slug, link, ...p
 
   const { variant, thumbnail, thumbnailText } = props
 
-  const imageVar = imageVariant || get(context.theme, rv(variant, 'imageVariant')[0]) || DEFAULT_IMAGE_VARIANT
+  const imageVar =
+    imageVariant || get(context.theme, rv(variant, `imageVariant`)[0]) || DEFAULT_IMAGE_VARIANT
 
   const image = thumbnail && thumbnail[imageVar]
 
   const linkProps = link
     ? {
-        as: 'a',
+        as: `a`,
         href: link,
-        target: '_blank',
-        rel: 'noopener noreferrer',
+        target: `_blank`,
+        rel: `noopener noreferrer`,
       }
     : {
         as: GLink,
@@ -41,10 +42,10 @@ const CardMedia = ({ imageVariant, omitMedia, mediaType, title, slug, link, ...p
       }
 
   return (
-    <Box sx={{ variant: rv(variant, 'media') }}>
+    <Box sx={{ variant: rv(variant, `media`) }}>
       <Link {...linkProps} sx={styles.link} aria-label={title}>
-        {mediaType === 'image' && image && <CardMediaImage image={image} {...props} />}
-        {(mediaType === 'icon' || (!image && thumbnailText)) && <CardMediaIcon {...props} />}
+        {mediaType === `image` && image && <CardMediaImage image={image} {...props} />}
+        {(mediaType === `icon` || (!image && thumbnailText)) && <CardMediaIcon {...props} />}
         {/* {featured && (
 				<Badge variant="featured">
 					<FaStar />
@@ -56,7 +57,7 @@ const CardMedia = ({ imageVariant, omitMedia, mediaType, title, slug, link, ...p
 }
 
 CardMedia.defaultProps = {
-  mediaType: 'image',
+  mediaType: `image`,
 }
 
 export default CardMedia

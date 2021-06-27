@@ -7,5 +7,5 @@ export { PostImage } from './Post.Image'
 export { PostTags } from './Post.Tags'
 export { PostTagsShare } from './Post.Tags.Share'
 
-export const PostComments = loadable(() => import(/* webpackPrefetch: true */ './Post.Comments'))
-export const PostShare = loadable(() => import(/* webpackPrefetch: true */ './Post.Share'))
+export const PostComments = loadable(() => import(/* webpackPrefetch: true */ `./Post.Comments`))
+export const PostShare = loadable(() => import(/* webpackPrefetch: true */ `./Post.Share`))

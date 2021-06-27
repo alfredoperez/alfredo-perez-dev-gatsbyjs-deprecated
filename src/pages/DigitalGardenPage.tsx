@@ -21,7 +21,13 @@ const DigitalGardenPage = (props: DigitalGardenProps) => {
   return (
     <React.Fragment>
       <SEO title="Digital Garden" />
-      <CardList variant={['horizontal']} title="Digital Garden" nodes={notes} columns={[1, 2]} omitMedia />
+      <CardList
+        variant={[`horizontal`]}
+        title="Digital Garden"
+        nodes={notes}
+        columns={[1, 2]}
+        omitMedia
+      />
     </React.Fragment>
   )
 }

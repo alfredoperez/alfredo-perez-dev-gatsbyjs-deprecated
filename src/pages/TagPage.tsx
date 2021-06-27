@@ -60,7 +60,7 @@ const TagPage = (props: TagProps) => {
           View all tags
         </TLink>
       </Flex>
-      <CardList variant={['horizontal']} nodes={notes} columns={[1, 2]} omitMedia fade={true} />
+      <CardList variant={[`horizontal`]} nodes={notes} columns={[1, 2]} omitMedia fade />
     </React.Fragment>
   )
 }

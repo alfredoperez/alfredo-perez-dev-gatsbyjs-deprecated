@@ -15,8 +15,8 @@ const styles = {
   },
 }
 
-const MemphisPattern = ({ sx = {}, ...props }) => {
-  return <Box sx={{ ...styles.pattern, ...sx }} {...props} />
-}
+const MemphisPattern = ({ sx = {}, ...props }) => (
+  <Box sx={{ ...styles.pattern, ...sx }} {...props} />
+)
 
 export default MemphisPattern

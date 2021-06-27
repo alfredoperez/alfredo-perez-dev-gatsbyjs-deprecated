@@ -33,8 +33,20 @@ const HomePage = (props: HomePageProps) => {
     <React.Fragment>
       <SEO />
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
-      <CardList variant={['horizontal']} title="Latest Notes" nodes={notes} columns={[1, 2]} omitMedia />
-      <CardList variant={['horizontal']} title="Maps of Content" nodes={mocs} columns={[4]} omitMedia />
+      <CardList
+        variant={[`horizontal`]}
+        title="Latest Notes"
+        nodes={notes}
+        columns={[1, 2]}
+        omitMedia
+      />
+      <CardList
+        variant={[`horizontal`]}
+        title="Maps of Content"
+        nodes={mocs}
+        columns={[4]}
+        omitMedia
+      />
     </React.Fragment>
   )
 }

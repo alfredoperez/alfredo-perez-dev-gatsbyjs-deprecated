@@ -12,7 +12,7 @@ const styles = {
 
 const CardFooterAuthorName = ({ variant, omitAuthor, author }) =>
   !omitAuthor && author && author.slug ? (
-    <Text sx={{ ...styles.author, variant: rv(variant, 'author') }}>
+    <Text sx={{ ...styles.author, variant: rv(variant, `author`) }}>
       <Link variant="mute" as={GLink} to={author.slug}>
         <strong>{author.name}</strong>
       </Link>

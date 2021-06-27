@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react'
 import { buildResponsiveVariant } from '@utils/buildResponsiveVariant'
-import Base from './Card.Base'
 import { VariantProp } from '@models/props'
+import Base from './Card.Base'
 
 type Category = {
   name: string
@@ -44,7 +44,7 @@ export interface CardProps extends PropsWithChildren<any> {
   excerpt: string
 }
 
-const Card = ({ variantGroup = 'cards', variant = 'vertical', aside, ...props }: CardProps) => {
+const Card = ({ variantGroup = `cards`, variant = `vertical`, aside, ...props }: CardProps) => {
   const responsiveVariant = buildResponsiveVariant(variantGroup, variant)
   return <Base variant={responsiveVariant} {...props} />
 }
