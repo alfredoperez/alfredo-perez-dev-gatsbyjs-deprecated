@@ -1,5 +1,5 @@
 ---
-title: Where to initialize NgRx Selectors?
+title: Where to initialize NgRx Selectors
 description:
 tags: ["angular","ngrx"]
 type: note
