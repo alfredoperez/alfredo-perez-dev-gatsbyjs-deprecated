@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/The Developers Guide to SEO Audits.md",
+            "file": "Personal/Life of Focus.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "dff76c702349f925"
+      },
+      {
+        "id": "1f7e31199faedf6d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Personal/Life of Focus.md",
+            "mode": "preview"
+          }
+        },
+        "group": "dff76c702349f925"
       }
     ],
     "direction": "vertical"
@@ -96,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Professional/The Developers Guide to SEO Audits.md"
+                "file": "Personal/Life of Focus.md"
               }
             }
           }
@@ -113,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Professional/The Developers Guide to SEO Audits.md",
+                "file": "Personal/Life of Focus.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -133,15 +146,15 @@
   },
   "active": "0345f791b1c81633",
   "lastOpenFiles": [
-    "Professional/Untitled.md",
+    "Personal/Life of Focus.md",
     "00 - Templates/source - workshop.md",
-    "Website Goals and Setup.md",
-    "Untitled.md",
-    "Professional/NgRx From Global to Component Store - BLS021 SHOW & TELL WITH ZACK DEROSE.md",
-    "00 - Templates/source- book.md",
-    "00 - Templates/source- book 1.md",
-    "Professional/Prefer using Component Store or services with a behavior subject for local state.md",
-    "Professional/Enhancing NgRx Entity with Atomic State.md",
-    "Professional/Where to initialize NgRx Selectors?.md"
+    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md",
+    "Inbox/Website Resources.md",
+    "Inbox/Modify Network Requests.md",
+    "Personal/The Compound Effect.md",
+    "Personal/Linking Your Thinking.md",
+    "Professional/WebStorm Setup.md",
+    "00 - Templates/Markdown Cheatsheet.md",
+    "00 - Templates/source- book.md"
   ]
 }
