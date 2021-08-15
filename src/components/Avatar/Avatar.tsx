@@ -5,7 +5,7 @@ import { normalizeImage } from '@utils/normalizeImage'
 import MemphisPattern from '@components/MemphisPattern'
 
 // Base size to keep all layers aligned easier
-const bs = (x) => `${x * 0.35}rem`
+const bs = (x: number) => `${x * 0.35}rem`
 
 const styles = {
   wrapper: {

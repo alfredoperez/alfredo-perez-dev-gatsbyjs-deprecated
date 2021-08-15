@@ -12,7 +12,7 @@ import CardListSlider from './CardList.Slider'
 const SLIDER_VARIANT_GROUP = `lists.cards.slider`
 const FIXED_VARIANT_GROUP = `lists.cards.fixed`
 
-interface CartListProps extends PropsWithChildren<any> {
+type CartListProps = PropsWithChildren<{
   nodes?: Array<any>
   variant?: Array<VariantProp> | VariantProp
   title?: string
@@ -26,7 +26,7 @@ interface CartListProps extends PropsWithChildren<any> {
   loading?: LoadingProp
   fade?: boolean
   columns?: Array<any>
-}
+}>
 
 const CardList = React.forwardRef(
   (
@@ -48,7 +48,7 @@ const CardList = React.forwardRef(
     }: CartListProps,
     ref,
   ) => {
-    const reducedNodes = reduceArray(nodes, { distinct, limit, skip })
+    const reducedNodes = reduceArray(nodes as Array<any>, { distinct, limit, skip })
     if (!reducedNodes || !reducedNodes.length) return null
 
     // Section title link for viewing more posts from same category
