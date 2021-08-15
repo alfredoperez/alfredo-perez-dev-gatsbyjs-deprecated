@@ -1,6 +1,6 @@
 import dedupe from 'dedupe'
 
-export const reduceArray = (array, { limit, skip, distinct }) => {
+export const reduceArray = (array: Array<any>, { limit, skip, distinct }) => {
   if (!array) return null
 
   if (!limit && !skip && !distinct) return array
@@ -9,7 +9,7 @@ export const reduceArray = (array, { limit, skip, distinct }) => {
 
   // Remove duplicate array
   if (distinct) {
-    newArray = dedupe(newArray, (node) => node.id)
+    newArray = dedupe(newArray, (node: any) => node.id)
   }
 
   // Skip specified number of first elements
