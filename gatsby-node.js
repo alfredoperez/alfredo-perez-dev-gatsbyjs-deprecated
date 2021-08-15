@@ -6,7 +6,7 @@ const options = {
   digitalGardenPath: `/digital-garden`,
   notesPath: `content/notes`,
   notesPrefix: `/notes/`,
-  mocsPrefix: `/mocs/`,
+  mocsPrefix: `/notes/`,
   pagesPath: `content/pages`,
   tagsPath: `/tags`,
   externalLinks: [

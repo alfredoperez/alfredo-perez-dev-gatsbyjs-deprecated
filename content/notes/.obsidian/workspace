@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
+            "file": "Professional/_ NgRx Lessons Learned.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
+            "file": "Professional/_ NgRx Lessons Learned.md",
             "mode": "preview"
           }
         },
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md"
+                "file": "Professional/_ NgRx Lessons Learned.md"
               }
             }
           }
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
+                "file": "Professional/_ NgRx Lessons Learned.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -146,6 +146,8 @@
   },
   "active": "0345f791b1c81633",
   "lastOpenFiles": [
+    "Professional/_ NgRx Lessons Learned.md",
+    "Professional/_NGRX Best Practices.md",
     "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
     "Professional/Design Systems with React & Storybook.md",
     "Personal/Life of Focus.md",
@@ -153,8 +155,6 @@
     "Inbox/Adding notes references into your GatsbyJS Digital Garden.md",
     "Inbox/Website Resources.md",
     "Inbox/Modify Network Requests.md",
-    "Personal/The Compound Effect.md",
-    "Personal/Linking Your Thinking.md",
-    "Professional/WebStorm Setup.md"
+    "Personal/The Compound Effect.md"
   ]
 }

@@ -1,11 +1,11 @@
 ---
-title: NgRx Best Practices
+title: NgRx Lessons Learned
 description:
 tags: ["ngrx", "angular"]
 type: moc
 status: seed
 created: 1/30/2021
-updated: 4/18/21
+updated: 8/15/2021
 ---
 
 ## Bedrock

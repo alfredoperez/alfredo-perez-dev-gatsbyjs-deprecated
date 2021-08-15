@@ -1,6 +1,5 @@
 import React from 'react'
-import { css, Link } from 'theme-ui'
-import { FaLink } from 'react-icons/fa'
+import { css } from 'theme-ui'
 
 const styles = {
   heading: {
