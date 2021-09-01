@@ -7,8 +7,6 @@ status: evergreen
 created: 2/23/21
 updated: 2/23/21
 ---
-
-
 Going from the concept that we have a `CallState`
 
 ```typescript

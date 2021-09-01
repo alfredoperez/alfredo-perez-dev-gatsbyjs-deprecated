@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "0345f791b1c81633",
+        "id": "7d46d8d79b87c574",
         "type": "leaf",
+        "dimension": 40.34212401995723,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/_ NgRx Lessons Learned.md",
+            "file": "Professional/Enhancing NgRx Entity with Atomic State.md",
             "mode": "source"
           }
-        },
-        "group": "dff76c702349f925"
+        }
       },
       {
-        "id": "1f7e31199faedf6d",
+        "id": "a5770bbe9b7363a3",
         "type": "leaf",
+        "dimension": 59.65787598004276,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/_ NgRx Lessons Learned.md",
-            "mode": "preview"
+            "file": "Personal/Linking Your Thinking.md",
+            "mode": "source"
           }
-        },
-        "group": "dff76c702349f925"
+        }
       }
     ],
     "direction": "vertical"
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#AlexOkrushko",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Professional/_ NgRx Lessons Learned.md"
+                "file": "Professional/Enhancing NgRx Entity with Atomic State.md"
               }
             }
           }
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Professional/_ NgRx Lessons Learned.md",
+                "file": "Professional/Enhancing NgRx Entity with Atomic State.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -144,17 +144,17 @@
     "width": 296,
     "collapsed": true
   },
-  "active": "0345f791b1c81633",
+  "active": "7d46d8d79b87c574",
   "lastOpenFiles": [
-    "Professional/_ NgRx Lessons Learned.md",
-    "Professional/_NGRX Best Practices.md",
-    "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
+    "Professional/Enhancing NgRx Entity with Atomic State.md",
+    "Personal/Linking Your Thinking.md",
     "Professional/Design Systems with React & Storybook.md",
-    "Personal/Life of Focus.md",
-    "00 - Templates/source - workshop.md",
-    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md",
+    "Professional/Where to initialize NgRx Selectors.md",
+    "Professional/Handling state in Angular with a service that uses BehaviorSubject.md",
+    "Professional/NgRx From Global to Component Store - BLS021 SHOW & TELL WITH ZACK DEROSE.md",
+    "Professional/Prefer using Component Store or services with a behavior subject for local state.md",
     "Inbox/Website Resources.md",
     "Inbox/Modify Network Requests.md",
-    "Personal/The Compound Effect.md"
+    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md"
   ]
 }

@@ -18,6 +18,7 @@ The following can practices are the foundation to how and when to use the NgRx S
 - Prefer the use of containers and presentational components
 
 ## Actions
+- [[NgRx Workshop at ng-conf 2020#Actions]]
 
 - Prefer using Event Storming
 - Avoid creating actions based on commands

@@ -1,7 +1,6 @@
 /** @jsx jsx */
-
 import React from 'react'
-import { Heading, jsx, Link as TLink } from 'theme-ui'
+import { Heading, Link as TLink } from 'theme-ui'
 import { Box, Flex } from '@theme-ui/components'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
@@ -22,14 +21,13 @@ type TagsProps = {
   }
 }
 
-const TagsPage = (props: TagsProps) => {
+const TagsPage = ({ data }: TagsProps) => {
   const { tagsPath, basePath } = useBlogConfig()
 
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-  if (!props.data) {
+  if (!data) {
     return null
   }
-  const { group: tags } = props.data.allNote
+  const { group: tags } = data.allNote
 
   return (
     <React.Fragment>

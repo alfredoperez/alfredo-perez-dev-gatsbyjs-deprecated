@@ -11,6 +11,7 @@ export const query = graphql`
       limit: 10
     ) {
       nodes {
+        id
         slug
         title
         created
