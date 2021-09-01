@@ -37,6 +37,7 @@ export interface CardProps extends PropsWithChildren<any> {
   title: string | {}
   slug: string
   link: string
+  id: string
   category: Category
   author: Author
   date: string
@@ -44,9 +45,9 @@ export interface CardProps extends PropsWithChildren<any> {
   excerpt: string
 }
 
-const Card = ({ variantGroup = `cards`, variant = `vertical`, aside, ...props }: CardProps) => {
+const Card = ({ variantGroup = `cards`, variant = `vertical`, id, ...props }: CardProps) => {
   const responsiveVariant = buildResponsiveVariant(variantGroup, variant)
-  return <Base variant={responsiveVariant} {...props} />
+  return <Base variant={responsiveVariant} key={id} id={id} {...props} />
 }
 
 export default Card

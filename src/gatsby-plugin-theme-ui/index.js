@@ -1,14 +1,14 @@
 import { merge } from 'theme-ui'
 import { tailwind } from '@theme-ui/presets'
 import { transparentize } from '@theme-ui/color'
-import elegantTheme from './elegant-theme'
+import customTheme from './custom-theme'
 
 require('typeface-ibm-plex-sans')
 require('typeface-fira-code')
 
-const tailwindAndElegantTheme = merge(tailwind, elegantTheme)
+const tailwindAndCustomTheme = merge(tailwind, customTheme)
 
-const theme = merge(tailwindAndElegantTheme, {
+const theme = merge(tailwindAndCustomTheme, {
   initialColorModeName: `light`,
   useCustomProperties: true,
 

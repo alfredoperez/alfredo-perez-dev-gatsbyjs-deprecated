@@ -6,7 +6,6 @@ import Card from '@components/Card'
 import { PostBody } from '@components/Post'
 import Divider from '@components/Divider'
 import { Main, Stack } from '@components/Layout'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PostComments from '../components/Post/Post.Comments'
 
 type NoteProps = {

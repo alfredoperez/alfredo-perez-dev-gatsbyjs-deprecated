@@ -86,7 +86,7 @@ const CardList = React.forwardRef(
 
     // Cards List (Fixed or Slider)
     const CardListComponent = () => (
-      <Box sx={{ variant: cardListVariant }}>
+      <Box sx={{ variant: cardListVariant[0] }}>
         {slider ? (
           <CardListSlider
             ref={ref}

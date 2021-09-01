@@ -38,7 +38,7 @@ const homepageTemplate = require.resolve(`./src/templates/HomePage.Query.tsx`)
 const tagTemplate = require.resolve(`./src/templates/TagPage.Query.tsx`)
 const tagsTemplate = require.resolve(`./src/templates/TagsPage.Query.tsx`)
 const noteTemplate = require.resolve(`./src/templates/NotePage.Query.tsx`)
-const mocTemplate = require.resolve(`./src/templates/NotePage.Query.tsx`)
+const mocTemplate = require.resolve(`./src/templates/MocPage.Query.tsx`)
 const digitalGardenTemplate = require.resolve(`./src/templates/DigitalGardenPage.Query.tsx`)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
