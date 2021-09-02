@@ -1,6 +1,7 @@
 /** @jsx jsx */
+import { Heading, jsx, Link as TLink } from 'theme-ui'
+
 import React from 'react'
-import { Heading, Link as TLink } from 'theme-ui'
 import { Box, Flex } from '@theme-ui/components'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
@@ -10,6 +11,7 @@ import useBlogConfig from '@hooks/use-blog-config'
 import replaceSlashes from '@utils/replace-slashes'
 import SEO from '@components/SEO'
 
+jsx
 type TagsProps = {
   data: {
     allNote: {
