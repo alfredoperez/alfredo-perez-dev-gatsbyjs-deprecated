@@ -15,20 +15,17 @@ type HomePageProps = {
   [key: string]: unknown
 }
 
-const HomePage = (props: HomePageProps) => {
-  const { siteTitle } = useSiteMetadata()
-
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-  if (!props.data) {
+const HomePage = ({ data }: HomePageProps) => {
+  if (!data) {
     return null
   }
+  const { siteTitle } = useSiteMetadata()
 
   const {
-    data: {
-      allNote: { nodes: notes },
-      allMoc: { nodes: mocs },
-    },
-  } = props
+    allNote: { nodes: notes },
+    allMoc: { nodes: mocs },
+  } = data
+
   return (
     <React.Fragment>
       <SEO />

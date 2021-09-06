@@ -1,6 +1,7 @@
+/** @jsx jsx */
 import React from 'react'
 import Img from 'gatsby-image'
-import { Box } from 'theme-ui'
+import { Box, jsx } from 'theme-ui'
 import { normalizeImage } from '@utils/normalizeImage'
 import MemphisPattern from '@components/MemphisPattern'
 
@@ -78,20 +79,20 @@ const styles = {
 }
 
 type AvatarProps = {
-  avatar?: any
-  size?: false | 'regular'
+  avatar: any
+  size: false | 'regular'
   width?: number
-  simple?: boolean
-  withPattern?: boolean
-  patternStyles?: {}
+  simple: boolean
+  withPattern: boolean
+  patternStyles: unknown
 }
 const Avatar = ({
   avatar = `regular`,
   withPattern = false,
   patternStyles = {},
+  simple = false,
   size,
   width,
-  simple = false,
 }: AvatarProps) => {
   if (!avatar || !avatar[size]) return null
 

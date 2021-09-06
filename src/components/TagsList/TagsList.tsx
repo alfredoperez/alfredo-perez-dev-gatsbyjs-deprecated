@@ -2,7 +2,7 @@ import React from 'react'
 import { Badge, Box, Flex } from 'theme-ui'
 import { Link } from 'gatsby'
 import useBlogConfig from '@hooks/use-blog-config'
-import replaceSlashes from '@utils/replace-slashes'
+import replaceSlashes from '@utils/replaceSlashes'
 import { Tag } from '@models/note'
 
 type TagsProps = {

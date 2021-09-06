@@ -1,17 +1,13 @@
 /** @jsx jsx */
 import { Heading, jsx, Link as TLink } from 'theme-ui'
-
 import React from 'react'
 import { Box, Flex } from '@theme-ui/components'
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 import kebabCase from 'lodash.kebabcase'
 import { Link } from 'gatsby'
 import useBlogConfig from '@hooks/use-blog-config'
-import replaceSlashes from '@utils/replace-slashes'
+import replaceSlashes from '@utils/replaceSlashes'
 import SEO from '@components/SEO'
 
-jsx
 type TagsProps = {
   data: {
     allNote: {
