@@ -26,6 +26,7 @@ type CartListProps = PropsWithChildren<{
   loading?: LoadingProp
   fade?: boolean
   columns?: Array<any>
+  omitMedia?: boolean
 }>
 
 const CardList = React.forwardRef(
