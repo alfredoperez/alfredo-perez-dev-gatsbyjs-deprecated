@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 
-const FORM_ID = `2581331` // process.env.CONVERTKIT_SIGNUP_FORM
+const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
 
 type ConvertKitResponseType = {
   result: `success` | `error`
   msg: string
 }
+
 const userConvertKit = () => {
   const [response, setResponse] = React.useState<ConvertKitResponseType | null>(null)
   const [submitting, setSubmitting] = useState<boolean>(false)
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault()
     setSubmitting(true)
     const data = new FormData(e.target)
@@ -18,7 +19,7 @@ const userConvertKit = () => {
     const name = data.get(`first_name`)
 
     try {
-      const apiResponse = await fetch(`https://app.convertkit.com/forms/${FORM_ID}/subscriptions`, {
+      await fetch(`https://app.convertkit.com/forms/${FORM_ID}/subscriptions`, {
         method: `post`,
         body: JSON.stringify({ email_address: email, first_name: name }, null, 2),
         headers: {
@@ -26,9 +27,9 @@ const userConvertKit = () => {
           'Content-Type': `application/json`,
         },
       })
-      const responseJson = await apiResponse.json()
+      // const responseJson = await apiResponse.json()
       setSubmitting(false)
-      setResponse({ result: `success`, msg: responseJson })
+      setResponse({ result: `success`, msg: `You are in 😎 Thanks!` })
     } catch (error) {
       setSubmitting(false)
       setResponse({ result: `error`, msg: `There was an error submitting your email` })

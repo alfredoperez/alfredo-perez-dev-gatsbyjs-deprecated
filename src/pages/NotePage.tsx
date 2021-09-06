@@ -1,11 +1,15 @@
+/** @jsx jsx */
 import React from 'react'
 import { Note } from '@models/note'
 import SEO from '@components/SEO'
-import { Card as CardComponent } from 'theme-ui'
+import { Card as CardComponent, Container, Flex, jsx } from 'theme-ui'
 import Card from '@components/Card'
-import { PostBody } from '@components/Post'
+import { PostBody, PostTagsShare } from '@components/Post'
 import Divider from '@components/Divider'
 import { Main, Stack } from '@components/Layout'
+import NewsletterCompact from '@components/NewsletterForm/NewsletterCompact'
+import Section from '@components/Section'
+import PostShare from '@components/Post/Post.Share'
 import PostComments from '../components/Post/Post.Comments'
 
 type NoteProps = {
@@ -19,14 +23,13 @@ type NoteProps = {
     next: any
   }
 }
-const NotePage = (props: NoteProps) => {
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-  if (!props.data) {
+const NotePage: React.FunctionComponent<NoteProps> = ({ data }: NoteProps) => {
+  if (!data) {
     return null
   }
-  const {
-    data: { note /* tagCategoryPosts, tagPosts, categoryPosts, previous, next */ },
-  } = props
+
+  /* tagCategoryPosts, tagPosts, categoryPosts, previous, next */
+  const { note } = data
 
   // const relatedPosts = [
   //   ...(tagCategoryPosts ? tagCategoryPosts.nodes : []),
@@ -44,35 +47,42 @@ const NotePage = (props: NoteProps) => {
         canonicalUrl={note.canonicalUrl}
       />
       <Divider />
-      <Stack effectProps={{ effect: `fadeInDown` }}>
+      <Stack>
         <Main>
           <Card {...note} variant="horizontal-hero" omitExcerpt omitMedia />
         </Main>
       </Stack>
       <Divider space={3} />
-      <Stack effectProps={{ fraction: 0 }}>
-        <Main>
-          <CardComponent variant="paper-lg">
-            {/* <PostImage {...note} inCard /> */}
+      <Stack direction="column">
+        <CardComponent variant="paper-lg">
+          {/* <PostImage {...note} inCard /> */}
 
-            <PostBody {...note} />
-            {/* <PostTagsShare {...note} location={props.location} /> */}
-            <PostComments {...note} />
-          </CardComponent>
-          <Divider />
-          {/* {post.category && ( */}
-          {/*  <CardList */}
-          {/*    title="Related Posts" */}
-          {/*    nodes={relatedPosts} */}
-          {/*    variant={['horizontal-aside']} */}
-          {/*    columns={[1, 2, 2, 2]} */}
-          {/*    limit={6} */}
-          {/*    distinct */}
-          {/*    omitMedia */}
-          {/*    omitCategory */}
-          {/*  /> */}
-          {/* )} */}
-        </Main>
+          <PostBody {...note} />
+        </CardComponent>
+
+        {/* {post.category && ( */}
+        {/*  <CardList */}
+        {/*    title="Related Posts" */}
+        {/*    nodes={relatedPosts} */}
+        {/*    variant={['horizontal-aside']} */}
+        {/*    columns={[1, 2, 2, 2]} */}
+        {/*    limit={6} */}
+        {/*    distinct */}
+        {/*    omitMedia */}
+        {/*    omitCategory */}
+        {/*  /> */}
+        {/* )} */}
+
+        {/* <PostShare {...note} location="TEST" /> */}
+        <Divider space={3} />
+        <Flex sx={{ maxWidth: `400px`, width: `400px`, justifyItems: `center` }}>
+          <NewsletterCompact />
+        </Flex>
+      </Stack>
+      <Divider space={3} />
+
+      <Stack>
+        <PostComments {...note} />
       </Stack>
     </>
   )

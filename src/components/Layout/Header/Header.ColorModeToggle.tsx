@@ -1,6 +1,4 @@
 /** @jsx jsx */
-/* eslint-disable */
-
 import { jsx, useColorMode } from 'theme-ui'
 
 // Adapted from: https://codepen.io/aaroniker/pen/KGpXZo

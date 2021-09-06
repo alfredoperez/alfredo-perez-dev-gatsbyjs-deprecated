@@ -15,6 +15,8 @@ const FIXED_VARIANT_GROUP = `lists.cards.fixed`
 type CartListProps = PropsWithChildren<{
   nodes?: Array<any>
   variant?: Array<VariantProp> | VariantProp
+  loading?: LoadingProp
+  columns?: Array<any>
   title?: string
   withTitleLink?: boolean
   limit?: number
@@ -23,9 +25,7 @@ type CartListProps = PropsWithChildren<{
   slider?: any
   aside?: boolean
   asNavFor?: any
-  loading?: LoadingProp
   fade?: boolean
-  columns?: Array<any>
   omitMedia?: boolean
 }>
 
