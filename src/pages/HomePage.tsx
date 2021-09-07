@@ -6,6 +6,8 @@ import { visuallyHidden } from '@utils/visuallyHidden'
 import { Note } from '@models/note'
 import CardList from '@components/CardList'
 import SEO from '@components/SEO'
+import { Main, Sidebar, Stack } from '@components/Layout'
+import NewsletterCompact from '@components/NewsletterForm/NewsletterCompact'
 
 type HomePageProps = {
   data: {
@@ -30,20 +32,27 @@ const HomePage = ({ data }: HomePageProps) => {
     <React.Fragment>
       <SEO />
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
-      <CardList
-        variant={[`horizontal`]}
-        title="Latest Notes"
-        nodes={notes}
-        columns={[1, 2]}
-        omitMedia
-      />
-      <CardList
-        variant={[`horizontal`]}
-        title="Maps of Content"
-        nodes={mocs}
-        columns={[4]}
-        omitMedia
-      />
+      <Stack>
+        <Main>
+          <CardList
+            variant={[`horizontal`]}
+            title="Latest Notes"
+            nodes={notes}
+            columns={[1, 2]}
+            omitMedia
+          />
+          <CardList
+            variant={[`horizontal`]}
+            title="Maps of Content"
+            nodes={mocs}
+            columns={[4]}
+            omitMedia
+          />
+        </Main>
+        <Sidebar>
+          <NewsletterCompact />
+        </Sidebar>
+      </Stack>
     </React.Fragment>
   )
 }

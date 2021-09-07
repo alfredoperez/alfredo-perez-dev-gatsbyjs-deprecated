@@ -1,6 +1,6 @@
+/** @jsx jsx */
 import React from 'react'
-import { Flex, Box, Divider } from 'theme-ui'
-import { PostTags } from '@components/Post/Post.Tags'
+import { Flex, Box, Divider, jsx } from 'theme-ui'
 import PostShare from '@components/Post/Post.Share'
 
 const styles = {
@@ -16,11 +16,10 @@ const styles = {
   },
 }
 
-export const PostTagsShare = (props) => (
+export const PostTagsShare: React.FC = (props) => (
   <Box>
     <Divider />
     <Flex sx={styles.flex}>
-      {/* <PostTags {...props} /> */}
       <PostShare {...props} />
     </Flex>
   </Box>
