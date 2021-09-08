@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { NewsletterServiceInterface } from '@components/NewsletterForm'
 
 const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
 
-type ConvertKitResponseType = {
+interface ConvertKitResponseType {
   result: `success` | `error`
   msg: string
 }
@@ -11,7 +12,7 @@ const userConvertKit = () => {
   const [response, setResponse] = React.useState<ConvertKitResponseType | null>(null)
   const [submitting, setSubmitting] = useState<boolean>(false)
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: any, tags: Array<string>) => {
     e.preventDefault()
     setSubmitting(true)
     const data = new FormData(e.target)
@@ -21,7 +22,7 @@ const userConvertKit = () => {
     try {
       await fetch(`https://app.convertkit.com/forms/${FORM_ID}/subscriptions`, {
         method: `post`,
-        body: JSON.stringify({ email_address: email, first_name: name }, null, 2),
+        body: JSON.stringify({ email_address: email, first_name: name, tags }, null, 2),
         headers: {
           Accept: `application/json`,
           'Content-Type': `application/json`,
@@ -43,14 +44,14 @@ const userConvertKit = () => {
   const canSubmit = !response || error
   const message = response && response.msg
 
-  return {
+  return ({
     handleSubmit,
     canSubmit,
     submitting,
     message,
     success,
     error,
-  }
+  } as unknown) as NewsletterServiceInterface
 }
 
 export default userConvertKit

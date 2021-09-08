@@ -2,14 +2,13 @@
 import React from 'react'
 import { Note } from '@models/note'
 import SEO from '@components/SEO'
-import { Card as CardComponent, Container, Flex, jsx } from 'theme-ui'
+import { Card as CardComponent, Flex, jsx } from 'theme-ui'
 import Card from '@components/Card'
-import { PostBody, PostTagsShare } from '@components/Post'
+import { PostBody } from '@components/Post'
 import Divider from '@components/Divider'
 import { Main, Stack } from '@components/Layout'
 import NewsletterCompact from '@components/NewsletterForm/NewsletterCompact'
-import Section from '@components/Section'
-import PostShare from '@components/Post/Post.Share'
+
 import PostComments from '../components/Post/Post.Comments'
 
 type NoteProps = {
