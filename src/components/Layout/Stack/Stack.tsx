@@ -4,11 +4,11 @@ import Section from '@components/Section'
 import { Property } from 'csstype'
 import { Fade } from 'react-awesome-reveal'
 
-type StackProps = {
+interface StackProps {
   direction?: Property.FlexDirection
 }
 
-export const Stack: React.FunctionComponent<StackProps> = ({
+export const Stack: React.FC<StackProps> = ({
   children,
   direction,
 
