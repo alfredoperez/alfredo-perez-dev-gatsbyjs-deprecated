@@ -75,7 +75,7 @@ const NotePage: React.FunctionComponent<NoteProps> = ({ data }: NoteProps) => {
         {/* <PostShare {...note} location="TEST" /> */}
         <Divider space={3} />
         <Flex sx={{ maxWidth: `400px`, width: `400px`, justifyItems: `center` }}>
-          <NewsletterCompact />
+          <NewsletterCompact tags={note.tags} />
         </Flex>
       </Stack>
       <Divider space={3} />

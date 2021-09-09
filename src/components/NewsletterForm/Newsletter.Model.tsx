@@ -1,7 +1,7 @@
 import { Tag } from '@models/note'
 
 export interface NewsletterBaseProps {
-  tags: Array<Tag>
+  tags?: Array<Tag>
 }
 
 export interface NewsletterServiceInterface {
