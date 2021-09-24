@@ -6,26 +6,28 @@
       {
         "id": "7d46d8d79b87c574",
         "type": "leaf",
-        "dimension": 40.34212401995723,
+        "dimension": 50,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/Enhancing NgRx Entity with Atomic State.md",
+            "file": "Inbox/Gatsby Camp Fall 2021.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "7a8b10de9cde8b42"
       },
       {
-        "id": "a5770bbe9b7363a3",
+        "id": "6179b1ffdb5d0dd4",
         "type": "leaf",
-        "dimension": 59.65787598004276,
+        "dimension": 50,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Personal/Linking Your Thinking.md",
-            "mode": "source"
+            "file": "Inbox/Gatsby Camp Fall 2021.md",
+            "mode": "preview"
           }
-        }
+        },
+        "group": "7a8b10de9cde8b42"
       }
     ],
     "direction": "vertical"
@@ -53,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#GatsbyJS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +72,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "1f317ed0d6664cd7",
@@ -109,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Professional/Enhancing NgRx Entity with Atomic State.md"
+                "file": "Inbox/Gatsby Camp Fall 2021.md"
               }
             }
           }
@@ -126,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Professional/Enhancing NgRx Entity with Atomic State.md",
+                "file": "Inbox/Gatsby Camp Fall 2021.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -146,15 +149,15 @@
   },
   "active": "7d46d8d79b87c574",
   "lastOpenFiles": [
-    "Professional/Enhancing NgRx Entity with Atomic State.md",
-    "Personal/Linking Your Thinking.md",
-    "Professional/Design Systems with React & Storybook.md",
-    "Professional/Where to initialize NgRx Selectors.md",
-    "Professional/Handling state in Angular with a service that uses BehaviorSubject.md",
-    "Professional/NgRx From Global to Component Store - BLS021 SHOW & TELL WITH ZACK DEROSE.md",
+    "Inbox/Gatsby Camp Fall 2021.md",
+    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md",
+    "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
+    "Professional/_Conferences and Workshops.md",
+    "00 - Templates/Learning Note - Workshop.md",
+    "How this works.md",
     "Professional/Prefer using Component Store or services with a behavior subject for local state.md",
-    "Inbox/Website Resources.md",
-    "Inbox/Modify Network Requests.md",
-    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md"
+    "_Courses and Workshops.md",
+    "00 - Templates/Evergreen Note.md",
+    "00 - Templates/MOC.md"
   ]
 }

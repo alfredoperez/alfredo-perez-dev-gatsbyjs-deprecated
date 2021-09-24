@@ -10,9 +10,7 @@ const NewsletterCompact: React.FunctionComponent = (props) => {
   return (
     <Section aside title="Newsletter" {...props}>
       <Card variant="paper">
-        <Text variant="p">
-          Make sure to subscribe to the newsletter and be the first to know the news.
-        </Text>
+        <Text variant="p">Like what you see? Keep in touch and I'll send more your way.</Text>
         <NewsletterForm {...{ handleSubmit, canSubmit, submitting, message, success }} />
       </Card>
     </Section>
