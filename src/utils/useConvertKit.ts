@@ -29,10 +29,13 @@ const userConvertKit = () => {
       })
       // const responseJson = await apiResponse.json()
       setSubmitting(false)
-      setResponse({ result: `success`, msg: `You are in 😎 Thanks!` })
+      setResponse({
+        result: `success`,
+        msg: `A perfect time to check your email inbox.`,
+      })
     } catch (error) {
       setSubmitting(false)
-      setResponse({ result: `error`, msg: `There was an error submitting your email` })
+      setResponse({ result: `error`, msg: `There was a glitch in the matrix...` })
     }
     setResponse(response)
     setSubmitting(false)
