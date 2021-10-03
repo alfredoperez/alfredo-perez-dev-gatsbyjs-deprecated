@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Box, Input, Button, Message, Spinner } from 'theme-ui'
 import { NewsletterBaseProps, Subscriber } from '@components/NewsletterForm/Newsletter.Model'
-import useConvertKit from '@utils/useConvertKit'
+import useConvertKit from '@hooks/useConvertKit'
 
 const styles = {
   msg: {

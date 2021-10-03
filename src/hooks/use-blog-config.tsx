@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import { BlogConfig } from '../models/blog-config.model'
+import { BlogConfig } from '@models/blog-config.model'
 
 type BlogConfigProps = {
   blogConfig: BlogConfig

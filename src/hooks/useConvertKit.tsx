@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react'
-import {
-  LoadingState,
-  ConvertKitHookResponse,
-  RequestState,
-  Subscriber,
-} from '@components/NewsletterForm'
+import { ConvertKitHookResponse, Subscriber } from '@components/NewsletterForm'
+import { LoadingState, RequestState } from '@models/RequestState.Model'
 
 const FORM_ID = `2581331` // process.env.CONVERTKIT_SIGNUP_FORM
 
