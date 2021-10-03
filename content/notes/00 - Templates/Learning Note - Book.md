@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 authors: []
-links:
+status: seed
 type: book
 tags: []
 created: {{ date }}

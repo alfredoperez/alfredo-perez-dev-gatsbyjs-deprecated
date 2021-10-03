@@ -1,8 +1,9 @@
 ---
-title: {{ title }}
+title: {{title}}
 description:
+status: seed
 tags: []
-created: {{ date }}
+created: {{date}}
 updated:
 type: moc
 ---
