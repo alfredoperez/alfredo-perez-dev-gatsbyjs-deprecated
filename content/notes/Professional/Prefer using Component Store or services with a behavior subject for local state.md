@@ -18,4 +18,4 @@ Global store better suited for managing global shared state, where [Component St
 Always make sure that the state in the NgRx store really needs to be there!
 
 ### External Links
-https://www.youtube.com/watch?v=zMtubR7etsE by #AlexOkrushko
+https://www.youtube.com/watch?v=zMtubR7etsE
