@@ -18,7 +18,9 @@
     "stylelint": "stylelint --ignore-path .gitignore './src/**/*.ts'",
     "prettier": "prettier --ignore-path .prettierignore --check  \"**/*.{js,jsx,ts,tsx,json}\"",
     "prettier:fix": "yarn prettier --write --ignore-path .prettierignore",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@loadable/component": "^5.14.1",
@@ -78,8 +80,11 @@
     "typeface-ibm-plex-sans": "^1.1.13"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.13.13",
-    "@babel/preset-typescript": "^7.13.0",
+    "@babel/core": "^7.15.5",
+    "@storybook/addon-actions": "^6.3.9",
+    "@storybook/addon-essentials": "^6.3.9",
+    "@storybook/addon-links": "^6.3.9",
+    "@storybook/react": "^6.3.9",
     "@svgr/webpack": "5.5.0",
     "@testing-library/dom": "^7.31.2",
     "@testing-library/jest-dom": "^5.13.0",
@@ -94,6 +99,7 @@
     "@typescript-eslint/eslint-plugin": "4.28.3",
     "@typescript-eslint/parser": "4.28.3",
     "babel-jest": "^27.0.2",
+    "babel-loader": "^8.2.2",
     "babel-plugin-root-import": "6.6.0",
     "babel-preset-gatsby": "^1.6.0",
     "eslint": "7.30.0",
