@@ -56,7 +56,7 @@ By storing the Gatsby data-layer in LMDB we can also restore the data  in a work
 
 #### Server Side Rendering (SSR)
 
-- Server rendering generates the full HTML for page on a the server.
+- Server rendering generates the full HTML for the page on the server.
 - Focused for data fetching outside the Gatsby data-layer
 - New export `getServerData` to access 3rd Party Data
 ![https://res.cloudinary.com/dagkspppt/image/upload/v1631809116/Gatsby%20Camp%20Fall%2021/gatsby-camp-ssr_krnfcx.png](https://res.cloudinary.com/dagkspppt/image/upload/v1631809116/Gatsby%20Camp%20Fall%2021/gatsby-camp-ssr_krnfcx.png)
