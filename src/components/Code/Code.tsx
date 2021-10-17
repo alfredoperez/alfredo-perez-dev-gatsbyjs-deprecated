@@ -1,4 +1,5 @@
-/* eslint react/destructuring-assignment: 0 */
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React, { useState } from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import loadable from '@loadable/component'

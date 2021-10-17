@@ -1,6 +1,3 @@
-// eslint-disable
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 import { tint } from '@theme-ui/color'
 import typography from './typography.js'
 
@@ -25,7 +22,6 @@ const code = {
   },
   '.prism-code': {
     fontSize: [1, 1, 2],
-
     padding: `2rem 1rem 1rem 1rem`,
     margin: `2rem`,
     webkitOverflowScrolling: `touch`,
