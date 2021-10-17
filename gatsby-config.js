@@ -110,5 +110,6 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-tsconfig-paths`,
+    `gatsby-plugin-sitemap`,
   ].filter(Boolean),
 }

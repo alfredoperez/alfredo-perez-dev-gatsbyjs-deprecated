@@ -1,12 +1,61 @@
+/** @jsx jsx */
 import React, { useCallback, useEffect, useState } from 'react'
 import { connectSearchBox, PoweredBy } from 'react-instantsearch-dom'
-import { Box, IconButton, Input } from 'theme-ui'
+import { Box, IconButton, Input, jsx } from 'theme-ui'
 import { FaSearch } from 'react-icons/fa'
 import useDebounce from '@hooks/useDebounce'
-import styles from './Search.styles'
 
+const styles = {
+  mobileTrigger: {
+    display: [`block`, null, `none`],
+  },
+  poweredBy: {
+    position: [`fixed`, `static`],
+    right: 0,
+    top: `-100%`,
+    transform: [`translateY(50%)`, `none`],
+    textAlign: `right`,
+    fontWeight: `medium`,
+    fontSize: 1,
+    width: 200,
+    svg: {
+      width: 60,
+      height: 16,
+      verticalAlign: `middle`,
+    },
+  },
+  input: {
+    ml: 1,
+  },
+  searchIcon: {
+    flexShrink: 0,
+    height: `20px`,
+    width: `20px`,
+  },
+  searchIconFa: {
+    height: `20px`,
+    width: `20px`,
+  },
+  form: (focus: boolean) => ({
+    display: [focus ? `flex` : `none`, focus ? `flex` : `none`, `flex`],
+    alignItems: `center`,
+    bg: `omegaLight`,
+    borderRadius: `default`,
+    position: focus ? `absolute` : `static`,
+    top: 4,
+    left: `50%`,
+    transform: focus ? `translate(-50%, 0)` : `translate(0, 0)`,
+    zIndex: 99,
+    width: focus ? `80vw` : `auto`,
+    maxWidth: focus ? `40em` : `none`,
+    borderStyle: `solid`,
+    borderColor: focus ? `omegaLight` : `headerBg`,
+    borderWidth: `md`,
+    px: 3,
+  }),
+}
 type SearchBoxProps = { refine: any; delay: any; focus: any; handleFocus: any; handleClose: any }
-const SearchBox = ({ refine, delay, focus, handleFocus, handleClose, ...rest }: SearchBoxProps) => {
+const SearchBox = ({ refine, focus, handleFocus, handleClose, ...rest }: SearchBoxProps) => {
   const [searchTerm, setSearchTerm] = useState(``)
   const debouncedSearchTerm = useDebounce(searchTerm, 500)
 
@@ -33,21 +82,17 @@ const SearchBox = ({ refine, delay, focus, handleFocus, handleClose, ...rest }: 
   }
 
   return (
-    <>
-      <IconButton sx={styles.mobileTrigger} onClick={handleFocus} aria-label="Search">
+    <React.Fragment>
+      <IconButton sx={styles.mobileTrigger} onClick={handleFocus} aria-label="Search Button">
         <FaSearch sx={styles.searchIconFa} />
       </IconButton>
-      <Box
-        sx={styles.form({
-          focus,
-        })}
-      >
+      <Box sx={styles.form(focus)}>
         <FaSearch style={styles.searchIcon} />
         <Input
           sx={styles.input}
           type="text"
           placeholder="Discover notes, guides, etc..."
-          aria-label="Search"
+          aria-label="Type what you want to search"
           onFocus={handleFocus}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleEsc}
@@ -59,7 +104,7 @@ const SearchBox = ({ refine, delay, focus, handleFocus, handleClose, ...rest }: 
           </Box>
         )}
       </Box>
-    </>
+    </React.Fragment>
   )
 }
 

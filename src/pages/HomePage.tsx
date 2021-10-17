@@ -6,8 +6,10 @@ import { visuallyHidden } from '@utils/visuallyHidden'
 import { Note } from '@models/note'
 import CardList from '@components/CardList'
 import SEO from '@components/SEO'
-import { Main, Sidebar, Stack } from '@components/Layout'
+import { Main, Stack } from '@components/Layout'
 import NewsletterCompact from '@components/NewsletterForm/NewsletterCompact'
+import Divider from '@components/Divider'
+import { Flex } from 'theme-ui'
 
 type HomePageProps = {
   data: {
@@ -29,7 +31,7 @@ const HomePage = ({ data }: HomePageProps) => {
   } = data
 
   return (
-    <React.Fragment>
+    <>
       <SEO />
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <Stack>
@@ -41,6 +43,7 @@ const HomePage = ({ data }: HomePageProps) => {
             columns={[1, 2]}
             omitMedia
           />
+          <Divider space={3} />
           <CardList
             variant={[`horizontal`]}
             title="Maps of Content"
@@ -49,11 +52,14 @@ const HomePage = ({ data }: HomePageProps) => {
             omitMedia
           />
         </Main>
-        <Sidebar>
-          <NewsletterCompact />
-        </Sidebar>
       </Stack>
-    </React.Fragment>
+      <Divider space={3} />
+      <Stack>
+        <Flex sx={{ maxWidth: `400px`, width: `400px`, justifyItems: `center` }}>
+          <NewsletterCompact />
+        </Flex>
+      </Stack>
+    </>
   )
 }
 

@@ -1,4 +1,5 @@
-/* eslint react/destructuring-assignment: 0 */
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React, { useState } from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import loadable from '@loadable/component'
@@ -45,15 +46,8 @@ const CodeCopy = ({ content, duration = 5000, fileName = ``, trim = false }: Cod
     </button>
   )
 }
+
 /// /
-type CodeProps = {
-  codeString: string
-  // language: Language
-  language: any
-  noLineNumbers?: boolean
-  metastring?: string
-  [key: string]: any
-}
 
 function getParams(className = ``) {
   const [lang = ``, params = ``] = className.split(`:`)
@@ -105,6 +99,15 @@ const LazyLiveProvider = loadable(async () => {
     </LiveProvider>
   )
 })
+
+type CodeProps = {
+  codeString: string
+  // language: Language
+  language: any
+  noLineNumbers?: boolean
+  metastring?: string
+  [key: string]: any
+}
 
 const Code = ({
   codeString,

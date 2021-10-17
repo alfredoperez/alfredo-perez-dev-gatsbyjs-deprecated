@@ -1,15 +1,13 @@
 /** @jsx jsx */
+import { Card as CardComponent, Flex, jsx } from 'theme-ui'
 import React from 'react'
 import { Note } from '@models/note'
 import SEO from '@components/SEO'
-import { Card as CardComponent, Container, Flex, jsx } from 'theme-ui'
 import Card from '@components/Card'
-import { PostBody, PostTagsShare } from '@components/Post'
+import { PostBody, PostImage } from '@components/Post'
 import Divider from '@components/Divider'
 import { Main, Stack } from '@components/Layout'
 import NewsletterCompact from '@components/NewsletterForm/NewsletterCompact'
-import Section from '@components/Section'
-import PostShare from '@components/Post/Post.Share'
 import PostComments from '../components/Post/Post.Comments'
 
 type NoteProps = {
@@ -56,15 +54,14 @@ const NotePage: React.FunctionComponent<NoteProps> = ({ data }: NoteProps) => {
       <Stack direction="column">
         <CardComponent variant="paper-lg">
           {/* <PostImage {...note} inCard /> */}
-
-          <PostBody {...note} />
+          <PostBody {...note} />`
         </CardComponent>
 
-        {/* {post.category && ( */}
+        {/* {data.categoryPosts && ( */}
         {/*  <CardList */}
         {/*    title="Related Posts" */}
-        {/*    nodes={relatedPosts} */}
-        {/*    variant={['horizontal-aside']} */}
+        {/*    nodes={data.categoryPosts} */}
+        {/*    variant={[`horizontal-aside`]} */}
         {/*    columns={[1, 2, 2, 2]} */}
         {/*    limit={6} */}
         {/*    distinct */}
