@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Heading, Text, Badge } from 'theme-ui'
 
 const styles = {
@@ -20,8 +19,8 @@ const styles = {
 type PageTitleProps = {
   header: string
   subheader: string
-  running: string | object
-  totalCount: number
+  running?: string
+  totalCount?: number
 }
 
 const PageTitle = ({ header, subheader, running, totalCount }: PageTitleProps) => (
