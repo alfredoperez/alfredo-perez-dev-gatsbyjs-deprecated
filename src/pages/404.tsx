@@ -9,20 +9,23 @@ import { Layout, Main, Stack } from '@components/Layout'
 
 const Page404 = () => (
   <>
+    <SEO title="Page Not Found" />
     <Divider space={3} />
-    <Main>
-      <Section>
-        <PageTitle
-          header="Sorry, this page isn't available."
-          subheader="You may have mistyped the address or the page may have moved."
-        />
-      </Section>
-      <Section>
-        <Button variant="primary" as={Link} to="/">
-          Go to homepage
-        </Button>
-      </Section>
-    </Main>
+    <Stack>
+      <Main>
+        <Section>
+          <PageTitle
+            header="Sorry, this page isn't available."
+            subheader="You may have mistyped the address or the page may have moved."
+          />
+        </Section>
+        <Section>
+          <Button variant="primary" as={Link} to="/">
+            Go to homepage
+          </Button>
+        </Section>
+      </Main>
+    </Stack>
   </>
 )
 
