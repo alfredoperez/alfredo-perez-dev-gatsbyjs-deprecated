@@ -45,7 +45,9 @@ module.exports = {
         path: options.notesPath,
       },
     },
-
+    {
+      resolve: `gatsby-plugin-sitemap`,
+    },
     // Link references
     {
       resolve: `gatsby-transformer-markdown-references`,
