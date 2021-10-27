@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import React, { useEffect, useState } from 'react'
-import { Box, IconButton, jsx } from 'theme-ui'
+import React, { useState } from 'react'
+import { Box, Button, jsx } from 'theme-ui'
 import { Configure, InstantSearch } from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite'
-import { FaTimes } from 'react-icons/fa'
+
 import SearchBox from './Search.Box'
 
 import Results from './Search.Results'
@@ -24,6 +24,7 @@ const styles = {
   },
   close: {
     position: `fixed`,
+
     zIndex: 99,
     right: [`50%`, 4],
     top: [`95%`, 4],
@@ -31,10 +32,6 @@ const styles = {
     textAlign: `center`,
     color: `omega`,
     fontSize: 1,
-    // svg: {
-    //   width: `24px`,
-    //   height: `24px`,
-    // },
   },
   esc: {
     display: [`none`, `block`],
@@ -44,10 +41,9 @@ const Overlay = ({ onClick }) => (
   <>
     <Box sx={styles.overlay} onClick={onClick} />
     <Box sx={styles.close}>
-      <IconButton onClick={onClick}>
-        <FaTimes />
-      </IconButton>
-      <Box sx={styles.esc}>ESC</Box>
+      <Button onClick={onClick} variant="secondary">
+        Close(ESC)
+      </Button>
     </Box>
   </>
 )
@@ -78,10 +74,6 @@ const Search = () => {
       setFocus(true)
     }
   }
-
-  useEffect(() => {
-    // focus && handleClose()
-  }) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Box>

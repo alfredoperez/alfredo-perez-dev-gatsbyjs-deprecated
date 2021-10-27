@@ -7,12 +7,11 @@ export default {
 
   /** MDX articles */
   pre: {
-    //  variant: `prism`,
     fontFamily: `"Fira Code"`,
     hyphens: `none`,
     overflow: `auto`,
     borderRadius: `default`,
-    tabSize: 4,
+    tabSize: 2,
     p: 3,
     my: 4,
   },

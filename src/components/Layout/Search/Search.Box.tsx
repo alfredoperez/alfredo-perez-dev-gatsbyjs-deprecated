@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { useCallback, useEffect, useState } from 'react'
 import { connectSearchBox, PoweredBy } from 'react-instantsearch-dom'
-import { Box, IconButton, Input, jsx } from 'theme-ui'
+import { Box, Button, Input, jsx } from 'theme-ui'
 import { FaSearch } from 'react-icons/fa'
 import useDebounce from '@hooks/useDebounce'
 
@@ -83,9 +83,9 @@ const SearchBox = ({ refine, focus, handleFocus, handleClose, ...rest }: SearchB
 
   return (
     <React.Fragment>
-      <IconButton sx={styles.mobileTrigger} onClick={handleFocus} aria-label="Search Button">
-        <FaSearch sx={styles.searchIconFa} />
-      </IconButton>
+      <Button sx={styles.mobileTrigger} onClick={handleFocus} aria-label="Search">
+        Search
+      </Button>
       <Box sx={styles.form(focus)}>
         <FaSearch style={styles.searchIcon} />
         <Input
