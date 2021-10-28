@@ -78,13 +78,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           status
         }
       }
-      notesQuery: allNote(filter: { type: { ne: "moc" } }, sort: { order: DESC, fields: created }) {
-        nodes {
-          slug
-          title
-          status
-        }
-      }
       allMoc: allNote(filter: { type: { eq: "moc" } }, sort: { order: DESC, fields: created }) {
         nodes {
           slug
@@ -147,39 +140,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 exports.sourceNodes = ({ actions, createContentDigest }) => {
   const { createNode } = actions
-  const {
-    basePath,
-    digitalGardenPath,
-    notesPath,
-    pagesPath,
-    tagsPath,
-    externalLinks,
-    navigation,
-    showLineNumbers,
-    showCopyButton,
-  } = options
-
-  const config = {
-    basePath,
-    pagesPath,
-    digitalGardenPath,
-    notesPath,
-    tagsPath,
-    externalLinks,
-    navigation,
-    showLineNumbers,
-    showCopyButton,
-  }
 
   createNode({
-    ...config,
+    ...options,
     id: `blog-config`,
     parent: null,
     children: [],
     internal: {
       type: `BlogConfig`,
-      contentDigest: createContentDigest(config),
-      content: JSON.stringify(config),
+      contentDigest: createContentDigest(options),
+      content: JSON.stringify(options),
       description: `Options for the blog`,
     },
   })
@@ -246,10 +216,10 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       canonicalUrl,
     }
 
-    // fieldData.inboundReferences = [{ title: 'test-title', slug: ' test-slug' }]
     const mdxNoteId = createNodeId(`${node.id} >>> MdxNote`)
     createNode({
       ...fieldData,
+
       // Required fields
       id: mdxNoteId,
       parent: node.id,
@@ -274,12 +244,6 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       value: fieldData.type,
     })
 
-    // createNodeField({
-    //   name: 'inboundReferences',
-    //   node,
-    //   value: fieldData.inboundReferences,
-    // })
-
     createParentChildLink({ parent: node, child: getNode(mdxNoteId) })
   }
 }
@@ -302,16 +266,13 @@ exports.createSchemaCustomization = ({ actions }) => {
     return result
   }
 
-  const { createTypes, createFieldExtension } = actions
-
-  const { basePath } = options
-
   const slugify = (source) => {
     const slug = source.slug ? source.slug : kebabCase(source.title)
 
-    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
+    return `/${options.basePath}/${slug}`.replace(/\/\/+/g, `/`)
   }
 
+  const { createTypes, createFieldExtension } = actions
   createFieldExtension({
     name: `slugify`,
     extend() {
@@ -334,7 +295,33 @@ exports.createSchemaCustomization = ({ actions }) => {
   })
 
   createTypes(`
-     interface Note implements Node {
+    """
+    Markdown Node
+    """
+    type MarkdownRemark implements Node @infer {
+      frontmatter: Frontmatter
+    }
+    
+    """
+    Markdown Frontmatter
+    """
+    type Frontmatter @infer {
+      title: String
+      date: Date @dateformat
+       tags: [NoteTag]
+      slug: String
+      
+
+    }
+    
+    type NoteReference {
+      id: String
+      name: String
+      title: String
+      slug: String
+    }
+    
+    interface Note implements Node {
       id: ID!
       slug: String! @slugify
       title: String!
@@ -350,21 +337,13 @@ exports.createSchemaCustomization = ({ actions }) => {
       canonicalUrl: String
       status: String
       type: String
-      inboundReferences: [InboundReference]
     }
     
-     type NoteTag {
+    type NoteTag {
       name: String
       slug: String
     }
-    
-    type InboundReference {
-      id: String
-      name: String
-      title: String
-      slug: String
-    }
-   
+       
    type MdxNote implements Node & Note {
     slug: String! @slugify
     title: String!
@@ -380,12 +359,8 @@ exports.createSchemaCustomization = ({ actions }) => {
     type: String
     description: String
     canonicalUrl: String
-    inboundReferences: [InboundReference]
   }
-    
-    
-    
-    
+      
     type BlogConfig implements Node {
       basePath: String
       digitalGardenPath: String

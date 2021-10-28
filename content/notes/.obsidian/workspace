@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "How this works.md",
+            "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "How this works.md",
+            "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
             "mode": "preview"
           }
         },
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "title:",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,7 +72,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "1f317ed0d6664cd7",
@@ -111,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "How this works.md"
+                "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md"
               }
             }
           }
@@ -128,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "How this works.md",
+                "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -148,6 +149,7 @@
   },
   "active": "7d46d8d79b87c574",
   "lastOpenFiles": [
+    "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
     "How this works.md",
     "Personal/The Compound Effect.md",
     "Personal/Linking Your Thinking.md",
@@ -156,7 +158,6 @@
     "00 - Templates/Learning Note - Video.md",
     "_Courses and Workshops.md",
     "Inbox/Gatsby Camp Fall 2021.md",
-    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md",
-    "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md"
+    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md"
   ]
 }

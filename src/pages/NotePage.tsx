@@ -4,11 +4,10 @@ import React from 'react'
 import { Note } from '@models/note'
 import SEO from '@components/SEO'
 import Card from '@components/Card'
-import { PostBody, PostImage } from '@components/Post'
+import { PostBody } from '@components/Post'
 import Divider from '@components/Divider'
 import { Main, Stack } from '@components/Layout'
 import NewsletterCompact from '@components/NewsletterForm/NewsletterCompact'
-import PostComments from '../components/Post/Post.Comments'
 
 type NoteProps = {
   data: {
@@ -29,11 +28,21 @@ const NotePage: React.FunctionComponent<NoteProps> = ({ data }: NoteProps) => {
   /* tagCategoryPosts, tagPosts, categoryPosts, previous, next */
   const { note } = data
 
-  // const relatedPosts = [
-  //   ...(tagCategoryPosts ? tagCategoryPosts.nodes : []),
-  //   ...(tagPosts ? tagPosts.nodes : []),
-  //   ...(categoryPosts ? categoryPosts.nodes : []),
-  // ]
+  const relatedNotes = [
+    ...(note.parent.inboundReferences.length > 0
+      ? note.parent.inboundReferences.map((ref) => {
+          const { title, slug, id } = ref.childMdxNote
+          return { title, slug, id }
+        })
+      : []),
+    ...(note.parent.outboundReferences.length > 0
+      ? note.parent.outboundReferences.map((ref) => {
+          const { title, slug, id } = ref.childMdxNote
+          return { title, slug, id }
+        })
+      : []),
+  ]
+  console.log({ relatedNotes })
 
   return (
     <>
@@ -57,12 +66,12 @@ const NotePage: React.FunctionComponent<NoteProps> = ({ data }: NoteProps) => {
           <PostBody {...note} />`
         </CardComponent>
 
-        {/* {data.categoryPosts && ( */}
+        {/* {relatedNotes.length > 0 && ( */}
         {/*  <CardList */}
-        {/*    title="Related Posts" */}
-        {/*    nodes={data.categoryPosts} */}
+        {/*    title="Related Notes" */}
+        {/*    nodes={relatedNotes} */}
         {/*    variant={[`horizontal-aside`]} */}
-        {/*    columns={[1, 2, 2, 2]} */}
+        {/*    columns={[1, 2]} */}
         {/*    limit={6} */}
         {/*    distinct */}
         {/*    omitMedia */}
@@ -78,9 +87,9 @@ const NotePage: React.FunctionComponent<NoteProps> = ({ data }: NoteProps) => {
       </Stack>
       <Divider space={3} />
 
-      <Stack>
-        <PostComments {...note} />
-      </Stack>
+      {/* <Stack> */}
+      {/*  <PostComments {...note} /> */}
+      {/* </Stack> */}
     </>
   )
 }

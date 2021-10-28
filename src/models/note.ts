@@ -11,6 +11,27 @@ export interface BannerImage {
   }
 }
 
+export interface ParentNote {
+  inboundReferences: Array<NoteReference>
+  outboundReferences: Array<NoteReference>
+}
+
+export interface ChildMdxNote {
+  title: string
+  id: string
+  slug: string
+}
+
+export interface NoteReference {
+  childMdxNote: ChildMdxNote
+}
+
+export interface SlimNote {
+  title: string
+  id: string
+  slug: string
+}
+
 export interface Note {
   id: string
   slug: string
@@ -25,4 +46,5 @@ export interface Note {
   canonicalUrl?: string
   timeToRead?: number
   banner?: BannerImage
+  parent: ParentNote
 }
