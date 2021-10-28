@@ -5,6 +5,7 @@ type DividerProps = {
   space: number
   line?: string
 }
+
 const Divider: React.FC<DividerProps> = ({ space, line }) => (
   <Box
     sx={{

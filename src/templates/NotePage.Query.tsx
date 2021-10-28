@@ -27,14 +27,26 @@ export const query = graphql`
       body
       excerpt
       timeToRead
-    }
-    mdx(slug: { eq: $slug }) {
-      inboundReferences {
+      parent {
         ... on Mdx {
-          frontmatter {
-            title
+          inboundReferences {
+            ... on Mdx {
+              childMdxNote {
+                id
+                slug
+                title
+              }
+            }
           }
-          slug
+          outboundReferences {
+            ... on Mdx {
+              childMdxNote {
+                id
+                slug
+                title
+              }
+            }
+          }
         }
       }
     }

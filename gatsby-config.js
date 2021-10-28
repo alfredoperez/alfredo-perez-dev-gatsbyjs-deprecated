@@ -4,6 +4,8 @@ require(`dotenv`).config({
 })
 
 const options = require(`./utils/default-options`)
+const slugify = require(`slugify`)
+const algoliaQueries = require('./utils/algolia-queries')
 
 const siteMetadata = {
   siteTitle: 'Alfredo Perez',
@@ -26,7 +28,7 @@ module.exports = {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         chunkSize: 10000,
-        queries: require('./utils/algolia-queries'),
+        queries: algoliaQueries,
         skipIndexing: process.env.ALGOLIA_SKIP_INDEX === 'true',
       },
     },
@@ -45,12 +47,11 @@ module.exports = {
         path: options.notesPath,
       },
     },
-
     // Link references
     {
       resolve: `gatsby-transformer-markdown-references`,
       options: {
-        types: ['Mdx'], // or ['RemarkMarkdown'] (or both)
+        types: ['Mdx'],
       },
     },
     {
@@ -67,10 +68,11 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-double-brackets-link',
+            resolve: 'gatsby-remark-obsidian',
             options: {
-              titleToURLPath: `${__dirname}/utils/resolve-url.js`,
-              stripBrackets: true,
+              titleToURL: (title) => `/notes/${slugify(title).toLocaleLowerCase()}`,
+              markdownFolder: `${__dirname}/content/notes`,
+              highlightClassName: 'highlight',
             },
           },
         ],
@@ -110,5 +112,6 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-tsconfig-paths`,
+    `gatsby-plugin-sitemap`,
   ].filter(Boolean),
 }

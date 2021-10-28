@@ -10,13 +10,13 @@ type DigitalGardenProps = {
   [key: string]: unknown
 }
 
-const DigitalGardenPage = (props: DigitalGardenProps) => {
+const DigitalGardenPage = ({ data }: DigitalGardenProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-  if (!props.data) {
+  if (!data) {
     return null
   }
 
-  const notes = props.data.allNote.nodes
+  const notes = data.allNote.nodes
 
   return (
     <React.Fragment>

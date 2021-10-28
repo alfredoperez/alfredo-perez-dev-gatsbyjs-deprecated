@@ -876,7 +876,7 @@ ul .task-list-item ul::before {
   text-decoration: none;
 }
 
-.cm-s-obsidian span.cm-link {
+.cm-s-obsidian span.cm-link:not(.cm-formatting-link) {
   background-image: linear-gradient(
     to bottom,
     var(--bg-sub-accent-55) 0%,
@@ -1088,10 +1088,6 @@ h6 a.tag {
   border-bottom-left-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
   background-color: #191621;
-}
-
-.HyperMD-codeblock.CodeMirror-line {
-  padding: 0 1rem !important;
 }
 
 pre {

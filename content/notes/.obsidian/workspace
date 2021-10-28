@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Inbox/Gatsby Camp Fall 2021.md",
+            "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Inbox/Gatsby Camp Fall 2021.md",
+            "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
             "mode": "preview"
           }
         },
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#GatsbyJS",
+                "query": "title:",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -112,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Inbox/Gatsby Camp Fall 2021.md"
+                "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md"
               }
             }
           }
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Inbox/Gatsby Camp Fall 2021.md",
+                "file": "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -149,15 +149,15 @@
   },
   "active": "7d46d8d79b87c574",
   "lastOpenFiles": [
-    "Inbox/Gatsby Camp Fall 2021.md",
-    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md",
     "Professional/A structured approach to processing diverse inputs - Bryan Jenks and his Obsidian KMS.md",
-    "Professional/_Conferences and Workshops.md",
-    "00 - Templates/Learning Note - Workshop.md",
     "How this works.md",
+    "Personal/The Compound Effect.md",
+    "Personal/Linking Your Thinking.md",
+    "Personal/Life of Focus.md",
     "Professional/Prefer using Component Store or services with a behavior subject for local state.md",
+    "00 - Templates/Learning Note - Video.md",
     "_Courses and Workshops.md",
-    "00 - Templates/Evergreen Note.md",
-    "00 - Templates/MOC.md"
+    "Inbox/Gatsby Camp Fall 2021.md",
+    "Inbox/Adding notes references into your GatsbyJS Digital Garden.md"
   ]
 }

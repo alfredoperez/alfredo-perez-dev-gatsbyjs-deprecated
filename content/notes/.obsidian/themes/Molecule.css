@@ -7,12 +7,19 @@
  #+#       #+#    #+#    #+#      #+#        #+#             #+#    #+#     #+#    #+#       #+#        #+#
 ###       ###     ########       ########## ##########       ########       ########        ########## ##########
 
-Version: 1.7
+Version: 1.14
 Check for releases: https://github.com/manassadasivuni/obsidian-molecule
 
 Made by Manas Sadasivuni (https://links.manassadasivuni.com)
 
 */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+:root {
+    --default-font: 'JetBrains Mono' !important;
+}
 
 .theme-light{
   --background-primary: #ffffff;
@@ -20,20 +27,12 @@ Made by Manas Sadasivuni (https://links.manassadasivuni.com)
   --background-secondary: #ffffff;
   --background-secondary-alt: #eeeeee;
   --background-accent: #5aa17b;
-  --background-modifier-border: #dddddd;
-  --background-modifier-form-field: #fff;
-  --background-modifier-form-field-highlighted: #fff;
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-success: #A4E7C3;
-  --background-modifier-error: #990000;
-  --background-modifier-error-rgb: 230, 135, 135;
-  --background-modifier-error-hover: #bb0000;
-  --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: #5aa17b;
   --text-accent-hover: #45795d;
   --text-normal: #000000;
   --text-muted: #444444;
-  --text-highlight-bg: #a4e7c3;
+  --text-highlight-bg: #4FFFB0;
   --text-selection: #B8D9F4;
   --interactive-normal: #5aa17b;
   --interactive-hover: #45795d;
@@ -41,60 +40,28 @@ Made by Manas Sadasivuni (https://links.manassadasivuni.com)
   --interactive-accent-rgb: 164, 231, 195;
   --interactive-accent-hover: #45795d;
 
-  --inline-code: var(--text-muted);
-  --code-background: ;
-  
-}
-
-/* ========== */
-/* Graph colours*/
-.graph-view.color-circle,
-.graph-view.color-fill-highlight,
-.graph-view.color-line-highlight{
-    color: #666666 !important;    
-}
-
-.graph-view.color-fill-attachment{
-  color: var(--text-highlight-bg) !important;
-}
-
-.graph-view.color-fill-tag{
-  color: var(--interactive-accent) !important;
-}
-
-.graph-view.color-text{
-    color: var(--text-normal) !important;
-}
-
-.graph-view.color-line{
-    color: rgba(0, 0, 0, 0.25);
-}
-
-.graph-view.color-fill{
-    color: #111111;
+  --green-accent: #4FFFB0;
+  --light-green-accent: #5CFFB6;
+  --purple-accent: #8269FF;
+  --red-accent: #FF5136;
+  --code-block-background: #eeeeee;
 }
 
 /* ========== */
 /* Element-wide styles */
-
-button {
-  background-color: var(--background-primary-alt);
+body {
+  -webkit-font-smoothing: auto;
+  --font-monospace: 'Space Mono', 'Source Code Pro', monospace;
 }
 
-button:hover {
-  background-color: var(--background-secondary-alt);
+mjx-container[jax='CHTML'] {
+  text-align: left;
+  outline: none;
+  font-size: 20px;
 }
 
 blockquote {
   margin-inline-start: 0;
-}
-
-blockquote:before {
-  font: 14px/20px italic Times, serif;
-  content: "“";
-  font-size: 3em;
-  line-height: 0.1em;
-  vertical-align: -0.4em;
 }
 
 blockquote p { 
@@ -107,166 +74,72 @@ img {
     margin-right: auto !important;
 } 
 
-a,
-.cm-hmd-internal-link
-{
+a, .cm-hmd-internal-link, .cm-url {
 color: var(--interactive-accent) !important;
 text-decoration: none !important;
 }
 
-a:hover,
-.cm-hmd-internal-link:hover,
-.cm-url
-{
-color: var(--interactive-accent-hover) !important;
+a:hover, .cm-hmd-internal-link:hover, .cm-url:hover {
+color: var(--purple-accent) !important;
 text-decoration: none !important;
 }
 
-/* ========== */
-
-body{
-  -webkit-font-smoothing: auto;
+.math-block > mjx-container[jax="CHTML"] {
+  font-size: 125%;
 }
 
-.theme-light .token.operator,
-.theme-light .token.entity,
-.theme-light .token.url,
-.theme-light .language-css .token.string,
-.theme-light .style .token.string {
-  background: transparent;
-}
-
-body:not(.is-grabbing) .nav-file:not(.is-active) .nav-file-title:hover,
-body:not(.is-grabbing) .nav-folder:not(.is-active) .nav-folder-title:hover {
-  --text-normal: var(--text-muted);
-  --background-secondary-alt: var(--background-secondary);
-}
-
-.workspace-tab-header-container{
-  color: var(--background-primary-alt)
-}
-
-.workspace-tab-header.is-active{
-  color: var(--interactive-accent);
-}
-
-.markdown-preview-view .markdown-embed { border:none; padding:0; margin:0; }
-.markdown-preview-view .markdown-embed-content { 
-  max-height: unset;
-  background-color: var(--background-primary);
-}
-
-.markdown-embed-link {
-  color: var(--text-faint) !important;
-  }
-
-.markdown-embed-link:hover {
-color: var(--interactive-accent-hover) !important;
-}
-
-.workspace-leaf-resize-handle:hover{
-  background-color: var(--interactive-accent);
-}
-
-.search-result-file-title{
-  color: var(--text-accent)
-}
-
-.search-result-file-title:hover{
-  color: var(--text-accent-hover)
-}
-
-.nav-file-title, .nav-folder-title{
-  color:var(--text-muted);
-}
-
-.suggestion-item.is-selected .suggestion-note, .suggestion-item.is-selected{
-  color: var(--background-primary);
-  background: var(--interactive-accent-hover);
-}
-
-.suggestion-item.is-selected .suggestion-hotkey{
-  color: var(--text-normal)
-}
-
-.markdown-preview-view.is-readable-line-width .markdown-preview-section,
-.markdown-source-view.is-readable-line-width .CodeMirror {
-  max-width: 900px !important;
-  line-height: 26px;
-}
-
-.nav-file.is-active > .nav-file-title{
-  background-color: var(--interactive-accent);
-  color: var(--background-primary)
-}
-
-.nav-file.is-active > .nav-file-title:hover {
-  background-color: var(--interactive-accent-hover);
-  color: var(--background-primary);
-}
-
-/* ========== */
-/* Preview */
-
-.markdown-preview-view code{
-  color: var(--inline-code);
-}
-
-/* Fancy horizontal lines (---) by TriDiamond (https://github.com/TriDiamond/) */
-
-.markdown-preview-view hr {
-  border: none;
-  height: 0;
-  border-bottom: 1px solid;
-  border-image-slice: 1;
-  border-width: 1px;
-  border-image-source: linear-gradient(to right, transparent, var(--text-accent), transparent);
-}
-
-.markdown-preview-view hr::after {
-  content: '«~»';
+.tag {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-normal) !important;
+  padding: 2px 8px;
   display: inline-block;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: 50% 50%;
-  padding: 0.5rem;
-  color: var(--text-muted);
-  background-color: var(--background-primary);
+  text-align: center;
+  margin: 0px 0px;
+}
+
+.tag:hover {
+  background-color: var(--purple-accent);
+  color: var(--background-primary-alt) !important;
+}
+
+p {
+  text-align: justify;
 }
 
 /* ========== */
-/* Edit */
-.cm-s-obsidian pre.HyperMD-codeblock,
-.cm-s-obsidian span.cm-math,
-.markdown-preview-view code {
-  font-weight: 600;
-  background-color: #eeeeee;
+/* Graph colours*/
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight {
+    color: var(--light-green-accent);    
 }
 
-.cm-s-obsidian span.cm-inline-code {
-  font-weight: 600;
-  font-style: normal;
-  color: var(--inline-code);
+.graph-view.color-fill-attachment {
+  color: var(--purple-accent) !important;
+  opacity: 0.6;
 }
 
-.cm-s-obsidian span.cm-math,
-.cm-s-obsidian span.hmd-fold-math-placeholder {
-  font-weight: 600;
-  font-style: normal;
+.graph-view.color-fill-tag {
+  color: var(--green-accent) !important;
+  opacity: 0.6;
 }
 
-/* Bigger link popup preview */
-.popover.hover-popover {
-  max-height: 800px;    /* was 300 */
-  min-height: 100px;
-  width: 500px;     /* was 400 */
+.graph-view.color-fill-unresolved {
+  color: var(--red-accent);
 }
 
+.graph-view.color-text {
+    color: var(--text-normal);
+}
 
-/* ==== CSS Tweaks - delete whichever parts you don't want ==== */
+.graph-view.color-line {
+    color: rgba(0, 0, 0, 0.25);
+}
 
-/* Better checkboxes */
+.graph-view.color-fill {
+    color: #111111;
+}
+
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
   box-sizing: border-box;
@@ -279,9 +152,9 @@ color: var(--interactive-accent-hover) !important;
   filter: none;
   outline: none;
   margin-right: 4px;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
   cursor: pointer;
-  vertical-align: center;
+  vertical-align: baseline;
 }
 
 .markdown-preview-view .task-list-item-checkbox:checked {
@@ -300,105 +173,154 @@ color: var(--interactive-accent-hover) !important;
   -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 14 14\'%3E%3Cpolygon points=\'5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039\'%3E%3C/polygon%3E%3C/svg%3E');
 }
 
-/* Fixing numbered lists */
-ol {
-  list-style-type: none;
-  counter-reset: item;
-  margin: 0;
-  padding: 0;
+.markdown-preview-view.is-readable-line-width .markdown-preview-section,
+.markdown-source-view.is-readable-line-width .CodeMirror {
+  max-width: 900px !important;
+  line-height: 26px;
 }
 
-ol > li {
-  display: table;
-  counter-increment: item;
-  margin-bottom: 0.6em;
+
+/* Code block background color */
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  background-color: var(--code-block-background);
 }
 
-ol > li:before {
-  content: counters(item, ".") ". ";
-  display: table-cell;
-  padding-right: 0.6em;    
-}
-
-li ol > li {
-  margin: 0;
-}
-
-li ol > li:before {
-  content: counters(item, ".") " ";
-}
-
-/* trace indentation lines by death_au */
-.cm-hmd-list-indent .cm-tab,
-ul ul {
-  position: relative;
-}
-
-.cm-hmd-list-indent .cm-tab::before,
-ul ul::before {
-  content: '';
-  border-left: 2px solid var(--background-modifier-border);
-  position: absolute;
-}
-
-.cm-hmd-list-indent .cm-tab::before {
-  left: 0;
-  top: -5px;
-  bottom: -4px;
-}
-
-ul ul::before {
-  left: -15px;
-  top: 0;
-  bottom: 0;
-}
-
-/* Click & hold images to increase size */
-.markdown-preview-view .internal-embed img {
-	cursor:zoom-in;}
-
-.markdown-preview-view .internal-embed img:active {
-	cursor:zoom-out;
-	display:block;
-	z-index:100;
-	position:fixed;
-    max-height:100%;
-    max-width:100%;
-    height:100%;
-    width:100%;
-    object-fit: contain;
-    margin:0 auto;
-    text-align:center;
-    top: 50%;
-  	transform: translateY(-50%);
-    padding:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background:var(--background-primary);}
-
-/* Removing strikethrough from completed to-do lists */
-.markdown-preview-view ul > li.task-list-item.is-checked {
-  text-decoration: none;
+.cm-s-obsidian pre.HyperMD-codeblock,
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
+.markdown-preview-view code {
   color: inherit;
 }
 
-/* obsidian-calendar-plugin */
-/* https://github.com/liamcain/obsidian-calendar-plugin */
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder {
+  font-weight: 600;
+  font-style: normal;
+}
 
-#calendar-container {
-  --color-background-heading: transparent;
+.markdown-preview-view code {
+  vertical-align: text-top;
+  word-break: break-word;
+}
 
-  --color-background-day: transparent;
-  --color-background-day-empty: var(--background-secondary-alt);
-  --color-background-day-active: var(--interactive-accent);
-  --color-background-day-hover: var(--interactive-hover);
+.markdown-preview-section:not(:first-child) h1,
+.markdown-preview-section:not(:first-child) h2,
+.markdown-preview-section:not(:first-child) h3,
+.markdown-preview-section:not(:first-child) h4,
+.markdown-preview-section:not(:first-child) h5,
+.markdown-preview-section:not(:first-child) h6 {
+  margin-top: 40px !important;
+}
 
-  --color-dot: var(--text-muted);
-  --color-arrow: currentColor;
+h1, h2, h3, h4, h5, h6, strong, b, .view-header-title {
+  font-weight: 600;
+}
 
-  --color-text-title: var(--text-normal);
-  --color-text-heading: var(--text-normal);
-  --color-text-day: var(--text-normal);
-  --color-text-today: var(--text-normal);
+.nav-file.is-active {
+  --background-secondary-alt: var(--interactive-accent);
+  --text-normal: #ffffff;
+}
+
+.nav-file:not(.is-active):hover .nav-file-title,
+.nav-folder:hover .nav-folder-content {
+  background-color: transparent;
+}
+
+
+.theme-light .token.operator,
+.theme-light .token.entity,
+.theme-light .token.url,
+.theme-light .language-css .token.string,
+.theme-light .style .token.string {
+  background: transparent;
+}
+
+body:not(.is-grabbing) .nav-file:not(.is-active) .nav-file-title:hover,
+body:not(.is-grabbing) .nav-folder:not(.is-active) .nav-folder-title:hover {
+  --text-normal: var(--text-muted);
+  --background-secondary-alt: var(--background-secondary);
+}
+
+.markdown-preview-view hr {
+  border: none;
+  height: 0;
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to right, transparent, var(--red-accent), transparent);
+}
+
+.markdown-preview-view hr::after {
+  content: '«~»';
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  color: var(--text-muted);
+  background-color: var(--background-primary);
+}
+
+
+.markdown-preview-view blockquote {
+  background: var(--background-secondary-alt); 
+  border-radius: unset;
+  border: unset;
+  padding: 10px;
+  margin: unset;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--purple-accent) !important;
+}
+
+.markdown-preview-view blockquote p {
+  margin: 0 10px;
+}
+
+/*  Fix suggested item */
+.suggestion-item.is-selected .suggestion-note, .suggestion-item.is-selected{
+  color: var(--background-primary);
+  background: var(--interactive-accent);
+}
+
+.suggestion-item.is-selected .suggestion-hotkey{
+  color: var(--text-normal)
+}
+
+/* Change background overlay */
+.modal-bg {
+  background-color: var(--background-accent);
+  opacity: 0.75;
+}
+
+/* Increases link popup preview */
+.popover.hover-popover {
+  max-height: 1000px;    /* was 300 */
+  min-height: 100px;
+  width: 600px;     /* was 400 */
+}
+
+/* Fixes icons being same as highlight colour when selected */
+.suggestion-item.qsp-symbol-l0.is-selected .qsp-symbol-indicator, 
+.suggestion-item.qsp-symbol-l1.is-selected .qsp-symbol-indicator,
+.suggestion-item.qsp-symbol-l2.is-selected .qsp-symbol-indicator,
+.suggestion-item.qsp-symbol-l3.is-selected .qsp-symbol-indicator,
+.suggestion-item.qsp-symbol-l4.is-selected .qsp-symbol-indicator,
+.suggestion-item.qsp-symbol-l5.is-selected .qsp-symbol-indicator,
+.suggestion-item.qsp-symbol-l6.is-selected .qsp-symbol-indicator {
+  color: var(--background-primary-alt)
+}
+
+/* Fixes find and replace button colours */
+.document-search-button {
+  background-color: var(--interactive-normal);
+  color: var(--background-primary-alt);
+}
+
+/* center tables */
+.markdown-preview-view table {
+  margin-right: auto;
+  margin-left: auto;
 }
