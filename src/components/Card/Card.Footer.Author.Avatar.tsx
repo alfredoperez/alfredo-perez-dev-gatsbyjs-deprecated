@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link as GLink } from 'gatsby'
 import { get, Link, useThemeUI } from 'theme-ui'
-import Avatar from '@components/Avatar'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
+import { buildResponsiveVariant as rv } from '../../utils/buildResponsiveVariant'
+import Avatar from '../Avatar'
 
 const authorImageSize = 48
 
@@ -13,11 +13,7 @@ const CardFooterAuthorAvatar = ({ variant, omitAuthor, author }) => {
 
   const responsiveVariant = rv(variant, `authorPhoto`)
 
-  const visibility = responsiveVariant.reduce(
-    (mobileVisibility, variant) =>
-      !(mobileVisibility === false && get(context.theme, variant, {}).display === `none`),
-    false,
-  )
+  const visibility = get(context.theme, responsiveVariant, {}).display === `none`
 
   return visibility ? (
     author && author.thumbnail ? (

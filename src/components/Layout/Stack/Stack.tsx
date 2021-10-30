@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { Container, Flex } from 'theme-ui'
-import Section from '@components/Section'
 import { Property } from 'csstype'
 import { Fade } from 'react-awesome-reveal'
+import Section from '../../Section'
 
 type StackProps = {
   direction?: Property.FlexDirection

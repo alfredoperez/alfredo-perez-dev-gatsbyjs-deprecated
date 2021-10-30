@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import { css } from 'theme-ui'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
+import { buildResponsiveVariant as rv, normalizeImage } from '../../utils'
 
 const CardMediaImage = ({ variant, loading, image }) => (
   <Img

@@ -2,8 +2,8 @@ import React from 'react'
 import groupArray from 'group-array'
 import { connectStateResults, Highlight, Snippet } from 'react-instantsearch-dom'
 import { Box, Heading, Spinner } from 'theme-ui'
-import Card from '@components/Card'
-import useScrollDisabler from '@hooks/useScrollDisabler'
+import Card from '../../Card'
+import useScrollDisabler from '../../../hooks/useScrollDisabler'
 import styles from './Search.styles'
 
 const Hits = ({ searchState, searchResults }) => {

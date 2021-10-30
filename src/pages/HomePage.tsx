@@ -1,15 +1,14 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
 import React from 'react'
-import useSiteMetadata from '@hooks/use-site-metadata'
-import { visuallyHidden } from '@utils/visuallyHidden'
-import { Note } from '@models/note'
-import CardList from '@components/CardList'
-import SEO from '@components/SEO'
-import { Main, Stack } from '@components/Layout'
-import NewsletterCompact from '@components/NewsletterForm/NewsletterCompact'
-import Divider from '@components/Divider'
-import { Flex } from 'theme-ui'
+import { Flex, jsx } from 'theme-ui'
+import useSiteMetadata from '../hooks/use-site-metadata'
+import NewsletterCompact from '../components/NewsletterForm/NewsletterCompact'
+import { visuallyHidden } from '../utils'
+import CardList from '../components/CardList'
+import { Note } from '../models'
+import SEO from '../components/SEO'
+import { Main, Stack } from '../components/Layout'
+import Divider from '../components/Divider'
 
 type HomePageProps = {
   data: {

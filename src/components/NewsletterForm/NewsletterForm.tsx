@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Input, Button, Message, Spinner } from 'theme-ui'
-import { NewsletterProps } from '@components/NewsletterForm/Newsletter.Model'
+import { NewsletterProps } from './Newsletter.Model'
 
 const styles = {
   msg: {

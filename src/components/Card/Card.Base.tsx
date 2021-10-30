@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Card, Flex } from 'theme-ui'
-import { columnSizeMatcher } from '@utils/columnSizeMatcher'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
+import { columnSizeMatcher, buildResponsiveVariant as rv } from '../../utils'
 import Body from './Card.Body'
 import Media from './Card.Media'
 import Footer from './Card.Footer'

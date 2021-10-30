@@ -106,7 +106,6 @@
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
-    "gatsby-plugin-tsconfig-paths": "^1.0.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.4",
     "plop": "2.7.4",

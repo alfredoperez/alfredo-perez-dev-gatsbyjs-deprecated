@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link as GLink } from 'gatsby'
 import { Box, get, Link, useThemeUI } from 'theme-ui'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
+import { buildResponsiveVariant as rv } from '../../utils'
 import CardMediaIcon from './Card.Media.Icon'
 import CardMediaImage from './Card.Media.Image'
 

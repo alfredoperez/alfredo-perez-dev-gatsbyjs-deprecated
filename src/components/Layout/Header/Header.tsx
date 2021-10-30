@@ -2,7 +2,7 @@
 import { Box, Container, jsx } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
 import { Link } from 'gatsby'
-import Logo from '@components/Logo/Logo'
+import Logo from '../../Logo/Logo'
 import useBlogConfig from '../../../hooks/use-blog-config'
 import replaceSlashes from '../../../utils/replaceSlashes'
 import useSiteMetadata from '../../../hooks/use-site-metadata'

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react'
 import { Flex, Box, Divider, jsx } from 'theme-ui'
-import PostShare from '@components/Post/Post.Share'
+import PostShare from './Post.Share'
 
 const styles = {
   flex: {

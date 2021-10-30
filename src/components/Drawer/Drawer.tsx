@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Box, IconButton } from 'theme-ui'
 import { FaBars, FaTimes } from 'react-icons/fa'
-// import useScrollDisabler from '@components/useScrollDisabler'
 import loadable from '@loadable/component'
 import './Drawer.css'
 

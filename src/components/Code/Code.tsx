@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import loadable from '@loadable/component'
 import theme from 'prism-react-renderer/themes/shadesOfPurple'
-import { copyToClipboard } from '@utils/copyToClipboard'
 import { visuallyHidden } from '@utils/visuallyHidden'
+import { copyToClipboard } from '../../utils'
 
 const delay = (duration: number) => new Promise((resolve) => setTimeout(resolve, duration))
 

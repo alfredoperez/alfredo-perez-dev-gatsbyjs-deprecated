@@ -1,3 +1,5 @@
+import { ThemeUICSSObject } from 'theme-ui'
+
 export const visuallyHidden = {
   // include `px` so we can use it with `sx`
   border: 0,
@@ -9,4 +11,4 @@ export const visuallyHidden = {
   position: `absolute`,
   whiteSpace: `nowrap`,
   width: `1px`,
-}
+} as ThemeUICSSObject

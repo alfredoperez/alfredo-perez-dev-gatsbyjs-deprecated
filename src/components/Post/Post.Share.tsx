@@ -2,7 +2,7 @@
 import React from 'react'
 import { IconButton, Heading, Flex, jsx } from 'theme-ui'
 import { TwitterShareButton, LinkedinShareButton } from 'react-share'
-import attachSocialIcons from '@utils/attachSocialIcons'
+import { attachSocialIcons } from '../../utils'
 
 const styles = {
   wrapper: {

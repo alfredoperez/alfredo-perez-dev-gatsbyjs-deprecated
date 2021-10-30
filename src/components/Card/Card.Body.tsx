@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'theme-ui'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
+import { buildResponsiveVariant as rv } from '../../utils'
 import CardBodyStatus from './Card.Body.Status'
 import CardBodyTitle from './Card.Body.Title'
 import CardBodyExcerpt from './Card.Body.Excerpt'

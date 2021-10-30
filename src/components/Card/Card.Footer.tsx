@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Flex } from 'theme-ui'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
-import CardFooterTags from '@components/Card/Card.Footer.Tags'
+import CardFooterTags from './Card.Footer.Tags'
+import { buildResponsiveVariant as rv } from '../../utils/buildResponsiveVariant'
 import Info from './Card.Footer.Info'
 
 const styles = {

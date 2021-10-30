@@ -1,6 +1,6 @@
 import React from 'react'
 import { get, Text, useThemeUI } from 'theme-ui'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
+import { buildResponsiveVariant as rv } from '../../utils'
 
 const styles = {
   excerpt: {

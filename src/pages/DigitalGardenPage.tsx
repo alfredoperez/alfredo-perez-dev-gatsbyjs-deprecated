@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React from 'react'
-import { Note } from '@models/note'
-import SEO from '@components/SEO'
+import { Note } from '../models'
+import SEO from '../components/SEO'
 import CardList from '../components/CardList'
 
 type DigitalGardenProps = {

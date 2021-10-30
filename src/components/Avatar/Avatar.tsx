@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import React from 'react'
 import Img from 'gatsby-image'
-import { Box, jsx } from 'theme-ui'
-import { normalizeImage } from '@utils/normalizeImage'
-import MemphisPattern from '@components/MemphisPattern'
+import { Box, jsx, ThemeUICSSObject } from 'theme-ui'
+import { normalizeImage } from '../../utils/normalizeImage'
+import MemphisPattern from '../MemphisPattern'
 
 // Base size to keep all layers aligned easier
 const bs = (x: number) => `${x * 0.35}rem`
@@ -14,48 +14,51 @@ const styles = {
     zIndex: 2,
     textAlign: `center`,
     mb: bs(3),
-  },
+  } as ThemeUICSSObject,
   pattern: {
     backgroundSize: `8rem`,
     opacity: 0.15,
-  },
-  circle: ({ width }: any) => ({
-    width: [bs(30), `full`],
-    height: `full`,
-    maxWidth: width,
-    borderRadius: `full`,
-    position: `absolute`,
-    transform: `translate(-50%)  scale(0.98)`,
-    left: `50%`,
-    top: bs(3),
-    bg: `alpha`,
-  }),
-  arc: ({ width }: any) => ({
-    width: [bs(30), `full`],
-    height: `full`,
-    maxWidth: width,
-    borderRadius: `full`,
-    position: `absolute`,
-    zIndex: 2,
-    left: `50%`,
-    transform: `translate(-50%)`,
-    mt: bs(-1),
-    ml: bs(-2),
-    boxShadow: (t) => `
+  } as ThemeUICSSObject,
+  circle: ({ width }: any) =>
+    ({
+      width: [bs(30), `full`],
+      height: `full`,
+      maxWidth: width,
+      borderRadius: `full`,
+      position: `absolute`,
+      transform: `translate(-50%)  scale(0.98)`,
+      left: `50%`,
+      top: bs(3),
+      bg: `alpha`,
+    } as ThemeUICSSObject),
+  arc: ({ width }: any) =>
+    ({
+      width: [bs(30), `full`],
+      height: `full`,
+      maxWidth: width,
+      borderRadius: `full`,
+      position: `absolute`,
+      zIndex: 2,
+      left: `50%`,
+      transform: `translate(-50%)`,
+      mt: bs(-1),
+      ml: bs(-2),
+      boxShadow: (t) => `
 			${bs(2)}
 			${bs(4)}
 			${t.colors.omegaLight}
 		`,
-  }),
-  imageWrapper: ({ width }: any) => ({
-    width: [bs(30), `full`],
-    maxWidth: width,
-    position: `relative`,
-    mx: `auto`,
-    '> div': {
-      borderRadius: `0 0 9999px 9999px`,
-    },
-  }),
+    } as ThemeUICSSObject),
+  imageWrapper: ({ width }: any) =>
+    ({
+      width: [bs(30), `full`],
+      maxWidth: width,
+      position: `relative`,
+      mx: `auto`,
+      '> div': {
+        borderRadius: `0 0 9999px 9999px`,
+      },
+    } as ThemeUICSSObject),
   imageWrapperSimple: ({ width }: any) => ({
     width,
     bg: `omegaLight`,

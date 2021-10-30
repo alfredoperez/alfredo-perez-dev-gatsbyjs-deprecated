@@ -45,7 +45,7 @@ const icons = {
   },
 }
 
-const attachSocialIcons = (items: Array<{ name: string; url: string }>) =>
+export const attachSocialIcons = (items: Array<{ name: string; url: string }>) =>
   items.length &&
   items.map((item) => {
     const name = (item.name || extractHostname(item.url || item)).toLowerCase()
@@ -55,5 +55,3 @@ const attachSocialIcons = (items: Array<{ name: string; url: string }>) =>
       ...((icons as any)[name] || icons.default),
     }
   })
-
-export default attachSocialIcons

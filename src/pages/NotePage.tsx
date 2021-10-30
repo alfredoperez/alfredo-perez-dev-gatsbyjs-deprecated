@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { Card as CardComponent, Flex, jsx } from 'theme-ui'
 import React from 'react'
-import { Note } from '@models/note'
-import SEO from '@components/SEO'
-import Card from '@components/Card'
-import { PostBody } from '@components/Post'
-import Divider from '@components/Divider'
-import { Main, Stack } from '@components/Layout'
-import NewsletterCompact from '@components/NewsletterForm/NewsletterCompact'
+import { Note } from '../models'
+import SEO from '../components/SEO'
+import Card from '../components/Card'
+import { PostBody } from '../components/Post'
+import Divider from '../components/Divider'
+import { Main, Stack } from '../components/Layout'
+import NewsletterCompact from '../components/NewsletterForm/NewsletterCompact'
 
 type NoteProps = {
   data: {

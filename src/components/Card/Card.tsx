@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react'
-import { buildResponsiveVariant } from '@utils/buildResponsiveVariant'
-import { VariantProp } from '@models/props'
+import { buildResponsiveVariant } from '../../utils'
+import { VariantProp } from '../../models/props'
 import Base from './Card.Base'
 
 type Category = {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link as GLink } from 'gatsby'
 import { Heading } from 'theme-ui'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
+import { buildResponsiveVariant as rv } from '../../utils/buildResponsiveVariant'
 
 const CardBodyTitle = ({ variant, title, slug, link }) => {
   const linkProps = link

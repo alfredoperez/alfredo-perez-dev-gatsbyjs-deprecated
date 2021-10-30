@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Badge, Flex, Heading } from 'theme-ui'
-import Divider from '@components/Divider'
+import Divider from '../Divider'
 
 const styles = {
   wrapper: {
