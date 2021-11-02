@@ -15,7 +15,7 @@ const CardBodyExcerpt = ({ variant, excerpt, omitExcerpt }) => {
   const responsiveVariant = rv(variant, `excerpt`)
 
   const themeValue = get(context.theme, responsiveVariant, {})
-  const visibility = themeValue.display === `none`
+  const visibility = themeValue.display !== `none`
   return !omitExcerpt && visibility ? (
     <Text
       variant="small"

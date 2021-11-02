@@ -13,13 +13,13 @@ const styles = {
   },
 }
 
-const NewsletterForm: React.FunctionComponent<NewsletterProps> = ({
+const NewsletterForm = ({
   handleSubmit,
   canSubmit,
   submitting,
   message,
   success,
-}) => (
+}: NewsletterProps) => (
   <form onSubmit={handleSubmit}>
     {message && (
       <Message

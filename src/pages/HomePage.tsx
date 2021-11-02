@@ -36,10 +36,10 @@ const HomePage = ({ data }: HomePageProps) => {
       <Stack>
         <Main>
           <CardList
-            variant={[`horizontal`]}
+            variant="horizontal"
             title="Latest Notes"
             nodes={notes}
-            columns={[1, 2]}
+            columns={[2, 1]}
             omitMedia
           />
           <Divider space={3} />

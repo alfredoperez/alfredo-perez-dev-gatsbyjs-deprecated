@@ -1,12 +1,12 @@
 import React from 'react'
 import { Box } from 'theme-ui'
 
-type DividerProps = {
+interface DividerProps {
   space: number
-  line?: string
+  line: string
 }
 
-const Divider: React.FC<DividerProps> = ({ space, line }) => (
+const Divider = ({ space, line }: DividerProps) => (
   <Box
     sx={{
       minWidth: `auto`,

@@ -4,7 +4,7 @@ import useConvertKit from '../../utils/useConvertKit'
 import Section from '../Section'
 import NewsletterForm from './NewsletterForm'
 
-const NewsletterCompact: React.FunctionComponent = (props) => {
+const NewsletterCompact = (props) => {
   const { handleSubmit, canSubmit, submitting, message, success } = useConvertKit()
 
   return (

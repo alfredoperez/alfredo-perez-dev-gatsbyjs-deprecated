@@ -20,7 +20,7 @@ type NoteProps = {
     next: any
   }
 }
-const NotePage: React.FunctionComponent<NoteProps> = ({ data }: NoteProps) => {
+const NotePage = ({ data }: NoteProps) => {
   if (!data) {
     return null
   }

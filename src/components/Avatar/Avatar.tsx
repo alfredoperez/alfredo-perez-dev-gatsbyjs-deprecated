@@ -84,7 +84,7 @@ const styles = {
 type AvatarProps = {
   avatar: any
   size: false | 'regular'
-  width?: number
+  width: number
   simple: boolean
   withPattern: boolean
   patternStyles: unknown
@@ -101,19 +101,19 @@ const Avatar = ({
 
   const image = normalizeImage(avatar[size])
 
-  width = width || image.width
+  const avatarWidth = width || image.width
 
   return simple ? (
-    <Box sx={styles.imageWrapperSimple({ width })}>
+    <Box sx={styles.imageWrapperSimple({ avatarWidth })}>
       <Img fluid={image} />
     </Box>
   ) : (
     <Box sx={styles.wrapper}>
       <Box>
         {withPattern && <MemphisPattern sx={{ ...styles.pattern, ...patternStyles }} />}
-        <Box sx={styles.circle({ width })} />
-        <Box sx={styles.arc({ width })} />
-        <Box sx={styles.imageWrapper({ width })}>
+        <Box sx={styles.circle({ avatarWidth })} />
+        <Box sx={styles.arc({ avatarWidth })} />
+        <Box sx={styles.imageWrapper({ avatarWidth })}>
           <Img fluid={image} />
         </Box>
       </Box>

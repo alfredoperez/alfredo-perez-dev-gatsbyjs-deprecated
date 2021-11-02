@@ -38,10 +38,10 @@ const styles = {
   },
 }
 type SectionTitleProps = {
-  title?: string
-  titleLink?: string
-  omitTitle?: boolean
-  variant?: string
+  title: string
+  titleLink: string
+  omitTitle: boolean
+  variant: string
 }
 const SectionTitle = ({ title, titleLink, omitTitle, variant }: SectionTitleProps) => {
   const linkProps = titleLink && {

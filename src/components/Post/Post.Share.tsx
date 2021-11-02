@@ -16,12 +16,12 @@ const styles = {
   },
 }
 
-type PostShareProps = {
+interface PostShareProps {
   location: any
   title: string
 }
 
-const PostShare: React.FC<PostShareProps> = ({ location, title }: PostShareProps) => {
+const PostShare = ({ location, title }: PostShareProps) => {
   const url = location?.href
 
   const Twitter = ({ children }: any) => (

@@ -1,19 +1,15 @@
-import React, { useContext } from 'react'
-import { Container, Flex } from 'theme-ui'
+/** @jsx jsx */
+import React from 'react'
+import { Container, Flex, jsx } from 'theme-ui'
 import { Property } from 'csstype'
 import { Fade } from 'react-awesome-reveal'
 import Section from '../../Section'
 
-type StackProps = {
+interface StackProps {
   direction?: Property.FlexDirection
 }
 
-export const Stack: React.FunctionComponent<StackProps> = ({
-  children,
-  direction,
-
-  ...props
-}) => (
+export const Stack: React.FunctionComponent<StackProps> = ({ children, direction, ...props }) => (
   // const context = useContext(pageContextProvider) as PageContext
 
   <Fade direction="up" triggerOnce>

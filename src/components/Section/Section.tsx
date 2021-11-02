@@ -5,14 +5,14 @@ import SectionTitle from './Section.Title'
 const SECTION_VARIANT = `section`
 const SIDE_SECTION_VARIANT = `section-aside`
 
-type SectionProps = PropsWithChildren<{
+interface SectionProps extends PropsWithChildren<any> {
   aside?: boolean
   title?: string
   titleLink?: string
   omitTitle?: boolean
-}>
+}
 
-const Section: React.FC<SectionProps> = ({ aside, children, ...props }: SectionProps) => {
+const Section = ({ aside, children, ...props }: SectionProps) => {
   const sectionVariant = aside ? SIDE_SECTION_VARIANT : SECTION_VARIANT
 
   return (

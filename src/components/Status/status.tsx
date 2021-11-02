@@ -1,11 +1,13 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 
 const styles = {
   emoji: {
     margin: 0,
   },
 }
-type StatusProps = {
+
+interface StatusProps {
   status: string
 }
 

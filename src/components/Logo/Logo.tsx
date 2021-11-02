@@ -3,6 +3,6 @@ import React from 'react'
 // @ts-ignore
 import logo from '../../../static/logo.png'
 
-const Logo: React.FunctionComponent = () => <img src={logo} alt="Logo" height={75} width={115} />
+const Logo = () => <img src={logo} alt="Logo" height={75} width={115} />
 
 export default Logo
