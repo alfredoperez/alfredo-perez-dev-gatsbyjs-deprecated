@@ -48,6 +48,7 @@
     "gatsby-plugin-sharp": "^4.0.0",
     "gatsby-plugin-sitemap": "^4.10.0",
     "gatsby-plugin-theme-ui": "^0.11.1",
+    "gatsby-plugin-tsconfig-paths": "^1.0.3",
     "gatsby-plugin-typescript": "^4.0.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.24",
     "gatsby-remark-images": "^5.8.0",
