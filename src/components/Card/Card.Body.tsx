@@ -17,7 +17,7 @@ const styles = {
 
 const CardBody = ({ children, omitBody, ...props }: CardProps) => {
   const bodyVariant = rv(props.variant, `body`)
-  console.log(bodyVariant)
+  // console.log(bodyVariant)
   return (
     !omitBody && (
       <Box

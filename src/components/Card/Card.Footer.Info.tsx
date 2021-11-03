@@ -5,8 +5,7 @@ import TextList from '../TextList'
 import { buildResponsiveVariant as rv } from '../../utils/buildResponsiveVariant'
 
 const CardFooterInfo = ({ variant, updated, timeToRead }) => (
-  <>
-    <TextList nowrap>
+  <TextList nowrap>
       {updated && <Text sx={{ variant: rv(variant, `date`) }}>Updated: {updated}</Text>}
       {timeToRead && (
         <Text sx={{ variant: rv(variant, `timeToRead`) }}>
@@ -14,7 +13,6 @@ const CardFooterInfo = ({ variant, updated, timeToRead }) => (
         </Text>
       )}
     </TextList>
-  </>
 )
 
 export default CardFooterInfo

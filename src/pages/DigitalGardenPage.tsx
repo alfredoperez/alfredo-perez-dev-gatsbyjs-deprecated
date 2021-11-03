@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 import { Note } from '../models'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import CardList from '../components/CardList'
 
 type DigitalGardenProps = {
@@ -20,7 +20,7 @@ const DigitalGardenPage = ({ data }: DigitalGardenProps) => {
 
   return (
     <React.Fragment>
-      <SEO title="Digital Garden" />
+      <Seo title="Digital Garden" />
       <CardList
         variant={[`horizontal`]}
         title="Digital Garden"

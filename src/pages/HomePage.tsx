@@ -6,7 +6,7 @@ import NewsletterCompact from '../components/NewsletterForm/NewsletterCompact'
 import { visuallyHidden } from '../utils'
 import CardList from '../components/CardList'
 import { Note } from '../models'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import { Main, Stack } from '../components/Layout'
 import Divider from '../components/Divider'
 
@@ -31,7 +31,7 @@ const HomePage = ({ data }: HomePageProps) => {
 
   return (
     <>
-      <SEO />
+      <Seo />
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <Stack>
         <Main>

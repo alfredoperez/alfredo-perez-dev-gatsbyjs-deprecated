@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import React from 'react'
 import Img from 'gatsby-image'
 import { Box, jsx, ThemeUICSSObject } from 'theme-ui'
-import { normalizeImage } from '../../utils/normalizeImage'
+import { normalizeImage } from '../../utils'
 import MemphisPattern from '../MemphisPattern'
 
 // Base size to keep all layers aligned easier
@@ -83,7 +82,7 @@ const styles = {
 
 type AvatarProps = {
   avatar: any
-  size: false | 'regular'
+  size: string
   width: number
   simple: boolean
   withPattern: boolean

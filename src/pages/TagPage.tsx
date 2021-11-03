@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import useBlogConfig from '../hooks/use-blog-config'
 import replaceSlashes from '../utils/replaceSlashes'
 import { Note } from '../models'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import CardList from '../components/CardList'
 
 type TagProps = {
@@ -40,7 +40,7 @@ const TagPage = (props: TagProps) => {
 
   return (
     <React.Fragment>
-      <SEO title={`Tag: ${pageContext.name}`} />
+      <Seo title={`Tag: ${pageContext.name}`} />
       <Flex
         sx={{
           alignItems: `center`,

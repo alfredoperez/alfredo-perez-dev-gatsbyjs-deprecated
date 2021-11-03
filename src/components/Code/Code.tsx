@@ -53,15 +53,15 @@ function getParams(className = ``) {
 
   return [
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+    // @ts-expect-error
     lang.split(`language-`).pop().split(`{`).shift(),
   ].concat(
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+    // @ts-expect-error
     params.split(`&`).reduce((merged, param) => {
       const [key, value] = param.split(`=`)
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+      // @ts-expect-error
       merged[key] = value
       return merged
     }, {}),

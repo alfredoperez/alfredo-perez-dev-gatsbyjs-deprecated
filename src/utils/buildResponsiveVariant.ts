@@ -1,7 +1,6 @@
 /**
  * Builds theme-ui variant dynamically
  */
-import { castArray } from './castArray'
 
 export const buildResponsiveVariant = (a: unknown, b: unknown, c?: unknown): string =>
   `${a}.${b}${c ? `.${c}` : ``}`

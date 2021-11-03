@@ -3,7 +3,7 @@ import { Box } from 'theme-ui'
 
 interface DividerProps {
   space: number
-  line: string
+  line?: string
 }
 
 const Divider = ({ space, line }: DividerProps) => (

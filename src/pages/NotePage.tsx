@@ -2,7 +2,7 @@
 import { Card as CardComponent, Flex, jsx } from 'theme-ui'
 import React from 'react'
 import { Note } from '../models'
-import SEO from '../components/SEO'
+import Seo from '../components/SEO'
 import Card from '../components/Card'
 import { PostBody } from '../components/Post'
 import Divider from '../components/Divider'
@@ -42,11 +42,11 @@ const NotePage = ({ data }: NoteProps) => {
         })
       : []),
   ]
-  console.log({ relatedNotes })
+  // console.log({ relatedNotes })
 
   return (
     <>
-      <SEO
+      <Seo
         title={note.title}
         description={note.description ? note.description : note.excerpt}
         image={note.banner ? note.banner.childImageSharp.resize.src : undefined}

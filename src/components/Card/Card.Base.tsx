@@ -1,6 +1,6 @@
 /** @jsx jsx * */
 import React from 'react'
-import { Box, Card, Flex, jsx } from 'theme-ui'
+import { Box, Card, Flex, jsx, ThemeUICSSObject } from 'theme-ui'
 import { columnSizeMatcher, buildResponsiveVariant as rv } from '../../utils'
 import Body from './Card.Body'
 import Media from './Card.Media'
@@ -25,11 +25,11 @@ interface CardBaseProps {
 }
 
 const CardBase = ({ columns, onMouseOver, id, ...props }: CardBaseProps) => {
-  const columnsSize = columnSizeMatcher(columns)
+  const columnsSize = columnSizeMatcher(columns) as ThemeUICSSObject
   const cardVariant = rv(props.variant, `card`)
   const contentVariant = rv(props.variant, `content`)
 
-  console.log({ columnsSize, cardVariant, contentVariant })
+  //  console.log({ columnsSize, cardVariant, contentVariant })
   return (
     <Box
       className="blog_card"

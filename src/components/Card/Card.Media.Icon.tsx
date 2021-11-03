@@ -5,11 +5,11 @@ import { getReadableColor, buildResponsiveVariant as rv } from '../../utils'
 import MemphisPattern from '../MemphisPattern'
 
 const styles = {
-  iconBox: (color) => ({
+  iconBox: (color: any) => ({
     bg: color || `omegaDark`,
     height: `full`,
   }),
-  iconAndText: (color) => ({
+  iconAndText: (color: any) => ({
     flexDirection: `column`,
     justifyContent: `center`,
     alignItems: `center`,

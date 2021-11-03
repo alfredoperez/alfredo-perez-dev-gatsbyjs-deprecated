@@ -13,11 +13,11 @@ const code = {
     fontSize: 1,
     fontFamily: typography.fonts.monospace,
     'textarea, pre': {
-      padding: (t: unknown) => `${t.space[3]} !important`,
+      padding: (t: any) => `${t.space[3]} !important`,
     },
   },
   "[data-name='live-preview']": {
-    padding: (t: unknown) => `calc(${t.space[2]} + 10px) !important`,
+    padding: (t: any) => `calc(${t.space[2]} + 10px) !important`,
     backgroundColor: tint(`primary`, 0.7),
   },
   '.prism-code': {
