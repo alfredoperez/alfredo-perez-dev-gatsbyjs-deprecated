@@ -13,7 +13,8 @@ const styles = {
     position: `relative`,
     pl: [0, 4],
     mx: [`auto`, 0],
-    mb: 0,
+    mb: 4,
+
     '::before': {
       display: [`none`, `block`],
       bg: `omegaLight`,
@@ -24,6 +25,7 @@ const styles = {
       width: 5,
       top: 0,
       left: 0,
+      mb: 1,
     },
   },
   // Section aside title

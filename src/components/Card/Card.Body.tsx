@@ -15,19 +15,24 @@ const styles = {
   },
 }
 
-const CardBody = ({ children, omitBody, ...props }: CardProps) =>
-  !omitBody && (
-    <Box
-      sx={{
-        ...styles.body,
-        variant: rv(props.variant, `body`),
-      }}
-    >
-      <CardBodyStatus {...props} />
-      <CardBodyTitle {...props} />
-      <CardBodyExcerpt {...props} />
-      {children}
-    </Box>
+const CardBody = ({ children, omitBody, ...props }: CardProps) => {
+  const bodyVariant = rv(props.variant, `body`)
+  console.log(bodyVariant)
+  return (
+    !omitBody && (
+      <Box
+        sx={{
+          ...styles.body,
+          variant: bodyVariant,
+        }}
+      >
+        <CardBodyStatus {...props} />
+        <CardBodyTitle {...props} />
+        <CardBodyExcerpt {...props} />
+        {children}
+      </Box>
+    )
   )
+}
 
 export default CardBody

@@ -28,6 +28,8 @@ const CardBase = ({ columns, onMouseOver, id, ...props }: CardBaseProps) => {
   const columnsSize = columnSizeMatcher(columns)
   const cardVariant = rv(props.variant, `card`)
   const contentVariant = rv(props.variant, `content`)
+
+  console.log({ columnsSize, cardVariant, contentVariant })
   return (
     <Box
       className="blog_card"

@@ -39,7 +39,7 @@ const HomePage = ({ data }: HomePageProps) => {
             variant="horizontal"
             title="Latest Notes"
             nodes={notes}
-            columns={[2, 1]}
+            columns={[1, 2]}
             omitMedia
           />
           <Divider space={3} />
@@ -47,7 +47,7 @@ const HomePage = ({ data }: HomePageProps) => {
             variant={[`horizontal`]}
             title="Maps of Content"
             nodes={mocs}
-            columns={[4]}
+            columns={[3]}
             omitMedia
           />
         </Main>
