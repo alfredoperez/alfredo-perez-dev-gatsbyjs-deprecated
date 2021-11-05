@@ -1,12 +1,17 @@
-import React from 'react'
+/** @jsx jsx */
 import groupArray from 'group-array'
 import { connectStateResults, Highlight, Snippet } from 'react-instantsearch-dom'
-import { Box, Heading, Spinner } from 'theme-ui'
-import Card from '@components/Card'
-import useScrollDisabler from '@hooks/useScrollDisabler'
+import { Box, Heading, Spinner, jsx } from 'theme-ui'
+import Card from '../../Card'
+import useScrollDisabler from '../../../hooks/useScrollDisabler'
 import styles from './Search.styles'
 
-const Hits = ({ searchState, searchResults }) => {
+interface HitsProps {
+  searchState: any
+  searchResults: any
+}
+
+const Hits = ({ searchState, searchResults }: HitsProps) => {
   useScrollDisabler()
   // Waiting for search request to return results from server
   if (searchResults.query !== searchState.query) {
@@ -25,7 +30,7 @@ const Hits = ({ searchState, searchResults }) => {
   return types.map((name) => (
     <Box variant="lists.cards.fixed.search" sx={styles.hitGroup} key={`search-${name}`}>
       <Heading variant="h4">{name}</Heading>
-      {hitsByType[name].map((hit) => {
+      {hitsByType[name].map((hit: any) => {
         const node = {
           ...hit,
           key: hit.objectID,

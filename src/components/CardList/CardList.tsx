@@ -1,12 +1,12 @@
 import React, { PropsWithChildren } from 'react'
 import { Box } from 'theme-ui'
-import Section from '@components/Section'
-import { reduceArray } from '@utils/reduceArray'
-import { hashCode } from '@utils/hashCode'
-import { buildResponsiveVariant } from '@utils/buildResponsiveVariant'
-import { LoadingProp, VariantProp } from '@models/props'
-import { Note } from '@models/note'
-import Card from '@components/Card'
+import Section from '../Section'
+import { reduceArray } from '../../utils'
+import { hashCode } from '../../utils/hashCode'
+import { buildResponsiveVariant } from '../../utils/buildResponsiveVariant'
+import { LoadingProp, VariantProp } from '../../models/props'
+import { Note } from '../../models/note'
+import Card from '../Card'
 import CardListSlider from './CardList.Slider'
 
 const SLIDER_VARIANT_GROUP = `lists.cards.slider`
@@ -87,7 +87,7 @@ const CardList = React.forwardRef(
 
     // Cards List (Fixed or Slider)
     const CardListComponent = () => (
-      <Box sx={{ variant: cardListVariant[0] }}>
+      <Box sx={{ variant: cardListVariant }}>
         {slider ? (
           <CardListSlider
             ref={ref}

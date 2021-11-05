@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from 'theme-ui'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
-import Status from '@components/Status'
+import { buildResponsiveVariant as rv } from '../../utils/buildResponsiveVariant'
+import Status from '../Status'
 
 const styles = {
   badge: {

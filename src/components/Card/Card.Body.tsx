@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'theme-ui'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
+import { buildResponsiveVariant as rv } from '../../utils'
 import CardBodyStatus from './Card.Body.Status'
 import CardBodyTitle from './Card.Body.Title'
 import CardBodyExcerpt from './Card.Body.Excerpt'
@@ -15,19 +15,24 @@ const styles = {
   },
 }
 
-const CardBody = ({ children, omitBody, ...props }: CardProps) =>
-  !omitBody && (
-    <Box
-      sx={{
-        ...styles.body,
-        variant: rv(props.variant, `body`),
-      }}
-    >
-      <CardBodyStatus {...props} />
-      <CardBodyTitle {...props} />
-      <CardBodyExcerpt {...props} />
-      {children}
-    </Box>
+const CardBody = ({ children, omitBody, ...props }: CardProps) => {
+  const bodyVariant = rv(props.variant, `body`)
+  // console.log(bodyVariant)
+  return (
+    !omitBody && (
+      <Box
+        sx={{
+          ...styles.body,
+          variant: bodyVariant,
+        }}
+      >
+        <CardBodyStatus {...props} />
+        <CardBodyTitle {...props} />
+        <CardBodyExcerpt {...props} />
+        {children}
+      </Box>
+    )
   )
+}
 
 export default CardBody

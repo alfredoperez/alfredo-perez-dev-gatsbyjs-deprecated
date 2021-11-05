@@ -1,15 +1,14 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
 import React from 'react'
-import useSiteMetadata from '@hooks/use-site-metadata'
-import { visuallyHidden } from '@utils/visuallyHidden'
-import { Note } from '@models/note'
-import CardList from '@components/CardList'
-import SEO from '@components/SEO'
-import { Main, Stack } from '@components/Layout'
-import NewsletterCompact from '@components/NewsletterForm/NewsletterCompact'
-import Divider from '@components/Divider'
-import { Flex } from 'theme-ui'
+import { Flex, jsx } from 'theme-ui'
+import useSiteMetadata from '../hooks/use-site-metadata'
+import NewsletterCompact from '../components/NewsletterForm/NewsletterCompact'
+import { visuallyHidden } from '../utils'
+import CardList from '../components/CardList'
+import { Note } from '../models'
+import Seo from '../components/SEO'
+import { Main, Stack } from '../components/Layout'
+import Divider from '../components/Divider'
 
 type HomePageProps = {
   data: {
@@ -32,12 +31,12 @@ const HomePage = ({ data }: HomePageProps) => {
 
   return (
     <>
-      <SEO />
+      <Seo />
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <Stack>
         <Main>
           <CardList
-            variant={[`horizontal`]}
+            variant="horizontal"
             title="Latest Notes"
             nodes={notes}
             columns={[1, 2]}
@@ -48,7 +47,7 @@ const HomePage = ({ data }: HomePageProps) => {
             variant={[`horizontal`]}
             title="Maps of Content"
             nodes={mocs}
-            columns={[4]}
+            columns={[3]}
             omitMedia
           />
         </Main>

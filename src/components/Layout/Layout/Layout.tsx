@@ -7,9 +7,9 @@ import SkipNavLink from '../../skip-nav'
 import CodeStyles from './LayoutCode.Styles'
 import 'normalize.css'
 import pageContextProvider from '../../pageContextProvider'
-import { PageContext } from '@models/page-context.model'
+import { PageContext } from '../../../models/page-context.model'
 
-type LayoutProps = { children: React.ReactNode; className?: string }
+type LayoutProps  = { children: React.ReactNode; className?: string }
 
 export const Layout = ({ children, className = `` }: LayoutProps) => {
   const pageContext: PageContext = {

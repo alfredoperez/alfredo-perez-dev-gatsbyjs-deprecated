@@ -4,8 +4,7 @@ import React, { useState } from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import loadable from '@loadable/component'
 import theme from 'prism-react-renderer/themes/shadesOfPurple'
-import { copyToClipboard } from '@utils/copyToClipboard'
-import { visuallyHidden } from '@utils/visuallyHidden'
+import { copyToClipboard } from '../../utils'
 
 const delay = (duration: number) => new Promise((resolve) => setTimeout(resolve, duration))
 
@@ -54,15 +53,15 @@ function getParams(className = ``) {
 
   return [
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+    // @ts-expect-error
     lang.split(`language-`).pop().split(`{`).shift(),
   ].concat(
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+    // @ts-expect-error
     params.split(`&`).reduce((merged, param) => {
       const [key, value] = param.split(`=`)
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+      // @ts-expect-error
       merged[key] = value
       return merged
     }, {}),

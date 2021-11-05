@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Input, Button, Message, Spinner } from 'theme-ui'
-import { NewsletterProps } from '@components/NewsletterForm/Newsletter.Model'
+import { NewsletterProps } from './Newsletter.Model'
 
 const styles = {
   msg: {
@@ -13,13 +13,13 @@ const styles = {
   },
 }
 
-const NewsletterForm: React.FunctionComponent<NewsletterProps> = ({
+const NewsletterForm = ({
   handleSubmit,
   canSubmit,
   submitting,
   message,
   success,
-}) => (
+}: NewsletterProps) => (
   <form onSubmit={handleSubmit}>
     {message && (
       <Message

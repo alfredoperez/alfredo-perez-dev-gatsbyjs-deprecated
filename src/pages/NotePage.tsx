@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { Card as CardComponent, Flex, jsx } from 'theme-ui'
 import React from 'react'
-import { Note } from '@models/note'
-import SEO from '@components/SEO'
-import Card from '@components/Card'
-import { PostBody } from '@components/Post'
-import Divider from '@components/Divider'
-import { Main, Stack } from '@components/Layout'
-import NewsletterCompact from '@components/NewsletterForm/NewsletterCompact'
+import { Note } from '../models'
+import Seo from '../components/SEO'
+import Card from '../components/Card'
+import { PostBody } from '../components/Post'
+import Divider from '../components/Divider'
+import { Main, Stack } from '../components/Layout'
+import NewsletterCompact from '../components/NewsletterForm/NewsletterCompact'
 
 type NoteProps = {
   data: {
@@ -20,7 +20,7 @@ type NoteProps = {
     next: any
   }
 }
-const NotePage: React.FunctionComponent<NoteProps> = ({ data }: NoteProps) => {
+const NotePage = ({ data }: NoteProps) => {
   if (!data) {
     return null
   }
@@ -42,11 +42,11 @@ const NotePage: React.FunctionComponent<NoteProps> = ({ data }: NoteProps) => {
         })
       : []),
   ]
-  console.log({ relatedNotes })
+  // console.log({ relatedNotes })
 
   return (
     <>
-      <SEO
+      <Seo
         title={note.title}
         description={note.description ? note.description : note.excerpt}
         image={note.banner ? note.banner.childImageSharp.resize.src : undefined}

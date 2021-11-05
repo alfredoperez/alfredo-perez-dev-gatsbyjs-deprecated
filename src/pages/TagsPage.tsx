@@ -4,9 +4,9 @@ import React from 'react'
 import { Box, Flex } from '@theme-ui/components'
 import kebabCase from 'lodash.kebabcase'
 import { Link } from 'gatsby'
-import useBlogConfig from '@hooks/use-blog-config'
-import replaceSlashes from '@utils/replaceSlashes'
-import SEO from '@components/SEO'
+import useBlogConfig from '../hooks/use-blog-config'
+import replaceSlashes from '../utils/replaceSlashes'
+import Seo from '../components/SEO'
 
 type TagsProps = {
   data: {
@@ -29,7 +29,7 @@ const TagsPage = ({ data }: TagsProps) => {
 
   return (
     <React.Fragment>
-      <SEO title="Tags" />
+      <Seo title="Tags" />
       <Heading as="h1" variant="styles.h1">
         All Tags
       </Heading>

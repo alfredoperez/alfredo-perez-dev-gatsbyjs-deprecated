@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import { Divider, Flex, Heading, IconButton, NavLink } from 'theme-ui'
-import { hashCode } from '@utils/hashCode'
-import { buildResponsiveVariant } from '@utils/index'
+import { buildResponsiveVariant, hashCode } from '../../../utils'
 
 const NavigationItem = ({ name, slug, url, Icon, color, variant, iconOnly }) => {
   let linkProps = {

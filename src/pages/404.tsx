@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Button } from 'theme-ui'
-import SEO from '@components/SEO'
-import PageTitle from '@components/PageTitle'
-import Section from '@components/Section'
-import Divider from '@components/Divider'
-import { Layout, Main, Stack } from '@components/Layout'
+import PageTitle from '../components/PageTitle'
+import Seo from '../components/SEO'
+import { Main, Stack } from '../components/Layout'
+import Section from '../components/Section'
+import Divider from '../components/Divider'
 
 const Page404 = () => (
   <>
-    <SEO title="Page Not Found" />
+    <Seo title="Page Not Found" />
     <Divider space={3} />
     <Stack>
       <Main>

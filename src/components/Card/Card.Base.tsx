@@ -1,7 +1,7 @@
+/** @jsx jsx * */
 import React from 'react'
-import { Box, Card, Flex } from 'theme-ui'
-import { columnSizeMatcher } from '@utils/columnSizeMatcher'
-import { buildResponsiveVariant as rv } from '@utils/buildResponsiveVariant'
+import { Box, Card, Flex, jsx, ThemeUICSSObject } from 'theme-ui'
+import { columnSizeMatcher, buildResponsiveVariant as rv } from '../../utils'
 import Body from './Card.Body'
 import Media from './Card.Media'
 import Footer from './Card.Footer'
@@ -17,35 +17,49 @@ const styles = {
   },
 }
 
-const CardBase = ({ columns, onMouseOver, id, ...props }) => (
-  <Box
-    className="blog_card"
-    sx={columnSizeMatcher(columns)}
-    onMouseOver={onMouseOver}
-    onFocus={onMouseOver}
-  >
-    <Card
-      key={id}
-      variant="interactive"
-      sx={{
-        ...styles.card,
-        variant: rv(props.variant, `card`),
-      }}
+interface CardBaseProps {
+  columns: Array<1 | 2 | 3 | 4 | 5>
+  onMouseOver: React.MouseEventHandler<HTMLElement> | undefined
+  variant: string
+  id: string
+}
+
+const CardBase = ({ columns, onMouseOver, id, ...props }: CardBaseProps) => {
+  const columnsSize = columnSizeMatcher(columns) as ThemeUICSSObject
+  const cardVariant = rv(props.variant, `card`)
+  const contentVariant = rv(props.variant, `content`)
+
+  //  console.log({ columnsSize, cardVariant, contentVariant })
+  return (
+    <Box
+      className="blog_card"
+      sx={columnsSize}
+      onMouseOver={onMouseOver}
+      onFocus={onMouseOver as any}
     >
-      <Flex
-        as="article"
+      <Card
+        key={id}
+        variant="interactive"
         sx={{
-          ...styles.content,
-          variant: rv(props.variant, `content`),
+          ...styles.card,
+          variant: cardVariant,
         }}
       >
-        <Media {...props} />
-        <Body {...props}>
-          <Footer {...props} />
-        </Body>
-      </Flex>
-    </Card>
-  </Box>
-)
+        <Flex
+          as="article"
+          sx={{
+            ...styles.content,
+            variant: contentVariant,
+          }}
+        >
+          <Media {...props} />
+          <Body {...props}>
+            <Footer {...props} />
+          </Body>
+        </Flex>
+      </Card>
+    </Box>
+  )
+}
 
 export default CardBase

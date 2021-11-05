@@ -1,5 +1,7 @@
 import React from 'react'
-import Divider from '@components/Divider'
+import Divider from '../Divider'
+import { getImageVariant } from '../../utils'
+import { css } from 'theme-ui'
 
 const styles = {
   regular: {
@@ -48,22 +50,21 @@ export const PostImage = ({
 }: PostImageProps) => {
   if (!thumbnail) return null
 
-  // const variant = (wide && 'wide') || (full && 'full') || 'regular'
-  // const image = getImageVariant(thumbnail, 'hero')
+  const variant = (wide && 'wide') || (full && 'full') || 'regular'
+  const image = getImageVariant(thumbnail, 'hero')
 
   return (
     <>
-      <p>HERE GOES THE Thumbnail IMAGE</p>
-      {/* <Img */}
-      {/*  image={image} */}
-      {/*  alt={title} */}
-      {/*  css={css({ */}
-      {/*    ...styles[variant], */}
-      {/*    ...(inCard && styles.inCard), */}
-      {/*    ...(inCardLarge && styles.inCardLarge), */}
-      {/*  })} */}
-      {/*  imgStyle={variant === 'wide' || variant === 'full' ? styles.full : undefined} */}
-      {/* /> */}
+      <Img
+        image={image}
+        alt={title}
+        css={css({
+          ...styles[variant],
+          ...(inCard && styles.inCard),
+          ...(inCardLarge && styles.inCardLarge),
+        })}
+        imgStyle={variant === 'wide' || variant === 'full' ? styles.full : undefined}
+      />
       <Divider space={3} />
     </>
   )

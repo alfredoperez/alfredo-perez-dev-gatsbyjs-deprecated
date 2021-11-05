@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link as GLink } from 'gatsby'
 import { Link, Text } from 'theme-ui'
-import TextList from '@components/TextList'
-import PageTitle from '@components/PageTitle'
+import TextList from '../TextList'
+import PageTitle from '../PageTitle'
 
 const styles = {
   item: {

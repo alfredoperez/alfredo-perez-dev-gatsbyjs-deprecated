@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Badge, Flex, Heading } from 'theme-ui'
-import Divider from '@components/Divider'
+import Divider from '../Divider'
 
 const styles = {
   wrapper: {
@@ -13,7 +13,8 @@ const styles = {
     position: `relative`,
     pl: [0, 4],
     mx: [`auto`, 0],
-    mb: 0,
+    mb: 4,
+
     '::before': {
       display: [`none`, `block`],
       bg: `omegaLight`,
@@ -24,6 +25,7 @@ const styles = {
       width: 5,
       top: 0,
       left: 0,
+      mb: 1,
     },
   },
   // Section aside title
@@ -38,10 +40,10 @@ const styles = {
   },
 }
 type SectionTitleProps = {
-  title?: string
-  titleLink?: string
-  omitTitle?: boolean
-  variant?: string
+  title: string
+  titleLink: string
+  omitTitle: boolean
+  variant: string
 }
 const SectionTitle = ({ title, titleLink, omitTitle, variant }: SectionTitleProps) => {
   const linkProps = titleLink && {

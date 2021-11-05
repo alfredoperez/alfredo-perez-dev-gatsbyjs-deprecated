@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { connectSearchBox, PoweredBy } from 'react-instantsearch-dom'
 import { Box, Button, Input, jsx } from 'theme-ui'
 import { FaSearch } from 'react-icons/fa'
-import useDebounce from '@hooks/useDebounce'
+import useDebounce from '../../../hooks/useDebounce'
 
 const styles = {
   mobileTrigger: {

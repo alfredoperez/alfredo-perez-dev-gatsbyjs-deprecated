@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'theme-ui'
-import useBlogConfig from '@hooks/use-blog-config'
+import useBlogConfig from '../../../hooks/use-blog-config'
 import HeaderNavigation from './Header.Navigation'
 
 const styles = {

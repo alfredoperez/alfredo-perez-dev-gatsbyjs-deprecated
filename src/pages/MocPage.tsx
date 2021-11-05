@@ -2,9 +2,9 @@
 import { Heading, jsx } from 'theme-ui'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import { Note } from '@models/note'
-import SEO from '@components/SEO'
-import TagsList from '@components/TagsList'
+import { Note } from '../models'
+import Seo from '../components/SEO'
+import TagsList from '../components/TagsList'
 
 type MocProps = {
   data: {
@@ -25,7 +25,7 @@ const MocPage = (props: MocProps) => {
 
   return (
     <React.Fragment>
-      <SEO
+      <Seo
         title={note.title}
         description={note.description ? note.description : note.excerpt}
         image={note.banner ? note.banner.childImageSharp.resize.src : undefined}
