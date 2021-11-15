@@ -1,11 +1,8 @@
-/** @jsx jsx */
 import React, { useState } from 'react'
-import { Box, Button, jsx } from 'theme-ui'
+import { Box, Button, ThemeUICSSObject } from 'theme-ui'
 import { Configure, InstantSearch } from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite'
-
 import SearchBox from './Search.Box'
-
 import Results from './Search.Results'
 
 const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME || `Notes`
@@ -21,7 +18,7 @@ const styles = {
     opacity: 0.9,
     width: `full`,
     height: `full`,
-  },
+  } as ThemeUICSSObject,
   close: {
     position: `fixed`,
 
@@ -32,10 +29,10 @@ const styles = {
     textAlign: `center`,
     color: `omega`,
     fontSize: 1,
-  },
+  } as ThemeUICSSObject,
   esc: {
     display: [`none`, `block`],
-  },
+  } as ThemeUICSSObject,
 }
 const Overlay = ({ onClick }) => (
   <>
@@ -82,11 +79,7 @@ const Search = () => {
         <SearchBox focus={focus} handleFocus={handleFocus} handleClose={handleClose} />
         {focus && <Results />}
       </InstantSearch>
-      {focus && (
-        <React.Fragment>
-          <Overlay onClick={handleClose} />
-        </React.Fragment>
-      )}
+      {focus && <Overlay onClick={handleClose} />}
     </Box>
   )
 }

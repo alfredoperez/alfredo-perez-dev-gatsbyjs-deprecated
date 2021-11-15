@@ -1,11 +1,8 @@
 import React, { PropsWithChildren } from 'react'
 import { Box } from 'theme-ui'
 import Section from '../Section'
-import { reduceArray } from '../../utils'
-import { hashCode } from '../../utils/hashCode'
-import { buildResponsiveVariant } from '../../utils/buildResponsiveVariant'
-import { LoadingProp, VariantProp } from '../../models/props'
-import { Note } from '../../models/note'
+import { reduceArray, hashCode, buildResponsiveVariant } from '../../utils'
+import { LoadingProp, VariantProp, Note } from '../../models'
 import Card from '../Card'
 import CardListSlider from './CardList.Slider'
 

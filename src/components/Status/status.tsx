@@ -1,17 +1,17 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
-
-const styles = {
-  emoji: {
-    margin: 0,
-  },
-}
+import { ThemeUICSSObject } from 'theme-ui'
+import React from 'react'
 
 interface StatusProps {
-  status: string
+  status: 'evergreen' | 'seed' | 'bud' | 'snag'
 }
 
 const Status = ({ status }: StatusProps) => {
+  const styles = {
+    emoji: {
+      margin: 0,
+    } as ThemeUICSSObject,
+  }
+
   switch (status) {
     case `evergreen`:
       return (

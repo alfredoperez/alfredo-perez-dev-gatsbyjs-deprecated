@@ -1,4 +1,5 @@
 import { tint } from '@theme-ui/color'
+import { ThemeUICSSObject } from 'theme-ui'
 
 const code = {
   "[data-name='live-editor']": {
@@ -217,6 +218,6 @@ const code = {
   '.react-live-wrapper .code-copy-button': {
     right: [0, 0, 0, -3],
   },
-}
+} as ThemeUICSSObject
 
 export default code

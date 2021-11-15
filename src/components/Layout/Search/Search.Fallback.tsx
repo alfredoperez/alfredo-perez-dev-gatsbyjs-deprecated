@@ -1,8 +1,12 @@
 import React from 'react'
-import { Box, IconButton, Input } from 'theme-ui'
+import { Box, IconButton, Input, ThemeUICSSObject } from 'theme-ui'
 import { FaSearch } from 'react-icons/fa'
-import styles from './Search.styles'
 
+const styles = {
+  mobileTrigger: {
+    display: [`block`, null, `none`],
+  } as ThemeUICSSObject,
+}
 const SearchFallback = (
   <>
     <IconButton sx={styles.mobileTrigger}>

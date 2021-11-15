@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { Heading, jsx, Link as TLink } from 'theme-ui'
+import { Heading, Link as TLink } from 'theme-ui'
 import React from 'react'
 import { Box, Flex } from '@theme-ui/components'
 import kebabCase from 'lodash.kebabcase'
@@ -22,9 +21,6 @@ type TagsProps = {
 const TagsPage = ({ data }: TagsProps) => {
   const { tagsPath, basePath } = useBlogConfig()
 
-  if (!data) {
-    return null
-  }
   const { group: tags } = data.allNote
 
   return (
