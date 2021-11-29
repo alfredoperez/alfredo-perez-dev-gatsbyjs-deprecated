@@ -33,7 +33,7 @@ export const useConvertKit = () => {
         result: `success`,
         msg: `A perfect time to check your email inbox.`,
       })
-    } catch (error) {
+    } catch (error: unknown) {
       setSubmitting(false)
       setResponse({ result: `error`, msg: `There was a glitch in the matrix...` })
     }

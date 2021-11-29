@@ -1,6 +1,6 @@
-import React from 'react'
+/** @jsx jsx */
 import SVG from 'react-inlinesvg'
-import { Box, css, Flex, Text } from 'theme-ui'
+import { Box, css, Flex, Text, jsx } from 'theme-ui'
 import { getReadableColor, buildResponsiveVariant as rv } from '../../utils'
 import MemphisPattern from '../MemphisPattern'
 

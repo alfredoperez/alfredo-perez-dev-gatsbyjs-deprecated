@@ -52,7 +52,7 @@ const NewsletterForm = ({
         <Button
           type="submit"
           variant={success || submitting ? `disabled` : `primary`}
-          disabled={success || submitting}
+          disabled={success ?? submitting}
           sx={styles.button}
         >
           Subscribe {submitting && <Spinner size="20" />}
