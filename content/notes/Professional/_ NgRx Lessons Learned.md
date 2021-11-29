@@ -19,7 +19,6 @@ The following can practices are the foundation to how and when to use the NgRx S
 
 ## Actions
 - [[NgRx Workshop at ng-conf 2020#Actions]]
-
 - Prefer using Event Storming
 - Avoid creating actions based on commands
 - Avoid creating actions that modify multiple parts of the state
