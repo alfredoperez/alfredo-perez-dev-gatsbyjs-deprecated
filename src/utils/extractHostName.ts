@@ -1,7 +1,7 @@
-const extractHostname = (url) => {
+export const extractHostname = (url: string) => {
   let hostname
   // find & remove protocol (http, ftp, etc.) and get hostname
-  if (url.indexOf(`//`) > -1) {
+  if (url.includes(`//`)) {
     hostname = url.split(`/`)[2]
   } else {
     hostname = url.split(`/`)[0]
@@ -15,5 +15,3 @@ const extractHostname = (url) => {
 
   return hostname
 }
-
-export default extractHostname

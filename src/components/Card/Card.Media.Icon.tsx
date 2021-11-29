@@ -30,7 +30,7 @@ const styles = {
 }
 
 const CardMediaIcon = ({ variant, thumbnailText, category }) =>
-  category && category.icon && category.name ? (
+  category?.icon && category?.name ? (
     <Box
       sx={{
         ...styles.iconBox(category.color),

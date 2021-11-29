@@ -5,7 +5,7 @@ type BlogConfigProps = {
   blogConfig: BlogConfig
 }
 
-const useBlogConfig = () => {
+export const useBlogConfig = () => {
   const data = useStaticQuery<BlogConfigProps>(graphql`
     query {
       blogConfig {
@@ -30,5 +30,3 @@ const useBlogConfig = () => {
 
   return data.blogConfig
 }
-
-export default useBlogConfig

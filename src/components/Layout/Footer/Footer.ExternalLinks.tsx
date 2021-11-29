@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx, Link as TLink } from 'theme-ui'
-import useBlogConfig from '../../../hooks/use-blog-config'
+import { useBlogConfig } from '../../../hooks'
 
 const FooterExternalLinks = () => {
   const { externalLinks } = useBlogConfig()

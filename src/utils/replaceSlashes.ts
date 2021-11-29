@@ -4,8 +4,6 @@
  * @param input
  * @return {string} - Sanitized string
  */
-function replaceSlashes(input: string): string {
+export const replaceSlashes = (input: string): string => {
   return input.replace(/\/\/+/g, `/`)
 }
-
-export default replaceSlashes

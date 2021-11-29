@@ -1,8 +1,8 @@
 import React from 'react'
 import { Badge, Box, Flex } from 'theme-ui'
 import { Link } from 'gatsby'
-import useBlogConfig from '../../hooks/use-blog-config'
-import replaceSlashes from '../../utils/replaceSlashes'
+import { useBlogConfig } from '../../hooks'
+import { replaceSlashes } from '../../utils'
 import { Tag } from '../../models'
 
 type TagsProps = {

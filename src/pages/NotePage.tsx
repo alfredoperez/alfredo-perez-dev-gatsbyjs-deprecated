@@ -21,27 +21,23 @@ type NoteProps = {
   }
 }
 const NotePage = ({ data }: NoteProps) => {
-  if (!data) {
-    return null
-  }
-
   /* tagCategoryPosts, tagPosts, categoryPosts, previous, next */
   const { note } = data
 
-  const relatedNotes = [
-    ...(note.parent.inboundReferences.length > 0
-      ? note.parent.inboundReferences.map((ref) => {
-          const { title, slug, id } = ref.childMdxNote
-          return { title, slug, id }
-        })
-      : []),
-    ...(note.parent.outboundReferences.length > 0
-      ? note.parent.outboundReferences.map((ref) => {
-          const { title, slug, id } = ref.childMdxNote
-          return { title, slug, id }
-        })
-      : []),
-  ]
+  // const relatedNotes = [
+  //   ...(note.parent.inboundReferences.length > 0
+  //     ? note.parent.inboundReferences.map((ref) => {
+  //       const { title, slug, id } = ref.childMdxNote;
+  //       return { title, slug, id };
+  //     })
+  //     : []),
+  //   ...(note.parent.outboundReferences.length > 0
+  //     ? note.parent.outboundReferences.map((ref) => {
+  //       const { title, slug, id } = ref.childMdxNote;
+  //       return { title, slug, id };
+  //     })
+  //     : [])
+  // ];
   // console.log({ relatedNotes })
 
   return (

@@ -8,7 +8,7 @@ import {
   FaLink,
   FaGlobe,
 } from 'react-icons/fa'
-import extractHostname from './extractHostName'
+import { extractHostname } from './extractHostName'
 
 const icons = {
   default: {

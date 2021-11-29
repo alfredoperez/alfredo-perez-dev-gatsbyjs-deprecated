@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react'
 import { Flex, jsx } from 'theme-ui'
-import useSiteMetadata from '../hooks/use-site-metadata'
+import { useSiteMetadata } from '../hooks'
 import NewsletterCompact from '../components/NewsletterForm/NewsletterCompact'
 import { visuallyHidden } from '../utils'
 import CardList from '../components/CardList'
@@ -19,9 +19,6 @@ type HomePageProps = {
 }
 
 const HomePage = ({ data }: HomePageProps) => {
-  if (!data) {
-    return null
-  }
   const { siteTitle } = useSiteMetadata()
 
   const {
