@@ -13,4 +13,3 @@ updated:
 
 
 ### External Links
-https:LINK by #AUTHOR

@@ -6,13 +6,13 @@ import { buildResponsiveVariant as rv } from '../../utils/buildResponsiveVariant
 
 const CardFooterInfo = ({ variant, updated, timeToRead }) => (
   <TextList nowrap>
-      {updated && <Text sx={{ variant: rv(variant, `date`) }}>Updated: {updated}</Text>}
-      {timeToRead && (
-        <Text sx={{ variant: rv(variant, `timeToRead`) }}>
-          <FaRegClock css={{ verticalAlign: `middle` }} /> {timeToRead} min
-        </Text>
-      )}
-    </TextList>
+    {updated && <Text sx={{ variant: rv(variant, `date`) }}>Updated: {updated}</Text>}
+    {timeToRead && (
+      <Text sx={{ variant: rv(variant, `timeToRead`) }}>
+        <FaRegClock css={{ verticalAlign: `middle` }} /> {timeToRead} min
+      </Text>
+    )}
+  </TextList>
 )
 
 export default CardFooterInfo
