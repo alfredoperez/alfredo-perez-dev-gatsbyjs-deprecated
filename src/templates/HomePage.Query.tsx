@@ -6,8 +6,8 @@ export default HomePage
 export const query = graphql`
   query {
     allNote(
-      filter: { status: { in: ["evergreen", "bud", "seed", "snag"] }, type: { ne: "moc" } }
-      sort: { fields: updated, order: DESC }
+      filter: { status: { in: ["evergreen", "bud"] }, type: { ne: "moc" } }
+      sort: { fields: created, order: ASC }
       limit: 10
     ) {
       nodes {

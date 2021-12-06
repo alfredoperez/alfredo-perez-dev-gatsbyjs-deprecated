@@ -37,6 +37,6 @@ module.exports = {
     '@typescript-eslint/no-throw-literal': 'off',
 
     // Temporary removing it
-   '@typescript-eslint/no-explicit-any': 'off'
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 }

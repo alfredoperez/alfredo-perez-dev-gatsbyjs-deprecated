@@ -9,23 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/_ NgRx Lessons Learned.md",
+            "file": "Inbox/Automatically change the Updated date in Obsidian notes.md",
             "mode": "source"
           }
         },
-        "group": "e9aef32b5f67a8c2"
+        "group": "73c8f268f70d0972"
       },
       {
-        "id": "0fc82d2dbcdf0dae",
+        "id": "584ed86c2332edab",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Professional/_ NgRx Lessons Learned.md",
+            "file": "Inbox/Automatically change the Updated date in Obsidian notes.md",
             "mode": "preview"
           }
         },
-        "group": "e9aef32b5f67a8c2"
+        "group": "73c8f268f70d0972"
       }
     ],
     "direction": "vertical"
@@ -37,7 +37,7 @@
       {
         "id": "485eac9793da5432",
         "type": "tabs",
-        "dimension": 65.71428571428571,
+        "dimension": 76.43835616438356,
         "children": [
           {
             "id": "afd6bca829d3da7b",
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "/21",
+                "query": "Automatically",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,12 +70,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "1f317ed0d6664cd7",
         "type": "tabs",
-        "dimension": 34.285714285714285,
+        "dimension": 23.56164383561644,
         "children": [
           {
             "id": "93d48d065c7425a4",
@@ -109,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Professional/_ NgRx Lessons Learned.md"
+                "file": "Inbox/Automatically change the Updated date in Obsidian notes.md"
               }
             }
           }
@@ -126,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Professional/_ NgRx Lessons Learned.md",
+                "file": "Inbox/Automatically change the Updated date in Obsidian notes.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -146,15 +147,15 @@
   },
   "active": "7d46d8d79b87c574",
   "lastOpenFiles": [
+    "Inbox/Automatically change the Updated date in Obsidian notes.md",
     "Professional/_ NgRx Lessons Learned.md",
+    "Professional/Creating Useful Documentation for Your Angular Component Library Using Storybook.md",
+    "Professional/WebStorm Setup.md",
+    "00 - Templates/Highlight - Video.md",
+    "Inbox/My Obsidian Setup.md",
     "00 - Templates/Markdown Cheatsheet.md",
     "Professional/_Conferences and Workshops.md",
     "Inbox/Gatsby Camp Fall 2021.md",
-    "Inbox/Modify Network Requests.md",
-    "Inbox/Automatically change the Updated date in Obsidian notes.md",
-    "00 - Templates/Note.md",
-    "00 - Templates/Highlight - Video.md",
-    "00 - Templates/Highlight - Book.md",
-    "Professional/Untitled.md"
+    "Inbox/Modify Network Requests.md"
   ]
 }

@@ -308,10 +308,8 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Frontmatter @infer {
       title: String
       date: Date @dateformat
-       tags: [NoteTag]
+      tags: [NoteTag]
       slug: String
-      
-
     }
     
     type NoteReference {
