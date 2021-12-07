@@ -1,6 +1,6 @@
-import React from 'react'
+/** @jsx jsx */
 import SVG from 'react-inlinesvg'
-import { Box, css, Flex, Text } from 'theme-ui'
+import { Box, css, Flex, Text, jsx } from 'theme-ui'
 import { getReadableColor, buildResponsiveVariant as rv } from '../../utils'
 import MemphisPattern from '../MemphisPattern'
 
@@ -30,7 +30,7 @@ const styles = {
 }
 
 const CardMediaIcon = ({ variant, thumbnailText, category }) =>
-  category && category.icon && category.name ? (
+  category?.icon && category?.name ? (
     <Box
       sx={{
         ...styles.iconBox(category.color),

@@ -50,6 +50,7 @@ export const PostImage = ({
 }: PostImageProps) => {
   if (!thumbnail) return null
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   const variant = (wide && 'wide') || (full && 'full') || 'regular'
   const image = getImageVariant(thumbnail, 'hero')
 

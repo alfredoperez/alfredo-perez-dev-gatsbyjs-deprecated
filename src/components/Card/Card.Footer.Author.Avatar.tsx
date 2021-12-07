@@ -16,7 +16,7 @@ const CardFooterAuthorAvatar = ({ variant, omitAuthor, author }) => {
   const visibility = get(context.theme, responsiveVariant, {}).display === `none`
 
   return visibility ? (
-    author && author.thumbnail ? (
+    author?.thumbnail ? (
       <Link
         as={GLink}
         to={author.slug}

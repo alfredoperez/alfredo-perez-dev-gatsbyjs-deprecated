@@ -18,8 +18,8 @@ const components = {
     // it's possible to have a pre without a code in it
     return <pre {...preProps} />
   },
-  // eslint-disable - next - line react / display - name
-  wrapper: ({ children }) => <>{children}</>,
+  // eslint-disable-next-line react/jsx-no-useless-fragment
+  wrapper: ({ children }) => <React.Fragment>{children}</React.Fragment>,
 }
 
 export default components

@@ -2,8 +2,8 @@
 import React from 'react'
 import { jsx, Link as TLink } from 'theme-ui'
 import { Link } from 'gatsby'
-import useBlogConfig from '../../../hooks/use-blog-config'
-import replaceSlashes from '../../../utils/replaceSlashes'
+import { useBlogConfig } from '../../../hooks'
+import { replaceSlashes } from '../../../utils'
 
 type NavigationProps = {
   items: {

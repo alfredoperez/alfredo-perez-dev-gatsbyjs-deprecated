@@ -3,8 +3,8 @@ import React from 'react'
 import { Box, Flex } from '@theme-ui/components'
 import kebabCase from 'lodash.kebabcase'
 import { Link } from 'gatsby'
-import useBlogConfig from '../hooks/use-blog-config'
-import replaceSlashes from '../utils/replaceSlashes'
+import { useBlogConfig } from '../hooks'
+import { replaceSlashes } from '../utils'
 import Seo from '../components/SEO'
 
 type TagsProps = {
@@ -21,6 +21,10 @@ type TagsProps = {
 const TagsPage = ({ data }: TagsProps) => {
   const { tagsPath, basePath } = useBlogConfig()
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (!data) {
+    return null
+  }
   const { group: tags } = data.allNote
 
   return (

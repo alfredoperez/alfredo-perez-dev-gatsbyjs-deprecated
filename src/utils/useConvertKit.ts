@@ -7,7 +7,7 @@ type ConvertKitResponseType = {
   msg: string
 }
 
-const userConvertKit = () => {
+export const useConvertKit = () => {
   const [response, setResponse] = React.useState<ConvertKitResponseType | null>(null)
   const [submitting, setSubmitting] = useState<boolean>(false)
 
@@ -33,7 +33,7 @@ const userConvertKit = () => {
         result: `success`,
         msg: `A perfect time to check your email inbox.`,
       })
-    } catch (error) {
+    } catch (error: unknown) {
       setSubmitting(false)
       setResponse({ result: `error`, msg: `There was a glitch in the matrix...` })
     }
@@ -41,10 +41,10 @@ const userConvertKit = () => {
     setSubmitting(false)
   }
 
-  const success = response && response.result === `success`
-  const error = response && response.result !== `success`
+  const success = response?.result === `success`
+  const error = response?.result !== `success`
   const canSubmit = !response || error
-  const message = response && response.msg
+  const message = response?.msg
 
   return {
     handleSubmit,
@@ -55,5 +55,3 @@ const userConvertKit = () => {
     error,
   }
 }
-
-export default userConvertKit

@@ -1,8 +1,6 @@
 import dedupe from 'dedupe'
 
 export const reduceArray = (array: Array<any>, { limit, skip, distinct }) => {
-  if (!array) return null
-
   if (!limit && !skip && !distinct) return array
 
   let newArray = array

@@ -21,6 +21,7 @@ type NoteProps = {
   }
 }
 const NotePage = ({ data }: NoteProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (!data) {
     return null
   }
@@ -28,20 +29,20 @@ const NotePage = ({ data }: NoteProps) => {
   /* tagCategoryPosts, tagPosts, categoryPosts, previous, next */
   const { note } = data
 
-  const relatedNotes = [
-    ...(note.parent.inboundReferences.length > 0
-      ? note.parent.inboundReferences.map((ref) => {
-          const { title, slug, id } = ref.childMdxNote
-          return { title, slug, id }
-        })
-      : []),
-    ...(note.parent.outboundReferences.length > 0
-      ? note.parent.outboundReferences.map((ref) => {
-          const { title, slug, id } = ref.childMdxNote
-          return { title, slug, id }
-        })
-      : []),
-  ]
+  // const relatedNotes = [
+  //   ...(note.parent.inboundReferences.length > 0
+  //     ? note.parent.inboundReferences.map((ref) => {
+  //       const { title, slug, id } = ref.childMdxNote;
+  //       return { title, slug, id };
+  //     })
+  //     : []),
+  //   ...(note.parent.outboundReferences.length > 0
+  //     ? note.parent.outboundReferences.map((ref) => {
+  //       const { title, slug, id } = ref.childMdxNote;
+  //       return { title, slug, id };
+  //     })
+  //     : [])
+  // ];
   // console.log({ relatedNotes })
 
   return (

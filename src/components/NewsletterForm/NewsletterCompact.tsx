@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Text } from 'theme-ui'
-import useConvertKit from '../../utils/useConvertKit'
+import { useConvertKit } from '../../utils/'
 import Section from '../Section'
 import NewsletterForm from './NewsletterForm'
 

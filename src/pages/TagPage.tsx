@@ -1,9 +1,10 @@
+/** @jsx jsx */
 import React from 'react'
-import { Heading, Link as TLink } from 'theme-ui'
+import { jsx, Heading, Link as TLink } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
 import { Link } from 'gatsby'
-import useBlogConfig from '../hooks/use-blog-config'
-import replaceSlashes from '../utils/replaceSlashes'
+import { useBlogConfig } from '../hooks'
+import { replaceSlashes } from '../utils'
 import { Note } from '../models'
 import Seo from '../components/SEO'
 import CardList from '../components/CardList'

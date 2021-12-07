@@ -9,6 +9,7 @@ import styles from './CardList.Slider.Styles'
 const Slider = loadable(
   () => import(/* webpackChunkName: 'react-slick' */ /* webpackPrefetch: true */ `react-slick`),
 )
+
 interface CardListSliderProps extends PropsWithChildren<any> {
   fade: boolean
   dots: boolean
@@ -60,12 +61,12 @@ const CardListSlider = React.forwardRef(
       dots: dots && fade,
     }
 
-    const responsiveSettings = context.theme.breakpoints.map((breakpoint, index) => {
+    const responsiveSettings = context.theme.breakpoints?.map((breakpoint, index) => {
       const rSlidesToShow = columns[index >= columns.length ? columns.length - 1 : index]
       const rSlidesToScroll =
         slidesToScroll[index >= slidesToScroll.length ? slidesToScroll.length - 1 : index]
       return {
-        breakpoint: parseInt(breakpoint),
+        breakpoint: parseInt(breakpoint, 10),
         settings: {
           slidesToShow: rSlidesToShow,
           slidesToScroll: rSlidesToScroll,
