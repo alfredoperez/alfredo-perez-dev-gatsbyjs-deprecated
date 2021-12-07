@@ -19,6 +19,10 @@ type HomePageProps = {
 }
 
 const HomePage = ({ data }: HomePageProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (!data) {
+    return null
+  }
   const { siteTitle } = useSiteMetadata()
 
   const {

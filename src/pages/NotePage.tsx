@@ -21,6 +21,11 @@ type NoteProps = {
   }
 }
 const NotePage = ({ data }: NoteProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (!data) {
+    return null
+  }
+
   /* tagCategoryPosts, tagPosts, categoryPosts, previous, next */
   const { note } = data
 

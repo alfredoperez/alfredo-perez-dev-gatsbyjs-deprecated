@@ -21,6 +21,10 @@ type TagsProps = {
 const TagsPage = ({ data }: TagsProps) => {
   const { tagsPath, basePath } = useBlogConfig()
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (!data) {
+    return null
+  }
   const { group: tags } = data.allNote
 
   return (

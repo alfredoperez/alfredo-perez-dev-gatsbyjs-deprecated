@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from 'react'
-import { Heading, Link as TLink } from 'theme-ui'
+import { jsx, Heading, Link as TLink } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
 import { Link } from 'gatsby'
 import { useBlogConfig } from '../hooks'
