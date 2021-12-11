@@ -14,6 +14,7 @@
   z-index: 9999;
   transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
+
 .drawer .drawer-mask {
   background: #000;
   opacity: 0;
@@ -22,8 +23,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
-    height 0s ease 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86), height 0s ease 0.3s;
 }
 .drawer-content-wrapper {
   position: absolute;

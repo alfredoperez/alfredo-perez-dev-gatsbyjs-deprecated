@@ -1,7 +1,5 @@
 {
-  "processors": [
-  ],
   "extends": [
-    "stylelint-config-recommended"
+    "stylelint-config-recommended",  "stylelint-prettier/recommended"
   ]
 }

@@ -34,8 +34,6 @@ public
 cypress/videos
 cypress/screenshots
 .env
-
 .netlify
-
 content/
 
