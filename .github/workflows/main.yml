@@ -30,8 +30,5 @@ jobs:
       - name: Install modules
         run: yarn
 
-      - name: Lint Styles
-        run: yarn lint:styles
-
       - name: Run tests
         run: yarn test
