@@ -18,7 +18,9 @@
     "lint:styles": "stylelint src/**/*.{js,jsx,ts,css}",
     "prettier": "prettier --ignore-path .prettierignore --check  \"**/*.{js,jsx,ts,tsx,json}\"",
     "prettier:fix": "yarn prettier --write --ignore-path .prettierignore",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
@@ -79,8 +81,15 @@
     "typeface-ibm-plex-sans": "^1.1.13"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/builder-webpack5": "^6.4.9",
+    "@storybook/manager-webpack5": "^6.4.9",
+    "@storybook/react": "^6.4.9",
     "@svgr/webpack": "5.5.0",
     "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.15.1",
@@ -94,6 +103,7 @@
     "@types/react-helmet": "6.1.4",
     "autoprefixer": "^10.4.0",
     "babel-jest": "^27.0.2",
+    "babel-loader": "^8.2.3",
     "babel-plugin-root-import": "6.6.0",
     "babel-preset-gatsby": "^1.6.0",
     "eslint": "7.30.0",
@@ -111,7 +121,8 @@
     "tailwindcss": "^3.0.1",
     "tailwindcss-pseudo-elements": "^2.0.0",
     "ts-jest": "^27.0.2",
-    "typescript": "4.3.5"
+    "typescript": "4.3.5",
+    "webpack": "5"
   },
   "repository": {
     "type": "git",

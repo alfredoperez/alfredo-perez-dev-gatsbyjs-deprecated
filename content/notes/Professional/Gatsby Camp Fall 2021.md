@@ -2,7 +2,7 @@
 title: Gatsby Camp Fall 2021
 tags: ['GatsbyJS']
 type: conference
-status: seed
+status: evergreen
 created: 9/16/21
 updated: 9/24/21
 ---

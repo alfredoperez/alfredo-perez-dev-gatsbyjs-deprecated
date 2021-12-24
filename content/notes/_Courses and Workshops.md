@@ -11,13 +11,10 @@ type: moc
 
 - [[Life of Focus]]
 
-## Personal Knowledge Management
-
-- [[Linking Your Thinking]]
-
 ## React
 
 - [[Design Systems with React & Storybook]]
+- [[Architect an Extensible Digital Garden with Next.js, Tailwind, and Nx]]
 
 ## Angular
 

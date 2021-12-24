@@ -7,9 +7,6 @@ created: 5/10/21
 updated: 5/10/21
 ---
 
-#
-
-
 ### External Links
-https://www.youtube.com/watch?v=GseGNPgsg70 by #ZackDerose
+https://www.youtube.com/watch?v=GseGNPgsg70 
 https://github.com/ZackDeRose/aeon-state-examples
