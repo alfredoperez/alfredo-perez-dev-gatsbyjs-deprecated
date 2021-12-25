@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7d46d8d79b87c574",
+        "id": "b82064b64ce824ff",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Inbox/Automatically change the Updated date in Obsidian notes.md",
-            "mode": "source"
+            "file": "Inbox/Digital Garden Inspiration Links.md",
+            "mode": "source",
+            "source": false
           }
-        },
-        "group": "73c8f268f70d0972"
-      },
-      {
-        "id": "584ed86c2332edab",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Inbox/Automatically change the Updated date in Obsidian notes.md",
-            "mode": "preview"
-          }
-        },
-        "group": "73c8f268f70d0972"
+        }
       }
     ],
     "direction": "vertical"
@@ -53,7 +41,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Automatically",
+                "query": "tag:#ZackDerose",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,8 +58,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "1f317ed0d6664cd7",
@@ -93,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318
+    "width": 318,
+    "collapsed": true
   },
   "right": {
     "id": "9f0e0a49a23e90c4",
@@ -110,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Inbox/Automatically change the Updated date in Obsidian notes.md"
+                "file": "Inbox/Digital Garden Inspiration Links.md"
               }
             }
           }
@@ -127,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Inbox/Automatically change the Updated date in Obsidian notes.md",
+                "file": "Inbox/Digital Garden Inspiration Links.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -145,17 +133,17 @@
     "width": 296,
     "collapsed": true
   },
-  "active": "7d46d8d79b87c574",
+  "active": "b82064b64ce824ff",
   "lastOpenFiles": [
+    "Inbox/Digital Garden Inspiration Links.md",
+    "00 - Templates/Awesomes.md",
     "Inbox/Automatically change the Updated date in Obsidian notes.md",
-    "Professional/_ NgRx Lessons Learned.md",
-    "Professional/Creating Useful Documentation for Your Angular Component Library Using Storybook.md",
-    "Professional/WebStorm Setup.md",
-    "00 - Templates/Highlight - Video.md",
+    "Inbox/Modify Network Requests.md",
+    "Professional/Gatsby Camp Fall 2021.md",
+    "Inbox/Website Resources.md",
     "Inbox/My Obsidian Setup.md",
+    "00 - Templates/Note.md",
     "00 - Templates/Markdown Cheatsheet.md",
-    "Professional/_Conferences and Workshops.md",
-    "Inbox/Gatsby Camp Fall 2021.md",
-    "Inbox/Modify Network Requests.md"
+    "Professional/NgRx From Global to Component Store - BLS021 SHOW & TELL WITH ZACK DEROSE.md"
   ]
 }

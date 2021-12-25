@@ -2,7 +2,7 @@
 title: Website Resources
 description:
 tags: ["#links"]
-type: awesome
+type: awesomes
 created: 3/20/21
 
 ---
