@@ -79,6 +79,7 @@
     "typeface-ibm-plex-sans": "^1.1.13"
   },
   "devDependencies": {
+    "autoprefixer": "^10.3.7",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
     "@svgr/webpack": "5.5.0",
@@ -104,7 +105,11 @@
     "stylelint": "13.13.1",
     "stylelint-config-recommended": "3.0.0",
     "ts-jest": "^27.0.2",
-    "typescript": "4.3.5"
+    "typescript": "4.3.5",
+    "gatsby-plugin-postcss": "^5.0.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.17",
+    "tailwindcss-pseudo-elements": "^2.0.0"
   },
   "repository": {
     "type": "git",
