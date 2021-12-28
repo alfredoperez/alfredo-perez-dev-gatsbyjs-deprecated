@@ -4,13 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "b82064b64ce824ff",
+        "id": "ff0dd6e53b1ba9cc",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Inbox/Digital Garden Inspiration Links.md",
+            "file": "00 - Templates/Markdown Cheatsheet.md",
             "mode": "source",
+            "backlinks": false,
             "source": false
           }
         }
@@ -57,6 +58,19 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "680891ea2a934520",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00 - Templates/Highlight - Book.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ]
       },
@@ -80,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318,
-    "collapsed": true
+    "width": 353
   },
   "right": {
     "id": "9f0e0a49a23e90c4",
@@ -98,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Inbox/Digital Garden Inspiration Links.md"
+                "file": "00 - Templates/Markdown Cheatsheet.md"
               }
             }
           }
@@ -115,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Inbox/Digital Garden Inspiration Links.md",
+                "file": "00 - Templates/Markdown Cheatsheet.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -130,20 +143,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296,
-    "collapsed": true
+    "width": 296
   },
-  "active": "b82064b64ce824ff",
+  "active": "ff0dd6e53b1ba9cc",
   "lastOpenFiles": [
+    "00 - Templates/Markdown Cheatsheet.md",
+    "Professional/_ NgRx Lessons Learned.md",
+    "00 - Templates/Highlight - Book.md",
+    "00 - Templates/Highlight - Video.md",
+    "Professional/Design Systems with React & Storybook.md",
+    "_Courses and Workshops.md",
+    "This is a test.md",
     "Inbox/Digital Garden Inspiration Links.md",
     "00 - Templates/Awesomes.md",
-    "Inbox/Automatically change the Updated date in Obsidian notes.md",
-    "Inbox/Modify Network Requests.md",
-    "Professional/Gatsby Camp Fall 2021.md",
-    "Inbox/Website Resources.md",
-    "Inbox/My Obsidian Setup.md",
-    "00 - Templates/Note.md",
-    "00 - Templates/Markdown Cheatsheet.md",
-    "Professional/NgRx From Global to Component Store - BLS021 SHOW & TELL WITH ZACK DEROSE.md"
+    "Inbox/Automatically change the Updated date in Obsidian notes.md"
   ]
 }
