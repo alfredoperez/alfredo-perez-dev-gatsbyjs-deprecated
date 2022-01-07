@@ -19,5 +19,7 @@
   ],
   "fileSortOrder": "alphabetical",
   "communityPluginSortOrder": "download",
-  "communityThemeSortOrder": "release"
+  "communityThemeSortOrder": "download",
+  "legacyEditor": false,
+  "livePreview": true
 }
