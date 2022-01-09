@@ -33,7 +33,7 @@ const options = {
   showCopyButton: true,
   formatString: `DD/MM/YYYY`,
 }
-// These template are only data-fetching wrappers that import components
+// These template are only data-fetching wrappers that import components_deprecated
 const homepageTemplate = require.resolve(`./src/templates/HomePage.Query.tsx`)
 const tagTemplate = require.resolve(`./src/templates/TagPage.Query.tsx`)
 const tagsTemplate = require.resolve(`./src/templates/TagsPage.Query.tsx`)

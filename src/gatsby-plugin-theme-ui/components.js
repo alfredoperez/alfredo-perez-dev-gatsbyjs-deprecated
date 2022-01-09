@@ -3,7 +3,7 @@ import React from 'react'
 import { Text } from '@theme-ui/components'
 import { preToCodeBlock } from 'mdx-utils'
 
-import Code from '../components/Code'
+import Code from '../components_deprecated/Code'
 
 const components = {
   // eslint-disable-next-line react/display-name

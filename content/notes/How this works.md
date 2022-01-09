@@ -91,4 +91,4 @@ I use the following tools:
 - Obsidian for note-making
 - Cloudinary to store images
 
-related: [[Website Goals and Setup]]
+related: [[Website Features]]

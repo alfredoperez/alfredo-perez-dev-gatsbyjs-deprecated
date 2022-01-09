@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "00 - Templates/Markdown Cheatsheet.md",
+            "file": "Inbox/Digital Garden Inspiration Links.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -42,7 +42,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#ZackDerose",
+                "query": "nextjs",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,7 +72,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "1f317ed0d6664cd7",
@@ -111,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00 - Templates/Markdown Cheatsheet.md"
+                "file": "Inbox/Digital Garden Inspiration Links.md"
               }
             }
           }
@@ -128,9 +129,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00 - Templates/Markdown Cheatsheet.md",
+                "file": "Inbox/Digital Garden Inspiration Links.md",
                 "collapseAll": false,
-                "extraContext": true,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -147,15 +148,15 @@
   },
   "active": "ff0dd6e53b1ba9cc",
   "lastOpenFiles": [
-    "00 - Templates/Markdown Cheatsheet.md",
-    "Professional/_ NgRx Lessons Learned.md",
-    "00 - Templates/Highlight - Book.md",
-    "00 - Templates/Highlight - Video.md",
-    "Professional/Design Systems with React & Storybook.md",
-    "_Courses and Workshops.md",
-    "This is a test.md",
     "Inbox/Digital Garden Inspiration Links.md",
-    "00 - Templates/Awesomes.md",
-    "Inbox/Automatically change the Updated date in Obsidian notes.md"
+    "Inbox/My Obsidian Setup.md",
+    "Inbox/Automatically change the Updated date in Obsidian notes.md",
+    "Website Features.md",
+    "Personal/Life of Focus.md",
+    "_Courses and Workshops.md",
+    "00 - Templates/Markdown Cheatsheet.md",
+    "How this works.md",
+    "Professional/Architect an Extensible Digital Garden with Next.js, Tailwind, and Nx.md",
+    "Inbox/Modify Network Requests.md"
   ]
 }

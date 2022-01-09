@@ -5,7 +5,7 @@ import kebabCase from 'lodash.kebabcase'
 import { Link } from 'gatsby'
 import { useBlogConfig } from '../hooks'
 import { replaceSlashes } from '../utils'
-import Seo from '../components/SEO'
+import Seo from '../components_deprecated/SEO'
 
 type TagsProps = {
   data: {
