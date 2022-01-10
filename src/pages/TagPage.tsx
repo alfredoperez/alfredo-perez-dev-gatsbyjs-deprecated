@@ -6,8 +6,8 @@ import { Link } from 'gatsby'
 import { useBlogConfig } from '../hooks'
 import { replaceSlashes } from '../utils'
 import { Note } from '../models'
-import Seo from '../components/SEO'
-import CardList from '../components/CardList'
+import Seo from '../components_deprecated/SEO'
+import CardList from '../components_deprecated/CardList'
 
 type TagProps = {
   data: {

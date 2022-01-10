@@ -19,7 +19,7 @@ module.exports = {
           90: '#281e4d',
           100: '#09002a',
         },
-        yollow: {
+        yellow: {
           DEFAULT: '#ffa700',
           80: '#ffb300',
           90: '#e77e00',

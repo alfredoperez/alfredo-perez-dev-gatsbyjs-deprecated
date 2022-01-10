@@ -1,8 +1,8 @@
 {
   "name": "alfredo-perez.dev",
   "private": true,
-  "description": "Alfredo Perez Personal website",
-  "version": "0.2.0",
+  "description": "Alfredo Perez Personal Website",
+  "version": "0.3.0",
   "license": "MIT",
   "author": "Alfredo Perez (https://alfredo-perez.dev)",
   "scripts": {

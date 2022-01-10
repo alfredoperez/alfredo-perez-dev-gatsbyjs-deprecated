@@ -2,8 +2,8 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 import { Note } from '../models'
-import Seo from '../components/SEO'
-import CardList from '../components/CardList'
+import Seo from '../components_deprecated/SEO'
+import CardList from '../components_deprecated/CardList'
 
 type DigitalGardenProps = {
   data: { allNote: { nodes: Array<Note> } }

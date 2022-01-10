@@ -2,13 +2,13 @@
 import React from 'react'
 import { Flex, jsx } from 'theme-ui'
 import { useSiteMetadata } from '../hooks'
-import NewsletterCompact from '../components/NewsletterForm/NewsletterCompact'
+import NewsletterCompact from '../components_deprecated/NewsletterForm/NewsletterCompact'
 import { visuallyHidden } from '../utils'
-import CardList from '../components/CardList'
+import CardList from '../components_deprecated/CardList'
 import { Note } from '../models'
-import Seo from '../components/SEO'
-import { Main, Stack } from '../components/Layout'
-import Divider from '../components/Divider'
+import Seo from '../components_deprecated/SEO'
+import { Main, Stack } from '../components_deprecated/Layout'
+import Divider from '../components_deprecated/Divider'
 
 type HomePageProps = {
   data: {

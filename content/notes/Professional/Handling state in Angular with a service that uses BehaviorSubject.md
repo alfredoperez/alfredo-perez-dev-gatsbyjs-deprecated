@@ -50,7 +50,7 @@ import { pluck } from 'rxjs/operators';
 
 /**
  * Plain Store Service.
- * This is intended to be used to enable communication between components
+ * This is intended to be used to enable communication between components_deprecated
  * and it should be just in cases where there are not too many states shared between them.
  */
 export class PlainStoreService<T> {

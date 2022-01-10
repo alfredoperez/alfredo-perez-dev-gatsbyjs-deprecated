@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Button } from 'theme-ui'
-import PageTitle from '../components/PageTitle'
-import Seo from '../components/SEO'
-import { Main, Stack } from '../components/Layout'
-import Section from '../components/Section'
-import Divider from '../components/Divider'
+import PageTitle from '../components_deprecated/PageTitle'
+import Seo from '../components_deprecated/SEO'
+import { Main, Stack } from '../components_deprecated/Layout'
+import Section from '../components_deprecated/Section'
+import Divider from '../components_deprecated/Divider'
 
 const Page404 = () => (
   <>
