@@ -76,7 +76,8 @@
     "slick-carousel": "^1.8.1",
     "theme-ui": "^0.11.1",
     "typeface-fira-code": "^1.1.13",
-    "typeface-ibm-plex-sans": "^1.1.13"
+    "typeface-ibm-plex-sans": "^1.1.13",
+    "obsidian-pkm": "https://github.com/alfredoperez/obsidian-pkm.git"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.7",
