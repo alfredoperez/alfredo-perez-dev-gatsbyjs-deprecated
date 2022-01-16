@@ -71,7 +71,7 @@ module.exports = {
             resolve: 'gatsby-remark-obsidian',
             options: {
               titleToURL: (title) => `/notes/${slugify(title).toLocaleLowerCase()}`,
-              markdownFolder: `${__dirname}/content/notes`,
+              markdownFolder: `${__dirname}/node_modules/obsidian-pkm/notes`,
               highlightClassName: 'highlight',
             },
           },

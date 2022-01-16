@@ -4,10 +4,10 @@ const options = {
   basePath: '/',
   postsPrefix: `/`,
   digitalGardenPath: `/digital-garden`,
-  notesPath: `content/notes`,
+  notesPath: `node_modules/obsidian-pkm/notes`,
   notesPrefix: `/notes/`,
   mocsPrefix: `/notes/`,
-  pagesPath: `content/pages`,
+  // pagesPath: `content/pages`,
   tagsPath: `/tags`,
   externalLinks: [
     {
