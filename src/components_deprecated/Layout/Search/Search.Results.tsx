@@ -3,7 +3,7 @@ import groupArray from 'group-array'
 import { connectStateResults, Highlight, Snippet } from 'react-instantsearch-dom'
 import { Box, Heading, Spinner, ThemeUICSSObject } from 'theme-ui'
 import Card from '../../Card'
-import useScrollDisabler from '../../../hooks/useScrollDisabler'
+import { useScrollDisabler } from '../../../hooks'
 
 const styles = {
   spinner: {
