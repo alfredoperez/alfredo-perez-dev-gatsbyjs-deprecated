@@ -3,11 +3,11 @@ import { Box, Container, jsx } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
 import { Link } from 'gatsby'
 import Logo from '../../Logo/Logo'
-import { useBlogConfig, useSiteMetadata } from '../../../hooks'
 import { replaceSlashes } from '../../../utils'
-import { HeaderMenu } from './Header.Menu'
 import HeaderColorModeToggle from './Header.ColorModeToggle'
 import Search from '../Search/Search'
+import defaultOptions from '../../../config/default-Options'
+import { HeaderMenu } from './Header.Menu'
 
 const styles = {
   wrapper: {
@@ -38,16 +38,16 @@ const styles = {
   },
 }
 const Header = () => {
-  const { basePath } = useBlogConfig()
-  const { siteTitle } = useSiteMetadata()
-
+  const { websiteData, siteMetadata } = defaultOptions
+  const { siteTitle } = siteMetadata
+  console.log({ siteTitle })
   return (
     <Box sx={styles.wrapper}>
       <Container variant="compact" sx={styles.container}>
         <Flex variant="layout.header">
           <Box sx={styles.logoContainer}>
             <Link
-              to={replaceSlashes(`/${basePath}`)}
+              to={replaceSlashes(`/${websiteData.basePath}`)}
               aria-label={`${siteTitle} - Back to home`}
               sx={{ color: `heading`, textDecoration: `none` }}
             >

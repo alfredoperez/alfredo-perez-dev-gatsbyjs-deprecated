@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from 'theme-ui'
-import { useBlogConfig } from '../../../hooks'
 import HeaderNavigation from './Header.Navigation'
+import defaultOptions from '../../../config/default-Options'
 
 const styles = {
   desktopMenu: {
@@ -16,7 +16,7 @@ const styles = {
 }
 
 export const HeaderMenu = () => {
-  const { navigation: navItems } = useBlogConfig()
+  const { navigation: navItems } = defaultOptions.websiteData
 
   const desktopMenuNav = <HeaderNavigation items={navItems} />
 

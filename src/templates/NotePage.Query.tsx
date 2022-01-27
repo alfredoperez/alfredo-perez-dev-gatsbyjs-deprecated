@@ -27,28 +27,28 @@ export const query = graphql`
       body
       excerpt
       timeToRead
-      parent {
-        ... on Mdx {
-          inboundReferences {
-            ... on Mdx {
-              childMdxNote {
-                id
-                slug
-                title
-              }
-            }
-          }
-          outboundReferences {
-            ... on Mdx {
-              childMdxNote {
-                id
-                slug
-                title
-              }
-            }
-          }
-        }
-      }
+      #      parent {
+      ##        ... on Mdx {
+      ##          inboundReferences {
+      ##            ... on Mdx {
+      ##              childMdxNote {
+      ##                id
+      ##                slug
+      ##                title
+      ##              }
+      ##            }
+      ##          }
+      ##          outboundReferences {
+      ##            ... on Mdx {
+      ##              childMdxNote {
+      ##                id
+      ##                slug
+      ##                title
+      ##              }
+      ##            }
+      ##          }
+      ##        }
+      #      }
     }
   }
 `

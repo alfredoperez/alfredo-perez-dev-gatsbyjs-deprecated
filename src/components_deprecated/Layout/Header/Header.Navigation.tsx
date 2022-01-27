@@ -2,8 +2,8 @@
 import React from 'react'
 import { jsx, Link as TLink } from 'theme-ui'
 import { Link } from 'gatsby'
-import { useBlogConfig } from '../../../hooks'
 import { replaceSlashes } from '../../../utils'
+import defaultOptions from '../../../config/default-Options'
 
 type NavigationProps = {
   items: {
@@ -13,7 +13,7 @@ type NavigationProps = {
 }
 
 const HeaderNavigation = ({ items }: NavigationProps) => {
-  const { basePath } = useBlogConfig()
+  const { basePath } = defaultOptions.websiteData
 
   return (
     <React.Fragment>

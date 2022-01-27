@@ -1,11 +1,9 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { useSiteMetadata } from '../../../hooks'
 import FooterExternalLinks from './Footer.ExternalLinks'
+import defaultOptions from '../../../config/default-Options'
 
 const Footer = () => {
-  const { siteTitle } = useSiteMetadata()
-
   return (
     <footer
       sx={{
@@ -22,7 +20,8 @@ const Footer = () => {
       }}
     >
       <div>
-        &copy; {new Date().getFullYear()} by {siteTitle}. All rights reserved.
+        &copy; {new Date().getFullYear()} by {defaultOptions.siteMetadata.siteTitle}. All rights
+        reserved.
       </div>
       <FooterExternalLinks />
     </footer>

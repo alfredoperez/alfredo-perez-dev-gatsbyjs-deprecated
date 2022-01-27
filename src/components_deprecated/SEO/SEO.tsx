@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { withPrefix } from 'gatsby'
-import { useSiteMetadata } from '../../hooks'
+import defaultOptions from '../../config/default-Options'
 
 type SEOProps = {
   title?: string
@@ -20,8 +20,6 @@ const SEO = ({
   children = null,
   canonicalUrl = ``,
 }: SEOProps) => {
-  const site = useSiteMetadata()
-
   const {
     siteTitle,
     siteTitleAlt: defaultTitle,
@@ -30,7 +28,7 @@ const SEO = ({
     siteLanguage,
     siteImage: defaultImage,
     author,
-  } = site
+  } = defaultOptions.siteMetadata
 
   const seo = {
     title: title || defaultTitle,

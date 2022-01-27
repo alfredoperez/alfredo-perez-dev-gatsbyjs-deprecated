@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx, Link as TLink } from 'theme-ui'
-import { useBlogConfig } from '../../../hooks'
+import defaultOptions from '../../../config/default-Options'
 
 const FooterExternalLinks = () => {
-  const { externalLinks } = useBlogConfig()
+  const { externalLinks } = defaultOptions.websiteData
 
   return (
     <React.Fragment>

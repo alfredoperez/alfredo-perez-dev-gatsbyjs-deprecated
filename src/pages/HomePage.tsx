@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import React from 'react'
 import { Flex, jsx } from 'theme-ui'
-import { useSiteMetadata } from '../hooks'
 import NewsletterCompact from '../components_deprecated/NewsletterForm/NewsletterCompact'
 import { visuallyHidden } from '../utils'
+import defaultOptions from '../config/default-Options'
 import CardList from '../components_deprecated/CardList'
 import { Note } from '../models'
 import Seo from '../components_deprecated/SEO'
@@ -23,7 +23,7 @@ const HomePage = ({ data }: HomePageProps) => {
   if (!data) {
     return null
   }
-  const { siteTitle } = useSiteMetadata()
+  const { siteTitle } = defaultOptions.siteMetadata
 
   const {
     allNote: { nodes: notes },

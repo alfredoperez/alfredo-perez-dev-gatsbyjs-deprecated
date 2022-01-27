@@ -1,50 +1,23 @@
 const kebabCase = require(`lodash.kebabcase`)
-
-const options = {
-  basePath: '/',
-  postsPrefix: `/`,
-  digitalGardenPath: `/digital-garden`,
-  notesPath: `node_modules/obsidian-pkm/notes`,
-  notesPrefix: `/notes/`,
-  mocsPrefix: `/notes/`,
-  // pagesPath: `content/pages`,
-  tagsPath: `/tags`,
-  externalLinks: [
-    {
-      name: `Twitter`,
-      url: `https://twitter.com/alfrodo_perez`,
-    },
-    {
-      name: `GitHub`,
-      url: `https://github.com/alfredoperez`,
-    },
-  ],
-  navigation: [
-    {
-      title: `Digital Garden`,
-      slug: `/digital-garden`,
-    },
-    {
-      title: `About`,
-      slug: `/notes/how-this-works`,
-    },
-  ],
-  showLineNumbers: true,
-  showCopyButton: true,
-  formatString: `DD/MM/YYYY`,
-}
-// These template are only data-fetching wrappers that import components_deprecated
 const homepageTemplate = require.resolve(`./src/templates/HomePage.Query.tsx`)
 const tagTemplate = require.resolve(`./src/templates/TagPage.Query.tsx`)
 const tagsTemplate = require.resolve(`./src/templates/TagsPage.Query.tsx`)
 const noteTemplate = require.resolve(`./src/templates/NotePage.Query.tsx`)
 const mocTemplate = require.resolve(`./src/templates/MocPage.Query.tsx`)
 const digitalGardenTemplate = require.resolve(`./src/templates/DigitalGardenPage.Query.tsx`)
+const options = require(`./src/config/defaultOptions`)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const { basePath, tagsPath, formatString, notesPrefix, mocsPrefix, digitalGardenPath } = options
+  const {
+    basePath,
+    tagsUrlPrefix,
+    formatString,
+    notesUrlPrefix,
+    mocsUrlPrefix,
+    digitalGardenPath,
+  } = options
 
   createPage({
     path: basePath,
@@ -55,7 +28,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
   createPage({
-    path: `/${basePath}/${tagsPath}`.replace(/\/\/+/g, `/`),
+    path: `/${basePath}/${tagsUrlPrefix}`.replace(/\/\/+/g, `/`),
     component: tagsTemplate,
   })
 
@@ -97,7 +70,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   notes.forEach((note) => {
     createPage({
-      path: `/${notesPrefix}${note.slug}`.replace(/\/\/+/g, `/`),
+      path: `/${notesUrlPrefix}${note.slug}`.replace(/\/\/+/g, `/`),
       component: noteTemplate,
       context: {
         slug: note.slug,
@@ -110,7 +83,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   if (tags.length > 0) {
     tags.forEach((tag) => {
-      const path = `/${basePath}/${tagsPath}/${kebabCase(tag.fieldValue)}`.replace(/\/\/+/g, `/`)
+      const path = `/${basePath}/${tagsUrlPrefix}/${kebabCase(tag.fieldValue)}`.replace(
+        /\/\/+/g,
+        `/`,
+      )
 
       createPage({
         path,
@@ -128,7 +104,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   mocs.forEach((moc) => {
     createPage({
-      path: `${mocsPrefix}${moc.slug}`.replace(/\/\/+/g, `/`),
+      path: `${mocsUrlPrefix}${moc.slug}`.replace(/\/\/+/g, `/`),
       component: mocTemplate,
       context: {
         slug: moc.slug,
@@ -170,7 +146,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
     return results
   }
   const { createNode, createParentChildLink, createNodeField } = actions
-  const { notesPath } = options
+  const { notesSourcePath } = options
 
   // Make sure that it's an MDX node
   if (node.internal.type !== `Mdx`) {
@@ -186,7 +162,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   // Check for "notes" and create the "Note" type
   if (
     node.internal.type === `Mdx` &&
-    source === notesPath &&
+    source === notesSourcePath &&
     // Makes sure to not include any note from the folders that include `00 - `
     // These folders are used for obsidian templates
     !fileNode.relativePath.includes('00 - ')

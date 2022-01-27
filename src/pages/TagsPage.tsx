@@ -3,7 +3,7 @@ import React from 'react'
 import { Box, Flex } from '@theme-ui/components'
 import kebabCase from 'lodash.kebabcase'
 import { Link } from 'gatsby'
-import { useBlogConfig } from '../hooks'
+import defaultOptions from '../config/default-Options'
 import { replaceSlashes } from '../utils'
 import Seo from '../components_deprecated/SEO'
 
@@ -19,7 +19,7 @@ type TagsProps = {
 }
 
 const TagsPage = ({ data }: TagsProps) => {
-  const { tagsPath, basePath } = useBlogConfig()
+  const { tagsUrlPrefix, basePath } = defaultOptions.websiteData
 
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (!data) {
@@ -39,7 +39,7 @@ const TagsPage = ({ data }: TagsProps) => {
             <TLink
               as={Link}
               sx={{ variant: `links.listItem`, mr: 2 }}
-              to={replaceSlashes(`/${basePath}/${tagsPath}/${kebabCase(listItem.fieldValue)}`)}
+              to={replaceSlashes(`/${basePath}/${tagsUrlPrefix}/${kebabCase(listItem.fieldValue)}`)}
             >
               {listItem.fieldValue} <span sx={{ color: `secondary` }}>({listItem.totalCount})</span>
             </TLink>

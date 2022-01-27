@@ -3,11 +3,11 @@ import React from 'react'
 import { jsx, Heading, Link as TLink } from 'theme-ui'
 import { Flex } from '@theme-ui/components'
 import { Link } from 'gatsby'
-import { useBlogConfig } from '../hooks'
 import { replaceSlashes } from '../utils'
 import { Note } from '../models'
 import Seo from '../components_deprecated/SEO'
 import CardList from '../components_deprecated/CardList'
+import defaultOptions from '../config/default-Options'
 
 type TagProps = {
   data: {
@@ -24,7 +24,7 @@ type TagProps = {
 }
 
 const TagPage = (props: TagProps) => {
-  const { tagsPath, basePath } = useBlogConfig()
+  const { tagsUrlPrefix, basePath } = defaultOptions.websiteData
 
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (!props.data) {
@@ -54,7 +54,7 @@ const TagPage = (props: TagProps) => {
         <TLink
           as={Link}
           sx={{ variant: `links.secondary`, marginY: 2 }}
-          to={replaceSlashes(`/${basePath}/${tagsPath}`)}
+          to={replaceSlashes(`/${basePath}/${tagsUrlPrefix}`)}
         >
           View all tags
         </TLink>
